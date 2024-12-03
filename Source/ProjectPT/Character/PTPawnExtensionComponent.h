@@ -8,6 +8,7 @@
 #include "PTPawnExtensionComponent.generated.h"
 
 class UPTPawnData;
+class UPTAbilitySystemComponent;
 
 /**
  *
@@ -29,6 +30,11 @@ public:
 
 	void SetPawnData(const UPTPawnData* InPawnData);
 	void SetPlayerInputComponent();
+	UPTAbilitySystemComponent* GetAbilitySystemComponent() const { return AbilitySystemComponent; }
+
+	/*Game Ability System*/
+	void RegisterGameAbilitySystem(UPTAbilitySystemComponent* InASC, AActor* IsOwnerActor);
+	void UnRegisterGameAbilitySystem();
 
 	virtual void OnRegister() final;
 	virtual void BeginPlay() final;
@@ -42,4 +48,7 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, Category = "PT|Pawn")
 	TObjectPtr<const UPTPawnData> PawnData;
+
+	UPROPERTY()
+	TObjectPtr<UPTAbilitySystemComponent> AbilitySystemComponent;
 };

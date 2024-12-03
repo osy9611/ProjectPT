@@ -8,6 +8,7 @@
 
 class UPTInputConfig;
 class UPTCameraMode;
+class UPTAbilitySet;
 /**
  *
  */
@@ -25,7 +26,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Camera")
 	TSubclassOf<UPTCameraMode> DefaultCameraMode;
 
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "InputConfig")
 	TObjectPtr<UPTInputConfig> InputConfig;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Abilities")
+	TArray<TObjectPtr<UPTAbilitySet>> AbilitySets;
 };

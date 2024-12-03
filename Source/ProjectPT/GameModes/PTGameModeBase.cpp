@@ -12,9 +12,9 @@
 #include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/GameModes/PTExperienceDefinition.h"
 #include <Kismet/GameplayStatics.h>
+
 APTGameModeBase::APTGameModeBase()
 {
-
 	GameStateClass = APTGameState::StaticClass();
 	PlayerControllerClass = APTPlayerController::StaticClass();
 	PlayerStateClass = APTPlayerState::StaticClass();
@@ -50,11 +50,13 @@ UClass* APTGameModeBase::GetDefaultPawnClassForController_Implementation(AContro
 	return Super::GetDefaultPawnClassForController_Implementation(InController);
 }
 
+PRAGMA_DISABLE_OPTIMIZATION
 void APTGameModeBase::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
 {
 	if (IsExperienceLoaded())
 		Super::HandleStartingNewPlayer_Implementation(NewPlayer);
 }
+PRAGMA_ENABLE_OPTIMIZATION
 
 APawn* APTGameModeBase::SpawnDefaultPawnAtTransform_Implementation(AController* NewPlayer, const FTransform& SpawnTransform)
 {
@@ -136,6 +138,15 @@ void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentE
 
 const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* InController) const
 {
+	if (InController)
+	{
+		if (const APTPlayerState* HakPS = InController->GetPlayerState<APTPlayerState>())
+		{
+			//GetPawnData 구현 
+			if (const UPTPawnData* PawnData = HakPS->GetPawnData<UPTPawnData>())
+				return PawnData;
+		}
+	}
 	//아직 PlayerState에 PawnData가 설정되어 있지 않은 경우, ExperienceManagerComponent의 CurrentExperience로부터 가져와서 설정한다
 	check(GameState);
 	UPTExperienceManagerComponent* ExperienceManagerComponent = GameState->FindComponentByClass<UPTExperienceManagerComponent>();

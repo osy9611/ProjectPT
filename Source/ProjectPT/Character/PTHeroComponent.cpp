@@ -17,6 +17,7 @@
 #include "ProjectPT/Camera/PTCameraMode.h"
 #include "Components/GameFrameworkComponentManager.h"
 #include "ProjectPT/Camera/PTCameraMode_ThirdPerson.h"
+#include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 
 const FName UPTHeroComponent::NAME_ActorFeatureName("Hero");
 
@@ -142,6 +143,7 @@ void UPTHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* Man
 			PawnData = PawnExtComp->GetPawnData<UPTPawnData>();
 
 			//DataIntialize 단계까지 오면, Pawn이 Controller에 Posses 되어 준비된 상태이다
+			PawnExtComp->RegisterGameAbilitySystem(PTPS->GetPTAbilitySystemComponent(), PTPS);
 		}
 
 		if (bIsLocallyControlled && PawnData)
@@ -232,6 +234,10 @@ void UPTHeroComponent::InitializePlayerInput(UInputComponent* PlayerInputCompone
 
 				UPTInputComponent* PTIC = CastChecked<UPTInputComponent>(PlayerInputComponent);
 				{
+					{
+						TArray<uint32> BindHandles;
+						PTIC->BindAbilityActions(InputConfig, this, &ThisClass::Input_AbilityInputTagPressed, &ThisClass::Input_AbilityInputTagReleased, BindHandles);
+					}
 					PTIC->BindNativeAction(InputConfig, GameplayTags.InputTag_Move, ETriggerEvent::Triggered, this, &ThisClass::Input_Move, false);
 					PTIC->BindNativeAction(InputConfig, GameplayTags.InputTag_Look_Mouse, ETriggerEvent::Triggered, this, &ThisClass::Input_LookMouse, false);
 					PTIC->BindNativeAction(InputConfig, GameplayTags.InputTag_Zoom, ETriggerEvent::Triggered, this, &ThisClass::Input_Zoom, false);
@@ -298,5 +304,29 @@ void UPTHeroComponent::Input_Zoom(const FInputActionValue& InputActionValue)
 	if (UPTCameraComponent* CameraPomponent = UPTCameraComponent::FindCameraComponent(Pawn))
 	{
 		CameraPomponent->AddFieldOfViewOffset(Value, false);
+	}
+}
+
+void UPTHeroComponent::Input_AbilityInputTagPressed(FGameplayTag InputTag)
+{
+	if (const APawn* Pawn = GetPawn<APawn>())
+	{
+		if (const UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
+		{
+			if (UPTAbilitySystemComponent* ASC = PawnExtComp->GetAbilitySystemComponent())
+				ASC->AbilityInputTagPressed(InputTag);
+		}
+	}
+}
+
+void UPTHeroComponent::Input_AbilityInputTagReleased(FGameplayTag InputTag)
+{
+	if (const APawn* Pawn = GetPawn<APawn>())
+	{
+		if (const UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
+		{
+			if (UPTAbilitySystemComponent* ASC = PawnExtComp->GetAbilitySystemComponent())
+				ASC->AbilityInputTagReleased(InputTag);
+		}
 	}
 }

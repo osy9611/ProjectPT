@@ -41,6 +41,9 @@ public:
 	void Input_LookMouse(const FInputActionValue& InputActionValue);
 	void Input_Zoom(const FInputActionValue& InputActionValue);
 
+	void Input_AbilityInputTagPressed(FGameplayTag InputTag);
+	void Input_AbilityInputTagReleased(FGameplayTag InputTag);
+
 	UPROPERTY(EditAnywhere)
 	TArray<FPTMappableConfigPair> DefaultInputConfigs;
 };

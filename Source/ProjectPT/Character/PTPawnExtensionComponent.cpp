@@ -5,6 +5,7 @@
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/PTGameplayTags.h"
 #include "Components/GameFrameworkComponentManager.h"
+#include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 
 /*feature name을 component 단위니깐 component를 빼고 pawn extension만 넣는 것은 확인할 수 있다.*/
 const FName UPTPawnExtensionComponent::NAME_ActorFeatureName("PawnExtension");
@@ -30,6 +31,36 @@ void UPTPawnExtensionComponent::SetPawnData(const UPTPawnData* InPawnData)
 void UPTPawnExtensionComponent::SetPlayerInputComponent()
 {
 	CheckDefaultInitialization();
+}
+
+void UPTPawnExtensionComponent::RegisterGameAbilitySystem(UPTAbilitySystemComponent* InASC, AActor* IsOwnerActor)
+{
+	check(InASC && IsOwnerActor);
+
+	if (AbilitySystemComponent == InASC)
+		return;
+
+	if (AbilitySystemComponent)
+		UnRegisterGameAbilitySystem();
+
+	APawn* Pawn = GetPawnChecked<APawn>();
+	AActor* ExistingActor = InASC->GetAvatarActor();
+	check(!ExistingActor);
+
+	//ASC를 업데이트하고, InitAbilityActorInfo를 Pawn과 같이 호출하여, AvatarActor를 Pawn으로 업데이트 해준다
+	AbilitySystemComponent = InASC;
+	AbilitySystemComponent->InitAbilityActorInfo(IsOwnerActor, Pawn);
+}
+
+void UPTPawnExtensionComponent::UnRegisterGameAbilitySystem()
+{
+	if (!AbilitySystemComponent)
+	{
+		return;
+	}
+
+	if (AbilitySystemComponent)
+		AbilitySystemComponent = nullptr;
 }
 
 void UPTPawnExtensionComponent::OnRegister()

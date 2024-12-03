@@ -8,7 +8,7 @@
 
 class UPTPawnData;
 class UPTExperienceDefinition;
-
+class UPTAbilitySystemComponent;
 /**
  * PawnData를 캐싱하는것이 주 목적
  */
@@ -17,16 +17,24 @@ class PROJECTPT_API APTPlayerState : public APlayerState
 {
 	GENERATED_BODY()
 public:
-	APTPlayerState(const FObjectInitializer& ObjectInitializer);
+	APTPlayerState(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
-	virtual void PostInitializeComponents() override;
+	virtual void PostInitializeComponents() final;
 
 	template<class T>
 	const T* GetPawnData() const { return Cast<T>(PawnData); }
-
 	void OnExperienceLoaded(const UPTExperienceDefinition* CurrentExperience);
 	void SetPawnData(const UPTPawnData* PawnData);
+	UPTAbilitySystemComponent* GetPTAbilitySystemComponent() const { return AbilitySystemComponent; }
 
 	UPROPERTY()
 	TObjectPtr<const UPTPawnData> PawnData;
+
+	/*
+	 * 어빌리티 컴포넌트가 여기에 있는 이유
+	 *  - 네트워크를 고려하면 이곳에 추가를 해야한다.
+	 *  - PlayerState는 주기적으로 서버에서 클라이언트로 배포되는 엑터이기 때문
+	*/
+	UPROPERTY(VisibleAnywhere, Category = "PlayerState")
+	TObjectPtr<UPTAbilitySystemComponent> AbilitySystemComponent;
 };

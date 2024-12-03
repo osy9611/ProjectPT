@@ -7,6 +7,7 @@
 #include "PTPlayerController.generated.h"
 
 class APTPlayerState;
+class UPTAbilitySystemComponent;
 
 /**
  * 
@@ -21,6 +22,7 @@ public:
 	
 	//내부적으로 플레이어 컨트롤러가 캐릭터에다가 델리게이트를 바인드하는데 그게 플레이어 컨트롤러를 캐릭터에게 넘겨준다
 	virtual void PostProcessInput(const float DeltaTime, const bool bGamePaused) override;
+	UPTAbilitySystemComponent* GetPTAbilitySystemComponent() const;
 
 	APTPlayerState* GetPTPlayerState() const;
 };
