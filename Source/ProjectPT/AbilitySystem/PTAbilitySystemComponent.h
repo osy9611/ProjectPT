@@ -20,7 +20,6 @@ public:
 
 	/*
 	* GAS에서 능력을 실행하기 위해 입력이 감지되었는지 확인할 때 사용
-	* 
 	*/
 	virtual void AbilitySpecInputPressed(FGameplayAbilitySpec& Spec) override;
 	virtual void AbilitySpecInputReleased(FGameplayAbilitySpec& Spec) override;
