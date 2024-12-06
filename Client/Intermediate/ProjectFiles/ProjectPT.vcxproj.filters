@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ProjectPT.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ProjectPT.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ProjectPTEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\README.md" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ModularGameplayActors">
+      <UniqueIdentifier>{E25759FB-664C-355F-8250-88BB112CE4AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ModularGameplayActors\Source">
+      <UniqueIdentifier>{D2A7373A-5074-3627-B395-44D580887335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\ModularGameplayActors\Source\ModularGameplayActors">
+      <UniqueIdentifier>{BB71DF83-D340-3BFB-8444-4117EB3288C8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\ModularGameplayActors.Build.cs">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors</Filter>
+    </None>
+    <Filter Include="Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private">
+      <UniqueIdentifier>{B8B90E7E-AD5A-3B0C-A684-BFAC92E94C5B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private\ModularCharacter.cpp">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private\ModularGameplayActors.cpp">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private\ModularPlayerController.cpp">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public">
+      <UniqueIdentifier>{2CE162FB-CFBE-3D0B-A1F3-D84F43D64075}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public\ModularCharacter.h">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public\ModularGameplayActors.h">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public\ModularPlayerController.h">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\ModularGameplayActors\ModularGameplayActors.uplugin">
+      <Filter>Plugins\ModularGameplayActors</Filter>
+    </None>
+    <Filter Include="Plugins\ModularGameplayActors\Resources">
+      <UniqueIdentifier>{890678FF-BC6A-31BD-81A0-4D84C6398C6D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ModularGameplayActors\Resources\Icon128.png">
+      <Filter>Plugins\ModularGameplayActors\Resources</Filter>
+    </None>
+    <Filter Include="Source\ProjectPT">
+      <UniqueIdentifier>{0DF43EB5-F9E2-36E8-853F-21DA780B3B73}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ProjectPT\ProjectPT.Build.cs">
+      <Filter>Source\ProjectPT</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ProjectPT\ProjectPT.cpp">
+      <Filter>Source\ProjectPT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\ProjectPT.h">
+      <Filter>Source\ProjectPT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\PTGameplayTags.cpp">
+      <Filter>Source\ProjectPT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\PTGameplayTags.h">
+      <Filter>Source\ProjectPT</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\PTLogChannels.cpp">
+      <Filter>Source\ProjectPT</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\PTLogChannels.h">
+      <Filter>Source\ProjectPT</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\AbilitySystem">
+      <UniqueIdentifier>{A73205BC-C1D7-339D-BE50-01B4F22AD8AE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\PTAbilitySet.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTAbilitySet.h">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\PTAbilitySystemComponent.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTAbilitySystemComponent.h">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\AbilitySystem\Abilities">
+      <UniqueIdentifier>{FF8EE166-F3F4-3D54-A75D-25F1DA21A9EB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_Jump.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_Jump.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeAttack.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeAttack.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\AbilitySystem\Notify">
+      <UniqueIdentifier>{AF8183F8-D51B-3514-9264-4CADECE03DA5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Notify\PTAnimNotify_AttackHitCheck.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Notify</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Notify\PTAnimNotify_AttackHitCheck.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Notify</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\AbilitySystem\Task">
+      <UniqueIdentifier>{D6FF886E-6263-361F-9FEF-E3616E064F6F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Task\PTAbilityTask_Trace.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Task</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Task\PTAbilityTask_Trace.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Task</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Animation">
+      <UniqueIdentifier>{EC58EA1E-EC77-31F3-825E-E7EFA3F1B170}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Animation\PTAnimInstance.cpp">
+      <Filter>Source\ProjectPT\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Animation\PTAnimInstance.h">
+      <Filter>Source\ProjectPT\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Camera">
+      <UniqueIdentifier>{EDD759E9-0899-3CEB-AE96-27AAA44E35A1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Camera\PTCameraComponent.cpp">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Camera\PTCameraComponent.h">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Camera\PTCameraMode.cpp">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Camera\PTCameraMode.h">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Camera\PTCameraMode_ThirdPerson.cpp">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Camera\PTCameraMode_ThirdPerson.h">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Camera\PTPlayerCameraManager.cpp">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Camera\PTPlayerCameraManager.h">
+      <Filter>Source\ProjectPT\Camera</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Character">
+      <UniqueIdentifier>{3445A293-9204-3C96-B7CE-F97CB3E8C108}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTCharacter.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTCharacter.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTHeroComponent.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTHeroComponent.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTPawnData.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTPawnData.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTPawnExtensionComponent.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTPawnExtensionComponent.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\GameModes">
+      <UniqueIdentifier>{62F36A1F-4F07-3667-B7AC-FDCBE51DE3A6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTExperienceDefinition.cpp">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTExperienceDefinition.h">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTExperienceManagerComponent.cpp">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTExperienceManagerComponent.h">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTGameModeBase.cpp">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTGameModeBase.h">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTGameState.cpp">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTGameState.h">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Input">
+      <UniqueIdentifier>{80210474-71C0-35E4-8D49-1D96D9B022A4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Input\PTInputComponent.cpp">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Input\PTInputComponent.h">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Input\PTInputConfig.cpp">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Input\PTInputConfig.h">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Input\PTMappableConfigPair.cpp">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Input\PTMappableConfigPair.h">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Player">
+      <UniqueIdentifier>{4F5CBE5F-5F7D-3187-A082-89AEAE27B0F7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Player\PTPlayerController.cpp">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Player\PTPlayerController.h">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Player\PTPlayerState.cpp">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Player\PTPlayerState.h">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\System">
+      <UniqueIdentifier>{2014B51B-9363-30DE-A2D6-2D5AC646BCA1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\System\PTAssetManager.cpp">
+      <Filter>Source\ProjectPT\System</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\System\PTAssetManager.h">
+      <Filter>Source\ProjectPT\System</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\System\PTGameInstance.cpp">
+      <Filter>Source\ProjectPT\System</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\System\PTGameInstance.h">
+      <Filter>Source\ProjectPT\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

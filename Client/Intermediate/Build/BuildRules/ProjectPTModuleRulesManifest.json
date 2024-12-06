@@ -1,0 +1,9 @@
+{
+	"SourceFiles": [
+		"D:\\Study\\Unreal\\ProjectPT\\Source\\ProjectPT\\ProjectPT.Build.cs",
+		"D:\\Study\\Unreal\\ProjectPT\\Plugins\\ModularGameplayActors\\Source\\ModularGameplayActors\\ModularGameplayActors.Build.cs",
+		"D:\\Study\\Unreal\\ProjectPT\\Source\\ProjectPT.Target.cs",
+		"D:\\Study\\Unreal\\ProjectPT\\Source\\ProjectPTEditor.Target.cs"
+	],
+	"EngineVersion": "5.4.4"
+}

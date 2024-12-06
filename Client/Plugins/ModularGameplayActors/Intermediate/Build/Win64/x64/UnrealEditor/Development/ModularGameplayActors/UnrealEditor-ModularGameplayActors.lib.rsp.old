@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-ModularGameplayActors.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Study\Unreal\ProjectPT\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplayActors\Module.ModularGameplayActors.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplayActors\ModularCharacter.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplayActors\ModularGameplayActors.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplayActors\ModularPlayerController.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplayActors\Default.rc2.res"
+/OUT:"D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplayActors\UnrealEditor-ModularGameplayActors.lib"

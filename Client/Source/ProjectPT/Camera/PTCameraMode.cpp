@@ -1,0 +1,291 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "PTCameraMode.h"
+#include "PTPlayerCameraManager.h"
+#include "PTCameraComponent.h"
+
+FPTCameraModeView::FPTCameraModeView()
+	:Location(ForceInit)
+	, Rotation(ForceInit)
+	, ControlRotation(ForceInit)
+	, FieldOfView(PT_CAMERA_DEFAULT_FOV)
+{
+}
+
+void FPTCameraModeView::Blend(const FPTCameraModeView& Other, float OtherWeight)
+{
+	if (OtherWeight <= 0.0f)
+		return;
+	else if (OtherWeight >= 1.0f)
+	{
+		//Weight가 1.0이면 Other를 덮어쓰면 된다.
+		*this = Other;
+		return;
+	}
+
+	//Location + OtherWeight * (Other.Location - Location)
+	Location = FMath::Lerp(Location, Other.Location, OtherWeight);
+
+	//Location과 같은 방식 Lerp (ControlRotation과 FieldOfView도 같음)
+	const FRotator DeltaRotation = (Other.Rotation - Rotation).GetNormalized();
+	Rotation = Rotation + (OtherWeight * DeltaRotation);
+
+	const FRotator DeltaControlRotation = (Other.ControlRotation - ControlRotation).GetNormalized();
+	ControlRotation = ControlRotation + (OtherWeight * DeltaControlRotation);
+
+	FieldOfView = FMath::Lerp(FieldOfView, Other.FieldOfView, OtherWeight);
+}
+
+UPTCameraMode::UPTCameraMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+{
+	FieldOfView = PT_CAMERA_DEFAULT_FOV;
+	ViewPitchMin = PT_CAMERA_DEFAULT_PITCH_MIN;
+	ViewPitchMax = PT_CAMERA_DEFAULT_PITCH_MAX;
+
+	BlendTime = 0.0f;
+	BlendAlpha = 1.0f;
+	BlendWeight = 1.0f;
+
+	BlendFunction = EPTCameraModeBlendFunction::EaseOut;
+	BlendExponent = 4.0f;
+}
+
+void UPTCameraMode::UpdateCameraMode(float DeltaTime)
+{
+	//Actor를 활용하여, Pivot[Location|Rotation]을 계산하여, View를 업데이트
+	UpdateView(DeltaTime);
+
+	//BlendWeight를 DeltaTime을 활용하여, BlendAlpha 계산 후, BlendFunction에 맞게 재 매핑하여 최종 계산
+	UpdateBlending(DeltaTime);
+}
+
+void UPTCameraMode::UpdateView(float DeltaTime)
+{
+	FVector PivotLocation = GetPivotLocation();
+	FRotator PivotRotation = GetPivotRotation();
+
+	PivotRotation.Pitch = FMath::ClampAngle(PivotRotation.Pitch, ViewPitchMin, ViewPitchMax);
+
+	View.Location = PivotLocation;
+	View.Rotation = PivotRotation;
+
+	View.ControlRotation = View.Rotation;
+	View.FieldOfView = FieldOfView;
+}
+
+void UPTCameraMode::UpdateBlending(float DeltaTime)
+{
+	//BlendAlpha를 DeltaTime을 통해 계산
+	if (BlendTime > 0.0f)
+		BlendAlpha += (DeltaTime / BlendTime);
+	else
+		BlendAlpha = 1.0f;
+
+	const float Exponent = (BlendExponent > 0.0f) ? BlendExponent : 1.0f;
+	switch (BlendFunction)
+	{
+	case EPTCameraModeBlendFunction::Linear:
+		BlendWeight = BlendAlpha;
+		break;
+	case EPTCameraModeBlendFunction::EaseIn:
+		BlendWeight = FMath::InterpEaseIn(0.0f, 1.0f, BlendAlpha, Exponent);
+		break;
+	case EPTCameraModeBlendFunction::EaseOut:
+		BlendWeight = FMath::InterpEaseOut(0.0f, 1.0f, BlendAlpha, Exponent);
+		break;
+	case EPTCameraModeBlendFunction::EaseInOut:
+		BlendWeight = FMath::InterpEaseInOut(0.0f, 1.0f, BlendAlpha, Exponent);
+		break;
+
+	default:
+		checkf(false, TEXT("UpdateBlending: Ivalid BlendFunction [%d]\n"), (uint8)BlendFunction);
+		break;
+	}
+}
+
+UPTCameraComponent* UPTCameraMode::GetPTCameraComponent() const
+{
+	//UPTCameraModeStack::GetCameraModeInstacne()확인
+	return CastChecked<UPTCameraComponent>(GetOuter());
+}
+
+AActor* UPTCameraMode::GetTargetActor() const
+{
+	const UPTCameraComponent* PTCameraComponent = GetPTCameraComponent();
+	return PTCameraComponent->GetTargetActor();
+}
+
+FVector UPTCameraMode::GetPivotLocation() const
+{
+	const AActor* TargetActor = GetTargetActor();
+	check(TargetActor);
+
+	//BaseEyeHeight를 고려하여, ViewLocation을 반환
+	if (const APawn* TargetPawn = Cast<APawn>(TargetActor))
+		return TargetPawn->GetPawnViewLocation();
+
+	return TargetActor->GetActorLocation();
+}
+
+FVector UPTCameraMode::GetPivotForward() const
+{
+	const AActor* TargetActor = GetTargetActor();
+	check(TargetActor);
+
+	return TargetActor->GetActorForwardVector();
+}
+
+FRotator UPTCameraMode::GetPivotRotation() const
+{
+	const AActor* TargetActor = GetTargetActor();
+	check(TargetActor);
+
+	//GetViewRotation() 확인, 보통 Pawn의 ControlRotation을 반환
+	if (const APawn* TargetPawn = Cast<APawn>(TargetActor))
+		return TargetPawn->GetViewRotation();
+
+	return TargetActor->GetActorRotation();
+}
+
+UPTCameraModeStack::UPTCameraModeStack(const FObjectInitializer& ObjectInitializer)
+{
+}
+
+UPTCameraMode* UPTCameraModeStack::GetCameraModeInstance(TSubclassOf<UPTCameraMode>& CameraModeClass)
+{
+	check(CameraModeClass);
+
+	//CameraModeInstance에서 먼저 생성되어있는지 확인 후 반환한다.
+	for (UPTCameraMode* CameraMode : CameraModeInstance)
+	{
+		//CameraMode는 UClass를 비교한다 -> CameraMode는 클래스 타입에 하나만 생기가됨
+		if ((CameraMode != nullptr) && (CameraMode->GetClass() == CameraModeClass))
+			return CameraMode;
+	}
+
+	//CameraModeClass에 알맞는 CameraMode의 인스턴스가 없다면 생성한다.
+	UPTCameraMode* NewCameraMode = NewObject<UPTCameraMode>(GetOuter(), CameraModeClass, NAME_None, RF_NoFlags);
+	check(NewCameraMode);
+
+	CameraModeInstance.Add(NewCameraMode);
+
+	return NewCameraMode;
+}
+
+void UPTCameraModeStack::PushCameraMode(TSubclassOf<UPTCameraMode>& CameraModeClass)
+{
+	if (!CameraModeClass)
+		return;
+
+	UPTCameraMode* CameraMode = GetCameraModeInstance(CameraModeClass);
+	check(CameraMode);
+
+	int32 StackSize = CameraModeStack.Num();
+
+	//가장 최근에 이미 CameraMode가 Stacking 되었으므로 그냥 리턴
+	if ((StackSize > 0) && (CameraModeStack[0] == CameraMode))
+		return;
+
+	int32 ExistingStackIndex = INDEX_NONE;
+	float ExistingStackContribution = 1.0f;
+
+	/**
+	 * BlendWeight    |    ExistingStackCOntribution    |    ExistingStackCOntribution (accumulated)
+	 * 0.1f           |    (1.0f) * 0.1f = 0.1f         |    (1.0f - 0.1f) = 0.9f
+	 * 0.3f           |    (0.9f) * 0.3f = 0.27f        |    (1.0f - 0.3f) * 0.9f = 0.63f
+	 * 0.6f           |    (0.63f) * 0.6f = 0.378f      |    (1.0f - 0.6f) * 0.63f = 0.252f
+	 * 1.0f           |    (0.252f) * 1.0f = 0.252f     |
+	 *                |    0.1f + 0.27f + 0.378f + 0.252f = 1.0f!
+	 */
+	for (int32 StackIndex = 0; StackIndex < StackSize; ++StackIndex)
+	{
+		if (CameraModeStack[StackIndex] == CameraMode)
+		{
+			ExistingStackIndex = StackIndex;
+			ExistingStackContribution *= CameraMode->BlendWeight;
+			break;
+		}
+		else
+		{
+			//원하는 CameraMode가 아니니까, InvBlendWeight = (1.0 - BlendWeight)를 곱해줘야, 값이 누적된다
+			ExistingStackContribution *= (1.0f - CameraModeStack[StackIndex]->BlendWeight);
+		}
+	}
+
+	if (ExistingStackIndex != INDEX_NONE)
+	{
+		CameraModeStack.RemoveAt(ExistingStackIndex);
+		StackSize--;
+	}
+	else
+	{
+		ExistingStackContribution = 0;
+	}
+
+	//BlendTime이 0보다 크다는 것은 Blend를 얼마 시간동안 진행함을 의미, 따라서 ExistingStackContribution을 적용
+	const bool bShouldBlend = ((CameraMode->BlendTime > 1.0) && (StackSize > 0));
+	const float BlendWeight = (bShouldBlend ? ExistingStackContribution : 1.0f);
+	CameraMode->BlendWeight = BlendWeight;
+
+	CameraModeStack.Insert(CameraMode, 0);
+	CameraModeStack.Last()->BlendWeight = 1.0f;
+}
+
+void UPTCameraModeStack::EvaluateStack(float DeltaTime, FPTCameraModeView& OutCameraModeView)
+{
+	//Top -> Bottom [0 -> Num]까지 순차적으로 Stack에 있는 CameraMode 업데이트
+	UpdateStack(DeltaTime);
+
+	//Bottom -> Top 까지 CameraModeStack에 대해 Blending 진행
+	BlendStack(OutCameraModeView);
+}
+
+void UPTCameraModeStack::UpdateStack(float DeltaTime)
+{
+	const int32 StackSize = CameraModeStack.Num();
+	if (StackSize <= 0)
+		return;
+
+	int32 RemoveCount = 0;
+	int32 RemoveIndex = INDEX_NONE;
+	for (int32 StackIndex = 0; StackIndex < StackSize; ++StackIndex)
+	{
+		UPTCameraMode* CameraMode = CameraModeStack[StackIndex];
+		check(CameraMode);
+
+		CameraMode->UpdateCameraMode(DeltaTime);
+
+		if (CameraMode->BlendWeight >= 1.0f)
+		{
+			RemoveIndex = (StackIndex + 1);
+			RemoveCount = (StackSize - RemoveIndex);
+			break;
+		}
+	}
+
+	if (RemoveIndex > 0)
+		CameraModeStack.RemoveAt(RemoveIndex,RemoveCount);
+}
+
+void UPTCameraModeStack::BlendStack(FPTCameraModeView& OutCameraModeView) const
+{
+	const int32 StackSize = CameraModeStack.Num();
+	if (StackSize <= 0)
+		return;
+
+	//CameraModeStack은 Botton->Top 순서로 Blend를 진행한다
+	const UPTCameraMode* CameraMode = CameraModeStack[StackSize - 1];
+	check(CameraMode);
+
+	OutCameraModeView = CameraMode->View;
+
+	//이미 Index = [StackSize-1] 를 OutCameraModeView로 지정했으므로, StackSize - 2 부터 순회하면 된다.
+	for (int32 StackIndex = (StackSize - 2); StackIndex >= 0; --StackIndex)
+	{
+		CameraMode = CameraModeStack[StackIndex];
+		check(CameraMode);
+
+		OutCameraModeView.Blend(CameraMode->View, CameraMode->BlendWeight);
+	}
+}
