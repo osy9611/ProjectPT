@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTExperienceDefinition_generated_h
 
-#define FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTExperienceDefinition(); \
 	friend struct Z_Construct_UClass_UPTExperienceDefinition_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPTExperienceDefinition)
 
 
-#define FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPTExperienceDefinition(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UPTExperienceDefinition();
 
 
-#define FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_13_PROLOG
-#define FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_13_PROLOG
+#define FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_INCLASS_NO_PURE_DECLS \
-	FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UClass* StaticClass<class UPTExperienceDefinition>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

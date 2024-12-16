@@ -14,14 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTInputConfig_generated_h
 
-#define FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_16_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Input_PTInputConfig_h_16_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPTInputAction_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPTInputAction>();
 
-#define FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_31_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Input_PTInputConfig_h_31_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTInputConfig(); \
 	friend struct Z_Construct_UClass_UPTInputConfig_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UPTInputConfig)
 
 
-#define FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_31_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Input_PTInputConfig_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTInputConfig(UPTInputConfig&&); \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UPTInputConfig();
 
 
-#define FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_28_PROLOG
-#define FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_31_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Input_PTInputConfig_h_28_PROLOG
+#define FID_Client_Source_ProjectPT_Input_PTInputConfig_h_31_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_31_INCLASS_NO_PURE_DECLS \
-	FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_31_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Input_PTInputConfig_h_31_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Input_PTInputConfig_h_31_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,7 +55,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UClass* StaticClass<class UPTInputConfig>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Input_PTInputConfig_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

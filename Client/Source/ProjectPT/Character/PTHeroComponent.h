@@ -38,11 +38,15 @@ public:
 	TSubclassOf<UPTCameraMode> DetermineCameraMode() const;
 	void InitializePlayerInput(UInputComponent* PlayerInputComponent);
 	void Input_Move(const FInputActionValue& InputActionValue);
+	void SetMove(bool IsMove) { bIsMove = IsMove; }
 	void Input_LookMouse(const FInputActionValue& InputActionValue);
 	void Input_Zoom(const FInputActionValue& InputActionValue);
 
 	void Input_AbilityInputTagPressed(FGameplayTag InputTag);
 	void Input_AbilityInputTagReleased(FGameplayTag InputTag);
+
+	UPROPERTY(EditAnywhere)
+	bool bIsMove = true;
 
 	UPROPERTY(EditAnywhere)
 	TArray<FPTMappableConfigPair> DefaultInputConfigs;

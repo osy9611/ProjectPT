@@ -39,7 +39,7 @@ struct Z_Construct_UClass_UPTAnimNotify_AttackHitCheck_Statics
 		{ "ModuleRelativePath", "AbilitySystem/Notify/PTAnimNotify_AttackHitCheck.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TriggerGameplayTag_MetaData[] = {
-		{ "Category", "PT|Event" },
+		{ "Category", "Event" },
 		{ "ModuleRelativePath", "AbilitySystem/Notify/PTAnimNotify_AttackHitCheck.h" },
 	};
 #endif // WITH_METADATA
@@ -51,7 +51,7 @@ struct Z_Construct_UClass_UPTAnimNotify_AttackHitCheck_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAnimNotify_AttackHitCheck_Statics::NewProp_TriggerGameplayTag = { "TriggerGameplayTag", nullptr, (EPropertyFlags)0x0020080000010011, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAnimNotify_AttackHitCheck, TriggerGameplayTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TriggerGameplayTag_MetaData), NewProp_TriggerGameplayTag_MetaData) }; // 1298103297
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAnimNotify_AttackHitCheck_Statics::NewProp_TriggerGameplayTag = { "TriggerGameplayTag", nullptr, (EPropertyFlags)0x0020080000000011, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAnimNotify_AttackHitCheck, TriggerGameplayTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TriggerGameplayTag_MetaData), NewProp_TriggerGameplayTag_MetaData) }; // 1298103297
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTAnimNotify_AttackHitCheck_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAnimNotify_AttackHitCheck_Statics::NewProp_TriggerGameplayTag,
 };
@@ -93,14 +93,14 @@ UPTAnimNotify_AttackHitCheck::~UPTAnimNotify_AttackHitCheck() {}
 // End Class UPTAnimNotify_AttackHitCheck
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAnimNotify_AttackHitCheck, UPTAnimNotify_AttackHitCheck::StaticClass, TEXT("UPTAnimNotify_AttackHitCheck"), &Z_Registration_Info_UClass_UPTAnimNotify_AttackHitCheck, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAnimNotify_AttackHitCheck), 3115141646U) },
+		{ Z_Construct_UClass_UPTAnimNotify_AttackHitCheck, UPTAnimNotify_AttackHitCheck::StaticClass, TEXT("UPTAnimNotify_AttackHitCheck"), &Z_Registration_Info_UClass_UPTAnimNotify_AttackHitCheck, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAnimNotify_AttackHitCheck), 1518448475U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_2342245864(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_4053885070(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Notify_PTAnimNotify_AttackHitCheck_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -46,11 +46,17 @@ struct Z_Construct_UClass_UPTHeroComponent_Statics
 		{ "ToolTip", "\xc4\xab\xef\xbf\xbd\xde\xb6\xef\xbf\xbd, \xef\xbf\xbd\xd4\xb7\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc3\xb7\xef\xbf\xbd\xef\xbf\xbd\xcc\xbe\xee\xb0\xa1 \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb4\xef\xbf\xbd \xef\xbf\xbd\xc3\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xca\xb1\xef\xbf\xbd\xc8\xad\xef\xbf\xbd\xef\xbf\xbd \xc3\xb3\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb4\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae\nPawn\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xbc\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb1\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd8\xbc\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsMove_MetaData[] = {
+		{ "Category", "PTHeroComponent" },
+		{ "ModuleRelativePath", "Character/PTHeroComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultInputConfigs_MetaData[] = {
 		{ "Category", "PTHeroComponent" },
 		{ "ModuleRelativePath", "Character/PTHeroComponent.h" },
 	};
 #endif // WITH_METADATA
+	static void NewProp_bIsMove_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsMove;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_DefaultInputConfigs_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_DefaultInputConfigs;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -61,9 +67,15 @@ struct Z_Construct_UClass_UPTHeroComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+void Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_bIsMove_SetBit(void* Obj)
+{
+	((UPTHeroComponent*)Obj)->bIsMove = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_bIsMove = { "bIsMove", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPTHeroComponent), &Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_bIsMove_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsMove_MetaData), NewProp_bIsMove_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_DefaultInputConfigs_Inner = { "DefaultInputConfigs", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FPTMappableConfigPair, METADATA_PARAMS(0, nullptr) }; // 1812802048
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_DefaultInputConfigs = { "DefaultInputConfigs", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTHeroComponent, DefaultInputConfigs), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultInputConfigs_MetaData), NewProp_DefaultInputConfigs_MetaData) }; // 1812802048
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTHeroComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_bIsMove,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_DefaultInputConfigs_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTHeroComponent_Statics::NewProp_DefaultInputConfigs,
 };
@@ -108,14 +120,14 @@ UPTHeroComponent::~UPTHeroComponent() {}
 // End Class UPTHeroComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Character_PTHeroComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTHeroComponent, UPTHeroComponent::StaticClass, TEXT("UPTHeroComponent"), &Z_Registration_Info_UClass_UPTHeroComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTHeroComponent), 2952035896U) },
+		{ Z_Construct_UClass_UPTHeroComponent, UPTHeroComponent::StaticClass, TEXT("UPTHeroComponent"), &Z_Registration_Info_UClass_UPTHeroComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTHeroComponent), 484299455U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Character_PTHeroComponent_h_306957607(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Character_PTHeroComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Character_PTHeroComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_720456168(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

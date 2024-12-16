@@ -4,6 +4,7 @@
 #include "PTCharacter.h"
 #include "ProjectPT/Camera/PTCameraComponent.h"
 #include "ProjectPT/Character/PTPawnExtensionComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 
 APTCharacter::APTCharacter()
 {

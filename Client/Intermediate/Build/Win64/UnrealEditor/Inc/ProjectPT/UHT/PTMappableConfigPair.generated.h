@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTMappableConfigPair_generated_h
 
-#define FID_ProjectPT_Source_ProjectPT_Input_PTMappableConfigPair_h_14_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Input_PTMappableConfigPair_h_14_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPTMappableConfigPair_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPTMappableConfigPair>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ProjectPT_Source_ProjectPT_Input_PTMappableConfigPair_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Input_PTMappableConfigPair_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

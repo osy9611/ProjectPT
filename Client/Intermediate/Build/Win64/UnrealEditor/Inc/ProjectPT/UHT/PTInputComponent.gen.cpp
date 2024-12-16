@@ -81,14 +81,14 @@ UPTInputComponent::~UPTInputComponent() {}
 // End Class UPTInputComponent
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputComponent_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPTInputComponent, UPTInputComponent::StaticClass, TEXT("UPTInputComponent"), &Z_Registration_Info_UClass_UPTInputComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTInputComponent), 3050318910U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputComponent_h_84677737(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputComponent_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputComponent_h_84677737(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

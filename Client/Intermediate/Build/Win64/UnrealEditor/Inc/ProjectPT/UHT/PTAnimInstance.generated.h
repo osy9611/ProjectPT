@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTAnimInstance_generated_h
 
-#define FID_ProjectPT_Source_ProjectPT_Animation_PTAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTAnimInstance(); \
 	friend struct Z_Construct_UClass_UPTAnimInstance_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPTAnimInstance)
 
 
-#define FID_ProjectPT_Source_ProjectPT_Animation_PTAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPTAnimInstance(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UPTAnimInstance();
 
 
-#define FID_ProjectPT_Source_ProjectPT_Animation_PTAnimInstance_h_12_PROLOG
-#define FID_ProjectPT_Source_ProjectPT_Animation_PTAnimInstance_h_15_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_12_PROLOG
+#define FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ProjectPT_Source_ProjectPT_Animation_PTAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ProjectPT_Source_ProjectPT_Animation_PTAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UClass* StaticClass<class UPTAnimInstance>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ProjectPT_Source_ProjectPT_Animation_PTAnimInstance_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

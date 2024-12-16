@@ -319,7 +319,7 @@ UPTCameraModeStack::~UPTCameraModeStack() {}
 // End Class UPTCameraModeStack
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Camera_PTCameraMode_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EPTCameraModeBlendFunction_StaticEnum, TEXT("EPTCameraModeBlendFunction"), &Z_Registration_Info_UEnum_EPTCameraModeBlendFunction, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3905394854U) },
@@ -329,9 +329,9 @@ struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Camera_PTCameraMode_
 		{ Z_Construct_UClass_UPTCameraModeStack, UPTCameraModeStack::StaticClass, TEXT("UPTCameraModeStack"), &Z_Registration_Info_UClass_UPTCameraModeStack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTCameraModeStack), 1169239955U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Camera_PTCameraMode_h_1826263524(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Camera_PTCameraMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Camera_PTCameraMode_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_1826263524(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Camera_PTCameraMode_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Camera_PTCameraMode_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

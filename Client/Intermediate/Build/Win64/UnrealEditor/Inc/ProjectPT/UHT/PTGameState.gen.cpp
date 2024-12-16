@@ -93,14 +93,14 @@ APTGameState::~APTGameState() {}
 // End Class APTGameState
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTGameState_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTGameState_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_APTGameState, APTGameState::StaticClass, TEXT("APTGameState"), &Z_Registration_Info_UClass_APTGameState, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTGameState), 785682662U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTGameState_h_2783980216(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTGameState_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTGameState_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTGameState_h_2783980216(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTGameState_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTGameState_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -92,14 +92,14 @@ UPTExperienceDefinition::~UPTExperienceDefinition() {}
 // End Class UPTExperienceDefinition
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPTExperienceDefinition, UPTExperienceDefinition::StaticClass, TEXT("UPTExperienceDefinition"), &Z_Registration_Info_UClass_UPTExperienceDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTExperienceDefinition), 399392499U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_1995623396(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_1995623396(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

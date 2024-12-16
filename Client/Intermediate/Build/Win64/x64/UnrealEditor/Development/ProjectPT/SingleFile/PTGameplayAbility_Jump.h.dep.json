@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\singlefile\\ptgameplayability_jump.h",
+        "Source": "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\singlefile\\ptgameplayability_jump.h",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability_jump.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability_jump.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -432,7 +432,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\algo\\impl\\rangepointertype.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\ray.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\vector2dhalf.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\gameplayability.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectmacros.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\script.h",
@@ -760,8 +760,8 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\gameplaytasks\\public\\gameplaytasktypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytasks\\uht\\gameplaytaskownerinterface.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayability.generated.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability.generated.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability_jump.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability_jump.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

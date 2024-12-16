@@ -151,14 +151,14 @@ UPTGameplayAbility_Jump::~UPTGameplayAbility_Jump() {}
 // End Class UPTGameplayAbility_Jump
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPTGameplayAbility_Jump, UPTGameplayAbility_Jump::StaticClass, TEXT("UPTGameplayAbility_Jump"), &Z_Registration_Info_UClass_UPTGameplayAbility_Jump, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_Jump), 2237787719U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_1736177329(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_1736177329(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Jump_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

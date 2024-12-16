@@ -9,17 +9,12 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FGameplayAbilityTargetDataHandle;
 #ifdef PROJECTPT_PTGameplayAbility_MeleeAttack_generated_h
 #error "PTGameplayAbility_MeleeAttack.generated.h already included, missing '#pragma once' in PTGameplayAbility_MeleeAttack.h"
 #endif
 #define PROJECTPT_PTGameplayAbility_MeleeAttack_generated_h
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOnTraceResultCallback);
-
-
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTGameplayAbility_MeleeAttack(); \
 	friend struct Z_Construct_UClass_UPTGameplayAbility_MeleeAttack_Statics; \
@@ -28,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPTGameplayAbility_MeleeAttack)
 
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTGameplayAbility_MeleeAttack(UPTGameplayAbility_MeleeAttack&&); \
@@ -40,13 +35,12 @@ public: \
 	NO_API virtual ~UPTGameplayAbility_MeleeAttack();
 
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_12_PROLOG
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_15_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_13_PROLOG
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_16_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -54,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UClass* StaticClass<class UPTGameplayAbility_MeleeAttack>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_MeleeAttack_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

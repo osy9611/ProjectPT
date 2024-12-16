@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTGameplayAbility_generated_h
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTGameplayAbility(); \
 	friend struct Z_Construct_UClass_UPTGameplayAbility_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPTGameplayAbility)
 
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTGameplayAbility(UPTGameplayAbility&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UPTGameplayAbility();
 
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_23_PROLOG
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_23_PROLOG
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_INCLASS_NO_PURE_DECLS \
-	FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UClass* StaticClass<class UPTGameplayAbility>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ProjectPT_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h
 
 
 #define FOREACH_ENUM_EPTABILITYACTIVATIONPOLICY(op) \

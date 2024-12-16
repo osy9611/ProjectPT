@@ -41,23 +41,32 @@ void UPTAbilitySystemComponent::AbilityInputTagPressed(const FGameplayTag& Input
 	{
 		for (const FGameplayAbilitySpec& AbilitySpec : ActivatableAbilities.Items)
 		{
-			InputPressedSpecHandles.AddUnique(AbilitySpec.Handle);
-			InputHeldSpecHandles.AddUnique(AbilitySpec.Handle);
+			if (AbilitySpec.Ability && (AbilitySpec.DynamicAbilityTags.HasTagExact(InputTag)))
+			{
+
+				InputPressedSpecHandles.AddUnique(AbilitySpec.Handle);
+				InputHeldSpecHandles.AddUnique(AbilitySpec.Handle);
+			}
 		}
 	}
 }
-
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySystemComponent::AbilityInputTagReleased(const FGameplayTag& InputTag)
 {
 	if (InputTag.IsValid())
 	{
 		for (const FGameplayAbilitySpec& AbilitySpec : ActivatableAbilities.Items)
 		{
-			InputReleasedSpecHandles.AddUnique(AbilitySpec.Handle);
-			InputHeldSpecHandles.Remove(AbilitySpec.Handle);
+			if (AbilitySpec.Ability && AbilitySpec.DynamicAbilityTags.HasTagExact(InputTag))
+			{
+				InputReleasedSpecHandles.AddUnique(AbilitySpec.Handle);
+				InputHeldSpecHandles.Remove(AbilitySpec.Handle);
+			}
 		}
 	}
 }
+PRAGMA_ENABLE_OPTIMIZATION
+
 PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySystemComponent::ProcessAbilityInput(float DeltaTime, bool bGamePaused)
 {

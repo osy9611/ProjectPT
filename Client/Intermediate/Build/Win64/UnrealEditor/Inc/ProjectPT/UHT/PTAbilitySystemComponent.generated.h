@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTAbilitySystemComponent_generated_h
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTAbilitySystemComponent(); \
 	friend struct Z_Construct_UClass_UPTAbilitySystemComponent_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPTAbilitySystemComponent)
 
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTAbilitySystemComponent(UPTAbilitySystemComponent&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UPTAbilitySystemComponent();
 
 
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_12_PROLOG
-#define FID_ProjectPT_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_12_PROLOG
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_ProjectPT_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_INCLASS_NO_PURE_DECLS \
-	FID_ProjectPT_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UClass* StaticClass<class UPTAbilitySystemComponent>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_ProjectPT_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySystemComponent_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

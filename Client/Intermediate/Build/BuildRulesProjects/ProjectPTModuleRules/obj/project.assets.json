@@ -8567,11 +8567,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Unreal\\ProjectPT\\Intermediate\\Build\\BuildRulesProjects\\ProjectPTModuleRules\\ProjectPTModuleRules.csproj",
+      "projectUniqueName": "D:\\Study\\Unreal\\ProjectPT\\Client\\Intermediate\\Build\\BuildRulesProjects\\ProjectPTModuleRules\\ProjectPTModuleRules.csproj",
       "projectName": "ProjectPTModuleRules",
-      "projectPath": "D:\\Study\\Unreal\\ProjectPT\\Intermediate\\Build\\BuildRulesProjects\\ProjectPTModuleRules\\ProjectPTModuleRules.csproj",
+      "projectPath": "D:\\Study\\Unreal\\ProjectPT\\Client\\Intermediate\\Build\\BuildRulesProjects\\ProjectPTModuleRules\\ProjectPTModuleRules.csproj",
       "packagesPath": "C:\\Users\\oh\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Unreal\\ProjectPT\\Intermediate\\Build\\BuildRulesProjects\\ProjectPTModuleRules\\obj\\",
+      "outputPath": "D:\\Study\\Unreal\\ProjectPT\\Client\\Intermediate\\Build\\BuildRulesProjects\\ProjectPTModuleRules\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oh\\AppData\\Roaming\\NuGet\\NuGet.Config",

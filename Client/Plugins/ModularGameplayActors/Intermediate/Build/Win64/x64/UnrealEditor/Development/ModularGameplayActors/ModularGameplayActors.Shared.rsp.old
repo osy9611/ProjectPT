@@ -285,6 +285,9 @@
 /I "D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Intermediate\Build\Win64\UnrealEditor\Inc\ModularGameplayActors\UHT"
 /I "D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Source"
 /I "D:\Study\Unreal\ProjectPT\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public"
+/I "..\Plugins\Runtime\ModularGameplay\Intermediate\Build\Win64\UnrealEditor\Inc\ModularGameplay\UHT"
+/I "..\Plugins\Runtime\ModularGameplay\Source"
+/I "..\Plugins\Runtime\ModularGameplay\Source\ModularGameplay\Public"
 /external:W0
 /external:I "ThirdParty\LibTiff\Source\Win64"
 /external:I "ThirdParty\LibTiff\Source"

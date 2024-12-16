@@ -181,7 +181,7 @@ UPTInputConfig::~UPTInputConfig() {}
 // End Class UPTInputConfig
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputConfig_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FPTInputAction::StaticStruct, Z_Construct_UScriptStruct_FPTInputAction_Statics::NewStructOps, TEXT("PTInputAction"), &Z_Registration_Info_UScriptStruct_PTInputAction, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPTInputAction), 2254772067U) },
@@ -190,9 +190,9 @@ struct Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_
 		{ Z_Construct_UClass_UPTInputConfig, UPTInputConfig::StaticClass, TEXT("UPTInputConfig"), &Z_Registration_Info_UClass_UPTInputConfig, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTInputConfig), 2717184307U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_1427711296(TEXT("/Script/ProjectPT"),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_Statics::ClassInfo),
-	Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_ProjectPT_Source_ProjectPT_Input_PTInputConfig_h_Statics::ScriptStructInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputConfig_h_1427711296(TEXT("/Script/ProjectPT"),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputConfig_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputConfig_h_Statics::ClassInfo),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputConfig_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Input_PTInputConfig_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

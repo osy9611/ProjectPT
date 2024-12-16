@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\study\\unreal\\projectpt\\source\\projectpt\\abilitysystem\\ptabilitysystemcomponent.cpp",
+        "Source": "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\ptabilitysystemcomponent.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\abilitysystem\\ptabilitysystemcomponent.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\ptabilitysystemcomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -773,9 +773,9 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemreplicationproxyinterface.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemreplicationproxyinterface.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptabilitysystemcomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptabilitysystemcomponent.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

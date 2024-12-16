@@ -23,6 +23,9 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	int32 AbilityLevel = 1;
+
+	UPROPERTY(EditDefaultsOnly)
+	bool isTrigger = false;
 };
 
 USTRUCT(BlueprintType)
@@ -39,7 +42,7 @@ protected:
 };
 
 /**
- * 
+ *
  */
 UCLASS()
 class PROJECTPT_API UPTAbilitySet : public UPrimaryDataAsset

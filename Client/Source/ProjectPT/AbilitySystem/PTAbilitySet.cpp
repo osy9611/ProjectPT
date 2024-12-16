@@ -48,5 +48,6 @@ void UPTAbilitySet::GiveToAbilitySystem(UPTAbilitySystemComponent* ASC, FPTAbili
 		const FGameplayAbilitySpecHandle AbilitySpecHandle = ASC->GiveAbility(AbilitySpec);
 		if (OutGrantedHandles)
 			OutGrantedHandles->AddAbilitySpecHandle(AbilitySpecHandle);
+
 	}
 }

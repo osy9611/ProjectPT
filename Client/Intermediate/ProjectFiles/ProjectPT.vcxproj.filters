@@ -11,10 +11,7 @@
     <None Include="..\..\Source\ProjectPTEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\.gitattributes" />
-    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
-    <None Include="..\..\README.md" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -120,6 +117,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTAbilitySystemComponent.h">
       <Filter>Source\ProjectPT\AbilitySystem</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetActor_Trace.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetActor_Trace.h">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\AbilitySystem\Abilities">
       <UniqueIdentifier>{FF8EE166-F3F4-3D54-A75D-25F1DA21A9EB}</UniqueIdentifier>
     </Filter>
@@ -139,6 +142,12 @@
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeAttack.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.h">
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\AbilitySystem\Notify">

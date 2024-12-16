@@ -515,10 +515,7 @@
     <None Include="..\..\ProjectPT.uproject"/>
     <None Include="..\..\Source\ProjectPT.Target.cs"/>
     <None Include="..\..\Source\ProjectPTEditor.Target.cs"/>
-    <None Include="..\..\.gitattributes"/>
-    <None Include="..\..\.gitignore"/>
     <None Include="..\..\.vsconfig"/>
-    <None Include="..\..\README.md"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
@@ -568,6 +565,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTAbilitySystemComponent.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetActor_Trace.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetActor_Trace.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
@@ -583,6 +585,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeAttack.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Notify\PTAnimNotify_AttackHitCheck.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_1)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_1)</ForcedIncludeFiles>

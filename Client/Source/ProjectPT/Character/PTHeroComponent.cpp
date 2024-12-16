@@ -249,6 +249,9 @@ void UPTHeroComponent::InitializePlayerInput(UInputComponent* PlayerInputCompone
 
 void UPTHeroComponent::Input_Move(const FInputActionValue& InputActionValue)
 {
+	if (!bIsMove)
+		return;
+
 	APawn* Pawn = GetPawn<APawn>();
 	AController* Controller = Pawn ? Pawn->GetController() : nullptr;
 
