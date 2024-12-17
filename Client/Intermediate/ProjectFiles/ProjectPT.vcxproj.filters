@@ -309,5 +309,11 @@
     <ClInclude Include="..\..\Source\ProjectPT\System\PTGameInstance.h">
       <Filter>Source\ProjectPT\System</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\Table">
+      <UniqueIdentifier>{B1224CBA-04C0-387D-8747-7E0CDF0917FC}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectPT\Table\GenerateTableData.h">
+      <Filter>Source\ProjectPT\Table</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

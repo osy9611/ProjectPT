@@ -32,6 +32,8 @@ void UPTGameplayAbility_MeleeHitCheck::ActivateAbility(const FGameplayAbilitySpe
 
 	UE_LOG(PTLog_GAS, Log, TEXT("Hit MeleeCheck"));
 
+
+
 	EndAbility(Handle, ActorInfo, ActivationInfo, true, false);
 }
 
