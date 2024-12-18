@@ -31,5 +31,6 @@ public:
 	TSharedPtr<class FUICommandList> PluginCommands;
 
 	FString CSVPathStr;
+	FString EnumPathStr;
 	bool bIsLiveCoding;
 };

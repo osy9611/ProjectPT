@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['CSVReader.py'],
+    ['D:\\Study\\Unreal\\ProjectPT\\Table\\python\\CSVReader.py'],
     pathex=[],
     binaries=[],
     datas=[],

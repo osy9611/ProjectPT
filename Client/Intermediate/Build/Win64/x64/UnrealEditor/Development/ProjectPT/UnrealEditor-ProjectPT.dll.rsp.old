@@ -37,7 +37,7 @@
 /FUNCTIONPADMIN:6
 "D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectPT\Module.ProjectPT.cpp.obj"
-"D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectPT\DataTableMakerCommand.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectPT\EnumGenerateData.cpp.obj"
 "D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectPT\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Plugins\Runtime\ModularGameplay\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplay\UnrealEditor-ModularGameplay.lib"
@@ -50,8 +50,6 @@
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayTasks\UnrealEditor-GameplayTasks.lib"
 "..\Plugins\Runtime\GameFeatures\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameFeatures\UnrealEditor-GameFeatures.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\InputCore\UnrealEditor-InputCore.lib"
-"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Json\UnrealEditor-Json.lib"
-"..\Intermediate\Build\Win64\x64\UnrealEditor\Development\JsonUtilities\UnrealEditor-JsonUtilities.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

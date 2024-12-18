@@ -30,7 +30,7 @@ def create_tabledatas():
             csv_file_path = os.path.join(csv_folder,file)
             ustruct_name = f'/Script/{project_name}.{file_name}'
             data_table_name = f"DT_{file_name}"
-            asset_folder = "/Game/Table"
+            asset_folder = "/Game/Table/Data"
             create_tabledata(csv_file_path, ustruct_name, data_table_name, asset_folder)
 
 def create_tabledata(csv_file_path, ustruct_name, data_table_name, asset_folder):

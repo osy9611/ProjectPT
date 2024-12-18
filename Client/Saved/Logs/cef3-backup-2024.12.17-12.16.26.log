@@ -1,4 +1,0 @@
-[1217/211428.795:ERROR:backend_impl.cc(1041)] Critical error found -8
-[1217/211428.796:ERROR:entry_impl.cc(1075)] No file for b3020154
-[1217/211428.797:WARNING:storage_block-inl.h(146)] Failed data load.
-[1217/211626.928:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled

@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.TableGenerator.cpp.obj": [
+			"TableGenerator.cpp.obj",
+			"TableGeneratorStyle.cpp.obj",
+			"TableGeneratorCommands.cpp.obj"
+		]
+	}
+}

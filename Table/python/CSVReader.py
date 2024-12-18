@@ -7,16 +7,6 @@ import pandas
 #current path
 current_path = os.getcwd()
 
-json_file_path = current_path+"\config.json"
-print(json_file_path)
-
-if os.path.exists(json_file_path):
-    try:
-        with open(json_file_path,'r') as file:
-            data = json.load(file)
-    except json.JSONDecodeError as e:
-        print("Json Load Faile : {e}")
-
 print("Start Generate CSV File")
 
 #엑셀 폴더 경로
@@ -45,5 +35,16 @@ for file in excel_files:
     csv_filename = os.path.splitext(os.path.basename(file))[0]
     csv_file_path = os.path.join(current_path+"\CSV", f"{csv_filename}.csv") 
     filtered_df.to_csv(csv_file_path, index=False, header=False)
+
+excel_folder_path = current_path+"\Enum"
+excel_files = glob.glob(os.path.join(excel_folder_path, "*.xlsx"))
+for file in excel_files:    
+    if os.path.basename(file).startswith("~$"):
+        continue
+   
+    df = pandas.read_excel(file)
+    csv_filename = os.path.splitext(os.path.basename(file))[0]
+    csv_file_path = os.path.join(current_path+"\Enum", f"{csv_filename}.csv") 
+    df.to_csv(csv_file_path, index=False, header=False,encoding='utf-8-sig')
 
 print("Complete CSV Generate!")

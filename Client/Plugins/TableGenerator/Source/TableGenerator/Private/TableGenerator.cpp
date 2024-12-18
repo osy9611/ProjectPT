@@ -134,7 +134,13 @@ void FTableGeneratorModule::MakeDataTableStruct()
 	UE_LOG(LogTemp, Log, TEXT("----- [TableGenerator] Make Excel To CSV AND C++ STRUCT -----"));
 	UE_LOG(LogTemp, Log, TEXT(" "));
 
-	FString PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "TableGenerator.py");
+
+	FString PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "EnumGenerator.py");
+	PythonScriptPath = FPaths::ConvertRelativePathToFull(PythonScriptPath);
+	PythonScriptPath.InsertAt(0, "py ");
+	GEngine->Exec(nullptr, *PythonScriptPath);	
+
+	PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "TableGenerator.py");
 	PythonScriptPath = FPaths::ConvertRelativePathToFull(PythonScriptPath);
 	PythonScriptPath.InsertAt(0, "py ");
 	GEngine->Exec(nullptr, *PythonScriptPath);
@@ -180,6 +186,7 @@ void FTableGeneratorModule::LoadConfigData()
 	{
 		//Json 데이터 읽기
 		CSVPathStr = JsonObject->GetStringField(TEXT("CSVFolderPath"));
+		EnumPathStr = JsonObject->GetStringField(TEXT("EnumFolderPath"));
 		bIsLiveCoding = JsonObject->GetBoolField(TEXT("UseLiveCoding"));
 	}
 }
@@ -191,7 +198,8 @@ void FTableGeneratorModule::SaveConfigData()
 
 	TSharedPtr<FJsonObject> JsonObject = MakeShareable(new FJsonObject());
 	JsonObject->SetStringField("CSVFolderPath", CSVPathStr);
-	JsonObject->SetBoolField("seLiveCoding", bIsLiveCoding);
+	JsonObject->SetStringField("EnumFolderPath", EnumPathStr);
+	JsonObject->SetBoolField("UseLiveCoding", bIsLiveCoding);
 
 	FString JsonContent;
 	TSharedRef<TJsonWriter<>> JsonWriter = TJsonWriterFactory<>::Create(&JsonContent);
@@ -228,6 +236,22 @@ TSharedRef<SDockTab> FTableGeneratorModule::SpawnTab(const FSpawnTabArgs& SpawnT
 							})
 						.OnTextCommitted_Lambda([&](const FText& NewText, ETextCommit::Type CommitType) {
 						CSVPathStr = NewText.ToString();
+						UE_LOG(LogTemp, Log, TEXT("First Input Finalized: %s"), *NewText.ToString());
+							})
+				]
+
+				+ SVerticalBox::Slot()
+				.AutoHeight()
+				.Padding(10)
+				[
+					SNew(SEditableTextBox)
+						.HintText(LOCTEXT("InputField1Hint", "Enter first value..."))
+						.Text(FText::FromString(EnumPathStr))
+						.OnTextChanged_Lambda([](const FText& NewText) {
+						UE_LOG(LogTemp, Log, TEXT("First Input Changed: %s"), *NewText.ToString());
+							})
+						.OnTextCommitted_Lambda([&](const FText& NewText, ETextCommit::Type CommitType) {
+						EnumPathStr = NewText.ToString();
 						UE_LOG(LogTemp, Log, TEXT("First Input Finalized: %s"), *NewText.ToString());
 							})
 				]

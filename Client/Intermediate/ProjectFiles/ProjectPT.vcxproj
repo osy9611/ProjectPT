@@ -726,6 +726,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\System\PTGameInstance.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Table\EnumGenerateData.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Table\EnumGenerateData.h"/>
     <ClInclude Include="..\..\Source\ProjectPT\Table\GenerateTableData.h"/>
   </ItemGroup>
   <PropertyGroup>

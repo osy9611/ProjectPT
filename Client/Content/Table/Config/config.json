@@ -1,4 +1,5 @@
 {
 	"CSVFolderPath": "D:\\Study\\Unreal\\ProjectPT\\Table\\CSV",
-	"seLiveCoding": true
+	"EnumFolderPath" : "D:\\Study\\Unreal\\ProjectPT\\Table\\Enum",
+	"UseLiveCoding": true
 }

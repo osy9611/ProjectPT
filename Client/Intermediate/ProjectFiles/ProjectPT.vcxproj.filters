@@ -369,6 +369,12 @@
     <Filter Include="Source\ProjectPT\Table">
       <UniqueIdentifier>{B1224CBA-04C0-387D-8747-7E0CDF0917FC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Table\EnumGenerateData.cpp">
+      <Filter>Source\ProjectPT\Table</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Table\EnumGenerateData.h">
+      <Filter>Source\ProjectPT\Table</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectPT\Table\GenerateTableData.h">
       <Filter>Source\ProjectPT\Table</Filter>
     </ClInclude>

@@ -1,0 +1,12 @@
+﻿,!Enum,PTElementType,,
+,!Enumerator,NONE,,
+,!Enumerator,SUPERHUMAN_TYPE,,화염
+,!Enumerator,ELEMENTAL_TYPE,,나무
+,!Enumerator,FIGHTING_TYPE,,바다
+,!Enumerator,ILLUSION_TYPE,,어둠
+,!Enumerator,ILLUSION_TYPE2,!End,어둠2
+,,,,
+,!Enum,MonsterType,,Monster의 종류 (스테이지에 출력 되는 오브젝트와 연관)
+,!Enumerator,NORMAL,,일반
+,!Enumerator,BOSS,,보스
+,!Enumerator,UNIQUE,!End,유니크

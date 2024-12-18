@@ -51,6 +51,7 @@
 			"PTHeroComponent.cpp.obj",
 			"PTPawnData.cpp.obj",
 			"PTPawnExtensionComponent.cpp.obj",
+			"DataTableMakerCommand.cpp.obj",
 			"PTExperienceDefinition.cpp.obj",
 			"PTExperienceManagerComponent.cpp.obj",
 			"PTGameModeBase.cpp.obj",
@@ -62,10 +63,10 @@
 			"PTPlayerState.cpp.obj",
 			"ProjectPT.cpp.obj",
 			"PTGameplayTags.cpp.obj",
+			"PTLogChannels.cpp.obj",
 			"PTAssetManager.cpp.obj",
 			"PTGameInstance.cpp.obj",
-			"DataTableMakerCommand.cpp.obj",
-			"PTLogChannels.cpp.obj"
+			"EnumGenerateData.cpp.obj"
 		]
 	}
 }
