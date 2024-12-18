@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\study\\unreal\\projectpt\\client\\plugins\\tablegenerator\\source\\tablegenerator\\private\\tablegeneratorcommands.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\tablegenerator\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\tablegenerator\\definitions.tablegenerator.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\tablegenerator\\source\\tablegenerator\\public\\tablegeneratorcommands.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\tablegenerator\\source\\tablegenerator\\public\\tablegeneratorstyle.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

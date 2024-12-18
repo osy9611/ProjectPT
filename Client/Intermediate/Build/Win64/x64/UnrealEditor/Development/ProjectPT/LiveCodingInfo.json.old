@@ -2,6 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ProjectPT.cpp.obj": [
+			"GenerateTableData.gen.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
@@ -60,11 +62,10 @@
 			"PTPlayerState.cpp.obj",
 			"ProjectPT.cpp.obj",
 			"PTGameplayTags.cpp.obj",
-			"PTLogChannels.cpp.obj",
 			"PTAssetManager.cpp.obj",
 			"PTGameInstance.cpp.obj",
-			"GenerateTableData.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj"
+			"DataTableMakerCommand.cpp.obj",
+			"PTLogChannels.cpp.obj"
 		]
 	}
 }

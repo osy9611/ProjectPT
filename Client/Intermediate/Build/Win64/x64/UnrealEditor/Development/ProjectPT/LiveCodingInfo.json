@@ -2,6 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ProjectPT.cpp.obj": [
+			"GenerateTableData.gen.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
@@ -34,6 +36,7 @@
 			"PTGameplayAbility.cpp.obj",
 			"PTGameplayAbility_Jump.cpp.obj",
 			"PTGameplayAbility_MeleeAttack.cpp.obj",
+			"PTGameplayAbility_MeleeHitCheck.cpp.obj",
 			"PTAnimNotify_AttackHitCheck.cpp.obj",
 			"PTAbilitySet.cpp.obj",
 			"PTAbilitySystemComponent.cpp.obj",
@@ -62,9 +65,7 @@
 			"PTLogChannels.cpp.obj",
 			"PTAssetManager.cpp.obj",
 			"PTGameInstance.cpp.obj",
-			"GenerateTableData.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
-			"PTGameplayAbility_MeleeHitCheck.cpp.obj"
+			"DataTableMakerCommand.cpp.obj"
 		]
 	}
 }

@@ -2,6 +2,7 @@
 	"SourceFiles": [
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Source\\ProjectPT\\ProjectPT.Build.cs",
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Plugins\\ModularGameplayActors\\Source\\ModularGameplayActors\\ModularGameplayActors.Build.cs",
+		"D:\\Study\\Unreal\\ProjectPT\\Client\\Plugins\\TableGenerator\\Source\\TableGenerator\\TableGenerator.Build.cs",
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Source\\ProjectPT.Target.cs",
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Source\\ProjectPTEditor.Target.cs"
 	],

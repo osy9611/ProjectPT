@@ -78,6 +78,54 @@
     <None Include="..\..\Plugins\ModularGameplayActors\Resources\Icon128.png">
       <Filter>Plugins\ModularGameplayActors\Resources</Filter>
     </None>
+    <Filter Include="Plugins\TableGenerator">
+      <UniqueIdentifier>{D5A15DA1-24BE-32E4-AB06-372D01985FB2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\TableGenerator\TableGenerator.uplugin">
+      <Filter>Plugins\TableGenerator</Filter>
+    </None>
+    <Filter Include="Plugins\TableGenerator\Resources">
+      <UniqueIdentifier>{C88FDA82-6BC8-390E-B155-17EC8BCF483E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\TableGenerator\Resources\Icon128.png">
+      <Filter>Plugins\TableGenerator\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\TableGenerator\Resources\PlaceholderButtonIcon.svg">
+      <Filter>Plugins\TableGenerator\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\TableGenerator\Source">
+      <UniqueIdentifier>{E5B05D01-147B-3B84-ACFD-FA77BB9520A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\TableGenerator\Source\TableGenerator">
+      <UniqueIdentifier>{BBD6F856-B4B9-3095-8147-2D8164BC648E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\TableGenerator\Source\TableGenerator\TableGenerator.Build.cs">
+      <Filter>Plugins\TableGenerator\Source\TableGenerator</Filter>
+    </None>
+    <Filter Include="Plugins\TableGenerator\Source\TableGenerator\Private">
+      <UniqueIdentifier>{DAB7DFE2-48E7-3E9A-B77C-EBDFA936EA4D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\TableGenerator\Source\TableGenerator\Private\TableGenerator.cpp">
+      <Filter>Plugins\TableGenerator\Source\TableGenerator\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\TableGenerator\Source\TableGenerator\Private\TableGeneratorCommands.cpp">
+      <Filter>Plugins\TableGenerator\Source\TableGenerator\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\TableGenerator\Source\TableGenerator\Private\TableGeneratorStyle.cpp">
+      <Filter>Plugins\TableGenerator\Source\TableGenerator\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\TableGenerator\Source\TableGenerator\Public">
+      <UniqueIdentifier>{54D148AD-B46F-3722-A99D-025245CBB3B7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\TableGenerator\Source\TableGenerator\Public\TableGenerator.h">
+      <Filter>Plugins\TableGenerator\Source\TableGenerator\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\TableGenerator\Source\TableGenerator\Public\TableGeneratorCommands.h">
+      <Filter>Plugins\TableGenerator\Source\TableGenerator\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\TableGenerator\Source\TableGenerator\Public\TableGeneratorStyle.h">
+      <Filter>Plugins\TableGenerator\Source\TableGenerator\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT">
       <UniqueIdentifier>{0DF43EB5-F9E2-36E8-853F-21DA780B3B73}</UniqueIdentifier>
     </Filter>
@@ -230,6 +278,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTPawnExtensionComponent.h">
       <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Commands">
+      <UniqueIdentifier>{9DB5C18D-5DD6-370A-BC7B-1E57C80F9861}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Commands\DataTableMakerCommand.cpp">
+      <Filter>Source\ProjectPT\Commands</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Commands\DataTableMakerCommand.h">
+      <Filter>Source\ProjectPT\Commands</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\GameModes">
       <UniqueIdentifier>{62F36A1F-4F07-3667-B7AC-FDCBE51DE3A6}</UniqueIdentifier>

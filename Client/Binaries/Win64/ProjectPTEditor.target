@@ -3680,6 +3680,18 @@
 		{
 			"Path": "$(ProjectDir)/Plugins/ModularGameplayActors/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/TableGenerator/Binaries/Win64/UnrealEditor-TableGenerator.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/TableGenerator/Binaries/Win64/UnrealEditor-TableGenerator.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/TableGenerator/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
 		}
 	],
 	"RuntimeDependencies": [
@@ -26744,6 +26756,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/TableGenerator/TableGenerator.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/ProjectPT.uproject",
 			"Type": "UFS"
 		}
@@ -26906,6 +26922,7 @@
 		"StudioTelemetry",
 		"SubversionSourceControl",
 		"Synthesis",
+		"TableGenerator",
 		"Takes",
 		"TcpMessaging",
 		"TemplateSequence",

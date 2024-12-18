@@ -24,6 +24,7 @@ public class ProjectPT : ModuleRules
 			//Input
             "InputCore", 
 			"EnhancedInput" 
+
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

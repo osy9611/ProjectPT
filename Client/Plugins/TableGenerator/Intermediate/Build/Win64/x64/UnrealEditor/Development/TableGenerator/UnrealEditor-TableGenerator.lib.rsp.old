@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-TableGenerator.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Cpp20.h.obj"
+"D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\TableGenerator.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\TableGeneratorCommands.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\TableGeneratorStyle.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\Default.rc2.res"
+/OUT:"D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\UnrealEditor-TableGenerator.lib"
