@@ -11,7 +11,9 @@
 #include "ProjectPT/Player/PTPlayerController.h"
 #include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/GameModes/PTExperienceDefinition.h"
+#include "ProjectPT/Table/DataManagerSubsystem.h"
 #include <Kismet/GameplayStatics.h>
+#include <ProjectPT/Table/GenerateTableData.h>
 
 APTGameModeBase::APTGameModeBase()
 {
@@ -97,6 +99,11 @@ void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 
 	if (!ExperienceId.IsValid())
 		ExperienceId = FPrimaryAssetId(FPrimaryAssetType("PTExperienceDefinition"), FName("BP_PTDefaultExperience"));
+
+	if (UDataManagerSubsystem* DataManager = GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
+	{
+		DataManager->LoadAllData();
+	}
 
 	OnMatchAssignmentGiven(ExperienceId);
 }

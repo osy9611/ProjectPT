@@ -7,6 +7,8 @@
         "Includes": [
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\table\\generatetabledata.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\table\\enumgeneratedata.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\enumgeneratedata.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\generatetabledata.generated.h"
         ],
         "ImportedModules": [],

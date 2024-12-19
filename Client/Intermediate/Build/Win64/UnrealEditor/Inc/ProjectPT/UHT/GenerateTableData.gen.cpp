@@ -11,253 +11,99 @@ void EmptyLinkFunctionForGeneratedCodeGenerateTableData() {}
 
 // Begin Cross Module References
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
-PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FTest();
-PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FTest2();
-PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FTest3();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSkillData();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
-// Begin ScriptStruct FTest
-static_assert(std::is_polymorphic<FTest>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FTest cannot be polymorphic unless super FTableRowBase is polymorphic");
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_Test;
-class UScriptStruct* FTest::StaticStruct()
+// Begin ScriptStruct FSkillData
+static_assert(std::is_polymorphic<FSkillData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FSkillData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_SkillData;
+class UScriptStruct* FSkillData::StaticStruct()
 {
-	if (!Z_Registration_Info_UScriptStruct_Test.OuterSingleton)
+	if (!Z_Registration_Info_UScriptStruct_SkillData.OuterSingleton)
 	{
-		Z_Registration_Info_UScriptStruct_Test.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FTest, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("Test"));
+		Z_Registration_Info_UScriptStruct_SkillData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FSkillData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("SkillData"));
 	}
-	return Z_Registration_Info_UScriptStruct_Test.OuterSingleton;
+	return Z_Registration_Info_UScriptStruct_SkillData.OuterSingleton;
 }
-template<> PROJECTPT_API UScriptStruct* StaticStruct<FTest>()
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FSkillData>()
 {
-	return FTest::StaticStruct();
+	return FSkillData::StaticStruct();
 }
-struct Z_Construct_UScriptStruct_FTest_Statics
+struct Z_Construct_UScriptStruct_FSkillData_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name_MetaData[] = {
-		{ "Category", "Test" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skillRange_MetaData[] = {
+		{ "Category", "SkillData" },
 		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name2_MetaData[] = {
-		{ "Category", "Test" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skillRadius_MetaData[] = {
+		{ "Category", "SkillData" },
 		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name3_MetaData[] = {
-		{ "Category", "Test" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStrPropertyParams NewProp_name;
-	static const UECodeGen_Private::FStrPropertyParams NewProp_name2;
-	static const UECodeGen_Private::FStrPropertyParams NewProp_name3;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static void* NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTest>();
-	}
-	static const UECodeGen_Private::FStructParams StructParams;
-};
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTest_Statics::NewProp_name = { "name", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest, name), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name_MetaData), NewProp_name_MetaData) };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTest_Statics::NewProp_name2 = { "name2", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest, name2), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name2_MetaData), NewProp_name2_MetaData) };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTest_Statics::NewProp_name3 = { "name3", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest, name3), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name3_MetaData), NewProp_name3_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FTest_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest_Statics::NewProp_name,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest_Statics::NewProp_name2,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest_Statics::NewProp_name3,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTest_Statics::StructParams = {
-	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
-	Z_Construct_UScriptStruct_FTableRowBase,
-	&NewStructOps,
-	"Test",
-	Z_Construct_UScriptStruct_FTest_Statics::PropPointers,
-	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest_Statics::PropPointers),
-	sizeof(FTest),
-	alignof(FTest),
-	RF_Public|RF_Transient|RF_MarkAsNative,
-	EStructFlags(0x00000001),
-	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FTest_Statics::Struct_MetaDataParams)
-};
-UScriptStruct* Z_Construct_UScriptStruct_FTest()
-{
-	if (!Z_Registration_Info_UScriptStruct_Test.InnerSingleton)
-	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_Test.InnerSingleton, Z_Construct_UScriptStruct_FTest_Statics::StructParams);
-	}
-	return Z_Registration_Info_UScriptStruct_Test.InnerSingleton;
-}
-// End ScriptStruct FTest
-
-// Begin ScriptStruct FTest2
-static_assert(std::is_polymorphic<FTest2>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FTest2 cannot be polymorphic unless super FTableRowBase is polymorphic");
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_Test2;
-class UScriptStruct* FTest2::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_Test2.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_Test2.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FTest2, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("Test2"));
-	}
-	return Z_Registration_Info_UScriptStruct_Test2.OuterSingleton;
-}
-template<> PROJECTPT_API UScriptStruct* StaticStruct<FTest2>()
-{
-	return FTest2::StaticStruct();
-}
-struct Z_Construct_UScriptStruct_FTest2_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
-		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name_MetaData[] = {
-		{ "Category", "Test2" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name2_MetaData[] = {
-		{ "Category", "Test2" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_range_MetaData[] = {
-		{ "Category", "Test2" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CollisionType_MetaData[] = {
+		{ "Category", "SkillData" },
 		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FStrPropertyParams NewProp_name;
-	static const UECodeGen_Private::FStrPropertyParams NewProp_name2;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_range;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_skillRange;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_skillRadius;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_CollisionType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_CollisionType;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTest2>();
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSkillData>();
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTest2_Statics::NewProp_name = { "name", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest2, name), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name_MetaData), NewProp_name_MetaData) };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTest2_Statics::NewProp_name2 = { "name2", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest2, name2), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name2_MetaData), NewProp_name2_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FTest2_Statics::NewProp_range = { "range", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest2, range), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_range_MetaData), NewProp_range_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FTest2_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest2_Statics::NewProp_name,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest2_Statics::NewProp_name2,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest2_Statics::NewProp_range,
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_skillRange = { "skillRange", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSkillData, skillRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_skillRange_MetaData), NewProp_skillRange_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_skillRadius = { "skillRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSkillData, skillRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_skillRadius_MetaData), NewProp_skillRadius_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_CollisionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_CollisionType = { "CollisionType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSkillData, CollisionType), Z_Construct_UEnum_ProjectPT_ECollisionType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionType_MetaData), NewProp_CollisionType_MetaData) }; // 150798757
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FSkillData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_skillRange,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_skillRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_CollisionType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_CollisionType,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest2_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTest2_Statics::StructParams = {
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSkillData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSkillData_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
 	Z_Construct_UScriptStruct_FTableRowBase,
 	&NewStructOps,
-	"Test2",
-	Z_Construct_UScriptStruct_FTest2_Statics::PropPointers,
-	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest2_Statics::PropPointers),
-	sizeof(FTest2),
-	alignof(FTest2),
+	"SkillData",
+	Z_Construct_UScriptStruct_FSkillData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSkillData_Statics::PropPointers),
+	sizeof(FSkillData),
+	alignof(FSkillData),
 	RF_Public|RF_Transient|RF_MarkAsNative,
 	EStructFlags(0x00000001),
-	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest2_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FTest2_Statics::Struct_MetaDataParams)
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSkillData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FSkillData_Statics::Struct_MetaDataParams)
 };
-UScriptStruct* Z_Construct_UScriptStruct_FTest2()
+UScriptStruct* Z_Construct_UScriptStruct_FSkillData()
 {
-	if (!Z_Registration_Info_UScriptStruct_Test2.InnerSingleton)
+	if (!Z_Registration_Info_UScriptStruct_SkillData.InnerSingleton)
 	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_Test2.InnerSingleton, Z_Construct_UScriptStruct_FTest2_Statics::StructParams);
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_SkillData.InnerSingleton, Z_Construct_UScriptStruct_FSkillData_Statics::StructParams);
 	}
-	return Z_Registration_Info_UScriptStruct_Test2.InnerSingleton;
+	return Z_Registration_Info_UScriptStruct_SkillData.InnerSingleton;
 }
-// End ScriptStruct FTest2
-
-// Begin ScriptStruct FTest3
-static_assert(std::is_polymorphic<FTest3>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FTest3 cannot be polymorphic unless super FTableRowBase is polymorphic");
-static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_Test3;
-class UScriptStruct* FTest3::StaticStruct()
-{
-	if (!Z_Registration_Info_UScriptStruct_Test3.OuterSingleton)
-	{
-		Z_Registration_Info_UScriptStruct_Test3.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FTest3, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("Test3"));
-	}
-	return Z_Registration_Info_UScriptStruct_Test3.OuterSingleton;
-}
-template<> PROJECTPT_API UScriptStruct* StaticStruct<FTest3>()
-{
-	return FTest3::StaticStruct();
-}
-struct Z_Construct_UScriptStruct_FTest3_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
-		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name_MetaData[] = {
-		{ "Category", "Test3" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_name2_MetaData[] = {
-		{ "Category", "Test3" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_range_MetaData[] = {
-		{ "Category", "Test3" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FStrPropertyParams NewProp_name;
-	static const UECodeGen_Private::FStrPropertyParams NewProp_name2;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_range;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static void* NewStructOps()
-	{
-		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FTest3>();
-	}
-	static const UECodeGen_Private::FStructParams StructParams;
-};
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTest3_Statics::NewProp_name = { "name", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest3, name), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name_MetaData), NewProp_name_MetaData) };
-const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FTest3_Statics::NewProp_name2 = { "name2", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest3, name2), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_name2_MetaData), NewProp_name2_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FTest3_Statics::NewProp_range = { "range", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FTest3, range), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_range_MetaData), NewProp_range_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FTest3_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest3_Statics::NewProp_name,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest3_Statics::NewProp_name2,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FTest3_Statics::NewProp_range,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest3_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FTest3_Statics::StructParams = {
-	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
-	Z_Construct_UScriptStruct_FTableRowBase,
-	&NewStructOps,
-	"Test3",
-	Z_Construct_UScriptStruct_FTest3_Statics::PropPointers,
-	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest3_Statics::PropPointers),
-	sizeof(FTest3),
-	alignof(FTest3),
-	RF_Public|RF_Transient|RF_MarkAsNative,
-	EStructFlags(0x00000001),
-	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FTest3_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FTest3_Statics::Struct_MetaDataParams)
-};
-UScriptStruct* Z_Construct_UScriptStruct_FTest3()
-{
-	if (!Z_Registration_Info_UScriptStruct_Test3.InnerSingleton)
-	{
-		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_Test3.InnerSingleton, Z_Construct_UScriptStruct_FTest3_Statics::StructParams);
-	}
-	return Z_Registration_Info_UScriptStruct_Test3.InnerSingleton;
-}
-// End ScriptStruct FTest3
+// End ScriptStruct FSkillData
 
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FTest::StaticStruct, Z_Construct_UScriptStruct_FTest_Statics::NewStructOps, TEXT("Test"), &Z_Registration_Info_UScriptStruct_Test, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTest), 4142710076U) },
-		{ FTest2::StaticStruct, Z_Construct_UScriptStruct_FTest2_Statics::NewStructOps, TEXT("Test2"), &Z_Registration_Info_UScriptStruct_Test2, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTest2), 279734136U) },
-		{ FTest3::StaticStruct, Z_Construct_UScriptStruct_FTest3_Statics::NewStructOps, TEXT("Test3"), &Z_Registration_Info_UScriptStruct_Test3, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FTest3), 542588699U) },
+		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 2513068451U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_2218825594(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_1666724002(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);

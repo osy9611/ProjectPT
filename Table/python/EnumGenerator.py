@@ -81,3 +81,6 @@ if os.path.exists(json_file_path):
 print("Start Generate Enum File")
 create_enum()
 create_file()
+
+unreal.SystemLibrary.execute_console_command(None, "Module Recompile")
+unreal.log("Project modules have been reloaded.")

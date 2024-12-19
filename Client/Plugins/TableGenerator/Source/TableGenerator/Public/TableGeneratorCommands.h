@@ -19,7 +19,7 @@ public:
 	virtual void RegisterCommands() override;
 
 	TSharedPtr< FUICommandInfo > Cmd_MakeStruct;
-	TSharedPtr< FUICommandInfo > Cmd_MakeAsset;
+	TSharedPtr< FUICommandInfo > Cmd_ImportCSV;
 	TSharedPtr< FUICommandInfo > Cmd_SettingConfig;
 
 public:

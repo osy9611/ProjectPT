@@ -20,7 +20,9 @@ public:
 	void FillMenu(FMenuBuilder& MenuBuilder);
 
 	void MakeDataTableStruct();
+	void ImportCSVData();
 	void SettingConfig();
+
 
 	void LoadConfigData();
 	void SaveConfigData();

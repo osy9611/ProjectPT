@@ -14,29 +14,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_GenerateTableData_generated_h
 
-#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_9_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FTest_Statics; \
+#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_10_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FSkillData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
 
 
-template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FTest>();
-
-#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_21_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FTest2_Statics; \
-	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
-	typedef FTableRowBase Super;
-
-
-template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FTest2>();
-
-#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_33_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FTest3_Statics; \
-	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
-	typedef FTableRowBase Super;
-
-
-template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FTest3>();
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSkillData>();
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Table_GenerateTableData_h

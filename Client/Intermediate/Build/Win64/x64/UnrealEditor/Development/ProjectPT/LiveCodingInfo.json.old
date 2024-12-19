@@ -2,8 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ProjectPT.cpp.obj": [
+			"EnumGenerateData.gen.cpp.obj",
 			"GenerateTableData.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
@@ -51,10 +51,8 @@
 			"PTHeroComponent.cpp.obj",
 			"PTPawnData.cpp.obj",
 			"PTPawnExtensionComponent.cpp.obj",
-			"DataTableMakerCommand.cpp.obj",
 			"PTExperienceDefinition.cpp.obj",
 			"PTExperienceManagerComponent.cpp.obj",
-			"PTGameModeBase.cpp.obj",
 			"PTGameState.cpp.obj",
 			"PTInputComponent.cpp.obj",
 			"PTInputConfig.cpp.obj",
@@ -66,6 +64,10 @@
 			"PTLogChannels.cpp.obj",
 			"PTAssetManager.cpp.obj",
 			"PTGameInstance.cpp.obj",
+			"DataManagerSubsystem.gen.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj",
+			"PTGameModeBase.cpp.obj",
+			"DataManagerSubsystem.cpp.obj",
 			"EnumGenerateData.cpp.obj"
 		]
 	}

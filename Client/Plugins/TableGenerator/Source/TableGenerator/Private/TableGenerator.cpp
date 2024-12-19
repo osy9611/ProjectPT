@@ -13,6 +13,7 @@
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonSerializer.h"
 
+
 static const FName TableGeneratorTabName("TableGenerator");
 
 #define LOCTEXT_NAMESPACE "FTableGeneratorModule"
@@ -34,6 +35,12 @@ void FTableGeneratorModule::StartupModule()
 	GenerateDataTableCommand->MapAction(
 		FTableGeneratorCommands::Get().Cmd_MakeStruct,
 		FExecuteAction::CreateRaw(this, &FTableGeneratorModule::MakeDataTableStruct),
+		FCanExecuteAction()
+	);
+
+	GenerateDataTableCommand->MapAction(
+		FTableGeneratorCommands::Get().Cmd_ImportCSV,
+		FExecuteAction::CreateRaw(this, &FTableGeneratorModule::ImportCSVData),
 		FCanExecuteAction()
 	);
 
@@ -117,6 +124,14 @@ void FTableGeneratorModule::FillMenu(FMenuBuilder& MenuBuilder)
 		);
 
 		MenuBuilder.AddMenuEntry(
+			FTableGeneratorCommands::Get().Cmd_ImportCSV,
+			NAME_None,
+			FText::FromString("Import CSV Data"),
+			FText::FromString("Import CSV Data"),
+			FSlateIcon()
+		);
+
+		MenuBuilder.AddMenuEntry(
 			FTableGeneratorCommands::Get().Cmd_SettingConfig,
 			NAME_None,
 			FText::FromString("Create Folders"),
@@ -131,9 +146,8 @@ void FTableGeneratorModule::MakeDataTableStruct()
 {
 	UE_LOG(LogTemp, Log, TEXT(" "));
 	UE_LOG(LogTemp, Log, TEXT("------------------------------"));
-	UE_LOG(LogTemp, Log, TEXT("----- [TableGenerator] Make Excel To CSV AND C++ STRUCT -----"));
+	UE_LOG(LogTemp, Log, TEXT("----- [TableGenerator] MakeDataTableStruct() -----"));
 	UE_LOG(LogTemp, Log, TEXT(" "));
-
 
 	FString PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "EnumGenerator.py");
 	PythonScriptPath = FPaths::ConvertRelativePathToFull(PythonScriptPath);
@@ -145,7 +159,19 @@ void FTableGeneratorModule::MakeDataTableStruct()
 	PythonScriptPath.InsertAt(0, "py ");
 	GEngine->Exec(nullptr, *PythonScriptPath);
 
-	PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "ImportCSV.py");
+	UE_LOG(LogTemp, Log, TEXT(" "));
+	UE_LOG(LogTemp, Log, TEXT(" "));
+	UE_LOG(LogTemp, Log, TEXT("------------------------------"));
+}
+
+void FTableGeneratorModule::ImportCSVData()
+{
+	UE_LOG(LogTemp, Log, TEXT(" "));
+	UE_LOG(LogTemp, Log, TEXT("------------------------------"));
+	UE_LOG(LogTemp, Log, TEXT("----- [TableGenerator] ImportCSVData() -----"));
+	UE_LOG(LogTemp, Log, TEXT(" "));
+
+	FString PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "ImportCSV.py");
 	PythonScriptPath = FPaths::ConvertRelativePathToFull(PythonScriptPath);
 	PythonScriptPath.InsertAt(0, "py ");
 	GEngine->Exec(nullptr, *PythonScriptPath);
@@ -165,6 +191,7 @@ void FTableGeneratorModule::SettingConfig()
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
 	FGlobalTabmanager::Get()->TryInvokeTab(FName("TableGenerator"));
 }
+
 
 void FTableGeneratorModule::LoadConfigData()
 {
@@ -267,20 +294,6 @@ TSharedRef<SDockTab> FTableGeneratorModule::SpawnTab(const FSpawnTabArgs& SpawnT
 								bIsLiveCoding = NewState == ECheckBoxState::Checked;
 							})
 				]
-
-				/*+ SVerticalBox::Slot()
-				.AutoHeight()
-				.Padding(10)
-				[
-					SNew(SEditableTextBox)
-						.HintText(LOCTEXT("InputField2Hint", "Enter second value..."))
-						.OnTextChanged_Lambda([](const FText& NewText) {
-						UE_LOG(LogTemp, Log, TEXT("Second Input Changed: %s"), *NewText.ToString());
-							})
-						.OnTextCommitted_Lambda([](const FText& NewText, ETextCommit::Type CommitType) {
-						UE_LOG(LogTemp, Log, TEXT("Second Input Finalized: %s"), *NewText.ToString());
-							})
-				]*/
 
 				+SVerticalBox::Slot()
 				.AutoHeight()

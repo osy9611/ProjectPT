@@ -279,15 +279,6 @@
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTPawnExtensionComponent.h">
       <Filter>Source\ProjectPT\Character</Filter>
     </ClInclude>
-    <Filter Include="Source\ProjectPT\Commands">
-      <UniqueIdentifier>{9DB5C18D-5DD6-370A-BC7B-1E57C80F9861}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\ProjectPT\Commands\DataTableMakerCommand.cpp">
-      <Filter>Source\ProjectPT\Commands</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Commands\DataTableMakerCommand.h">
-      <Filter>Source\ProjectPT\Commands</Filter>
-    </ClInclude>
     <Filter Include="Source\ProjectPT\GameModes">
       <UniqueIdentifier>{62F36A1F-4F07-3667-B7AC-FDCBE51DE3A6}</UniqueIdentifier>
     </Filter>
@@ -369,6 +360,12 @@
     <Filter Include="Source\ProjectPT\Table">
       <UniqueIdentifier>{B1224CBA-04C0-387D-8747-7E0CDF0917FC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Table\DataManagerSubsystem.cpp">
+      <Filter>Source\ProjectPT\Table</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Table\DataManagerSubsystem.h">
+      <Filter>Source\ProjectPT\Table</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Table\EnumGenerateData.cpp">
       <Filter>Source\ProjectPT\Table</Filter>
     </ClCompile>

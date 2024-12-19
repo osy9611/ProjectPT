@@ -3,12 +3,18 @@ import json
 import os
 import sys
 import csv
+import glob
+import time
 
 
 #project name
 project_name = ""
 #csv path
 csv_folder = ""
+#enum path
+enum_folder = ""
+#enum names
+enum_names = []
 #use live coding
 use_live_coding = False
 #genrated string
@@ -40,9 +46,29 @@ def get_unreal_type(type):
         return "FText"
     elif str_type == "color" or str_type == "coloru8":
         return "FLinearColor"
+    elif type in enum_names:
+        return "E"+type
     else:
         unreal.log_error(str_type + " << This type is not allowed. It will change to \'FString\'.")
         return "FString"
+
+def get_enum_data():
+    global enum_names
+    enum_files= glob.glob(os.path.join(enum_folder,"*.csv"))
+    print("111111")
+    for file in enum_files:
+        if os.path.basename(file).startswith("~$"):
+            continue
+
+        with open(file,'r') as csvfile:
+            csv_reader = csv.reader(csvfile)
+            key = ""
+            for row in csv_reader:
+                if row[1] == "":
+                    continue
+                if row[1] == "!Enum":
+                    enum_names.append(str(row[2]))
+
 
 def create_struct():
     global genrated_str
@@ -143,6 +169,7 @@ def create_file():
         c_file.writelines("# pragma once\n")
         next_line(c_file)
         c_file.writelines("#include \"Engine/DataTable.h\"\n")
+        c_file.writelines("#include \"EnumGenerateData.h\"\n")
         c_file.writelines("#include \"GenerateTableData.generated.h\"\n")
         next_line(c_file)
         c_file.writelines(genrated_str)
@@ -150,7 +177,7 @@ def create_file():
 
 def recompile_and_reload():
     # 빌드 시스템 트리거 (Live Coding 등 설정 필요)
-    unreal.SystemLibrary.execute_console_command(None, "Module Recompile")
+    unreal.SystemLibrary.execute_console_command(None, "LiveCoding.Compile")
     unreal.log("Project modules have been reloaded.")
 
 
@@ -165,13 +192,14 @@ if os.path.exists(json_file_path):
             project_name = unreal.Paths.get_base_filename(unreal.Paths.get_project_file_path())
             struct_save_folder = unreal.SystemLibrary.get_project_directory() + "Source/" + project_name + "/Table"
             csv_folder = data["CSVFolderPath"]
+            enum_folder = data["EnumFolderPath"]
             use_live_coding  = data["UseLiveCoding"]
     except json.JSONDecodeError as e:
         print("Json Load Faile : {e}")
 
 print("Start Generate CSV File")
 
-
+get_enum_data()
 create_struct()
 create_file()
 if use_live_coding ==True:

@@ -40,4 +40,13 @@ enum class EMonsterType : uint8;
 template<> struct TIsUEnumClass<EMonsterType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<EMonsterType>();
 
+#define FOREACH_ENUM_ECOLLISIONTYPE(op) \
+	op(ECollisionType::RayTrace) \
+	op(ECollisionType::Capsule) \
+	op(ECollisionType::Box) 
+
+enum class ECollisionType : uint8;
+template<> struct TIsUEnumClass<ECollisionType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<ECollisionType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -1,42 +1,19 @@
 # pragma once
 
 #include "Engine/DataTable.h"
+#include "EnumGenerateData.h"
 #include "GenerateTableData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FTest : public FTableRowBase
+struct FSkillData : public FTableRowBase
 {
 	GENERATED_USTRUCT_BODY()
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString name;
+	float skillRange;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString name2;
+	float skillRadius;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString name3;
-};
-USTRUCT(BlueprintType)
-struct FTest2 : public FTableRowBase
-{
-	GENERATED_USTRUCT_BODY()
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString name;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString name2;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float range;
-};
-USTRUCT(BlueprintType)
-struct FTest3 : public FTableRowBase
-{
-	GENERATED_USTRUCT_BODY()
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString name;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString name2;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float range;
+	ECollisionType CollisionType;
 };
 
