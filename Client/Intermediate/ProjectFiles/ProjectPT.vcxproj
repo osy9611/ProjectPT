@@ -591,6 +591,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetActor_Trace.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetData_SingleTargetHit.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetData_SingleTargetHit.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
@@ -611,6 +616,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_RangeAttack.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_RangeAttack.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAttributeSet.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>

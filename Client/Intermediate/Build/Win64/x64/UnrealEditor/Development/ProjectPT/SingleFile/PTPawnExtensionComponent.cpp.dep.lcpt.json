@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\study\\unreal\\projectpt\\source\\projectpt\\character\\ptpawnextensioncomponent.cpp",
+        "Source": "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\character\\ptpawnextensioncomponent.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\character\\ptpawnextensioncomponent.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\character\\ptpawnextensioncomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -645,9 +645,9 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplay\\uht\\gameframeworkinitstateinterface.generated.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptpawnextensioncomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\ptlogchannels.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\ptgameplaytags.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptpawnextensioncomponent.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptlogchannels.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptgameplaytags.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentmanager.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\subsystems\\gameinstancesubsystem.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\subsystems\\subsystem.h",
@@ -656,7 +656,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponentdelegates.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplay\\uht\\gameframeworkcomponentdelegates.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplay\\uht\\gameframeworkcomponentmanager.generated.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\abilitysystem\\ptabilitysystemcomponent.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\ptabilitysystemcomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemcomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\attributeset.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\datatable.h",
@@ -795,7 +795,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemreplicationproxyinterface.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemreplicationproxyinterface.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptabilitysystemcomponent.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptabilitysystemcomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

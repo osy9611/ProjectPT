@@ -171,6 +171,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetActor_Trace.h">
       <Filter>Source\ProjectPT\AbilitySystem</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetData_SingleTargetHit.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\PTGameplayAbilityTargetData_SingleTargetHit.h">
+      <Filter>Source\ProjectPT\AbilitySystem</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\AbilitySystem\Abilities">
       <UniqueIdentifier>{FF8EE166-F3F4-3D54-A75D-25F1DA21A9EB}</UniqueIdentifier>
     </Filter>
@@ -196,6 +202,12 @@
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_RangeAttack.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_RangeAttack.h">
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\AbilitySystem\AttributeSet">

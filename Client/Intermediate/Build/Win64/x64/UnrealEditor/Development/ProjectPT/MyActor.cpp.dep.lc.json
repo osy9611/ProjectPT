@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\myactor.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\myactor.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\myactor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
