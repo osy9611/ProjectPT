@@ -69,7 +69,11 @@
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\task\\ptabilitytask_trace.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\tasks\\abilitytask.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitytask.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptabilitytask_trace.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptabilitytask_trace.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\character\\ptcharacter.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\modulargameplayactors\\source\\modulargameplayactors\\public\\modularcharacter.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\modulargameplayactors\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplayactors\\uht\\modularcharacter.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcharacter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

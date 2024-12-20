@@ -6,11 +6,13 @@
 #include "ProjectPT/GameModes/PTExperienceManagerComponent.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySet.h"
+#include "ProjectPT/AbilitySystem/AttributeSet/PTCharacter_AttributeSet.h"
 #include "ProjectPT/Character/PTPawnData.h"
 
 APTPlayerState::APTPlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 	AbilitySystemComponent = ObjectInitializer.CreateDefaultSubobject<UPTAbilitySystemComponent>(this, TEXT("AbilitySystemComponent"));
+	AttributeSet = CreateDefaultSubobject<UPTCharacter_AttributeSet>(TEXT("AttributeSet"));
 }
 
 void APTPlayerState::PostInitializeComponents()
@@ -62,5 +64,7 @@ void APTPlayerState::SetPawnData(const UPTPawnData* InPawnData)
 		if (AbilitySet)
 			AbilitySet->GiveToAbilitySystem(AbilitySystemComponent, nullptr);
 	}
+
+	AttributeSet->InitAttributeSet("1001");
 }
 

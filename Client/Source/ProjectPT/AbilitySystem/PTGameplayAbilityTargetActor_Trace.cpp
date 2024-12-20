@@ -3,6 +3,10 @@
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
 #include "ProjectPT/AbilitySystem/Task/PTAbilityTask_Trace.h"
+#include "ProjectPT/Character/PTCharacter.h"
+#include "ProjectPT/AbilitySystem/Abilities/PTGameplayAbility.h"
+#include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
+#include "ProjectPT/PTLogChannels.h"
 APTGameplayAbilityTargetActor_Trace::APTGameplayAbilityTargetActor_Trace(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 }
@@ -12,6 +16,11 @@ void APTGameplayAbilityTargetActor_Trace::StartTargeting(UGameplayAbility* Abili
 	Super::StartTargeting(Ability);
 
 	SourceActor = Ability->GetCurrentActorInfo()->AvatarActor.Get();
+
+	if (UPTGameplayAbility* PTGameAbility = CastChecked<UPTGameplayAbility>(Ability))
+	{
+		AttributeSet = PTGameAbility->GetPTAttribute();
+	}
 }
 
 void APTGameplayAbilityTargetActor_Trace::ConfirmTargetingAndContinue()
@@ -23,9 +32,11 @@ void APTGameplayAbilityTargetActor_Trace::ConfirmTargetingAndContinue()
 	}
 }
 
-FGameplayAbilityTargetDataHandle APTGameplayAbilityTargetActor_Trace::MakeTargetData() const
+FGameplayAbilityTargetDataHandle APTGameplayAbilityTargetActor_Trace::MakeTargetData()
 {
 	ACharacter* Character = CastChecked<ACharacter>(SourceActor);
+
+	bool test = CheckCollisionData();
 
 	FHitResult HitResult;
 
@@ -82,3 +93,45 @@ FGameplayAbilityTargetDataHandle APTGameplayAbilityTargetActor_Trace::MakeTarget
 
 	return DataHandle;
 }
+
+PRAGMA_DISABLE_OPTIMIZATION
+bool APTGameplayAbilityTargetActor_Trace::CheckCollisionData()
+{
+	APTCharacter* Character = CastChecked<APTCharacter>(SourceActor);
+
+	FHitResult HitResult;
+
+	FCollisionQueryParams Params(SCENE_QUERY_STAT(UPTAbilityTask_Trace), false, Character);
+
+	if (!AttributeSet.IsValid())
+	{
+		UE_LOG(PTLog, Error, TEXT("Attribute Is Not Valid %s"), *Character->GetName());
+		return false;
+	}
+
+	const float AttackRange = AttributeSet->Skill1.skillRange;
+	const float AttackRadius = AttributeSet->Skill1.skillRadius;
+
+	FVector Forward = Character->GetActorForwardVector();
+	FVector Start = Character->GetActorLocation();
+	FVector End = Start + Forward * AttackRange;
+
+	FCollisionShape CollisionShape;
+	switch (AttributeSet->Skill1.CollisionType)
+	{
+	case ECollisionType::Capsule:
+		CollisionShape = FCollisionShape::MakeSphere(AttackRadius);
+		break;
+	}
+
+	bool HitDetected = GetWorld()->SweepSingleByChannel(
+		HitResult,
+		Character->GetActorLocation(),
+		Character->GetActorLocation() + Character->GetActorForwardVector() * AttackRange,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel2,
+		CollisionShape,
+		Params);
+	return false;
+}
+PRAGMA_ENABLE_OPTIMIZATION

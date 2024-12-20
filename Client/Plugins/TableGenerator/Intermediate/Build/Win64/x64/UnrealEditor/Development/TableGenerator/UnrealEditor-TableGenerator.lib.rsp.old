@@ -9,5 +9,6 @@
 "D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\Module.TableGenerator.cpp.obj"
 "D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\TableGenerator.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\TableGeneratorCommands.cpp.obj"
 "D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\Default.rc2.res"
 /OUT:"D:\Study\Unreal\ProjectPT\Client\Plugins\TableGenerator\Intermediate\Build\Win64\x64\UnrealEditor\Development\TableGenerator\UnrealEditor-TableGenerator.lib"

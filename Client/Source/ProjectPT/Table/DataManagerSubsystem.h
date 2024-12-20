@@ -23,7 +23,7 @@ public:
 	void ReloadAllData();
 
 	template<typename T = FTableRowBase>
-	static T* FindData(const FString& RowName);
+	T* FindData(const FString& RowName);
 
 	UDataTable* GetTableData(const FString& TableName);
 

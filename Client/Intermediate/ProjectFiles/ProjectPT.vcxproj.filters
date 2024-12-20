@@ -198,6 +198,21 @@
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.h">
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\AbilitySystem\AttributeSet">
+      <UniqueIdentifier>{746CDABF-8B49-3B09-A23D-1ECC2F1BCB22}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAttributeSet.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAttributeSet.h">
+      <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTCharacter_AttributeSet.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTCharacter_AttributeSet.h">
+      <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\AbilitySystem\Notify">
       <UniqueIdentifier>{AF8183F8-D51B-3514-9264-4CADECE03DA5}</UniqueIdentifier>
     </Filter>

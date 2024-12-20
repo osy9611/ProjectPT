@@ -9,6 +9,7 @@
 class UPTPawnData;
 class UPTExperienceDefinition;
 class UPTAbilitySystemComponent;
+class UPTAttributeSet;
 /**
  * PawnData를 캐싱하는것이 주 목적
  */
@@ -26,6 +27,7 @@ public:
 	void OnExperienceLoaded(const UPTExperienceDefinition* CurrentExperience);
 	void SetPawnData(const UPTPawnData* PawnData);
 	UPTAbilitySystemComponent* GetPTAbilitySystemComponent() const { return AbilitySystemComponent; }
+	UPTAttributeSet* GetPTAttributeSet() const { return AttributeSet; }
 
 	UPROPERTY()
 	TObjectPtr<const UPTPawnData> PawnData;
@@ -37,4 +39,7 @@ public:
 	*/
 	UPROPERTY(VisibleAnywhere, Category = "PlayerState")
 	TObjectPtr<UPTAbilitySystemComponent> AbilitySystemComponent;
+
+	UPROPERTY(VisibleAnywhere,Category="PlayerState")
+	TObjectPtr<UPTAttributeSet> AttributeSet;
 };

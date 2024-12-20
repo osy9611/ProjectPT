@@ -8,6 +8,7 @@
 
 class APTCharacter;
 class FGamePlayAbilitySpecHandle;
+class UPTAttributeSet;
 
 UENUM(BlueprintType)
 enum class EPTAbilityActivationPolicy : uint8
@@ -28,6 +29,7 @@ public:
 	UPTGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	APTCharacter* GetPTCharacterFromActorInfo();
+	virtual UPTAttributeSet* GetPTAttribute();
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;

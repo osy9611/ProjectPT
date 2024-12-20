@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTGameplayAbilityTargetActor_Trace_generated_h
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_9_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPTGameplayAbilityTargetActor_Trace(); \
 	friend struct Z_Construct_UClass_APTGameplayAbilityTargetActor_Trace_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(APTGameplayAbilityTargetActor_Trace)
 
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_9_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APTGameplayAbilityTargetActor_Trace(APTGameplayAbilityTargetActor_Trace&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~APTGameplayAbilityTargetActor_Trace();
 
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_6_PROLOG
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_9_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_7_PROLOG
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_9_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_9_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_PTGameplayAbilityTargetActor_Trace_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -3,6 +3,7 @@
 
 #include "PTGameplayAbility.h"
 #include "ProjectPT/Character/PTCharacter.h"
+#include "ProjectPT/Player/PTPlayerState.h"
 
 UPTGameplayAbility::UPTGameplayAbility(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -11,6 +12,18 @@ UPTGameplayAbility::UPTGameplayAbility(const FObjectInitializer& ObjectInitializ
 APTCharacter* UPTGameplayAbility::GetPTCharacterFromActorInfo()
 {
 	return CurrentActorInfo ? Cast<APTCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
+}
+
+UPTAttributeSet* UPTGameplayAbility::GetPTAttribute()
+{
+	if (APTCharacter* PTCharacter = GetPTCharacterFromActorInfo())
+	{
+		if (APTPlayerState* PTPlayerState = PTCharacter->GetPlayerState<APTPlayerState>())
+		{
+			return PTPlayerState->GetPTAttributeSet();
+		}
+	}
+	return nullptr;
 }
 
 void UPTGameplayAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
