@@ -32,7 +32,7 @@ struct Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n *\n */" },
 #endif
 		{ "IncludePath", "Camera/PTCameraMode_ThirdPerson.h" },
 		{ "IsBlueprintBase", "true" },
@@ -56,11 +56,17 @@ struct Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics
 		{ "Category", "Camera" },
 		{ "ModuleRelativePath", "Camera/PTCameraMode_ThirdPerson.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsSetOffset_MetaData[] = {
+		{ "Category", "Camera" },
+		{ "ModuleRelativePath", "Camera/PTCameraMode_ThirdPerson.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetOffsetCurve;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_DefaultCameraDistance;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MinCameraDistance;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CameraCollisionRadius;
+	static void NewProp_bIsSetOffset_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsSetOffset;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -72,11 +78,17 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTCameraMode_
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_DefaultCameraDistance = { "DefaultCameraDistance", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode_ThirdPerson, DefaultCameraDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultCameraDistance_MetaData), NewProp_DefaultCameraDistance_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_MinCameraDistance = { "MinCameraDistance", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode_ThirdPerson, MinCameraDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MinCameraDistance_MetaData), NewProp_MinCameraDistance_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_CameraCollisionRadius = { "CameraCollisionRadius", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode_ThirdPerson, CameraCollisionRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraCollisionRadius_MetaData), NewProp_CameraCollisionRadius_MetaData) };
+void Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_bIsSetOffset_SetBit(void* Obj)
+{
+	((UPTCameraMode_ThirdPerson*)Obj)->bIsSetOffset = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_bIsSetOffset = { "bIsSetOffset", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPTCameraMode_ThirdPerson), &Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_bIsSetOffset_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsSetOffset_MetaData), NewProp_bIsSetOffset_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_TargetOffsetCurve,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_DefaultCameraDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_MinCameraDistance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_CameraCollisionRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::NewProp_bIsSetOffset,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTCameraMode_ThirdPerson_Statics::DependentSingletons[])() = {
@@ -119,10 +131,10 @@ UPTCameraMode_ThirdPerson::~UPTCameraMode_ThirdPerson() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_ThirdPerson_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTCameraMode_ThirdPerson, UPTCameraMode_ThirdPerson::StaticClass, TEXT("UPTCameraMode_ThirdPerson"), &Z_Registration_Info_UClass_UPTCameraMode_ThirdPerson, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTCameraMode_ThirdPerson), 3177420374U) },
+		{ Z_Construct_UClass_UPTCameraMode_ThirdPerson, UPTCameraMode_ThirdPerson::StaticClass, TEXT("UPTCameraMode_ThirdPerson"), &Z_Registration_Info_UClass_UPTCameraMode_ThirdPerson, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTCameraMode_ThirdPerson), 280824847U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_ThirdPerson_h_2542202459(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_ThirdPerson_h_1666214621(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_ThirdPerson_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_ThirdPerson_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -46,6 +46,7 @@ public:
 
 public:
 	bool bResetFieldOfViewOffSet;
+	bool bAddFiledOfViewOffset;
 protected:
 
 	float FieldOfViewOffset;

@@ -20,6 +20,7 @@ void UPTCameraMode_ThirdPerson::UpdateView(float DeltaTime)
 	View.Location = PivotLocation;
 	View.Rotation = PivotRotation;
 	View.ControlRotation = View.Rotation;
+
 	if (bIsSetOffset)
 		View.FieldOfView = FieldOfView + FieldOfViewOffset;
 	else

@@ -100,6 +100,7 @@ public:
 	UPTCameraModeStack(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	UPTCameraMode* GetCameraModeInstance(TSubclassOf<UPTCameraMode>& OutCameraModeView);
+	UPTCameraMode* GetFirstCameraMode() { return CameraModeInstance.Num() > 0 ? CameraModeInstance[0] : nullptr; }
 	void PushCameraMode(TSubclassOf<UPTCameraMode>& CameraModeClass);
 	void EvaluateStack(float DeltaTime, FPTCameraModeView& OutCameraModeView);
 	void UpdateStack(float DeltaTime);

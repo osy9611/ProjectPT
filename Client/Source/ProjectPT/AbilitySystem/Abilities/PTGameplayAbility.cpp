@@ -33,22 +33,22 @@ UPTAttributeSet* UPTGameplayAbility::GetPTAttribute()
 	return nullptr;
 }
 
-void UPTGameplayAbility::SetCameraMode(TSubclassOf<UPTCameraMode> CameraMode)
+void UPTGameplayAbility::SetCameraMode(TSubclassOf<UPTCameraMode> CameraMode, bool UseFovOffset)
 {
 	if (UPTHeroComponent* HeroComponent = GetPTHeroComponentFromActorInfo())
 	{
-		HeroComponent->SetAbilityCameraMode(CameraMode, CurrentSpecHandle);
+		HeroComponent->SetAbilityCameraMode(CameraMode, CurrentSpecHandle,UseFovOffset);
 		ActiveCameraMode = CameraMode;
 	}
 }
 
-void UPTGameplayAbility::ClearCameraMode()
+void UPTGameplayAbility::ClearCameraMode(bool UseFovOffset)
 {
 	if (ActiveCameraMode)
 	{
 		if (UPTHeroComponent* HeroComponent = GetPTHeroComponentFromActorInfo())
 		{
-			HeroComponent->ClearAbilityCameraMode(CurrentSpecHandle);
+			HeroComponent->ClearAbilityCameraMode(CurrentSpecHandle,UseFovOffset);
 		}
 
 		ActiveCameraMode = nullptr;

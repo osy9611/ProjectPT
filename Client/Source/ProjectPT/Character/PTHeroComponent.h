@@ -39,8 +39,8 @@ public:
 
 
 	//AbilityCameraSet
-	void SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMode, FGameplayAbilitySpecHandle& OwningSpecHandle);
-	void ClearAbilityCameraMode(const FGameplayAbilitySpecHandle& OwningSpecHandle);
+	void SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMode, FGameplayAbilitySpecHandle& OwningSpecHandle, bool UseFovOffset = true);
+	void ClearAbilityCameraMode(const FGameplayAbilitySpecHandle& OwningSpecHandle, bool UseFovOffset = true);
 
 
 	TSubclassOf<UPTCameraMode> DetermineCameraMode() const;

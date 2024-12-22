@@ -108,19 +108,29 @@ struct Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics
 	struct PTGameplayAbility_eventSetCameraMode_Parms
 	{
 		TSubclassOf<UPTCameraMode> CameraMode;
+		bool UseFovOffset;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CPP_Default_UseFovOffset", "true" },
 		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_CameraMode;
+	static void NewProp_UseFovOffset_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_UseFovOffset;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::NewProp_CameraMode = { "CameraMode", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_eventSetCameraMode_Parms, CameraMode), Z_Construct_UClass_UClass, Z_Construct_UClass_UPTCameraMode_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::NewProp_UseFovOffset_SetBit(void* Obj)
+{
+	((PTGameplayAbility_eventSetCameraMode_Parms*)Obj)->UseFovOffset = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::NewProp_UseFovOffset = { "UseFovOffset", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PTGameplayAbility_eventSetCameraMode_Parms), &Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::NewProp_UseFovOffset_SetBit, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::NewProp_CameraMode,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::NewProp_UseFovOffset,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTGameplayAbility, nullptr, "SetCameraMode", nullptr, nullptr, Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::PTGameplayAbility_eventSetCameraMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics::Function_MetaDataParams) };
@@ -137,9 +147,10 @@ UFunction* Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode()
 DEFINE_FUNCTION(UPTGameplayAbility::execSetCameraMode)
 {
 	P_GET_OBJECT(UClass,Z_Param_CameraMode);
+	P_GET_UBOOL(Z_Param_UseFovOffset);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->SetCameraMode(Z_Param_CameraMode);
+	P_THIS->SetCameraMode(Z_Param_CameraMode,Z_Param_UseFovOffset);
 	P_NATIVE_END;
 }
 // End Class UPTGameplayAbility Function SetCameraMode
@@ -181,7 +192,7 @@ struct Z_Construct_UClass_UPTGameplayAbility_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTGameplayAbility_ClearCameraMode, "ClearCameraMode" }, // 3794495511
-		{ &Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode, "SetCameraMode" }, // 2864601599
+		{ &Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode, "SetCameraMode" }, // 576287492
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -239,10 +250,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities
 		{ EPTAbilityActivationPolicy_StaticEnum, TEXT("EPTAbilityActivationPolicy"), &Z_Registration_Info_UEnum_EPTAbilityActivationPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2255047541U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTGameplayAbility, UPTGameplayAbility::StaticClass, TEXT("UPTGameplayAbility"), &Z_Registration_Info_UClass_UPTGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility), 3504169525U) },
+		{ Z_Construct_UClass_UPTGameplayAbility, UPTGameplayAbility::StaticClass, TEXT("UPTGameplayAbility"), &Z_Registration_Info_UClass_UPTGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility), 2290001550U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_2443606959(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_1055618317(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::EnumInfo));

@@ -39,6 +39,7 @@ void UPTCameraComponent::GetCameraView(float DeltaTime, FMinimalViewInfo& Desire
 	//CameraComponent에 대해 Parent의 SceneGraph 관계를 고려해 업데이트를 진행
 	SetWorldLocationAndRotation(CameraModeView.Location, CameraModeView.Rotation);
 
+	if(bAddFiledOfViewOffset)
 	CameraModeView.FieldOfView += FieldOfViewOffset;
 
 	if (bResetFieldOfViewOffSet)

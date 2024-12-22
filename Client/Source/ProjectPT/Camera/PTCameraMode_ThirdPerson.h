@@ -8,9 +8,9 @@
 
 class UCurveVector;
 /**
- * 
+ *
  */
-UCLASS(Abstract,Blueprintable)
+UCLASS(Abstract, Blueprintable)
 class PROJECTPT_API UPTCameraMode_ThirdPerson : public UPTCameraMode
 {
 	GENERATED_BODY()
@@ -33,7 +33,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	float CameraCollisionRadius = 2.0f;
 
-	bool bIsSetOffset = false;
+	UPROPERTY(EditAnywhere, Category = "Camera")
+	bool bIsSetOffset = true;
 private:
 	float PrevFieldOfView;
 	float FieldOfViewOffset;

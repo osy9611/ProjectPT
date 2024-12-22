@@ -172,21 +172,37 @@ void UPTHeroComponent::CheckDefaultInitialization()
 	ContinueInitStateChain(StateChain);
 }
 
-void UPTHeroComponent::SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMode, FGameplayAbilitySpecHandle& OwningSpecHandle)
+void UPTHeroComponent::SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMode, FGameplayAbilitySpecHandle& OwningSpecHandle, bool UseFovOffset)
 {
 	if (CameraMode)
 	{
 		AbilityCameraMode = CameraMode;
 		AbilityCameraModeOwningSpecHandle = OwningSpecHandle;
+
+		const APawn* Pawn = GetPawn<APawn>();
+		if (!Pawn)
+			return;
+		if (UPTCameraComponent* CameraPomponent = UPTCameraComponent::FindCameraComponent(Pawn))
+		{
+			CameraPomponent->bAddFiledOfViewOffset = UseFovOffset;
+		}
 	}
 }
 
-void UPTHeroComponent::ClearAbilityCameraMode(const FGameplayAbilitySpecHandle& OwningSpecHandle)
+void UPTHeroComponent::ClearAbilityCameraMode(const FGameplayAbilitySpecHandle& OwningSpecHandle, bool UseFovOffset)
 {
 	if (AbilityCameraModeOwningSpecHandle == OwningSpecHandle)
 	{
 		AbilityCameraMode = nullptr;
 		AbilityCameraModeOwningSpecHandle = FGameplayAbilitySpecHandle();
+
+		const APawn* Pawn = GetPawn<APawn>();
+		if (!Pawn)
+			return;
+		if (UPTCameraComponent* CameraPomponent = UPTCameraComponent::FindCameraComponent(Pawn))
+		{
+			CameraPomponent->bAddFiledOfViewOffset = UseFovOffset;
+		}
 	}
 }
 

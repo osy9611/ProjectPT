@@ -35,9 +35,9 @@ public:
 	virtual UPTAttributeSet* GetPTAttribute();
 
 	UFUNCTION(BlueprintCallable)
-	void SetCameraMode(TSubclassOf<UPTCameraMode> CameraMode);
+	void SetCameraMode(TSubclassOf<UPTCameraMode> CameraMode,bool UseFovOffset=true);
 	UFUNCTION(BlueprintCallable)
-	void ClearCameraMode();
+	void ClearCameraMode(bool UseFovOffset = true);
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
