@@ -71,7 +71,10 @@ void UPTCameraComponent::UpdateCameraModes()
 	if (DetermineCameraModeDelegate.IsBound())
 	{
 		if (TSubclassOf<UPTCameraMode> CameraMode = DetermineCameraModeDelegate.Execute())
+		{
 			CameraModeStack->PushCameraMode(CameraMode);
+		}
+			
 	}
 }
 

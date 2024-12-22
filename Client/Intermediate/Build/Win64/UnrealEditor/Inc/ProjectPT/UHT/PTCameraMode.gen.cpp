@@ -156,12 +156,18 @@ struct Z_Construct_UClass_UPTCameraMode_Statics
 		{ "ToolTip", "EaseIn/Out\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd Exponent" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BlendFunction_MetaData[] = {
+		{ "Category", "Blending" },
+		{ "ModuleRelativePath", "Camera/PTCameraMode.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_FieldOfView;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ViewPitchMin;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ViewPitchMax;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_BlendTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_BlendExponent;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_BlendFunction_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_BlendFunction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -169,17 +175,21 @@ struct Z_Construct_UClass_UPTCameraMode_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_FieldOfView = { "FieldOfView", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, FieldOfView), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FieldOfView_MetaData), NewProp_FieldOfView_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_ViewPitchMin = { "ViewPitchMin", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, ViewPitchMin), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ViewPitchMin_MetaData), NewProp_ViewPitchMin_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_ViewPitchMax = { "ViewPitchMax", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, ViewPitchMax), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ViewPitchMax_MetaData), NewProp_ViewPitchMax_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendTime = { "BlendTime", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, BlendTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlendTime_MetaData), NewProp_BlendTime_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendExponent = { "BlendExponent", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, BlendExponent), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlendExponent_MetaData), NewProp_BlendExponent_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_FieldOfView = { "FieldOfView", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, FieldOfView), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_FieldOfView_MetaData), NewProp_FieldOfView_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_ViewPitchMin = { "ViewPitchMin", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, ViewPitchMin), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ViewPitchMin_MetaData), NewProp_ViewPitchMin_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_ViewPitchMax = { "ViewPitchMax", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, ViewPitchMax), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ViewPitchMax_MetaData), NewProp_ViewPitchMax_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendTime = { "BlendTime", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, BlendTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlendTime_MetaData), NewProp_BlendTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendExponent = { "BlendExponent", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, BlendExponent), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlendExponent_MetaData), NewProp_BlendExponent_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendFunction_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendFunction = { "BlendFunction", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTCameraMode, BlendFunction), Z_Construct_UEnum_ProjectPT_EPTCameraModeBlendFunction, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlendFunction_MetaData), NewProp_BlendFunction_MetaData) }; // 3905394854
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTCameraMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_Statics::NewProp_FieldOfView,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_Statics::NewProp_ViewPitchMin,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_Statics::NewProp_ViewPitchMax,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendExponent,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendFunction_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTCameraMode_Statics::NewProp_BlendFunction,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTCameraMode_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTCameraMode_Statics::DependentSingletons[])() = {
@@ -325,11 +335,11 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_S
 		{ EPTCameraModeBlendFunction_StaticEnum, TEXT("EPTCameraModeBlendFunction"), &Z_Registration_Info_UEnum_EPTCameraModeBlendFunction, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3905394854U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTCameraMode, UPTCameraMode::StaticClass, TEXT("UPTCameraMode"), &Z_Registration_Info_UClass_UPTCameraMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTCameraMode), 4121051198U) },
+		{ Z_Construct_UClass_UPTCameraMode, UPTCameraMode::StaticClass, TEXT("UPTCameraMode"), &Z_Registration_Info_UClass_UPTCameraMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTCameraMode), 3767053576U) },
 		{ Z_Construct_UClass_UPTCameraModeStack, UPTCameraModeStack::StaticClass, TEXT("UPTCameraModeStack"), &Z_Registration_Info_UClass_UPTCameraModeStack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTCameraModeStack), 1169239955U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_1826263524(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_1152331929(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_Statics::EnumInfo));

@@ -47,12 +47,19 @@ public:
 	virtual void UpdateView(float DeltaTime);
 	void UpdateBlending(float DeltaTime);
 
+	const FPTCameraModeView& GetCameraModeView() const { return View; }
+
 	UPTCameraComponent* GetPTCameraComponent() const;
 	AActor* GetTargetActor() const;
 	FVector GetPivotLocation() const;
 	FVector GetPivotForward() const;
 	FRotator GetPivotRotation() const;
 
+	float GetBlendTime() const { return BlendTime; }
+	float GetBlendWeight() const { return BlendWeight; }
+	void SetBlendWeight(float Weight);
+
+protected:
 	FPTCameraModeView View;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "View", Meta = (UIMin = "5.0", UIMax = "170", ClampMin = "5.0", Clampmax = "170.0"))
@@ -80,6 +87,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Blending")
 	float BlendExponent;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Blending")
 	EPTCameraModeBlendFunction BlendFunction;
 };
 
@@ -104,4 +112,5 @@ public:
 	//Camera Matrix Blend 업데이트 진행 큐
 	UPROPERTY()
 	TArray<TObjectPtr<UPTCameraMode>> CameraModeStack;
+
 };

@@ -6,12 +6,12 @@
 #include "Components/PawnComponent.h"
 #include "Components/GameFrameworkInitStateInterface.h"
 #include "ProjectPT/Input/PTMappableConfigPair.h"
+#include "GameplayAbilitySpecHandle.h"
 #include "PTHeroComponent.generated.h"
 
 struct FPTMappableConfigPair;
 struct FInputActionValue;
 class UPTCameraMode;
-
 /**
  * 카메라, 입력 등 플레이어가 제어하는 시스템의 초기화를 처리하는 컴포넌트
  * Pawn에 종속성을 방지하기 위해서 독립적으로 만듬
@@ -22,6 +22,8 @@ class PROJECTPT_API UPTHeroComponent : public UPawnComponent, public IGameFramew
 	GENERATED_BODY()
 public:
 	UPTHeroComponent(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+
+	static UPTHeroComponent* FindHeroComponent(const AActor* Actor) { return (Actor ? Actor->FindComponentByClass<UPTHeroComponent>() : nullptr); }
 
 	static const FName NAME_ActorFeatureName;
 
@@ -34,6 +36,12 @@ public:
 	virtual bool CanChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState) const final;
 	virtual void HandleChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState) final;
 	virtual void CheckDefaultInitialization() final;
+
+
+	//AbilityCameraSet
+	void SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMode, FGameplayAbilitySpecHandle& OwningSpecHandle);
+	void ClearAbilityCameraMode(const FGameplayAbilitySpecHandle& OwningSpecHandle);
+
 
 	TSubclassOf<UPTCameraMode> DetermineCameraMode() const;
 	void InitializePlayerInput(UInputComponent* PlayerInputComponent);
@@ -50,4 +58,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	TArray<FPTMappableConfigPair> DefaultInputConfigs;
+
+	UPROPERTY()
+	TSubclassOf<UPTCameraMode> AbilityCameraMode;
+
+	FGameplayAbilitySpecHandle AbilityCameraModeOwningSpecHandle;
 };

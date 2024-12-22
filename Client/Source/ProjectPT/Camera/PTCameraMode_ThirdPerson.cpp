@@ -20,7 +20,10 @@ void UPTCameraMode_ThirdPerson::UpdateView(float DeltaTime)
 	View.Location = PivotLocation;
 	View.Rotation = PivotRotation;
 	View.ControlRotation = View.Rotation;
-	View.FieldOfView = FieldOfView + FieldOfViewOffset;
+	if (bIsSetOffset)
+		View.FieldOfView = FieldOfView + FieldOfViewOffset;
+	else
+		View.FieldOfView = FieldOfView;
 
 	//TargetOffsetCurve가 오버라이드되어 있다면, Curve에 값을 가져와 적용 진행
 	if (TargetOffsetCurve)

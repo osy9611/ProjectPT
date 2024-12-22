@@ -47,7 +47,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 template<> PROJECTPT_API UClass* StaticClass<class UPTCameraMode>();
 
-#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_90_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_98_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTCameraModeStack(); \
 	friend struct Z_Construct_UClass_UPTCameraModeStack_Statics; \
@@ -56,7 +56,7 @@ public: \
 	DECLARE_SERIALIZER(UPTCameraModeStack)
 
 
-#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_90_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_98_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTCameraModeStack(UPTCameraModeStack&&); \
@@ -68,12 +68,12 @@ public: \
 	NO_API virtual ~UPTCameraModeStack();
 
 
-#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_87_PROLOG
-#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_90_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_95_PROLOG
+#define FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_98_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_90_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_90_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_98_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Camera_PTCameraMode_h_98_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -18,6 +18,8 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplay\\uht\\gameframeworkinitstateinterface.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\input\\ptmappableconfigpair.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptmappableconfigpair.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayabilityspechandle.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayabilityspechandle.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptherocomponent.generated.h"
         ],
         "ImportedModules": [],

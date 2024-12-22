@@ -18,6 +18,7 @@
 #include "Components/GameFrameworkComponentManager.h"
 #include "ProjectPT/Camera/PTCameraMode_ThirdPerson.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
+#include "ProjectPT/Camera/PTCameraMode.h"
 
 const FName UPTHeroComponent::NAME_ActorFeatureName("Hero");
 
@@ -171,8 +172,29 @@ void UPTHeroComponent::CheckDefaultInitialization()
 	ContinueInitStateChain(StateChain);
 }
 
+void UPTHeroComponent::SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMode, FGameplayAbilitySpecHandle& OwningSpecHandle)
+{
+	if (CameraMode)
+	{
+		AbilityCameraMode = CameraMode;
+		AbilityCameraModeOwningSpecHandle = OwningSpecHandle;
+	}
+}
+
+void UPTHeroComponent::ClearAbilityCameraMode(const FGameplayAbilitySpecHandle& OwningSpecHandle)
+{
+	if (AbilityCameraModeOwningSpecHandle == OwningSpecHandle)
+	{
+		AbilityCameraMode = nullptr;
+		AbilityCameraModeOwningSpecHandle = FGameplayAbilitySpecHandle();
+	}
+}
+
 TSubclassOf<UPTCameraMode> UPTHeroComponent::DetermineCameraMode() const
 {
+	if (AbilityCameraMode)
+		return AbilityCameraMode;
+
 	const APawn* Pawn = GetPawn<APawn>();
 
 	if (!Pawn)

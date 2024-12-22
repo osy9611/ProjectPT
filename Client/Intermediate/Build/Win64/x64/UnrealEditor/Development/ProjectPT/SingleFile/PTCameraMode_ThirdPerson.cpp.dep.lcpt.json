@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\study\\unreal\\projectpt\\source\\projectpt\\camera\\ptcameramode_thirdperson.cpp",
+        "Source": "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameramode_thirdperson.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\camera\\ptcameramode_thirdperson.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameramode_thirdperson.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -432,8 +432,8 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\algo\\impl\\rangepointertype.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\ray.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\math\\vector2dhalf.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\camera\\ptcameramode.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameramode.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\objectmacros.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\script.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\threadsingleton.h",
@@ -531,7 +531,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\stack.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\enumproperty.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\fieldpathproperty.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode_thirdperson.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode_thirdperson.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\curves\\curvevector.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\curves\\richcurve.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\curves\\keyhandle.h",
@@ -553,8 +553,8 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\packagereload.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\curvebase.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\curvevector.generated.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\ptlogchannels.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\camera\\ptcameracomponent.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptlogchannels.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameracomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\components\\scenecomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\componentinstancedatacache.h",
@@ -602,7 +602,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\enginedefines.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameratypes.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameracomponent.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameracomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

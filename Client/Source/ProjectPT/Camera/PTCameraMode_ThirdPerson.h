@@ -33,6 +33,8 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	float CameraCollisionRadius = 2.0f;
 
+	bool bIsSetOffset = false;
 private:
+	float PrevFieldOfView;
 	float FieldOfViewOffset;
 };

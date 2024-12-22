@@ -9,12 +9,18 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPTCameraMode;
 #ifdef PROJECTPT_PTGameplayAbility_generated_h
 #error "PTGameplayAbility.generated.h already included, missing '#pragma once' in PTGameplayAbility.h"
 #endif
 #define PROJECTPT_PTGameplayAbility_generated_h
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_27_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execClearCameraMode); \
+	DECLARE_FUNCTION(execSetCameraMode);
+
+
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_29_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTGameplayAbility(); \
 	friend struct Z_Construct_UClass_UPTGameplayAbility_Statics; \
@@ -23,7 +29,7 @@ public: \
 	DECLARE_SERIALIZER(UPTGameplayAbility)
 
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_27_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTGameplayAbility(UPTGameplayAbility&&); \
@@ -35,12 +41,13 @@ public: \
 	NO_API virtual ~UPTGameplayAbility();
 
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_24_PROLOG
-#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_27_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_26_PROLOG
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_29_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_27_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_27_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_29_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
