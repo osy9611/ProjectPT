@@ -16,6 +16,7 @@ struct FGameplayAbilityTargetDataHandle;
 #define PROJECTPT_PTGameplayAbility_RangeAttack_generated_h
 
 #define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_RangeAttack_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetMuzzleName); \
 	DECLARE_FUNCTION(execStartRangedWeaponTargeting);
 
 

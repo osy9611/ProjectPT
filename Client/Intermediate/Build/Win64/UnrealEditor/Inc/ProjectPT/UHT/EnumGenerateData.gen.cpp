@@ -164,15 +164,19 @@ struct Z_Construct_UEnum_ProjectPT_ECollisionType_Statics
 		{ "Box.Comment", "//\xec\xba\xa1\xec\x8a\x90\n" },
 		{ "Box.Name", "ECollisionType::Box" },
 		{ "Box.ToolTip", "\xec\xba\xa1\xec\x8a\x90" },
-		{ "Capsule.Comment", "//\xeb\xa0\x88\xec\x9d\xb4\n" },
+		{ "Capsule.Comment", "//\xea\xb5\xac\xed\x98\x95\n" },
 		{ "Capsule.Name", "ECollisionType::Capsule" },
-		{ "Capsule.ToolTip", "\xeb\xa0\x88\xec\x9d\xb4" },
+		{ "Capsule.ToolTip", "\xea\xb5\xac\xed\x98\x95" },
 		{ "ModuleRelativePath", "Table/EnumGenerateData.h" },
 		{ "RayTrace.Name", "ECollisionType::RayTrace" },
+		{ "Sphere.Comment", "//\xeb\xa0\x88\xec\x9d\xb4\n" },
+		{ "Sphere.Name", "ECollisionType::Sphere" },
+		{ "Sphere.ToolTip", "\xeb\xa0\x88\xec\x9d\xb4" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "ECollisionType::RayTrace", (int64)ECollisionType::RayTrace },
+		{ "ECollisionType::Sphere", (int64)ECollisionType::Sphere },
 		{ "ECollisionType::Capsule", (int64)ECollisionType::Capsule },
 		{ "ECollisionType::Box", (int64)ECollisionType::Box },
 	};
@@ -206,10 +210,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EPTElementType_StaticEnum, TEXT("EPTElementType"), &Z_Registration_Info_UEnum_EPTElementType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1995855187U) },
 		{ EMonsterType_StaticEnum, TEXT("EMonsterType"), &Z_Registration_Info_UEnum_EMonsterType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1246490867U) },
-		{ ECollisionType_StaticEnum, TEXT("ECollisionType"), &Z_Registration_Info_UEnum_ECollisionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 150798757U) },
+		{ ECollisionType_StaticEnum, TEXT("ECollisionType"), &Z_Registration_Info_UEnum_ECollisionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3224060965U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_2303412231(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_3076800305(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_Statics::EnumInfo));

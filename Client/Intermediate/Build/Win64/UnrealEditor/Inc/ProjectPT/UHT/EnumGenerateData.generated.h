@@ -42,6 +42,7 @@ template<> PROJECTPT_API UEnum* StaticEnum<EMonsterType>();
 
 #define FOREACH_ENUM_ECOLLISIONTYPE(op) \
 	op(ECollisionType::RayTrace) \
+	op(ECollisionType::Sphere) \
 	op(ECollisionType::Capsule) \
 	op(ECollisionType::Box) 
 

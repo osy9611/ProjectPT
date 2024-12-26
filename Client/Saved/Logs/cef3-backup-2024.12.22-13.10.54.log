@@ -1,0 +1,18 @@
+[1222/221032.631:WARNING:angle_platform_impl.cc(48)] HLSLCompiler.cpp:257 (compileToBinary): 
+C:\fakepath(85,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
+
+[1222/221032.925:WARNING:angle_platform_impl.cc(48)] HLSLCompiler.cpp:257 (compileToBinary): 
+C:\fakepath(135,1): warning X4000: use of potentially uninitialized variable (f_i)
+C:\fakepath(137,1): warning X4000: use of potentially uninitialized variable (f_i)
+C:\fakepath(173,1): warning X4000: use of potentially uninitialized variable (f_u)
+
+[1222/221041.454:WARNING:angle_platform_impl.cc(48)] HLSLCompiler.cpp:257 (compileToBinary): 
+C:\fakepath(160,1): warning X4000: use of potentially uninitialized variable (f_renderMipMapLevel)
+
+[1222/221041.508:WARNING:angle_platform_impl.cc(48)] HLSLCompiler.cpp:257 (compileToBinary): 
+C:\fakepath(160,1): warning X4000: use of potentially uninitialized variable (f_renderMipMapLevel)
+
+[1222/221041.569:WARNING:angle_platform_impl.cc(48)] HLSLCompiler.cpp:257 (compileToBinary): 
+C:\fakepath(160,1): warning X4000: use of potentially uninitialized variable (f_renderMipMapLevel)
+
+[1222/221054.981:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled

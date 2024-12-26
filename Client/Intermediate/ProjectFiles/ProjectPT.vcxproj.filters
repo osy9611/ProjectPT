@@ -204,6 +204,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_MeleeHitCheck.h">
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_Projectile.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_Projectile.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_RangeAttack.cpp">
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClCompile>
@@ -368,6 +374,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Player\PTPlayerState.h">
       <Filter>Source\ProjectPT\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Pool">
+      <UniqueIdentifier>{D9D80293-3E30-3798-8B7A-B17D859B4B18}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Pool\ObjectPoolSubsystem.cpp">
+      <Filter>Source\ProjectPT\Pool</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Pool\ObjectPoolSubsystem.h">
+      <Filter>Source\ProjectPT\Pool</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Pool\Poolable_Actor.cpp">
+      <Filter>Source\ProjectPT\Pool</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Pool\Poolable_Actor.h">
+      <Filter>Source\ProjectPT\Pool</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\System">
       <UniqueIdentifier>{2014B51B-9363-30DE-A2D6-2D5AC646BCA1}</UniqueIdentifier>
