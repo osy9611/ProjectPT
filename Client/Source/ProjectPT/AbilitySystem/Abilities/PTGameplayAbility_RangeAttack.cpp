@@ -1,8 +1,10 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "AbilitySystemComponent.h"
 #include "PTGameplayAbility_RangeAttack.h"
+#include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/AbilitySystem/PTGameplayAbilityTargetData_SingleTargetHit.h"
+#include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
+#include "ProjectPT/Character/PTHeroComponent.h"
+#include "Components/StaticMeshComponent.h"
 
 UPTGameplayAbility_RangeAttack::UPTGameplayAbility_RangeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -45,18 +47,27 @@ void UPTGameplayAbility_RangeAttack::PerformLocalTargeting(TArray<FHitResult>& O
 {
 	APawn* const AvatarPawn = Cast<APawn>(GetAvatarActorFromActorInfo());
 
+	UPTAttributeSet* PTAttributeSet = GetPTAttribute();
+
 	FRangedWeaponFiringInput InputData;
 	InputData.bCanPlayBulletFX = true;
 
 	const FTransform TargetTransform = GetTargetingTransform(AvatarPawn, EPTAbilityTargetingSource::CameraTowardsFocus);
+
+	if (PTAttributeSet)
+	{
+		InputData.MaxDamageRange = PTAttributeSet->Skill1.skillRange;
+		InputData.BulletTraceWeaponRadius = PTAttributeSet->Skill1.skillRadius;
+
+		MuzzleName = PTAttributeSet->Skill1.MuzzleName;
+	}
 
 	//언리얼은 ForwardVector가 EAxis::X이다.
 	InputData.AimDir = TargetTransform.GetUnitAxis(EAxis::X);
 	InputData.StartTrace = TargetTransform.GetTranslation();
 	InputData.EndAim = InputData.StartTrace + InputData.AimDir * InputData.MaxDamageRange;
 
-
-#if 1
+#if 0
 	{
 		static float DebugThickness = 2.0f;
 		DrawDebugLine(GetWorld(), InputData.StartTrace, InputData.StartTrace + (InputData.AimDir * 100.0f), FColor::Yellow, false, 10.0f, 0, DebugThickness);
@@ -91,7 +102,7 @@ FTransform UPTGameplayAbility_RangeAttack::GetTargetingTransform(APawn* SourcePa
 	const FVector WeaponLoc = GetWeaponTargetingSourceLocation();
 	FVector FinalCamLoc = FocalLoc + (((WeaponLoc - FocalLoc) | AimDir) * AimDir);
 
-#if 1
+#if 0
 	{
 		// WeaponLoc (사실상 ActorLoc)
 		DrawDebugPoint(GetWorld(), WeaponLoc, 10.0f, FColor::Red, false, 60.0f);

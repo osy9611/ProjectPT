@@ -32,7 +32,7 @@ private:
 	//PIE 종료시 ReleaseSharedReference에서 문제가 생기는 이유는
 	//언리얼 GC에 의해서 이미 메모리가 해제된 상태에 추가적으로 메모리 해제를 하기때문
 	//따라서 TWeakObjectPtr로 설정함
-	TMap<FString, TWeakObjectPtr<UDataTable>> CacheTableData;
+	TMap<FString, UDataTable*> CacheTableData;
 	bool bIsLoadData = false;
 };
 
@@ -41,18 +41,14 @@ T* UDataManagerSubsystem::FindData(const FString& RowName)
 {
 	FString Key = T::StaticStruct()->GetName();
 
-	if (TWeakObjectPtr<UDataTable>* TablePtr = CacheTableData.Find(Key))
+	if (UDataTable** TablePtr = CacheTableData.Find(Key))
 	{
-		if (TablePtr->IsValid())
+		UDataTable* DataTable = *TablePtr;
+		if (DataTable)
 		{
-			UDataTable* DataTable = TablePtr->Get();
-			if (DataTable)
-			{
-				T* Result = DataTable->FindRow<T>(FName(*RowName), TEXT("FindData"));
-				if (Result)
-					return Result;
-			}
-
+			T* Result = DataTable->FindRow<T>(FName(*RowName), TEXT("FindData"));
+			if (Result)
+				return Result;
 		}
 	}
 

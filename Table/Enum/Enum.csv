@@ -13,5 +13,6 @@
 ,,,,
 ,!Enum,CollisionType,,충돌 타입
 ,!Enumerator,RayTrace,,레이
+,!Enumerator,Sphere,,구형
 ,!Enumerator,Capsule,,캡슐
 ,!Enumerator,Box,!End,박스

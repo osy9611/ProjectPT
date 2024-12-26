@@ -49,9 +49,13 @@ public:
 	void AddAdditionalTraceIgnoreActors(FCollisionQueryParams& TraceParams) const;
 	void OnTargetDataReadyCallback(const FGameplayAbilityTargetDataHandle& InData, FGameplayTag ApplicationTag);
 
+	UFUNCTION(BlueprintCallable)
+	FString GetMuzzleName() { return MuzzleName; }
+
 	/*Called When Target Data Is Ready*/
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnRangeWeaponTargetDataReady(const FGameplayAbilityTargetDataHandle& TargetData);
 
-	bool bDrawDebugLine = true;
+private:
+	FString MuzzleName;
 };
