@@ -2,11 +2,14 @@
 
 
 #include "Poolable_Actor.h"
+#include "ProjectPT/PTLogChannels.h"
 
 void UPoolable_Actor::Init(UWorld* World, TSubclassOf<AActor> Actor, int32 count)
 {
-	check(Actor);
-
+	if (!Actor)
+	{
+		UE_LOG(PTLog, Log, TEXT("Actor Not Found"));
+	}
 	OriginalActor = Actor;
 	for (int32 i = 0; i < count; ++i)
 	{

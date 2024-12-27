@@ -49,7 +49,22 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayabilitytypes.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayability.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability_projectile.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayability_projectile.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\pool\\objectpoolsubsystem.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\objectpoolsubsystem.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptlogchannels.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\object\\projectile.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\projectile.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\character\\ptherocomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\pawncomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkcomponent.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplay\\uht\\gameframeworkcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplay\\uht\\pawncomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gameframeworkinitstateinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\intermediate\\build\\win64\\unrealeditor\\inc\\modulargameplay\\uht\\gameframeworkinitstateinterface.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\input\\ptmappableconfigpair.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptmappableconfigpair.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptherocomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

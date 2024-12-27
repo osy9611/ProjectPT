@@ -10,7 +10,7 @@ UObjectPoolSubsystem::UObjectPoolSubsystem()
 {
 }
 
-AActor* UObjectPoolSubsystem::GetActor(UClass* ClassType)
+AActor* UObjectPoolSubsystem::GetActor(TSubclassOf<AActor> ClassType)
 {
 	UWorld* World = GetWorld();
 	if (!World)
@@ -19,7 +19,7 @@ AActor* UObjectPoolSubsystem::GetActor(UClass* ClassType)
 		return nullptr;
 	}
 
-	if (UPoolable_Actor** PoolableActor = ObjectPools.Find(ClassType))
+	if (UPoolable_Actor** PoolableActor = ObjectPools.Find(ClassType.Get()))
 	{
 		return (*PoolableActor)->Get(World);
 	}

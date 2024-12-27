@@ -360,6 +360,15 @@
     <ClInclude Include="..\..\Source\ProjectPT\Input\PTMappableConfigPair.h">
       <Filter>Source\ProjectPT\Input</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\Object">
+      <UniqueIdentifier>{30BD0487-3A27-3130-9F9A-308BAD03637B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Object\Projectile.cpp">
+      <Filter>Source\ProjectPT\Object</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Object\Projectile.h">
+      <Filter>Source\ProjectPT\Object</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Player">
       <UniqueIdentifier>{4F5CBE5F-5F7D-3187-A082-89AEAE27B0F7}</UniqueIdentifier>
     </Filter>

@@ -16,7 +16,7 @@ class PROJECTPT_API UObjectPoolSubsystem : public UWorldSubsystem
 public:
 	UObjectPoolSubsystem();
 
-	AActor* GetActor(UClass* ClassType);
+	AActor* GetActor(TSubclassOf<AActor> ClassType);
 	void ReturnActor(AActor* Actor);
 
 private:

@@ -9,7 +9,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
 #ifdef PROJECTPT_PTGameplayAbility_Projectile_generated_h
 #error "PTGameplayAbility_Projectile.generated.h already included, missing '#pragma once' in PTGameplayAbility_Projectile.h"
 #endif

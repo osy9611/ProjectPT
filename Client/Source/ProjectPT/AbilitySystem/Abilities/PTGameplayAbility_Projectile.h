@@ -18,7 +18,10 @@ public:
 	UPTGameplayAbility_Projectile(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	UFUNCTION(BlueprintCallable)
-	void CreateObject(AActor* Actor);
+	void CreateObject();
 
 	void ShotProjectile();
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Pawn")
+	TSubclassOf<AActor> ProjectileObject;
 };
