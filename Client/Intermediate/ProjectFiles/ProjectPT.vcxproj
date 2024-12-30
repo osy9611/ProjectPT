@@ -726,11 +726,17 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Input\PTMappableConfigPair.h"/>
-    <ClCompile Include="..\..\Source\ProjectPT\Object\Projectile.cpp">
+    <ClCompile Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Object\Projectile.h"/>
+    <ClInclude Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Object\PTProjectile.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Object\PTProjectile.h"/>
+    <ClInclude Include="..\..\Source\ProjectPT\Physics\PTCollisionChannel.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Player\PTPlayerController.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>

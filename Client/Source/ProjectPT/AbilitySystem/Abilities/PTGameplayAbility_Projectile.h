@@ -20,8 +20,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void CreateObject();
 
-	void ShotProjectile();
-
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Pawn")
 	TSubclassOf<AActor> ProjectileObject;
 };

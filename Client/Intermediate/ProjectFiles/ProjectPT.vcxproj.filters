@@ -363,11 +363,23 @@
     <Filter Include="Source\ProjectPT\Object">
       <UniqueIdentifier>{30BD0487-3A27-3130-9F9A-308BAD03637B}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\ProjectPT\Object\Projectile.cpp">
+    <ClCompile Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.cpp">
       <Filter>Source\ProjectPT\Object</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Object\Projectile.h">
+    <ClInclude Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.h">
       <Filter>Source\ProjectPT\Object</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Object\PTProjectile.cpp">
+      <Filter>Source\ProjectPT\Object</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Object\PTProjectile.h">
+      <Filter>Source\ProjectPT\Object</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Physics">
+      <UniqueIdentifier>{5AD0AEE7-A63C-314A-865F-80FD00A606B8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectPT\Physics\PTCollisionChannel.h">
+      <Filter>Source\ProjectPT\Physics</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\Player">
       <UniqueIdentifier>{4F5CBE5F-5F7D-3187-A082-89AEAE27B0F7}</UniqueIdentifier>

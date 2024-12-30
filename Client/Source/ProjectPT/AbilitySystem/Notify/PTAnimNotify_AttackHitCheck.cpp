@@ -15,7 +15,7 @@ FString UPTAnimNotify_AttackHitCheck::GetNotifyName_Implementation() const
 {
 	return FString("GASAttackHitCheck");
 }
-
+ 
 void UPTAnimNotify_AttackHitCheck::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
 	if (MeshComp)
@@ -37,8 +37,6 @@ void UPTAnimNotify_AttackHitCheck::Notify(USkeletalMeshComponent* MeshComp, UAni
 			PayloadData.EventMagnitude = 1;
 
 			int32 result = AbilityCompoent->HandleGameplayEvent(TriggerGameplayTag, &PayloadData);
-
-			UE_LOG(PTLog_GAS, Error, TEXT("ResultCount : %i"), result);
 		}
 	}
 
