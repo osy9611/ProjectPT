@@ -29,6 +29,11 @@ void UPTAudioSubsystem::RegisterData()
 			AudioComponent = NewObject<UAudioComponent>(this);
 			AudioComponents.Add(SoundType, AudioComponent);
 		}
+
+		if (SoundType == ESoundType::BGM)
+		{
+			AudioComponent->bAutoActivate = true;
+		}
 		AudioComponent->RegisterComponentWithWorld(GetWorld());
 		AudioComponent->RegisterComponent();
 	}
@@ -60,24 +65,23 @@ void UPTAudioSubsystem::SetVolume(ESoundType Type, float Volume)
 		AudioComponent->SetVolumeMultiplier(Volume);
 	}
 }
-PRAGMA_DISABLE_OPTIMIZATION
+
 void UPTAudioSubsystem::PlaySound3D_ByPath(ESoundType Type, const FSoftObjectPath& BGMPath, FVector Location)
 {
-	UPTAssetManager& AssetManager = UPTAssetManager::Get();
-	AssetManager.AsynchronusLoadAsset(BGMPath, [&,Type](UObject* result)
-		{
-			if (USoundBase* Sound = Cast<USoundBase>(result))
+	if (UAudioComponent* AudioComponent = GetAudioComponent(Type))
+	{
+		UPTAssetManager& AssetManager = UPTAssetManager::Get();
+		AssetManager.AsynchronusLoadAsset(BGMPath, [&, AudioComponent](UObject* result)
 			{
- 				if (UAudioComponent* AudioComponent = GetAudioComponent(Type))
+				if (USoundBase* Sound = Cast<USoundBase>(result))
 				{
 					AudioComponent->SetSound(Sound);
 					AudioComponent->SetWorldLocation(Location);
 					AudioComponent->Play();
 				}
-			}
-		});
+			});
+	}
 }
-PRAGMA_ENABLE_OPTIMIZATION
 
 void UPTAudioSubsystem::PlaySound3D_BySound(ESoundType Type, USoundBase* Sound, FVector Location)
 {
@@ -94,7 +98,7 @@ void UPTAudioSubsystem::PlaySound2D_ByPath(ESoundType Type, const FSoftObjectPat
 	if (UAudioComponent* AudioComponent = GetAudioComponent(Type))
 	{
 		UPTAssetManager& AssetManager = UPTAssetManager::Get();
-		AssetManager.AsynchronusLoadAsset(Path, [&](UObject* result)
+		AssetManager.AsynchronusLoadAsset(Path, [&, AudioComponent](UObject* result)
 			{
 				if (USoundBase* Sound = Cast<USoundBase>(result))
 				{
