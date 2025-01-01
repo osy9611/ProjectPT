@@ -39,4 +39,5 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attribute")
 	FSkillData Skill2;
+
 };

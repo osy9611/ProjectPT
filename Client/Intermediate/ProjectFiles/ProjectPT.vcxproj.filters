@@ -231,6 +231,15 @@
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTCharacter_AttributeSet.h">
       <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\AbilitySystem\GameplayEffect">
+      <UniqueIdentifier>{C5DF3DCE-8123-317E-A666-DF1CDB41633E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\PTGE_AttackDamage.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\GameplayEffect</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\PTGE_AttackDamage.h">
+      <Filter>Source\ProjectPT\AbilitySystem\GameplayEffect</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\AbilitySystem\Notify">
       <UniqueIdentifier>{AF8183F8-D51B-3514-9264-4CADECE03DA5}</UniqueIdentifier>
     </Filter>
@@ -363,10 +372,10 @@
     <Filter Include="Source\ProjectPT\Object">
       <UniqueIdentifier>{30BD0487-3A27-3130-9F9A-308BAD03637B}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.cpp">
+    <ClCompile Include="..\..\Source\ProjectPT\Object\PTObjectSubsystem.cpp">
       <Filter>Source\ProjectPT\Object</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.h">
+    <ClInclude Include="..\..\Source\ProjectPT\Object\PTObjectSubsystem.h">
       <Filter>Source\ProjectPT\Object</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Object\PTProjectile.cpp">
@@ -410,6 +419,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Pool\Poolable_Actor.h">
       <Filter>Source\ProjectPT\Pool</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Sound">
+      <UniqueIdentifier>{B3DE8056-3643-3122-BC41-265BE2EE6D4D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Sound\PTAudioSubsystem.cpp">
+      <Filter>Source\ProjectPT\Sound</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Sound\PTAudioSubsystem.h">
+      <Filter>Source\ProjectPT\Sound</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\System">
       <UniqueIdentifier>{2014B51B-9363-30DE-A2D6-2D5AC646BCA1}</UniqueIdentifier>

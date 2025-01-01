@@ -14,6 +14,8 @@
 #include "ProjectPT/Table/DataManagerSubsystem.h"
 #include <Kismet/GameplayStatics.h>
 #include <ProjectPT/Table/GenerateTableData.h>
+#include <ProjectPT/Object/PTObjectSubsystem.h>
+#include <ProjectPT/Sound/PTAudioSubsystem.h>
 
 APTGameModeBase::APTGameModeBase()
 {
@@ -56,7 +58,9 @@ PRAGMA_DISABLE_OPTIMIZATION
 void APTGameModeBase::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
 {
 	if (IsExperienceLoaded())
+	{
 		Super::HandleStartingNewPlayer_Implementation(NewPlayer);
+	}
 }
 PRAGMA_ENABLE_OPTIMIZATION
 
@@ -141,16 +145,22 @@ void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentE
 				RestartPlayer(PC);
 		}
 	}
+
+
+	if (UPTAudioSubsystem* AudioSubSystem = GetGameInstance()->GetSubsystem<UPTAudioSubsystem>())
+	{
+		AudioSubSystem->RegisterData();
+	}
 }
 
 const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* InController) const
 {
 	if (InController)
 	{
-		if (const APTPlayerState* HakPS = InController->GetPlayerState<APTPlayerState>())
+		if (const APTPlayerState* PTPS = InController->GetPlayerState<APTPlayerState>())
 		{
 			//GetPawnData ±¸Çö 
-			if (const UPTPawnData* PawnData = HakPS->GetPawnData<UPTPawnData>())
+			if (const UPTPawnData* PawnData = PTPS->GetPawnData<UPTPawnData>())
 				return PawnData;
 		}
 	}

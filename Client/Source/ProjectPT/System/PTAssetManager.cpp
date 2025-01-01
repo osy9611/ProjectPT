@@ -58,7 +58,7 @@ UObject* UPTAssetManager::SynchronusLoadAsset(const FSoftObjectPath& AssetPath)
 	return nullptr;
 }
 
-UObject* UPTAssetManager::AsynchronusLoadAsset(const FSoftObjectPath& AssetPath, TFunction<void(UObject*)> callback)
+void UPTAssetManager::AsynchronusLoadAsset(const FSoftObjectPath& AssetPath, TFunction<void(UObject*)> callback)
 {
 	if (AssetPath.IsValid())
 	{
@@ -86,7 +86,6 @@ UObject* UPTAssetManager::AsynchronusLoadAsset(const FSoftObjectPath& AssetPath,
 			},
 			FStreamableManager::AsyncLoadHighPriority);
 	}
-	return nullptr;
 }
 
 void UPTAssetManager::AddLoadedAsset(const UObject* Asset)

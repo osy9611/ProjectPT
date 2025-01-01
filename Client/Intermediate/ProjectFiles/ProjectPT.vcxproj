@@ -636,6 +636,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTCharacter_AttributeSet.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\PTGE_AttackDamage.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\PTGE_AttackDamage.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Notify\PTAnimNotify_AttackHitCheck.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
@@ -726,11 +731,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Input\PTMappableConfigPair.h"/>
-    <ClCompile Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.cpp">
+    <ClCompile Include="..\..\Source\ProjectPT\Object\PTObjectSubsystem.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Object\ObjectSubsystem.h"/>
+    <ClInclude Include="..\..\Source\ProjectPT\Object\PTObjectSubsystem.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Object\PTProjectile.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
@@ -757,6 +762,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Pool\Poolable_Actor.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Sound\PTAudioSubsystem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Sound\PTAudioSubsystem.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\System\PTAssetManager.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_2)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_2)</ForcedIncludeFiles>

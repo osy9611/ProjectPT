@@ -26,7 +26,7 @@ public:
 	static bool ShouldLogAssetLoads();
 
 	static UObject* SynchronusLoadAsset(const FSoftObjectPath& AssetPath);
-	static UObject* AsynchronusLoadAsset(const FSoftObjectPath& AssetPath, TFunction<void(UObject*)>callback);
+	static void AsynchronusLoadAsset(const FSoftObjectPath& AssetPath, TFunction<void(UObject*)>callback);
 
 	template<typename AssetType>
 	static AssetType* GetAsset(const TSoftObjectPtr<AssetType>& AssetPointer, bool bKeepMemory = true);

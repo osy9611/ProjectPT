@@ -70,7 +70,11 @@
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\table\\generatetabledata.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\table\\enumgeneratedata.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\enumgeneratedata.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\generatetabledata.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\generatetabledata.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\object\\ptobjectsubsystem.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptobjectsubsystem.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\sound\\ptaudiosubsystem.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaudiosubsystem.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
