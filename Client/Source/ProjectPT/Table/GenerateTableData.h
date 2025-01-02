@@ -17,5 +17,6 @@ public:
 	FString MuzzleName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECollisionType CollisionType;
+
 };
 

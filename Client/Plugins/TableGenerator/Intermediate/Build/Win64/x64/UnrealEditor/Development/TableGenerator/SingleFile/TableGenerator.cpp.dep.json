@@ -1119,7 +1119,10 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\json\\public\\jsonglobals.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\json\\public\\serialization\\jsonwriter.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\json\\public\\policies\\prettyjsonprintpolicy.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\json\\public\\policies\\jsonprintpolicy.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\json\\public\\policies\\jsonprintpolicy.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\bufferarchive.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\serialization\\objectandnameasstringproxyarchive.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\nameasstringproxyarchive.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

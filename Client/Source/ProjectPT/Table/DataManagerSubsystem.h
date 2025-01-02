@@ -20,12 +20,17 @@ public:
 	virtual void Deinitialize() override;
 
 	void LoadAllData();
+	void LoadAllDataTable();
+	void LoadAllDataBinary();
+
 	void ReloadAllData();
 
 	template<typename T = FTableRowBase>
 	T* FindData(const FString& RowName);
 
 	UDataTable* GetTableData(const FString& TableName);
+
+	UDataTable* DeserializeData(const FString& FilePath);
 
 private:
 	//PIE 종료 시 GC이 모든 UObject를 정리한다.

@@ -16,7 +16,10 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\editor\\leveleditor\\public\\viewporttypedefinition.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\editor\\leveleditor\\public\\leveleditoroutlinersettings.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\developer\\toolwidgets\\public\\filters\\genericfilter.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\developer\\toolwidgets\\public\\filters\\filterbase.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\developer\\toolwidgets\\public\\filters\\filterbase.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\bufferarchive.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\serialization\\objectandnameasstringproxyarchive.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\nameasstringproxyarchive.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

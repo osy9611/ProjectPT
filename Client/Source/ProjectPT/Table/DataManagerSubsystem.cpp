@@ -3,6 +3,7 @@
 
 #include "DataManagerSubsystem.h"
 #include "EnumGenerateData.h"
+#include "Serialization/ObjectAndNameAsStringProxyArchive.h"
 
 UDataManagerSubsystem::UDataManagerSubsystem()
 {
@@ -12,7 +13,6 @@ UDataManagerSubsystem::UDataManagerSubsystem()
 void UDataManagerSubsystem::Deinitialize()
 {
 	Super::Deinitialize();
-
 	CacheTableData.Empty();
 }
 
@@ -21,8 +21,14 @@ void UDataManagerSubsystem::LoadAllData()
 	if (bIsLoadData)
 		return;
 
-	UE_LOG(PTLog, Log, TEXT("LoadAllData"));
+	UE_LOG(PTLog, Log, TEXT("[UDataManageSubSystem] LoadAllData"));
+	LoadAllDataBinary();
 
+	bIsLoadData = true;
+}
+
+void UDataManagerSubsystem::LoadAllDataTable()
+{
 	TMap<FString, UDataTable*> NewTableData;
 
 	FString DataTableFolderPath = FPaths::ProjectContentDir() + TEXT("Table/Data");
@@ -37,26 +43,54 @@ void UDataManagerSubsystem::LoadAllData()
 		//이미 로드된 데이터 확인
 		if (UDataTable** ExistingTable = CacheTableData.Find(FileName))
 		{
-			UE_LOG(PTLog, Log, TEXT("Table already loaded: %s"), *FileName);
+			UE_LOG(PTLog, Log, TEXT("[UDataManageSubSystem] Table already loaded: %s"), *FileName);
 			NewTableData.Add(FileName, *ExistingTable);
 			continue;
 		}
 
 		if (UDataTable* DataTable = LoadObject<UDataTable>(nullptr, *AssetPath))
 		{
-			UE_LOG(PTLog, Log, TEXT("Table Load Success: %s"), *FileName);
+			UE_LOG(PTLog, Log, TEXT("[UDataManageSubSystem] Table Load Success: %s"), *FileName);
 			FString Key = *(DataTable->GetRowStructName()).ToString();
 			NewTableData.Add(Key, DataTable);
 		}
 		else
 		{
-			UE_LOG(PTLog, Error, TEXT("Table Load Fail: %s"), *FileName);
+			UE_LOG(PTLog, Error, TEXT("[UDataManageSubSystem] Table Load Fail: %s"), *FileName);
 		}
 	}
 
 	//기존 데이터 덮어쓰기
 	CacheTableData = MoveTemp(NewTableData);
-	bIsLoadData = true;
+}
+
+void UDataManagerSubsystem::LoadAllDataBinary()
+{
+	if (bIsLoadData)
+		return;
+
+
+	TMap<FString, UDataTable*> NewTableData;
+
+	FString DataTableFolderPath = FPaths::ProjectContentDir() + TEXT("Table/Byte");
+	TArray<FString> FileNames;
+	IFileManager::Get().FindFiles(FileNames, *DataTableFolderPath, TEXT("*.byte"));
+
+	for (const FString& FileName : FileNames)
+	{
+		if (UDataTable* DataTable = DeserializeData(DataTableFolderPath + "/" + FileName))
+		{
+			FString Key = *(DataTable->GetRowStructName()).ToString();
+			NewTableData.Add(Key, DataTable);
+		}
+		else
+		{
+			UE_LOG(PTLog, Error, TEXT("[UDataManageSubSystem] BinaryData Load Fail: %s"), *FileName);
+		}
+	}
+
+	//기존 데이터 덮어쓰기
+	CacheTableData = MoveTemp(NewTableData);
 }
 
 void UDataManagerSubsystem::ReloadAllData()
@@ -67,9 +101,35 @@ void UDataManagerSubsystem::ReloadAllData()
 
 UDataTable* UDataManagerSubsystem::GetTableData(const FString& TableName)
 {
-	if(UDataTable**TablePtr = CacheTableData.Find(TableName))
+	if (UDataTable** TablePtr = CacheTableData.Find(TableName))
 	{
 		return *TablePtr;
 	}
 	return nullptr;
+}
+
+UDataTable* UDataManagerSubsystem::DeserializeData(const FString& FilePath)
+{
+	if (FilePath.IsEmpty())
+	{
+		UE_LOG(PTLog, Log, TEXT("[UDataManageSubSystem] This File Path Is Null"));
+		return nullptr;
+	}
+
+	TArray<uint8> BinaryData;
+
+	if (FFileHelper::LoadFileToArray(BinaryData, *FilePath) == false)
+	{
+		UE_LOG(PTLog, Log, TEXT("[UDataManageSubSystem] Failed to load binary file : %s"), *FilePath);
+		return nullptr;
+	}
+
+	FMemoryReader MemoryReader(BinaryData, true);
+
+	UDataTable* DataTable = NewObject<UDataTable>();
+
+	FObjectAndNameAsStringProxyArchive Ar(MemoryReader, false);
+	DataTable->Serialize(Ar);
+
+	return DataTable;
 }

@@ -86,11 +86,11 @@
 			"ProjectPT.cpp.obj",
 			"PTGameplayTags.cpp.obj",
 			"PTLogChannels.cpp.obj",
+			"PTAudioSubsystem.cpp.obj",
 			"PTAssetManager.cpp.obj",
 			"PTGameInstance.cpp.obj",
-			"DataManagerSubsystem.cpp.obj",
 			"EnumGenerateData.cpp.obj",
-			"PTAudioSubsystem.cpp.obj"
+			"DataManagerSubsystem.cpp.obj"
 		]
 	}
 }

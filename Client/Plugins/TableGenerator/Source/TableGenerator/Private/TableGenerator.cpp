@@ -12,6 +12,8 @@
 #include "Misc/Paths.h"
 #include "Serialization/JsonReader.h"
 #include "Serialization/JsonSerializer.h"
+#include <Serialization/BufferArchive.h>
+#include <Serialization/ObjectAndNameAsStringProxyArchive.h>
 
 
 static const FName TableGeneratorTabName("TableGenerator");
@@ -152,7 +154,7 @@ void FTableGeneratorModule::MakeDataTableStruct()
 	FString PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "EnumGenerator.py");
 	PythonScriptPath = FPaths::ConvertRelativePathToFull(PythonScriptPath);
 	PythonScriptPath.InsertAt(0, "py ");
-	GEngine->Exec(nullptr, *PythonScriptPath);	
+	GEngine->Exec(nullptr, *PythonScriptPath);
 
 	PythonScriptPath = FPaths::Combine(FPaths::ProjectContentDir(), "Python", "TableGenerator.py");
 	PythonScriptPath = FPaths::ConvertRelativePathToFull(PythonScriptPath);
@@ -176,9 +178,42 @@ void FTableGeneratorModule::ImportCSVData()
 	PythonScriptPath.InsertAt(0, "py ");
 	GEngine->Exec(nullptr, *PythonScriptPath);
 
+	GenerateByte();
+
 	UE_LOG(LogTemp, Log, TEXT(" "));
 	UE_LOG(LogTemp, Log, TEXT(" "));
 	UE_LOG(LogTemp, Log, TEXT("------------------------------"));
+}
+
+void FTableGeneratorModule::GenerateByte()
+{
+	FString DataTableFolderPath = FPaths::ProjectContentDir() + TEXT("Table/Data");
+	TArray<FString> FileNames;
+	IFileManager::Get().FindFiles(FileNames, *DataTableFolderPath, TEXT("*.uasset"));
+
+	for (const FString& FileName : FileNames)
+	{
+		FString AssetPath = FString::Printf(TEXT("/Game/Table/Data/%s"), *FPaths::GetBaseFilename(FileName));
+		
+		if (UDataTable* DataTable = LoadObject<UDataTable>(nullptr, *AssetPath))
+		{
+			FString OutputPath = FPaths::ProjectContentDir()+FString::Printf(TEXT("/Table/Byte/%s.byte"), *DataTable->GetName());
+			
+			TArray<uint8> BinaryData;
+			FMemoryWriter MemoryWriter(BinaryData, true);
+			FObjectAndNameAsStringProxyArchive Ar(MemoryWriter, false);
+			DataTable->Serialize(Ar);
+
+			if (FFileHelper::SaveArrayToFile(BinaryData, *OutputPath))
+			{
+				UE_LOG(LogTemp, Log, TEXT("Data saved to binary file : %s"), *OutputPath);
+			}
+			else
+			{
+				UE_LOG(LogTemp, Log, TEXT("Failed Data saved to binary file : %s"), *OutputPath);
+			}
+		}
+	}
 }
 
 void FTableGeneratorModule::SettingConfig()
@@ -295,7 +330,7 @@ TSharedRef<SDockTab> FTableGeneratorModule::SpawnTab(const FSpawnTabArgs& SpawnT
 							})
 				]
 
-				+SVerticalBox::Slot()
+				+ SVerticalBox::Slot()
 				.AutoHeight()
 				.Padding(10)
 				.HAlign(HAlign_Center) // 버튼을 중앙 정렬

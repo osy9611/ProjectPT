@@ -83,7 +83,7 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/ProjectPT.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/PTGameplayTags.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/PTLogChannels.cpp"
+#include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/Sound/PTAudioSubsystem.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/System/PTAssetManager.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/System/PTGameInstance.cpp"
-#include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/Table/DataManagerSubsystem.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/Table/EnumGenerateData.cpp"

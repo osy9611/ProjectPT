@@ -21,6 +21,7 @@ public:
 
 	void MakeDataTableStruct();
 	void ImportCSVData();
+	void GenerateByte();
 	void SettingConfig();
 
 
