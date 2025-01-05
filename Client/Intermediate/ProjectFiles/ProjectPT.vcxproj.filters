@@ -33,9 +33,96 @@
     <Filter Include="Plugins">
       <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Plugins\CommonGame">
+      <UniqueIdentifier>{E1E239CD-53BC-3B92-8DE7-AD14CF3D2557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CommonGame\Source">
+      <UniqueIdentifier>{38A194BF-B69F-3709-A5F4-B4EDA2B5B5F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\CommonGame\Source\CommonGame">
+      <UniqueIdentifier>{5FC62767-EBE6-3928-9BD4-52F90D3F2118}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CommonGame\Source\CommonGame\CommonGame.Build.cs">
+      <Filter>Plugins\CommonGame\Source\CommonGame</Filter>
+    </None>
+    <Filter Include="Plugins\CommonGame\Source\CommonGame\Private">
+      <UniqueIdentifier>{D9E7423B-BEF6-3131-8177-EB9838C31B49}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonGame.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonGameInstance.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonLocalPlayer.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonPlayerController.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonUserWidgetBase.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\UIManagerSubsystem.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\CommonGame\Source\CommonGame\Public">
+      <UniqueIdentifier>{A960B343-5B8A-3A84-8C5C-DF32BD009E63}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonGame.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonGameInstance.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonLocalPlayer.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonPlayerController.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonUserWidgetBase.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\UIManagerSubsystem.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\CommonGame\CommonGame.uplugin">
+      <Filter>Plugins\CommonGame</Filter>
+    </None>
+    <Filter Include="Plugins\CommonGame\Resources">
+      <UniqueIdentifier>{19C16645-1283-3DD9-8FA6-7A1F72D25A7D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\CommonGame\Resources\Icon128.png">
+      <Filter>Plugins\CommonGame\Resources</Filter>
+    </None>
     <Filter Include="Plugins\ModularGameplayActors">
       <UniqueIdentifier>{E25759FB-664C-355F-8250-88BB112CE4AF}</UniqueIdentifier>
     </Filter>
+    <None Include="..\..\Plugins\ModularGameplayActors\ModularGameplayActors.uplugin">
+      <Filter>Plugins\ModularGameplayActors</Filter>
+    </None>
+    <Filter Include="Plugins\ModularGameplayActors\Resources">
+      <UniqueIdentifier>{890678FF-BC6A-31BD-81A0-4D84C6398C6D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\ModularGameplayActors\Resources\Icon128.png">
+      <Filter>Plugins\ModularGameplayActors\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\TableGenerator">
+      <UniqueIdentifier>{D5A15DA1-24BE-32E4-AB06-372D01985FB2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\TableGenerator\TableGenerator.uplugin">
+      <Filter>Plugins\TableGenerator</Filter>
+    </None>
+    <Filter Include="Plugins\TableGenerator\Resources">
+      <UniqueIdentifier>{C88FDA82-6BC8-390E-B155-17EC8BCF483E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\TableGenerator\Resources\Icon128.png">
+      <Filter>Plugins\TableGenerator\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\TableGenerator\Resources\PlaceholderButtonIcon.svg">
+      <Filter>Plugins\TableGenerator\Resources</Filter>
+    </None>
     <Filter Include="Plugins\ModularGameplayActors\Source">
       <UniqueIdentifier>{D2A7373A-5074-3627-B395-44D580887335}</UniqueIdentifier>
     </Filter>
@@ -69,30 +156,6 @@
     <ClInclude Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public\ModularPlayerController.h">
       <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public</Filter>
     </ClInclude>
-    <None Include="..\..\Plugins\ModularGameplayActors\ModularGameplayActors.uplugin">
-      <Filter>Plugins\ModularGameplayActors</Filter>
-    </None>
-    <Filter Include="Plugins\ModularGameplayActors\Resources">
-      <UniqueIdentifier>{890678FF-BC6A-31BD-81A0-4D84C6398C6D}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\ModularGameplayActors\Resources\Icon128.png">
-      <Filter>Plugins\ModularGameplayActors\Resources</Filter>
-    </None>
-    <Filter Include="Plugins\TableGenerator">
-      <UniqueIdentifier>{D5A15DA1-24BE-32E4-AB06-372D01985FB2}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\TableGenerator\TableGenerator.uplugin">
-      <Filter>Plugins\TableGenerator</Filter>
-    </None>
-    <Filter Include="Plugins\TableGenerator\Resources">
-      <UniqueIdentifier>{C88FDA82-6BC8-390E-B155-17EC8BCF483E}</UniqueIdentifier>
-    </Filter>
-    <None Include="..\..\Plugins\TableGenerator\Resources\Icon128.png">
-      <Filter>Plugins\TableGenerator\Resources</Filter>
-    </None>
-    <None Include="..\..\Plugins\TableGenerator\Resources\PlaceholderButtonIcon.svg">
-      <Filter>Plugins\TableGenerator\Resources</Filter>
-    </None>
     <Filter Include="Plugins\TableGenerator\Source">
       <UniqueIdentifier>{E5B05D01-147B-3B84-ACFD-FA77BB9520A3}</UniqueIdentifier>
     </Filter>
@@ -393,6 +456,12 @@
     <Filter Include="Source\ProjectPT\Player">
       <UniqueIdentifier>{4F5CBE5F-5F7D-3187-A082-89AEAE27B0F7}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Player\PTLocalPlayer.cpp">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Player\PTLocalPlayer.h">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Player\PTPlayerController.cpp">
       <Filter>Source\ProjectPT\Player</Filter>
     </ClCompile>
@@ -461,6 +530,15 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\ProjectPT\Table\GenerateTableData.h">
       <Filter>Source\ProjectPT\Table</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\UI">
+      <UniqueIdentifier>{EA9F777F-5F64-34D7-AA65-F10ACCC8EA74}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.cpp">
+      <Filter>Source\ProjectPT\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.h">
+      <Filter>Source\ProjectPT\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

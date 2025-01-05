@@ -23,9 +23,13 @@ public class ProjectPT : ModuleRules
             "ModularGameplayActors",
 			//Input
             "InputCore", 
-			"EnhancedInput" 
-
-		});
+			"EnhancedInput",
+			//CommonUI
+			"CommonInput",
+			"CommonUI",
+			//CommonGame
+            "CommonGame",
+        });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

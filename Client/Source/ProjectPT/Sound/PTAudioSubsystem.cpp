@@ -16,7 +16,7 @@ void UPTAudioSubsystem::Deinitialize()
 {
 	AudioComponents.Empty();
 }
-
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTAudioSubsystem::RegisterData()
 {
 	int32 MaxCount = static_cast<int32>(ESoundType::Max);
@@ -35,10 +35,10 @@ void UPTAudioSubsystem::RegisterData()
 			AudioComponent->bAutoActivate = true;
 		}
 		AudioComponent->RegisterComponentWithWorld(GetWorld());
-		AudioComponent->RegisterComponent();
+		//AudioComponent->RegisterComponent();
 	}
 }
-
+PRAGMA_ENABLE_OPTIMIZATION
 UAudioComponent* UPTAudioSubsystem::GetAudioComponent(ESoundType Type)
 {
 	if (UAudioComponent** AudioComponentPtr = AudioComponents.Find(Type))

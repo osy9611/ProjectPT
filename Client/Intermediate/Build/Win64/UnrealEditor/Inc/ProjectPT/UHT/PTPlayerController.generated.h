@@ -19,7 +19,7 @@ private: \
 	static void StaticRegisterNativesAPTPlayerController(); \
 	friend struct Z_Construct_UClass_APTPlayerController_Statics; \
 public: \
-	DECLARE_CLASS(APTPlayerController, AModularPlayerController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProjectPT"), NO_API) \
+	DECLARE_CLASS(APTPlayerController, ACommonPlayerController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProjectPT"), NO_API) \
 	DECLARE_SERIALIZER(APTPlayerController)
 
 

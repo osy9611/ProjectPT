@@ -7,7 +7,6 @@
 			"GenerateTableData.gen.cpp.obj",
 			"ObjectPoolSubsystem.gen.cpp.obj",
 			"Poolable_Actor.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
@@ -23,7 +22,6 @@
 			"PTCharacter_AttributeSet.gen.cpp.obj",
 			"PTExperienceDefinition.gen.cpp.obj",
 			"PTExperienceManagerComponent.gen.cpp.obj",
-			"PTGameInstance.gen.cpp.obj",
 			"PTGameModeBase.gen.cpp.obj",
 			"PTGameplayAbility.gen.cpp.obj",
 			"PTGameplayAbilityTargetActor_Trace.gen.cpp.obj",
@@ -43,7 +41,6 @@
 			"PTPawnData.gen.cpp.obj",
 			"PTPawnExtensionComponent.gen.cpp.obj",
 			"PTPlayerCameraManager.gen.cpp.obj",
-			"PTPlayerController.gen.cpp.obj",
 			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
@@ -79,7 +76,6 @@
 			"PTMappableConfigPair.cpp.obj",
 			"PTObjectSubsystem.cpp.obj",
 			"PTProjectile.cpp.obj",
-			"PTPlayerController.cpp.obj",
 			"PTPlayerState.cpp.obj",
 			"ObjectPoolSubsystem.cpp.obj",
 			"Poolable_Actor.cpp.obj",
@@ -88,9 +84,17 @@
 			"PTLogChannels.cpp.obj",
 			"PTAudioSubsystem.cpp.obj",
 			"PTAssetManager.cpp.obj",
-			"PTGameInstance.cpp.obj",
 			"DataManagerSubsystem.cpp.obj",
-			"EnumGenerateData.cpp.obj"
+			"EnumGenerateData.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj",
+			"PTGameInstance.gen.cpp.obj",
+			"PTLocalPlayer.gen.cpp.obj",
+			"PTPlayerController.gen.cpp.obj",
+			"PTUIManagerSubsystem.gen.cpp.obj",
+			"PTLocalPlayer.cpp.obj",
+			"PTPlayerController.cpp.obj",
+			"PTGameInstance.cpp.obj",
+			"PTUIManagerSubsystem.cpp.obj"
 		]
 	}
 }

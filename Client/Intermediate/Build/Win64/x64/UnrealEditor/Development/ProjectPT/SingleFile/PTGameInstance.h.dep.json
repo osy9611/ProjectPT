@@ -570,6 +570,8 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\serialization\\customversion.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\replaytypes.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameinstance.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\commongameinstance.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongameinstance.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameinstance.generated.h"
         ],
         "ImportedModules": [],

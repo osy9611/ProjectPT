@@ -10,7 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTPlayerController() {}
 
 // Begin Cross Module References
-MODULARGAMEPLAYACTORS_API UClass* Z_Construct_UClass_AModularPlayerController();
+COMMONGAME_API UClass* Z_Construct_UClass_ACommonPlayerController();
 PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerController();
 PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerController_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
@@ -45,7 +45,7 @@ struct Z_Construct_UClass_APTPlayerController_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 UObject* (*const Z_Construct_UClass_APTPlayerController_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_AModularPlayerController,
+	(UObject* (*)())Z_Construct_UClass_ACommonPlayerController,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APTPlayerController_Statics::DependentSingletons) < 16);
@@ -84,10 +84,10 @@ APTPlayerController::~APTPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APTPlayerController, APTPlayerController::StaticClass, TEXT("APTPlayerController"), &Z_Registration_Info_UClass_APTPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTPlayerController), 1422634851U) },
+		{ Z_Construct_UClass_APTPlayerController, APTPlayerController::StaticClass, TEXT("APTPlayerController"), &Z_Registration_Info_UClass_APTPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTPlayerController), 2277262034U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerController_h_3359381330(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerController_h_2600368070(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

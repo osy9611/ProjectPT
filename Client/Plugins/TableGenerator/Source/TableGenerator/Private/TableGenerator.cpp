@@ -65,8 +65,6 @@ void FTableGeneratorModule::StartupModule()
 	LevelEditorModule.GetMenuExtensibilityManager()->AddExtender(Extender);
 }
 
-
-
 void FTableGeneratorModule::ShutdownModule()
 {
 	IModuleInterface::ShutdownModule();
