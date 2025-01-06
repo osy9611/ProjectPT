@@ -858,6 +858,11 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Table\EnumGenerateData.h"/>
     <ClInclude Include="..\..\Source\ProjectPT\Table\GenerateTableData.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\PTActivatableWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\PTActivatableWidget.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>

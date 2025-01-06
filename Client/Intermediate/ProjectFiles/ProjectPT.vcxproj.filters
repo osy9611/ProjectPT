@@ -534,6 +534,12 @@
     <Filter Include="Source\ProjectPT\UI">
       <UniqueIdentifier>{EA9F777F-5F64-34D7-AA65-F10ACCC8EA74}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\PTActivatableWidget.cpp">
+      <Filter>Source\ProjectPT\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\PTActivatableWidget.h">
+      <Filter>Source\ProjectPT\UI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.cpp">
       <Filter>Source\ProjectPT\UI</Filter>
     </ClCompile>

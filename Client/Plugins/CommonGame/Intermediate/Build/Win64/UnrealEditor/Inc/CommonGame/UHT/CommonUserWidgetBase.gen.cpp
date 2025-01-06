@@ -88,7 +88,7 @@ struct Z_Construct_UClass_UCommonUserWidgetBase_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n *\n */" },
 #endif
 		{ "IncludePath", "CommonUserWidgetBase.h" },
 		{ "ModuleRelativePath", "Public/CommonUserWidgetBase.h" },
@@ -161,10 +161,10 @@ UCommonUserWidgetBase::~UCommonUserWidgetBase() {}
 struct Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCommonUserWidgetBase, UCommonUserWidgetBase::StaticClass, TEXT("UCommonUserWidgetBase"), &Z_Registration_Info_UClass_UCommonUserWidgetBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommonUserWidgetBase), 1764020412U) },
+		{ Z_Construct_UClass_UCommonUserWidgetBase, UCommonUserWidgetBase::StaticClass, TEXT("UCommonUserWidgetBase"), &Z_Registration_Info_UClass_UCommonUserWidgetBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCommonUserWidgetBase), 2580791419U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_3159801076(TEXT("/Script/CommonGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_59638506(TEXT("/Script/CommonGame"),
 	Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

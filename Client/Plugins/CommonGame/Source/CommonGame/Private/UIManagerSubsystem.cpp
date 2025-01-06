@@ -2,9 +2,9 @@
 
 
 #include "UIManagerSubsystem.h"
-#include "CommonUserWidgetBase.h"
 #include "CommonPlayerController.h"
 #include "CommonLocalPlayer.h"
+#include "CommonActivatableWidget.h"
 
 
 UUIManagerSubsystem::UUIManagerSubsystem()
@@ -135,4 +135,15 @@ void UUIManagerSubsystem::RemoveLayoutFromViewport()
 	{
 		CurrentWidget->RemoveFromParent();
 	}
+}
+
+UCommonActivatableWidget* UUIManagerSubsystem::CreateWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass)
+{
+	if (!ActivatableWidgetClass)
+	{
+		UE_LOG(LogTemp, Log, TEXT("This ActivatableWidgetClass Is Null"));
+		return nullptr;
+	}
+
+	return CreateWidgetClass<UCommonActivatableWidget>(LayerName, ActivatableWidgetClass->GetClass());
 }

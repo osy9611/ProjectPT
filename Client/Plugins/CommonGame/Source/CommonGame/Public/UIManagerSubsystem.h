@@ -4,15 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "GameplayTagContainer.h"
+#include "CommonUserWidgetBase.h"
+#include "CommonActivatableWidget.h"
+#include "Widgets/CommonActivatableWidgetContainer.h"
 #include "UIManagerSubsystem.generated.h"
 
-
-class UCommonUserWidgetBase;
 class UCommonLocalPlayer;
 /**
  *
  */
-UCLASS(Abstract, config=Game)
+UCLASS(Abstract, config = Game)
 class COMMONGAME_API UUIManagerSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
@@ -32,6 +34,15 @@ public:
 	void AddToLayoutViewport(UCommonLocalPlayer* PlayerController);
 	void RemoveLayoutFromViewport();
 
+	UFUNCTION(BlueprintCallable)
+	UCommonActivatableWidget* CreateWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass);
+
+	template<typename T = UCommonActivatableWidget>
+	T* CreateWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
+
+	template<typename T = UCommonActivatableWidget>
+	T* GetWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
+
 	UPROPERTY(Transient)
 	TSubclassOf<UCommonUserWidgetBase> CurrentWidgetClass;
 
@@ -42,3 +53,27 @@ public:
 	TSoftClassPtr<UCommonUserWidgetBase> DefualtWidget;
 
 };
+
+template<typename T>
+T* UUIManagerSubsystem::CreateWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
+{
+	if (!CurrentWidget)
+	{
+		UE_LOG(LogTemp, Log, TEXT("[UIManageSubsystem] CurrentWidget is nullptr"));
+		return nullptr;
+	}
+
+	return Cast<T>(CurrentWidget->CreateWidgetToLayer(LayerName, ActivatableWidgetClass));
+}
+
+template<typename T>
+T* UUIManagerSubsystem::GetWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
+{
+	if (!CurrentWidget)
+	{
+		UE_LOG(LogTemp, Log, TEXT("[UIManageSubsystem] CurrentWidget is nullptr"));
+		return nullptr;
+	}
+
+	return Cast<T>(CurrentWidget->GetWidgetToLayer(LayerName, ActivatableWidgetClass));
+}

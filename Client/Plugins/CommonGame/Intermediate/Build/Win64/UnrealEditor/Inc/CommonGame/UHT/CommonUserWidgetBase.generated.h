@@ -16,11 +16,11 @@ struct FGameplayTag;
 #endif
 #define COMMONGAME_CommonUserWidgetBase_generated_h
 
-#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRegisterLayer);
 
 
-#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCommonUserWidgetBase(); \
 	friend struct Z_Construct_UClass_UCommonUserWidgetBase_Statics; \
@@ -29,7 +29,7 @@ public: \
 	DECLARE_SERIALIZER(UCommonUserWidgetBase)
 
 
-#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UCommonUserWidgetBase(UCommonUserWidgetBase&&); \
@@ -41,13 +41,13 @@ public: \
 	NO_API virtual ~UCommonUserWidgetBase();
 
 
-#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_14_PROLOG
-#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_17_GENERATED_BODY \
+#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_15_PROLOG
+#define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Client_Plugins_CommonGame_Source_CommonGame_Public_CommonUserWidgetBase_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

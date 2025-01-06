@@ -241,8 +241,6 @@ void UPTCameraModeStack::PushCameraMode(TSubclassOf<UPTCameraMode>& CameraModeCl
 		{
 			//원하는 CameraMode가 아니니까, InvBlendWeight = (1.0 - BlendWeight)를 곱해줘야, 값이 누적된다
 			ExistingStackContribution *= (1.0f - CameraModeStack[StackIndex]->GetBlendWeight());
-
-			
 		}
 	}
 

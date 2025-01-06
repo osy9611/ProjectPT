@@ -15,7 +15,8 @@
 				"ModularGameplayActors",
 				"GameplayAbilities",
 				"CoreUObject",
-				"CommonGame"
+				"CommonGame",
+				"CommonUI"
 			]
 		}
 	],

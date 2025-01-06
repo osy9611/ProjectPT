@@ -29,6 +29,8 @@ public class ProjectPT : ModuleRules
 			"CommonUI",
 			//CommonGame
             "CommonGame",
+			// UMG
+            "UMG",
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
