@@ -10,6 +10,7 @@
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
+			"PTActivatableWidget.gen.cpp.obj",
 			"PTAnimInstance.gen.cpp.obj",
 			"PTAnimNotify_AttackHitCheck.gen.cpp.obj",
 			"PTAssetManager.gen.cpp.obj",
@@ -46,6 +47,7 @@
 			"PTPlayerController.gen.cpp.obj",
 			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
+			"PTUIManagerSubsystem.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
 			"PTGameplayAbility_Jump.cpp.obj",
 			"PTGameplayAbility_MeleeAttack.cpp.obj",
@@ -63,6 +65,7 @@
 			"PTAbilityTask_Trace.cpp.obj",
 			"PTAnimInstance.cpp.obj",
 			"PTCameraComponent.cpp.obj",
+			"PTCameraMode.cpp.obj",
 			"PTCameraMode_ThirdPerson.cpp.obj",
 			"PTPlayerCameraManager.cpp.obj",
 			"PTCharacter.cpp.obj",
@@ -91,12 +94,15 @@
 			"PTGameInstance.cpp.obj",
 			"DataManagerSubsystem.cpp.obj",
 			"EnumGenerateData.cpp.obj",
+			"PTActivatableWidget.cpp.obj",
 			"PTUIManagerSubsystem.cpp.obj",
+			"CircumferenceMarkerWidget.gen.cpp.obj",
 			"ProjectPT.init.gen.cpp.obj",
-			"PTActivatableWidget.gen.cpp.obj",
-			"PTUIManagerSubsystem.gen.cpp.obj",
-			"PTCameraMode.cpp.obj",
-			"PTActivatableWidget.cpp.obj"
+			"PTWidgetData.gen.cpp.obj",
+			"SCircumferenceMarkerWidget.gen.cpp.obj",
+			"PTWidgetData.cpp.obj",
+			"CircumferenceMarkerWidget.cpp.obj",
+			"SCircumferenceMarkerWidget.cpp.obj"
 		]
 	}
 }

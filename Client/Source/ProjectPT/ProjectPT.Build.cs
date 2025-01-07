@@ -31,6 +31,9 @@ public class ProjectPT : ModuleRules
             "CommonGame",
 			// UMG
             "UMG",
+			// Slate
+            "Slate",
+            "SlateCore",
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

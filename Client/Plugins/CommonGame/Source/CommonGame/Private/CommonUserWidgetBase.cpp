@@ -42,7 +42,6 @@ UCommonActivatableWidget* UCommonUserWidgetBase::CreateWidgetToLayer(FGameplayTa
 		{
 			return LayerWidget->AddWidget(ActivatableWidgetClass);
 		}
-		
 	}
 
 	return nullptr;

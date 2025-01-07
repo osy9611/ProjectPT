@@ -546,5 +546,26 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.h">
       <Filter>Source\ProjectPT\UI</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\PTWidgetData.cpp">
+      <Filter>Source\ProjectPT\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\PTWidgetData.h">
+      <Filter>Source\ProjectPT\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\Weapon">
+      <UniqueIdentifier>{EFD4EA53-523A-33D8-95F6-89D05CDF5827}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Weapon\CircumferenceMarkerWidget.cpp">
+      <Filter>Source\ProjectPT\UI\Weapon</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Weapon\CircumferenceMarkerWidget.h">
+      <Filter>Source\ProjectPT\UI\Weapon</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Weapon\SCircumferenceMarkerWidget.cpp">
+      <Filter>Source\ProjectPT\UI\Weapon</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Weapon\SCircumferenceMarkerWidget.h">
+      <Filter>Source\ProjectPT\UI\Weapon</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
