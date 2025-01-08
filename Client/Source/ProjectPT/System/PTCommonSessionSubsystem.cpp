@@ -6,6 +6,7 @@
 #include "ProjectPT/Table/DataManagerSubsystem.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/GameModes/PTSceneData.h"
+#include "ProjectPT/Sound/PTAudioSubsystem.h"
 #include "PTAssetManager.h"
 
 UPTCommonSessionSubsystem::UPTCommonSessionSubsystem()
@@ -32,6 +33,11 @@ void UPTCommonSessionSubsystem::MoveSessionByTableID(int32 TableNo)
 
 					if (MoveSessionData)
 					{
+						if (UPTAudioSubsystem* AudioComponent = GetGameInstance()->GetSubsystem<UPTAudioSubsystem>())
+						{
+							AudioComponent->UnRegisterData();
+						}
+							
 						GetWorld()->ServerTravel(MoveSessionData->CreateURL());
 					}
 				}

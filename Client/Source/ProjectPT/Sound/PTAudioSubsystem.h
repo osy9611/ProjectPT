@@ -27,6 +27,7 @@ public:
 	virtual void Deinitialize() override;
 
 	void RegisterData();
+	void UnRegisterData();
 
 	UAudioComponent* GetAudioComponent(ESoundType Type);
 	void SetVolume(ESoundType Type, float Volume);

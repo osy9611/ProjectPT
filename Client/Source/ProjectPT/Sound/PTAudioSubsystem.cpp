@@ -35,8 +35,23 @@ void UPTAudioSubsystem::RegisterData()
 		{
 			AudioComponent->bAutoActivate = true;
 		}
-		//AudioComponent->RegisterComponentWithWorld(GetWorld());
+		AudioComponent->RegisterComponentWithWorld(GetWorld());
 		//AudioComponent->RegisterComponent();
+	}
+}
+void UPTAudioSubsystem::UnRegisterData()
+{
+	int32 MaxCount = static_cast<int32>(ESoundType::Max);
+
+	for (int32 i = 0; i < MaxCount; ++i)
+	{
+		ESoundType SoundType = static_cast<ESoundType>(i);
+		UAudioComponent* AudioComponent = GetAudioComponent(SoundType);
+		if (!AudioComponent)
+		{
+			continue;
+		}
+		AudioComponent->UnregisterComponent();
 	}
 }
 PRAGMA_ENABLE_OPTIMIZATION
