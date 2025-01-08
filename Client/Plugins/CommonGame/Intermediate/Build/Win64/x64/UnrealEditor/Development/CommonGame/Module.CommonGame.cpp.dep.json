@@ -6,7 +6,6 @@
         "PCH": "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\commongame\\definitions.commongame.h",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongame.init.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongameinstance.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\commongameinstance.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongameinstance.generated.h",
@@ -84,6 +83,7 @@
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commongameinstance.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonlocalplayer.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonplayercontroller.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonuserwidgetbase.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\uimanagersubsystem.cpp"
         ],
         "ImportedModules": [],

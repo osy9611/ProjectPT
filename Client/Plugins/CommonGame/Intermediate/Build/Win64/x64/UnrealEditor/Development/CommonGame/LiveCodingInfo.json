@@ -2,7 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.CommonGame.cpp.obj": [
-			"CommonGame.init.gen.cpp.obj",
 			"CommonGameInstance.gen.cpp.obj",
 			"CommonLocalPlayer.gen.cpp.obj",
 			"CommonPlayerController.gen.cpp.obj",
@@ -12,8 +11,11 @@
 			"CommonGameInstance.cpp.obj",
 			"CommonLocalPlayer.cpp.obj",
 			"CommonPlayerController.cpp.obj",
+			"CommonUserWidgetBase.cpp.obj",
 			"UIManagerSubsystem.cpp.obj",
-			"CommonUserWidgetBase.cpp.obj"
+			"CommonGame.init.gen.cpp.obj",
+			"CommonSessionSubsystem.gen.cpp.obj",
+			"CommonSessionSubsystem.cpp.obj"
 		]
 	}
 }

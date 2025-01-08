@@ -7,6 +7,7 @@
 #include "PTExperienceDefinition.generated.h"
 
 class UPTPawnData;
+class UPTWidgetData;
 /**
  * 
  */
@@ -16,6 +17,13 @@ class PROJECTPT_API UPTExperienceDefinition : public UPrimaryDataAsset
 	GENERATED_BODY()
 	
 public:
+
+	void RegisterWidgetData(UWorld* World);
+
 	UPROPERTY(EditAnywhere, Category = Gameplay)
 	TObjectPtr<UPTPawnData> DefaultPawnData;
+
+	UPROPERTY(EditAnywhere,Category = Gameplay)
+	TObjectPtr<UPTWidgetData> DefaultWidgetData;
+
 };

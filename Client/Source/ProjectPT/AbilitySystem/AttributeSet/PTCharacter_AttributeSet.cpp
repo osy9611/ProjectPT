@@ -10,7 +10,7 @@ UPTCharacter_AttributeSet::UPTCharacter_AttributeSet(const FObjectInitializer& O
 {
 
 }
-
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTCharacter_AttributeSet::InitAttributeSet(FString RowName)
 {
 	//Character와 관련된 데이터를 입력해서 등록해주면 될거같다.
@@ -20,3 +20,4 @@ void UPTCharacter_AttributeSet::InitAttributeSet(FString RowName)
 		Skill2 = *DataManager->FindData<FSkillData>("1002");
 	}
 }
+PRAGMA_ENABLE_OPTIMIZATION

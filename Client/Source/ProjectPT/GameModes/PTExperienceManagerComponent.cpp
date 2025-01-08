@@ -15,6 +15,7 @@ void UPTExperienceManagerComponent::CallOrRegister_OnExperienceLoaded(FOnExperie
 		OnExperienceLoaded.Add(MoveTemp(Delegate));
 }
 
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTExperienceManagerComponent::SetCurrentExperience(FPrimaryAssetId ExperienceId)
 {
 	UPTAssetManager& AssetManager = UPTAssetManager::Get();
@@ -36,6 +37,7 @@ void UPTExperienceManagerComponent::SetCurrentExperience(FPrimaryAssetId Experie
 
 	StartExperienceLoad();
 }
+PRAGMA_ENABLE_OPTIMIZATION
 
 void UPTExperienceManagerComponent::StartExperienceLoad()
 {

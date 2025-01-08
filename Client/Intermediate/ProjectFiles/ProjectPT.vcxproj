@@ -572,6 +572,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonSessionSubsystem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonUserWidgetBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -584,6 +588,7 @@
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonGameInstance.h"/>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonLocalPlayer.h"/>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonPlayerController.h"/>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonSessionSubsystem.h"/>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonUserWidgetBase.h"/>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\UIManagerSubsystem.h"/>
     <None Include="..\..\Plugins\CommonGame\CommonGame.uplugin"/>
@@ -781,6 +786,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTGameState.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTSceneData.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTSceneData.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Input\PTInputComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
@@ -842,6 +852,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\System\PTAssetManager.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\System\PTCommonSessionSubsystem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\System\PTCommonSessionSubsystem.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\System\PTGameInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>

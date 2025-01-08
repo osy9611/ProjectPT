@@ -15,6 +15,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define PROJECTPT_GenerateTableData_generated_h
 
 #define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_10_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FSceneData_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
+	typedef FTableRowBase Super;
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSceneData>();
+
+#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_18_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSkillData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;

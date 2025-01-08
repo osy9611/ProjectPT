@@ -37,6 +37,7 @@ private:
 	//PIE 종료시 ReleaseSharedReference에서 문제가 생기는 이유는
 	//언리얼 GC에 의해서 이미 메모리가 해제된 상태에 추가적으로 메모리 해제를 하기때문
 	//따라서 TWeakObjectPtr로 설정함
+	UPROPERTY()
 	TMap<FString, UDataTable*> CacheTableData;
 	bool bIsLoadData = false;
 };

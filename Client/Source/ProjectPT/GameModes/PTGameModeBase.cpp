@@ -88,6 +88,7 @@ APawn* APTGameModeBase::SpawnDefaultPawnAtTransform_Implementation(AController* 
 	return nullptr;
 }
 
+PRAGMA_DISABLE_OPTIMIZATION
 void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 {
 	FPrimaryAssetId ExperienceId;
@@ -111,7 +112,7 @@ void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 
 	OnMatchAssignmentGiven(ExperienceId);
 }
-
+PRAGMA_ENABLE_OPTIMIZATION
 void APTGameModeBase::OnMatchAssignmentGiven(FPrimaryAssetId ExperienceId)
 {
 	check(ExperienceId.IsValid());
@@ -133,6 +134,11 @@ bool APTGameModeBase::IsExperienceLoaded() const
 
 void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentExperience)
 {
+	if (CurrentExperience->DefaultWidgetData)
+	{
+		const_cast<UPTExperienceDefinition*>(CurrentExperience)->RegisterWidgetData(GetWorld());
+	}
+
 	for (FConstPlayerControllerIterator Iterator = GetWorld()->GetPlayerControllerIterator(); Iterator; ++Iterator)
 	{
 		APlayerController* PC = Cast<APlayerController>(*Iterator);

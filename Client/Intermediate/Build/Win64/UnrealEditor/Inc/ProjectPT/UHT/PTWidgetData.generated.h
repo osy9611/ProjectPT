@@ -14,7 +14,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTWidgetData_generated_h
 
-#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_15_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FWidgetData_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FWidgetData>();
+
+#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_29_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTWidgetData(); \
 	friend struct Z_Construct_UClass_UPTWidgetData_Statics; \
@@ -23,9 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UPTWidgetData)
 
 
-#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPTWidgetData(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTWidgetData(UPTWidgetData&&); \
@@ -37,12 +42,12 @@ public: \
 	NO_API virtual ~UPTWidgetData();
 
 
-#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_12_PROLOG
-#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_15_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_26_PROLOG
+#define FID_Client_Source_ProjectPT_UI_PTWidgetData_h_29_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_UI_PTWidgetData_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_UI_PTWidgetData_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_UI_PTWidgetData_h_29_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_UI_PTWidgetData_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

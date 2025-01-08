@@ -60,6 +60,9 @@
     <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonPlayerController.cpp">
       <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonSessionSubsystem.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonUserWidgetBase.cpp">
       <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
     </ClCompile>
@@ -79,6 +82,9 @@
       <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonPlayerController.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonSessionSubsystem.h">
       <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonUserWidgetBase.h">
@@ -411,6 +417,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTGameState.h">
       <Filter>Source\ProjectPT\GameModes</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTSceneData.cpp">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTSceneData.h">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Input">
       <UniqueIdentifier>{80210474-71C0-35E4-8D49-1D96D9B022A4}</UniqueIdentifier>
     </Filter>
@@ -505,6 +517,12 @@
       <Filter>Source\ProjectPT\System</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\System\PTAssetManager.h">
+      <Filter>Source\ProjectPT\System</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\System\PTCommonSessionSubsystem.cpp">
+      <Filter>Source\ProjectPT\System</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\System\PTCommonSessionSubsystem.h">
       <Filter>Source\ProjectPT\System</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\System\PTGameInstance.cpp">

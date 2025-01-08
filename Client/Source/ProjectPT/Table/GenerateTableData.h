@@ -5,6 +5,14 @@
 #include "GenerateTableData.generated.h"
 
 USTRUCT(BlueprintType)
+struct FSceneData : public FTableRowBase
+{
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString DataPath;
+};
+USTRUCT(BlueprintType)
 struct FSkillData : public FTableRowBase
 {
 	GENERATED_USTRUCT_BODY()
@@ -17,6 +25,5 @@ public:
 	FString MuzzleName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECollisionType CollisionType;
-
 };
 

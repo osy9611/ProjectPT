@@ -15,6 +15,7 @@ void UPTAudioSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 void UPTAudioSubsystem::Deinitialize()
 {
 	AudioComponents.Empty();
+	Super::Deinitialize();
 }
 PRAGMA_DISABLE_OPTIMIZATION
 void UPTAudioSubsystem::RegisterData()
@@ -34,7 +35,7 @@ void UPTAudioSubsystem::RegisterData()
 		{
 			AudioComponent->bAutoActivate = true;
 		}
-		AudioComponent->RegisterComponentWithWorld(GetWorld());
+		//AudioComponent->RegisterComponentWithWorld(GetWorld());
 		//AudioComponent->RegisterComponent();
 	}
 }

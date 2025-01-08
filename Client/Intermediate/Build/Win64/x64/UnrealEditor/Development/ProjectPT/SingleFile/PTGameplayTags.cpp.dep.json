@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\study\\unreal\\projectpt\\source\\projectpt\\ptgameplaytags.cpp",
+        "Source": "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptgameplaytags.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
-            "d:\\study\\unreal\\projectpt\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\ptgameplaytags.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptgameplaytags.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -532,7 +532,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\stack.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\enumproperty.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\fieldpathproperty.h",
-            "d:\\study\\unreal\\projectpt\\source\\projectpt\\ptlogchannels.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptlogchannels.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagsmanager.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\datatable.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\datatableutils.h",
