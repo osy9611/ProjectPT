@@ -49,11 +49,11 @@ struct Z_Construct_UClass_UPTAttributeSet_Statics
 		{ "Category", "Attribute" },
 		{ "ModuleRelativePath", "AbilitySystem/AttributeSet/PTAttributeSet.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Skill1_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Skill_Default_MetaData[] = {
 		{ "Category", "Attribute" },
 		{ "ModuleRelativePath", "AbilitySystem/AttributeSet/PTAttributeSet.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Skill2_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Skill_Q_MetaData[] = {
 		{ "Category", "Attribute" },
 		{ "ModuleRelativePath", "AbilitySystem/AttributeSet/PTAttributeSet.h" },
 	};
@@ -61,8 +61,8 @@ struct Z_Construct_UClass_UPTAttributeSet_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Health;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_MaxHealth;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Mana;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Skill1;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_Skill2;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Skill_Default;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Skill_Q;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -73,14 +73,14 @@ struct Z_Construct_UClass_UPTAttributeSet_Statics
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAttributeSet, Health), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Health_MetaData), NewProp_Health_MetaData) }; // 675369593
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAttributeSet, MaxHealth), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxHealth_MetaData), NewProp_MaxHealth_MetaData) }; // 675369593
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Mana = { "Mana", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAttributeSet, Mana), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mana_MetaData), NewProp_Mana_MetaData) }; // 675369593
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill1 = { "Skill1", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAttributeSet, Skill1), Z_Construct_UScriptStruct_FSkillData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Skill1_MetaData), NewProp_Skill1_MetaData) }; // 2940934073
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill2 = { "Skill2", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAttributeSet, Skill2), Z_Construct_UScriptStruct_FSkillData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Skill2_MetaData), NewProp_Skill2_MetaData) }; // 2940934073
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill_Default = { "Skill_Default", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAttributeSet, Skill_Default), Z_Construct_UScriptStruct_FSkillData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Skill_Default_MetaData), NewProp_Skill_Default_MetaData) }; // 129159566
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill_Q = { "Skill_Q", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAttributeSet, Skill_Q), Z_Construct_UScriptStruct_FSkillData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Skill_Q_MetaData), NewProp_Skill_Q_MetaData) }; // 129159566
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTAttributeSet_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Health,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_MaxHealth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Mana,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill1,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill2,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill_Default,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAttributeSet_Statics::NewProp_Skill_Q,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTAttributeSet_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTAttributeSet_Statics::DependentSingletons[])() = {
@@ -123,10 +123,10 @@ UPTAttributeSet::~UPTAttributeSet() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAttributeSet, UPTAttributeSet::StaticClass, TEXT("UPTAttributeSet"), &Z_Registration_Info_UClass_UPTAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAttributeSet), 2352738111U) },
+		{ Z_Construct_UClass_UPTAttributeSet, UPTAttributeSet::StaticClass, TEXT("UPTAttributeSet"), &Z_Registration_Info_UClass_UPTAttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAttributeSet), 3332585558U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_2122689598(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_3558116413(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -22,6 +22,8 @@ public:
 	UPTAttributeSet(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 	virtual void InitAttributeSet(FString RowName);
 
+	FSkillData GetSkillData(FGameplayTag GameplayTag);
+
 public:
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData Health;
@@ -35,9 +37,9 @@ public:
 	FGameplayAttributeData Mana;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attribute")
-	FSkillData Skill1;
+	FSkillData Skill_Default;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attribute")
-	FSkillData Skill2;
+	FSkillData Skill_Q;
 
 };

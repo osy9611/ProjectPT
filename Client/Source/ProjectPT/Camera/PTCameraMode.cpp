@@ -191,7 +191,7 @@ UPTCameraMode* UPTCameraModeStack::GetCameraModeInstance(TSubclassOf<UPTCameraMo
 	//CameraModeInstance에서 먼저 생성되어있는지 확인 후 반환한다.
 	for (UPTCameraMode* CameraMode : CameraModeInstance)
 	{
-		//CameraMode는 UClass를 비교한다 -> CameraMode는 클래스 타입에 하나만 생기가됨
+		//CameraMode는 UClass를 비교한다 -> CameraMode는 클래스 타입에 하나만 생기게됨
 		if ((CameraMode != nullptr) && (CameraMode->GetClass() == CameraModeClass))
 			return CameraMode;
 	}

@@ -1,4 +1,4 @@
-tableNo,skillRange,skillRadius,MuzzleName,CollisionType
-int,float,float,string,CollisionType
-1001,25000,0,Muzzle_01,RayTrace
-1002,100,50,Muzzle_03,Sphere
+tableNo,skillRange,skillRadius,skillSpeed,MuzzleName,CollisionType
+int,float,float,float,string,CollisionType
+1001,25000,0,0,Muzzle_01,RayTrace
+1002,1000,100,600,Muzzle_03,Sphere

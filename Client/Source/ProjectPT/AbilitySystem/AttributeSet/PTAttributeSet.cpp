@@ -12,3 +12,24 @@ UPTAttributeSet::UPTAttributeSet(const FObjectInitializer& ObjectInitializer) : 
 void UPTAttributeSet::InitAttributeSet(FString rowName)
 {
 }
+
+FSkillData UPTAttributeSet::GetSkillData(FGameplayTag GameplayTag)
+{
+	FSkillData Result = FSkillData();
+	if(GameplayTag.IsValid())
+	{
+		FString TagStr = GameplayTag.ToString();
+
+		if (TagStr==TEXT("InputTag.Ability.SkillDefault"))
+		{
+			Result = Skill_Default;
+		}
+
+		if (TagStr == TEXT("InputTag.Ability.SkillQ"))
+		{
+			Result = Skill_Q;
+		}
+	}
+
+	return Result;
+}

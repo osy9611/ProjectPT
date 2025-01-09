@@ -6,6 +6,8 @@
 #include "UIManagerSubsystem.h"
 #include "PTUIManagerSubsystem.generated.h"
 
+class UPTActivatableWidget;
+
 /**
  * 
  */
@@ -14,4 +16,14 @@ class PROJECTPT_API UPTUIManagerSubsystem : public UUIManagerSubsystem
 {
 	GENERATED_BODY()
 	
+public:
+	void ShowMouseCursor();
+	void HideMouseCursor();
+
+	UFUNCTION(BlueprintCallable)
+	void HandleNotifyGameplayTag(TSubclassOf<UPTActivatableWidget> ActivateWidget, FGameplayTag LayerName, FGameplayTag GameplayTag);
+
+
+	UFUNCTION(BlueprintCallable)
+	void K2_HandleNotifyGameplayTag(TSubclassOf<UPTActivatableWidget> ActivateWidget, FGameplayTag LayerName, FGameplayTag GameplayTag);
 };

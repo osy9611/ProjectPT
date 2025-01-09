@@ -34,7 +34,7 @@ void UPTWidgetData::RegisterWidgetData(UWorld* World)
 
 	for (const FWidgetData Widget : Widgets)
 	{
-		UIManagerSubsystem->CreateWidgetClass(Widget.AddWidgetType, Widget.ActiveWidget);
+		 UIManagerSubsystem->CreateWidgetClass<UPTActivatableWidget>(Widget.AddWidgetType, Widget.ActiveWidget);
 	}
 
 	UE_LOG(PTLog, Log, TEXT("[UPTwidgetData] Complete RegisterWidget!!"));

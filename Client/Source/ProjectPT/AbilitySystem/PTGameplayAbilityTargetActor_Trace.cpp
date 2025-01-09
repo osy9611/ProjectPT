@@ -109,15 +109,15 @@ bool APTGameplayAbilityTargetActor_Trace::CheckCollisionData()
 		return false;
 	}
 
-	const float AttackRange = AttributeSet->Skill1.skillRange;
-	const float AttackRadius = AttributeSet->Skill1.skillRadius;
+	const float AttackRange = AttributeSet->Skill_Default.skillRange;
+	const float AttackRadius = AttributeSet->Skill_Default.skillRadius;
 
 	FVector Forward = Character->GetActorForwardVector();
 	FVector Start = Character->GetActorLocation();
 	FVector End = Start + Forward * AttackRange;
 
 	FCollisionShape CollisionShape;
-	switch (AttributeSet->Skill1.CollisionType)
+	switch (AttributeSet->Skill_Default.CollisionType)
 	{
 	case ECollisionType::Capsule:
 		CollisionShape = FCollisionShape::MakeSphere(AttackRadius);

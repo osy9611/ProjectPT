@@ -9,12 +9,19 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FGameplayTag;
 #ifdef PROJECTPT_PTActivatableWidget_generated_h
 #error "PTActivatableWidget.generated.h already included, missing '#pragma once' in PTActivatableWidget.h"
 #endif
 #define PROJECTPT_PTActivatableWidget_generated_h
 
-#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHideMouseCursor); \
+	DECLARE_FUNCTION(execShowMouseCursor);
+
+
+#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_CALLBACK_WRAPPERS
+#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTActivatableWidget(); \
 	friend struct Z_Construct_UClass_UPTActivatableWidget_Statics; \
@@ -23,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UPTActivatableWidget)
 
 
-#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTActivatableWidget(UPTActivatableWidget&&); \
@@ -35,12 +42,14 @@ public: \
 	NO_API virtual ~UPTActivatableWidget();
 
 
-#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_16_PROLOG
-#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_19_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_18_PROLOG
+#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_19_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_CALLBACK_WRAPPERS \
+	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

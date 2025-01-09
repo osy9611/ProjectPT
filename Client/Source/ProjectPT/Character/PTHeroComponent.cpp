@@ -185,7 +185,7 @@ void UPTHeroComponent::SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMod
 		if (UPTCameraComponent* CameraPomponent = UPTCameraComponent::FindCameraComponent(Pawn))
 		{
 			CameraPomponent->bAddFiledOfViewOffset = UseFovOffset;
-		}
+		} 
 	}
 }
 

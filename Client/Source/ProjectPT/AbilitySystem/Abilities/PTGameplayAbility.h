@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Abilities/GameplayAbility.h"
+#include "GameplayTagContainer.h"
 #include "PTGameplayAbility.generated.h"
 
 class APTCharacter;
@@ -21,7 +22,7 @@ enum class EPTAbilityActivationPolicy : uint8
 };
 
 /**
- * 
+ *
  */
 UCLASS(Abstract)
 class PROJECTPT_API UPTGameplayAbility : public UGameplayAbility
@@ -34,14 +35,16 @@ public:
 	UPTHeroComponent* GetPTHeroComponentFromActorInfo();
 	virtual UPTAttributeSet* GetPTAttribute();
 
+	virtual FGameplayTag GetGameplayTag(){ return GetCurrentAbilitySpec()->DynamicAbilityTags.GetByIndex(0); }
+
 	UFUNCTION(BlueprintCallable)
-	void SetCameraMode(TSubclassOf<UPTCameraMode> CameraMode,bool UseFovOffset=true);
+	void SetCameraMode(TSubclassOf<UPTCameraMode> CameraMode, bool UseFovOffset = true);
 	UFUNCTION(BlueprintCallable)
 	void ClearCameraMode(bool UseFovOffset = true);
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
-	
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "PT|AbilityActivation")
 	EPTAbilityActivationPolicy ActivationPolicy;
 

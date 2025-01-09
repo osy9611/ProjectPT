@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "ProjectPT/UI/PTActivatableWidget.h"
+#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTActivatableWidget() {}
 
@@ -13,14 +14,120 @@ void EmptyLinkFunctionForGeneratedCodePTActivatableWidget() {}
 COMMONINPUT_API UEnum* Z_Construct_UEnum_CommonInput_ECommonInputMode();
 COMMONUI_API UClass* Z_Construct_UClass_UCommonActivatableWidget();
 ENGINE_API UEnum* Z_Construct_UEnum_Engine_EMouseCaptureMode();
+GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTActivatableWidget();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTActivatableWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
+// Begin Class UPTActivatableWidget Function HideMouseCursor
+struct Z_Construct_UFunction_UPTActivatableWidget_HideMouseCursor_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PTActivatableWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTActivatableWidget_HideMouseCursor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTActivatableWidget, nullptr, "HideMouseCursor", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTActivatableWidget_HideMouseCursor_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTActivatableWidget_HideMouseCursor_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPTActivatableWidget_HideMouseCursor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTActivatableWidget_HideMouseCursor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTActivatableWidget::execHideMouseCursor)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HideMouseCursor();
+	P_NATIVE_END;
+}
+// End Class UPTActivatableWidget Function HideMouseCursor
+
+// Begin Class UPTActivatableWidget Function OnNotify
+struct PTActivatableWidget_eventOnNotify_Parms
+{
+	FGameplayTag GamePlayTag;
+};
+static FName NAME_UPTActivatableWidget_OnNotify = FName(TEXT("OnNotify"));
+void UPTActivatableWidget::OnNotify(FGameplayTag GamePlayTag)
+{
+	PTActivatableWidget_eventOnNotify_Parms Parms;
+	Parms.GamePlayTag=GamePlayTag;
+	ProcessEvent(FindFunctionChecked(NAME_UPTActivatableWidget_OnNotify),&Parms);
+}
+struct Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PTActivatableWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_GamePlayTag;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::NewProp_GamePlayTag = { "GamePlayTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTActivatableWidget_eventOnNotify_Parms, GamePlayTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::NewProp_GamePlayTag,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTActivatableWidget, nullptr, "OnNotify", nullptr, nullptr, Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::PropPointers), sizeof(PTActivatableWidget_eventOnNotify_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::Function_MetaDataParams) };
+static_assert(sizeof(PTActivatableWidget_eventOnNotify_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTActivatableWidget_OnNotify()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTActivatableWidget_OnNotify_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class UPTActivatableWidget Function OnNotify
+
+// Begin Class UPTActivatableWidget Function ShowMouseCursor
+struct Z_Construct_UFunction_UPTActivatableWidget_ShowMouseCursor_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "UI/PTActivatableWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTActivatableWidget_ShowMouseCursor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTActivatableWidget, nullptr, "ShowMouseCursor", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTActivatableWidget_ShowMouseCursor_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTActivatableWidget_ShowMouseCursor_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPTActivatableWidget_ShowMouseCursor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTActivatableWidget_ShowMouseCursor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTActivatableWidget::execShowMouseCursor)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowMouseCursor();
+	P_NATIVE_END;
+}
+// End Class UPTActivatableWidget Function ShowMouseCursor
+
 // Begin Class UPTActivatableWidget
 void UPTActivatableWidget::StaticRegisterNativesUPTActivatableWidget()
 {
+	UClass* Class = UPTActivatableWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HideMouseCursor", &UPTActivatableWidget::execHideMouseCursor },
+		{ "ShowMouseCursor", &UPTActivatableWidget::execShowMouseCursor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPTActivatableWidget);
 UClass* Z_Construct_UClass_UPTActivatableWidget_NoRegister()
@@ -67,6 +174,12 @@ struct Z_Construct_UClass_UPTActivatableWidget_Statics
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_MouseCaptureMode;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPTActivatableWidget_HideMouseCursor, "HideMouseCursor" }, // 3949274669
+		{ &Z_Construct_UFunction_UPTActivatableWidget_OnNotify, "OnNotify" }, // 3999327613
+		{ &Z_Construct_UFunction_UPTActivatableWidget_ShowMouseCursor, "ShowMouseCursor" }, // 1117348232
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPTActivatableWidget>::IsAbstract,
 	};
@@ -93,11 +206,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPTActivatableWidget_St
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UPTActivatableWidget_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UPTActivatableWidget_Statics::PropPointers),
 	0,
 	0x00B010A0u,
@@ -123,10 +236,10 @@ UPTActivatableWidget::~UPTActivatableWidget() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTActivatableWidget, UPTActivatableWidget::StaticClass, TEXT("UPTActivatableWidget"), &Z_Registration_Info_UClass_UPTActivatableWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTActivatableWidget), 2036065259U) },
+		{ Z_Construct_UClass_UPTActivatableWidget, UPTActivatableWidget::StaticClass, TEXT("UPTActivatableWidget"), &Z_Registration_Info_UClass_UPTActivatableWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTActivatableWidget), 1891672202U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_4146362174(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_1416754267(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

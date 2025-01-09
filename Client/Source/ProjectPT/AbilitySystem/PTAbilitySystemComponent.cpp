@@ -35,6 +35,7 @@ void UPTAbilitySystemComponent::AbilitySpecInputReleased(FGameplayAbilitySpec& S
 		InvokeReplicatedEvent(EAbilityGenericReplicatedEvent::InputReleased, Spec.Handle, Spec.ActivationInfo.GetActivationPredictionKey());
 }
 
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySystemComponent::AbilityInputTagPressed(const FGameplayTag& InputTag)
 {
 	if (InputTag.IsValid())
@@ -50,6 +51,8 @@ void UPTAbilitySystemComponent::AbilityInputTagPressed(const FGameplayTag& Input
 		}
 	}
 }
+PRAGMA_ENABLE_OPTIMIZATION
+
 PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySystemComponent::AbilityInputTagReleased(const FGameplayTag& InputTag)
 {

@@ -22,6 +22,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float skillRadius;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float skillSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString MuzzleName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECollisionType CollisionType;

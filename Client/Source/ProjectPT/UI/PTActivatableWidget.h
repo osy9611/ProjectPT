@@ -6,6 +6,8 @@
 #include "CommonActivatableWidget.h"
 #include "PTActivatableWidget.generated.h"
 
+class UPTUIManagerSubsystem;
+struct FGameplayTag;
 /**
  * CommonActivatableWidget의 특성
  * 1. Widget Layout과 Widget Instance를 구분하기 위한 용도로 CommonActivatableWidget은 Layour 정의 :
@@ -22,6 +24,19 @@ public:
 	UPTActivatableWidget();
 
 	virtual TOptional<FUIInputConfig> GetDesiredInputConfig() const override;
+
+	UPTUIManagerSubsystem* GetUIManagerSubsystem();
+
+	UFUNCTION(BlueprintCallable)
+	void ShowMouseCursor();
+
+	UFUNCTION(BlueprintCallable)
+	void HideMouseCursor();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnNotify(FGameplayTag GamePlayTag);
+
+	void OnNotify_Implementation(FGameplayTag GamePlayTag);
 
 	//Input 처리 방식
 	UPROPERTY(EditDefaultsOnly, Category = Input)

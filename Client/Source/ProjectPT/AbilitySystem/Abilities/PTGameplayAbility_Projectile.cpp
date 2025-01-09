@@ -6,6 +6,8 @@
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/Object/PTProjectile.h"
 #include "ProjectPT/Character/PTHeroComponent.h"
+#include "ProjectPT/Table/GenerateTableData.h"
+#include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
 
 UPTGameplayAbility_Projectile::UPTGameplayAbility_Projectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -31,7 +33,10 @@ void UPTGameplayAbility_Projectile::CreateObject()
 		if (UPTHeroComponent* PTHeroComponent = GetPTHeroComponentFromActorInfo())
 		{
 			FTransform Transform = PTHeroComponent->GetSkeletonMeshSocketTransform(FName(TEXT("Muzzle_03")));
-			Projectile->RegisterData(Transform.GetLocation(), AvatarActor->GetActorForwardVector(), 1000, 100, 30.0f);
+
+			FSkillData SkillData = AttributeSet->GetSkillData(GetGameplayTag());
+
+			Projectile->RegisterData(Transform.GetLocation(), AvatarActor->GetActorForwardVector(), SkillData.skillRange, SkillData.skillRadius, SkillData.skillSpeed);
 		}
 	}
 }
