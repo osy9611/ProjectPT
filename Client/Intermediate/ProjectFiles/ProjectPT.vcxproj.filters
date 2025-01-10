@@ -309,6 +309,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\PTGE_AttackDamage.h">
       <Filter>Source\ProjectPT\AbilitySystem\GameplayEffect</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\UPTGE_SkillCoolTime.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\GameplayEffect</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\UPTGE_SkillCoolTime.h">
+      <Filter>Source\ProjectPT\AbilitySystem\GameplayEffect</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\AbilitySystem\Notify">
       <UniqueIdentifier>{AF8183F8-D51B-3514-9264-4CADECE03DA5}</UniqueIdentifier>
     </Filter>

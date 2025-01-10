@@ -20,4 +20,5 @@ UPTGE_AttackDamage::UPTGE_AttackDamage()
 
 	ModifierInfo.ModifierMagnitude = ModMagnitude;
 	Modifiers.Add(ModifierInfo);
+
 }

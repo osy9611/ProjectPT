@@ -24,6 +24,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float skillSpeed;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float skillCoolTime;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString MuzzleName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	ECollisionType CollisionType;

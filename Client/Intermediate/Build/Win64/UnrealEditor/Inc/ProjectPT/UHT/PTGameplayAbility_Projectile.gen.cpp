@@ -72,11 +72,17 @@ struct Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics
 		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility_Projectile.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UseBPGameplayEffect_MetaData[] = {
+		{ "Category", "UseBPGameplayEffect" },
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility_Projectile.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileObject_MetaData[] = {
 		{ "Category", "Pawn" },
 		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility_Projectile.h" },
 	};
 #endif // WITH_METADATA
+	static void NewProp_UseBPGameplayEffect_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_UseBPGameplayEffect;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_ProjectileObject;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -89,8 +95,14 @@ struct Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+void Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::NewProp_UseBPGameplayEffect_SetBit(void* Obj)
+{
+	((UPTGameplayAbility_Projectile*)Obj)->UseBPGameplayEffect = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::NewProp_UseBPGameplayEffect = { "UseBPGameplayEffect", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPTGameplayAbility_Projectile), &Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::NewProp_UseBPGameplayEffect_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UseBPGameplayEffect_MetaData), NewProp_UseBPGameplayEffect_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::NewProp_ProjectileObject = { "ProjectileObject", nullptr, (EPropertyFlags)0x0014000000010015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTGameplayAbility_Projectile, ProjectileObject), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileObject_MetaData), NewProp_ProjectileObject_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::NewProp_UseBPGameplayEffect,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::NewProp_ProjectileObject,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics::PropPointers) < 2048);
@@ -134,10 +146,10 @@ UPTGameplayAbility_Projectile::~UPTGameplayAbility_Projectile() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTGameplayAbility_Projectile, UPTGameplayAbility_Projectile::StaticClass, TEXT("UPTGameplayAbility_Projectile"), &Z_Registration_Info_UClass_UPTGameplayAbility_Projectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_Projectile), 2422068169U) },
+		{ Z_Construct_UClass_UPTGameplayAbility_Projectile, UPTGameplayAbility_Projectile::StaticClass, TEXT("UPTGameplayAbility_Projectile"), &Z_Registration_Info_UClass_UPTGameplayAbility_Projectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_Projectile), 1150686239U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_3505178577(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_3369172133(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

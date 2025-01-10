@@ -711,6 +711,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\PTGE_AttackDamage.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\UPTGE_SkillCoolTime.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\GameplayEffect\UPTGE_SkillCoolTime.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Notify\PTAnimNotify_AttackHitCheck.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_3)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_3)</ForcedIncludeFiles>
