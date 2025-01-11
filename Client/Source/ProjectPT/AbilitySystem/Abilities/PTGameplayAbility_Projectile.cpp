@@ -17,23 +17,6 @@ UPTGameplayAbility_Projectile::UPTGameplayAbility_Projectile(const FObjectInitia
 void UPTGameplayAbility_Projectile::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData)
 {
 	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
-
-	if (CooldownGameplayEffectClass)
-	{
-		// Create the GameplayEffectSpec
-		FGameplayEffectContextHandle Context = MakeEffectContext(Handle, ActorInfo);
-		FGameplayEffectSpecHandle SpecHandle = MakeOutgoingGameplayEffectSpec(CooldownGameplayEffectClass, GetAbilityLevel(Handle, ActorInfo));
-
-		// Access and modify the GameplayEffectSpec
-		if (FGameplayEffectSpec* Spec = SpecHandle.Data.Get())
-		{
-			// Modify the cooldown duration to a new value (e.g., 5 seconds)
-			Spec->SetDuration(5.0f, true); // Set the duration to 5 seconds and enforce it
-		}
-
-		// Apply the modified GameplayEffectSpec to the owner
-		ApplyGameplayEffectSpecToOwner(Handle, ActorInfo, ActivationInfo, SpecHandle);
-	}
 }
 
 
