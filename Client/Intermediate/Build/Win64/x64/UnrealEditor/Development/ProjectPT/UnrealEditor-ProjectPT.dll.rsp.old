@@ -37,6 +37,7 @@
 /FUNCTIONPADMIN:6
 "D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectPT\Module.ProjectPT.cpp.obj"
+"D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectPT\PTGameplayAbility_Projectile.cpp.obj"
 "D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\UnrealEditor\Development\ProjectPT\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Plugins\Runtime\ModularGameplay\Intermediate\Build\Win64\x64\UnrealEditor\Development\ModularGameplay\UnrealEditor-ModularGameplay.lib"

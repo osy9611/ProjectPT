@@ -59,6 +59,7 @@
 			"PTGameplayAbility_Jump.cpp.obj",
 			"PTGameplayAbility_MeleeAttack.cpp.obj",
 			"PTGameplayAbility_MeleeHitCheck.cpp.obj",
+			"PTGameplayAbility_Projectile.cpp.obj",
 			"PTGameplayAbility_RangeAttack.cpp.obj",
 			"PTAttributeSet.cpp.obj",
 			"PTCharacter_AttributeSet.cpp.obj",
@@ -107,8 +108,7 @@
 			"PTUIManagerSubsystem.cpp.obj",
 			"PTWidgetData.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
-			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTGameplayAbility_Projectile.cpp.obj"
+			"SCircumferenceMarkerWidget.cpp.obj"
 		]
 	}
 }

@@ -3698,6 +3698,26 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/Binaries/Win64/UnrealEditor-GameplayMessageNodes.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/Binaries/Win64/UnrealEditor-GameplayMessageNodes.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/Binaries/Win64/UnrealEditor-GameplayMessageRuntime.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/Binaries/Win64/UnrealEditor-GameplayMessageRuntime.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/ModularGameplayActors/Binaries/Win64/UnrealEditor-ModularGameplayActors.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -26788,6 +26808,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/GameplayMessageRouter.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/ModularGameplayActors/ModularGameplayActors.uplugin",
 			"Type": "UFS"
 		},
@@ -26877,6 +26901,7 @@
 		"GameFeatures",
 		"GameplayAbilities",
 		"GameplayCameras",
+		"GameplayMessageRouter",
 		"GameplayTagsEditor",
 		"GeometryCache",
 		"GeometryCollectionPlugin",

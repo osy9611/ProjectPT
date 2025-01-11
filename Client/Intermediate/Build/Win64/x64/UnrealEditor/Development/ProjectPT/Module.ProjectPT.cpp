@@ -56,6 +56,7 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/AbilitySystem/Abilities/PTGameplayAbility_Jump.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/AbilitySystem/Abilities/PTGameplayAbility_MeleeAttack.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/AbilitySystem/Abilities/PTGameplayAbility_MeleeHitCheck.cpp"
+#include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/AbilitySystem/Abilities/PTGameplayAbility_Projectile.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/AbilitySystem/Abilities/PTGameplayAbility_RangeAttack.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/AbilitySystem/AttributeSet/PTCharacter_AttributeSet.cpp"

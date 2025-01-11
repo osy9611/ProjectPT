@@ -352,6 +352,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilitysystemblueprintlibrary.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemblueprintlibrary.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability_meleehitcheck.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability_projectile.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability_rangeattack.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\attributeset\\ptattributeset.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\attributeset\\ptcharacter_attributeset.cpp",

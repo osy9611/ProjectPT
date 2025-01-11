@@ -1,0 +1,1 @@
+#include "D:/Study/Unreal/LyraStarterGame/Plugins/GameplayMessageRouter/Source/GameplayMessageRuntime/Public/GameFramework/GameplayMessageTypes2.h"

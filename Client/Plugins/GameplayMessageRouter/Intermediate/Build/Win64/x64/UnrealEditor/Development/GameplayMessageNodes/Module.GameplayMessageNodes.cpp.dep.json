@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\study\\unreal\\lyrastartergame\\plugins\\gameplaymessagerouter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gameplaymessagenodes\\module.gameplaymessagenodes.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\study\\unreal\\lyrastartergame\\intermediate\\build\\win64\\x64\\lyraeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\study\\unreal\\lyrastartergame\\plugins\\gameplaymessagerouter\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\gameplaymessagenodes\\definitions.gameplaymessagenodes.h",
+            "d:\\study\\unreal\\lyrastartergame\\plugins\\gameplaymessagerouter\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaymessagenodes\\uht\\gameplaymessagenodes.init.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
