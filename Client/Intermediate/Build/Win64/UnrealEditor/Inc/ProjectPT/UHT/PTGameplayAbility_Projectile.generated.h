@@ -15,7 +15,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define PROJECTPT_PTGameplayAbility_Projectile_generated_h
 
 #define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execCreateObject);
+	DECLARE_FUNCTION(execCreateObject); \
+	DECLARE_FUNCTION(execGetCoolTime);
 
 
 #define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_INCLASS_NO_PURE_DECLS \

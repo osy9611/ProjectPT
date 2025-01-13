@@ -1,11 +1,11 @@
-"D:\Study\Unreal\LyraStarterGame\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Module.GameplayMessageRuntime.cpp"
-/FI"D:\Study\Unreal\LyraStarterGame\Intermediate\Build\Win64\x64\LyraEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"D:\Study\Unreal\LyraStarterGame\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Definitions.GameplayMessageRuntime.h"
-/Yu"D:\Study\Unreal\LyraStarterGame\Intermediate\Build\Win64\x64\LyraEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"D:\Study\Unreal\LyraStarterGame\Intermediate\Build\Win64\x64\LyraEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"D:\Study\Unreal\LyraStarterGame\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Module.GameplayMessageRuntime.cpp.obj"
-/sourceDependencies "D:\Study\Unreal\LyraStarterGame\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Module.GameplayMessageRuntime.cpp.dep.json"
-@"D:\Study\Unreal\LyraStarterGame\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\GameplayMessageRuntime.Shared.rsp"
+"D:\Study\Unreal\ProjectPT\Client\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Module.GameplayMessageRuntime.cpp"
+/FI"D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"D:\Study\Unreal\ProjectPT\Client\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Definitions.GameplayMessageRuntime.h"
+/Yu"D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"D:\Study\Unreal\ProjectPT\Client\Intermediate\Build\Win64\x64\ProjectPTEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"D:\Study\Unreal\ProjectPT\Client\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Module.GameplayMessageRuntime.cpp.obj"
+/sourceDependencies "D:\Study\Unreal\ProjectPT\Client\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\Module.GameplayMessageRuntime.cpp.dep.json"
+@"D:\Study\Unreal\ProjectPT\Client\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageRuntime\GameplayMessageRuntime.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

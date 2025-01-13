@@ -1,0 +1,24 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "PTUIMessageExtensions.generated.h"
+
+USTRUCT(BlueprintType)
+struct FUISkillCoolTimeMessage
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float CoolTime;
+};
+
+USTRUCT(BlueprintType)
+struct FUIFireZoomMessage
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool FireZoom;
+};

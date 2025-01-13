@@ -1,5 +1,6 @@
 /I "."
 /I "D:\Study\Unreal\ProjectPT\Client\Plugins\CommonGame\Source\CommonGame\Private"
+/I "D:\Study\Unreal\ProjectPT\Client\Plugins\CommonGame\Intermediate\Build\Win64\UnrealEditor\Inc\CommonGame\UHT"
 /I "D:\Study\Unreal\ProjectPT\Client\Plugins\CommonGame\Source"
 /I "D:\Study\Unreal\ProjectPT\Client\Plugins\CommonGame\Source\CommonGame\Public"
 /I "Runtime\Core\Public"

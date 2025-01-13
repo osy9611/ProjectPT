@@ -47,12 +47,54 @@ DEFINE_FUNCTION(UPTGameplayAbility_Projectile::execCreateObject)
 }
 // End Class UPTGameplayAbility_Projectile Function CreateObject
 
+// Begin Class UPTGameplayAbility_Projectile Function GetCoolTime
+struct Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics
+{
+	struct PTGameplayAbility_Projectile_eventGetCoolTime_Parms
+	{
+		float ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility_Projectile.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_Projectile_eventGetCoolTime_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTGameplayAbility_Projectile, nullptr, "GetCoolTime", nullptr, nullptr, Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::PTGameplayAbility_Projectile_eventGetCoolTime_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::PTGameplayAbility_Projectile_eventGetCoolTime_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTGameplayAbility_Projectile::execGetCoolTime)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetCoolTime();
+	P_NATIVE_END;
+}
+// End Class UPTGameplayAbility_Projectile Function GetCoolTime
+
 // Begin Class UPTGameplayAbility_Projectile
 void UPTGameplayAbility_Projectile::StaticRegisterNativesUPTGameplayAbility_Projectile()
 {
 	UClass* Class = UPTGameplayAbility_Projectile::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "CreateObject", &UPTGameplayAbility_Projectile::execCreateObject },
+		{ "GetCoolTime", &UPTGameplayAbility_Projectile::execGetCoolTime },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -88,6 +130,7 @@ struct Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTGameplayAbility_Projectile_CreateObject, "CreateObject" }, // 3031371847
+		{ &Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime, "GetCoolTime" }, // 221402816
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -146,10 +189,10 @@ UPTGameplayAbility_Projectile::~UPTGameplayAbility_Projectile() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTGameplayAbility_Projectile, UPTGameplayAbility_Projectile::StaticClass, TEXT("UPTGameplayAbility_Projectile"), &Z_Registration_Info_UClass_UPTGameplayAbility_Projectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_Projectile), 1150686239U) },
+		{ Z_Construct_UClass_UPTGameplayAbility_Projectile, UPTGameplayAbility_Projectile::StaticClass, TEXT("UPTGameplayAbility_Projectile"), &Z_Registration_Info_UClass_UPTGameplayAbility_Projectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_Projectile), 1974851199U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_3369172133(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_338458843(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

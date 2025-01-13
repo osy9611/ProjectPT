@@ -34,6 +34,8 @@ public class ProjectPT : ModuleRules
 			// Slate
             "Slate",
             "SlateCore",
+			//AI
+			"AIModule"
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

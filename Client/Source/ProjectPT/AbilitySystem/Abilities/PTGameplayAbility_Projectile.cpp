@@ -45,6 +45,17 @@ bool UPTGameplayAbility_Projectile::CommitAbilityCooldown(const FGameplayAbility
 }
 PRAGMA_ENABLE_OPTIMIZATION
 
+float UPTGameplayAbility_Projectile::GetCoolTime()
+{
+	if (UPTAttributeSet* AttributeSet = GetPTAttribute())
+	{
+		FSkillData SkillData = AttributeSet->GetSkillData(GetGameplayTag());
+		return 	SkillData.skillCoolTime;
+	}
+
+	return 0;
+}
+
 void UPTGameplayAbility_Projectile::CreateObject()
 {
 	//check(Actor);

@@ -6,7 +6,7 @@
         "PCH": "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\circumferencemarkerwidget.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\weapon\\circumferencemarkerwidget.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\umg\\public\\components\\widget.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\fieldnotification\\public\\fieldnotificationdeclaration.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\fieldnotification\\public\\ifieldnotificationclassdescriptor.h",
@@ -22,7 +22,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\slatecore\\public\\types\\navigationmetadata.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetnavigation.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widget.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\scircumferencemarkerwidget.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\weapon\\scircumferencemarkerwidget.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\scircumferencemarkerwidget.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\circumferencemarkerwidget.generated.h"
         ],

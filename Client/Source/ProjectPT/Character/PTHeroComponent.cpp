@@ -110,8 +110,6 @@ bool UPTHeroComponent::CanChangeInitState(UGameFrameworkComponentManager* Manage
 	{
 		// PawnExtensionComponent가 DataInitialized될 때까지 기다림 (== 모든 Feature Component가 DataAvailable인 상태)
 		return PTPS && Manager->HasFeatureReachedInitState(Pawn, UPTPawnExtensionComponent::NAME_ActorFeatureName, InitTags.InitState_DataInitialized);
-
-		//return true;
 	}
 
 	// DataInitialized -> GameplayReady

@@ -207,6 +207,9 @@
     <Filter Include="Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private">
       <UniqueIdentifier>{B8B90E7E-AD5A-3B0C-A684-BFAC92E94C5B}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private\ModularAIController.cpp">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private\ModularCharacter.cpp">
       <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Private</Filter>
     </ClCompile>
@@ -219,6 +222,9 @@
     <Filter Include="Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public">
       <UniqueIdentifier>{2CE162FB-CFBE-3D0B-A1F3-D84F43D64075}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public\ModularAIController.h">
+      <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public\ModularCharacter.h">
       <Filter>Plugins\ModularGameplayActors\Source\ModularGameplayActors\Public</Filter>
     </ClInclude>
@@ -438,6 +444,12 @@
     <Filter Include="Source\ProjectPT\Character">
       <UniqueIdentifier>{3445A293-9204-3C96-B7CE-F97CB3E8C108}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTAICharacter.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTAICharacter.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Character\PTCharacter.cpp">
       <Filter>Source\ProjectPT\Character</Filter>
     </ClCompile>
@@ -461,6 +473,12 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTPawnExtensionComponent.h">
       <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Extensions">
+      <UniqueIdentifier>{41503613-6DDD-3295-9A1F-4C5E9D6A7F42}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTUIMessageExtensions.h">
+      <Filter>Source\ProjectPT\Extensions</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\GameModes">
       <UniqueIdentifier>{62F36A1F-4F07-3667-B7AC-FDCBE51DE3A6}</UniqueIdentifier>
@@ -544,6 +562,12 @@
       <Filter>Source\ProjectPT\Player</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Player\PTLocalPlayer.h">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Player\PTPlayerAIController.cpp">
+      <Filter>Source\ProjectPT\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Player\PTPlayerAIController.h">
       <Filter>Source\ProjectPT\Player</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Player\PTPlayerController.cpp">

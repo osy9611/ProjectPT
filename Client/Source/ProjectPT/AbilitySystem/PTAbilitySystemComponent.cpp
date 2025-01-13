@@ -23,6 +23,12 @@ void UPTAbilitySystemComponent::AbilitySpecInputPressed(FGameplayAbilitySpec& Sp
 {
 	Super::AbilitySpecInputPressed(Spec);
 
+	/*
+	* InvokeReplicatedEvent
+	* GAS에서 특정 이벤트가 발생했을 때 이벤트를 복제하여 처리하는 역할을 담당한다.
+	* 클라이언트와 서버 간의 능력 이벤트 동기화를 위해 사용된다.
+	* 멀티 플레이가 아니더라도 재사용
+	*/
 	if (Spec.IsActive())
 		InvokeReplicatedEvent(EAbilityGenericReplicatedEvent::InputPressed, Spec.Handle, Spec.ActivationInfo.GetActivationPredictionKey());
 }

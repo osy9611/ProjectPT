@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\scircumferencemarkerwidget.cpp",
+        "Source": "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\weapon\\scircumferencemarkerwidget.cpp",
         "ProvidedModule": "",
         "Includes": [
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\projectpt\\definitions.projectpt.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\x64\\projectpteditor\\development\\unrealed\\shareddefinitions.unrealed.project.valapi.cpp20.h",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\scircumferencemarkerwidget.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ui\\weapon\\scircumferencemarkerwidget.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\containers\\array.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\hal\\platform.h",

@@ -21,6 +21,10 @@ public:
 	
 	virtual bool CommitAbilityCooldown(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const bool ForceCooldown, OUT FGameplayTagContainer* OptionalRelevantTags = nullptr) override;
 	
+
+	UFUNCTION(BlueprintCallable)
+	float GetCoolTime();
+
 	UFUNCTION(BlueprintCallable)
 	void CreateObject();
 
