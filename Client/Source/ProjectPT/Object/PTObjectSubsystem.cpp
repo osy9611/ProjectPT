@@ -8,13 +8,23 @@
 #include "AbilitySystemGlobals.h"
 #include "ProjectPT/Character/PTPawnExtensionComponent.h"
 #include "ProjectPT/Character/PTCharacter.h"
-#include <ProjectPT/Player/PTPlayerState.h>
+#include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/GameplayEffect/PTGE_AttackDamage.h"
+#include "ProjectPT/GameModes/PTGameModeBase.h"
+#include "Kismet/GameplayStatics.h"
+#include "ProjectPT/Object/PTPlayerStart.h"
+#include "ProjectPT/Character/PTPawnData.h"
+#include "ProjectPT/Character/PTAICharacter.h"
 #include "ProjectPT/GameModes/PTGameModeBase.h"
 
 UPTObjectSubsystem::UPTObjectSubsystem()
 {
+}
+
+void UPTObjectSubsystem::Initialize(FSubsystemCollectionBase& Collection)
+{
+	Super::Initialize(Collection);
 }
 
 void UPTObjectSubsystem::Deinitialize()
@@ -22,7 +32,39 @@ void UPTObjectSubsystem::Deinitialize()
 	if (ObjectDatas.Num() > 0)
 		ObjectDatas.Empty();
 
+	if (CachePlayerStarts.Num() > 0)
+		CachePlayerStarts.Empty();
+
+	IsLoaded = false;
 	Super::Deinitialize();
+}
+
+PRAGMA_DISABLE_OPTIMIZATION
+void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName)
+{
+	if (!PawnData)
+	{
+		UE_LOG(PTLog, Error, TEXT("PawnData Is nullptr"));
+		return;
+	}
+
+	if (PawnData->PawnClass)
+	{
+		TArray<APTPlayerStart*> PlayerStartList = GetPlayerStartList(GameplayTag);
+		for (APTPlayerStart* PTPlayerStart : PlayerStartList)
+		{
+			AActor* Actor = SpawnActor(PawnData->PawnClass, PTPlayerStart->GetActorTransform(), nullptr);
+			if (Actor)
+			{
+				if (APTAICharacter* PTAICharacter = Cast<APTAICharacter>(Actor))
+				{
+					PTAICharacter->SpawnDefaultController();
+				}
+			}
+		}
+	}
+
+
 }
 
 APawn* UPTObjectSubsystem::SpawnActor(UClass* PawnClass, const FTransform& SpawnTransform, APawn* Instigator)
@@ -45,7 +87,7 @@ APawn* UPTObjectSubsystem::SpawnActor(UClass* PawnClass, const FTransform& Spawn
 
 	return nullptr;
 }
-
+PRAGMA_ENABLE_OPTIMIZATION
 void UPTObjectSubsystem::RegisterActor(AActor* Actor)
 {
 	check(Actor);
@@ -127,9 +169,52 @@ void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const 
 	}
 	else
 	{
-		UE_LOG(PTLog, Error, TEXT("[ObjectSubSystem] This Actor Is Not Found Actor Naem %s"), *ActorName);
+		UE_LOG(PTLog, Error, TEXT("[ObjectSubSystem] This Actor Is Not Found Actor Name %s"), *ActorName);
 	}
 
+}
+
+TArray<APTPlayerStart*> UPTObjectSubsystem::GetPlayerStartList(FGameplayTag GameplayTag)
+{
+	if (CachePlayerStarts.Contains(GameplayTag))
+	{
+		return CachePlayerStarts[GameplayTag].PlayerStartList;
+	}
+
+	return TArray<APTPlayerStart*>();
+}
+
+void UPTObjectSubsystem::SetCachePlayerStart()
+{
+	if (IsLoaded)
+		return;
+
+	UE_LOG(PTLog, Log, TEXT("[ObjectSubSystem] Start CachePlayerStart!"));
+	TArray<AActor*> PlayerStarts;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), APTPlayerStart::StaticClass(), PlayerStarts);
+
+	for (AActor* PlayerStartActor : PlayerStarts)
+	{
+		APTPlayerStart* PlayerStart = Cast< APTPlayerStart>(PlayerStartActor);
+		if (PlayerStart)
+		{
+			FGameplayTag GameplayTag = PlayerStart->GetGameplayTag();
+
+			if (FPlayerStartList* PlayerStartListResult = CachePlayerStarts.Find(GameplayTag))
+			{
+				PlayerStartListResult->PlayerStartList.Add(PlayerStart);
+			}
+			else
+			{
+				FPlayerStartList PlayerStartList;
+				PlayerStartList.PlayerStartList.Add(PlayerStart);
+				CachePlayerStarts.Add(GameplayTag, PlayerStartList);
+			}
+		}
+	}
+
+	IsLoaded = true;
+	UE_LOG(PTLog, Log, TEXT("[ObjectSubSystem] Complete CachePlayerStart!"))
 }
 
 UPTAbilitySystemComponent* UPTObjectSubsystem::GetASC(AActor* Actor)

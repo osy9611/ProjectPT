@@ -2,4 +2,22 @@
 
 
 #include "PTAICharacter.h"
+#include "ProjectPT/Character/PTPawnExtensionComponent.h"
+APTAICharacter::APTAICharacter()
+{
+	//PrimaryActorTick.bCanEverTick = false;
+	//PrimaryActorTick.bStartWithTickEnabled = false;
 
+	//Create PawnExtensionComponent »ý¼º
+	PawnExtComponent = CreateDefaultSubobject<UPTPawnExtensionComponent>(TEXT("PawnExtensionComponent"));
+}
+
+void APTAICharacter::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+void APTAICharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}

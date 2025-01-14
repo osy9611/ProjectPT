@@ -3,7 +3,7 @@
 
 #include "PTGameModeBase.h"
 #include "ProjectPT/PTLogChannels.h"
-#include <ProjectPT/Character/PTPawnExtensionComponent.h>
+#include "ProjectPT/Character/PTPawnExtensionComponent.h"
 #include "ProjectPT/GameModes/PTExperienceManagerComponent.h"
 #include "ProjectPT/GameModes/PTGameState.h"
 #include "ProjectPT/Character/PTCharacter.h"
@@ -12,10 +12,12 @@
 #include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/GameModes/PTExperienceDefinition.h"
 #include "ProjectPT/Table/DataManagerSubsystem.h"
-#include <Kismet/GameplayStatics.h>
-#include <ProjectPT/Table/GenerateTableData.h>
-#include <ProjectPT/Object/PTObjectSubsystem.h>
-#include <ProjectPT/Sound/PTAudioSubsystem.h>
+#include "Kismet/GameplayStatics.h"
+#include "ProjectPT/Table/GenerateTableData.h"
+#include "ProjectPT/Object/PTObjectSubsystem.h"
+#include "ProjectPT/Sound/PTAudioSubsystem.h"
+#include "ProjectPT/Object/PTPlayerStart.h"
+#include "Engine/World.h"
 
 APTGameModeBase::APTGameModeBase()
 {
@@ -89,6 +91,21 @@ APawn* APTGameModeBase::SpawnDefaultPawnAtTransform_Implementation(AController* 
 }
 
 PRAGMA_DISABLE_OPTIMIZATION
+AActor* APTGameModeBase::ChoosePlayerStart_Implementation(AController* Player)
+{
+	if (UPTObjectSubsystem* PTObjectSubsystem = GetWorld()->GetSubsystem<UPTObjectSubsystem>())
+	{
+		PTObjectSubsystem->SetCachePlayerStart();
+
+		FGameplayTag GameplayTag = UGameplayTagsManager::Get().RequestGameplayTag(FName(TEXT("Spawn.Player")));
+		TArray<APTPlayerStart*> PlayerStartList = PTObjectSubsystem->GetPlayerStartList(GameplayTag);
+
+		if (PlayerStartList.Num() > 0)
+			return Cast<AActor>(PlayerStartList[0]);
+	}
+
+	return Super::ChoosePlayerStart_Implementation(Player);
+}
 void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 {
 	FPrimaryAssetId ExperienceId;
@@ -112,7 +129,7 @@ void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 
 	OnMatchAssignmentGiven(ExperienceId);
 }
-PRAGMA_ENABLE_OPTIMIZATION
+
 void APTGameModeBase::OnMatchAssignmentGiven(FPrimaryAssetId ExperienceId)
 {
 	check(ExperienceId.IsValid());
@@ -139,6 +156,15 @@ void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentE
 		const_cast<UPTExperienceDefinition*>(CurrentExperience)->RegisterWidgetData(GetWorld());
 	}
 
+	if (CurrentExperience->AIPawnData)
+	{
+		if (UPTObjectSubsystem* ObjectSubSystem = GetWorld()->GetSubsystem<UPTObjectSubsystem>())
+		{
+			FGameplayTag GameplayTag = UGameplayTagsManager::Get().RequestGameplayTag(FName(TEXT("Spawn.Monster")));
+			ObjectSubSystem->SpawnAIActor(CurrentExperience->AIPawnData.Get(), GameplayTag, TEXT("AI"));
+		}
+	}
+
 	for (FConstPlayerControllerIterator Iterator = GetWorld()->GetPlayerControllerIterator(); Iterator; ++Iterator)
 	{
 		APlayerController* PC = Cast<APlayerController>(*Iterator);
@@ -153,12 +179,13 @@ void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentE
 	}
 
 
+
 	if (UPTAudioSubsystem* AudioSubSystem = GetGameInstance()->GetSubsystem<UPTAudioSubsystem>())
 	{
 		AudioSubSystem->RegisterData();
 	}
 }
-
+PRAGMA_ENABLE_OPTIMIZATION
 const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* InController) const
 {
 	if (InController)

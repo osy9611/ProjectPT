@@ -45,9 +45,14 @@ struct Z_Construct_UClass_UPTExperienceDefinition_Statics
 		{ "Category", "Gameplay" },
 		{ "ModuleRelativePath", "GameModes/PTExperienceDefinition.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AIPawnData_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "GameModes/PTExperienceDefinition.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultPawnData;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultWidgetData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AIPawnData;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -57,9 +62,11 @@ struct Z_Construct_UClass_UPTExperienceDefinition_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultPawnData = { "DefaultPawnData", nullptr, (EPropertyFlags)0x0114000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTExperienceDefinition, DefaultPawnData), Z_Construct_UClass_UPTPawnData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultPawnData_MetaData), NewProp_DefaultPawnData_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultWidgetData = { "DefaultWidgetData", nullptr, (EPropertyFlags)0x0114000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTExperienceDefinition, DefaultWidgetData), Z_Construct_UClass_UPTWidgetData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultWidgetData_MetaData), NewProp_DefaultWidgetData_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_AIPawnData = { "AIPawnData", nullptr, (EPropertyFlags)0x0114000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTExperienceDefinition, AIPawnData), Z_Construct_UClass_UPTPawnData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AIPawnData_MetaData), NewProp_AIPawnData_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTExperienceDefinition_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultPawnData,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultWidgetData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_AIPawnData,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTExperienceDefinition_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTExperienceDefinition_Statics::DependentSingletons[])() = {
@@ -103,10 +110,10 @@ UPTExperienceDefinition::~UPTExperienceDefinition() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTExperienceDefinition, UPTExperienceDefinition::StaticClass, TEXT("UPTExperienceDefinition"), &Z_Registration_Info_UClass_UPTExperienceDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTExperienceDefinition), 2782065755U) },
+		{ Z_Construct_UClass_UPTExperienceDefinition, UPTExperienceDefinition::StaticClass, TEXT("UPTExperienceDefinition"), &Z_Registration_Info_UClass_UPTExperienceDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTExperienceDefinition), 4215352397U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_3986930208(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_3579363273(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

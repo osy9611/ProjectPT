@@ -26,4 +26,7 @@ public:
 	UPROPERTY(EditAnywhere,Category = Gameplay)
 	TObjectPtr<UPTWidgetData> DefaultWidgetData;
 
+	UPROPERTY(EditAnywhere, Category = Gameplay)
+	TObjectPtr<UPTPawnData> AIPawnData;
+
 };

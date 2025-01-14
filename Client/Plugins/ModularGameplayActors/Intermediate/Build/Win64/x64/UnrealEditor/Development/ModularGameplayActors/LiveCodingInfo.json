@@ -2,14 +2,14 @@
 	"RemapUnityFiles": 
 	{
 		"Module.ModularGameplayActors.cpp.obj": [
+			"ModularAIController.gen.cpp.obj",
 			"ModularCharacter.gen.cpp.obj",
+			"ModularGameplayActors.init.gen.cpp.obj",
 			"ModularPlayerController.gen.cpp.obj",
+			"ModularAIController.cpp.obj",
 			"ModularCharacter.cpp.obj",
 			"ModularGameplayActors.cpp.obj",
-			"ModularPlayerController.cpp.obj",
-			"ModularAIController.gen.cpp.obj",
-			"ModularGameplayActors.init.gen.cpp.obj",
-			"ModularAIController.cpp.obj"
+			"ModularPlayerController.cpp.obj"
 		]
 	}
 }

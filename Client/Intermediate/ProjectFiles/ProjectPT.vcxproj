@@ -866,6 +866,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Object\PTObjectSubsystem.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Object\PTPlayerStart.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Object\PTPlayerStart.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Object\PTProjectile.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>

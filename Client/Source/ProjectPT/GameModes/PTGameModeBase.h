@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "GameplayTagsManager.h"
 #include "PTGameModeBase.generated.h"
 
 class UPTPawnData;
@@ -35,6 +36,12 @@ public:
 	* 생성하기 위해서 사용된다.
 	*/
 	virtual APawn* SpawnDefaultPawnAtTransform_Implementation(AController* NewPlayer, const FTransform& SpawnTransform) final;
+
+	/*
+	* ChoosePlayerStart_Implementation
+	* 게임에 스폰될 때 어느 지점에서 시작할지를 결정하기 위해 사용된다.
+	*/
+	virtual AActor* ChoosePlayerStart_Implementation(AController* Player) final;
 
 	void HandleMatchAssignmentIfNotExceptingOne();
 	void OnMatchAssignmentGiven(FPrimaryAssetId ExperienceId);

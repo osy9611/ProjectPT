@@ -543,6 +543,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\Object\PTObjectSubsystem.h">
       <Filter>Source\ProjectPT\Object</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Object\PTPlayerStart.cpp">
+      <Filter>Source\ProjectPT\Object</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Object\PTPlayerStart.h">
+      <Filter>Source\ProjectPT\Object</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Object\PTProjectile.cpp">
       <Filter>Source\ProjectPT\Object</Filter>
     </ClCompile>
