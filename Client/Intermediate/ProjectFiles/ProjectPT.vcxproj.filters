@@ -360,6 +360,12 @@
     <Filter Include="Source\ProjectPT\AbilitySystem\AttributeSet">
       <UniqueIdentifier>{746CDABF-8B49-3B09-A23D-1ECC2F1BCB22}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAI_AttributeSet.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAI_AttributeSet.h">
+      <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAttributeSet.cpp">
       <Filter>Source\ProjectPT\AbilitySystem\AttributeSet</Filter>
     </ClCompile>
@@ -448,6 +454,12 @@
       <Filter>Source\ProjectPT\Character</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTAICharacter.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTAIComponent.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTAIComponent.h">
       <Filter>Source\ProjectPT\Character</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Character\PTCharacter.cpp">

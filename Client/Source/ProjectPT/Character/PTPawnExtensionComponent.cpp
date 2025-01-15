@@ -33,6 +33,22 @@ void UPTPawnExtensionComponent::SetPlayerInputComponent()
 	CheckDefaultInitialization();
 }
 
+void UPTPawnExtensionComponent::SpawnDefaultController()
+{
+	APawn* Pawn = GetPawnChecked<APawn>();
+	Pawn->SpawnDefaultController();
+}
+
+void UPTPawnExtensionComponent::InitializeGameAbilitySystem(AActor* IsOwnerActor)
+{
+	if (!IsOwnerActor)
+		return;
+
+	UPTAbilitySystemComponent* ASC = CreateDefaultSubobject<UPTAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	RegisterGameAbilitySystem(ASC, IsOwnerActor);
+
+}
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTPawnExtensionComponent::RegisterGameAbilitySystem(UPTAbilitySystemComponent* InASC, AActor* IsOwnerActor)
 {
 	check(InASC && IsOwnerActor);
@@ -163,7 +179,7 @@ bool UPTPawnExtensionComponent::CanChangeInitState(UGameFrameworkComponentManage
 
 	return false;
 }
-
+PRAGMA_ENABLE_OPTIMIZATION
 void UPTPawnExtensionComponent::CheckDefaultInitialization()
 {
 	CheckDefaultInitializationForImplementers();

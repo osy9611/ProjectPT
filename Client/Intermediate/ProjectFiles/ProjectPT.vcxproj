@@ -740,6 +740,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_RangeAttack.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAI_AttributeSet.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAI_AttributeSet.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\AttributeSet\PTAttributeSet.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
@@ -800,6 +805,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTAICharacter.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTAIComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTAIComponent.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Character\PTCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_5)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_5)</ForcedIncludeFiles>

@@ -45,7 +45,6 @@ void UPTHeroComponent::OnRegister()
 	/*
 	* GameFrameworkComponentManager에 InitState 사용을 위해 등록 진행
 	*  - 등록은 상속받았던 IGameFrameworkInitStateInterface 매서드 RegisterInitStateFeature()를 활용
-	*  - 해당 함수를 간단히 보기
 	* GameInstance에서 정의한 InitState 정보를 사용하기 위해서 등록하기 위한 함수로만 생각하자
 	*/
 	RegisterInitStateFeature();
@@ -163,7 +162,7 @@ void UPTHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* Man
 
 void UPTHeroComponent::CheckDefaultInitialization()
 {
-	//Hero Feature는 Pawn Extension Feature에 종속되어 있으므로, CheckDefaultInitializationForImplementers를 호출하지 않는다
+	//Pawn Extension Feature에 종속되어 있으므로, CheckDefaultInitializationForImplementers를 호출하지 않는다
 
 	const FPTGameplayTags& InitTags = FPTGameplayTags::Get();
 	static const TArray<FGameplayTag> StateChain = { InitTags.InitState_Spawned, InitTags.InitState_DataAvailable, InitTags.InitState_DataInitialized, InitTags.InitState_GameplayReady };

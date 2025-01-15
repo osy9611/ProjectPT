@@ -34,7 +34,7 @@ public:
 
 	void SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName);
 
-	APawn* SpawnActor(UClass* PawnClass, const FTransform& SpawnTransform,APawn* Instigator);
+	APawn* SpawnActor(UClass* PawnClass, const FTransform& SpawnTransform, APawn* Instigator);
 	void RegisterActor(AActor* Actor);
 	void ReturnActor(AActor* Actor);
 
@@ -46,12 +46,12 @@ public:
 	TArray<APTPlayerStart*> GetPlayerStartList(FGameplayTag GameplayTag);
 
 private:
-	bool IsLoaded =false;
+	bool IsLoaded = false;
 	UPTAbilitySystemComponent* GetASC(AActor* Actor);
 
 private:
 	UPROPERTY()
-	TMap<FGameplayTag , FPlayerStartList> CachePlayerStarts;
+	TMap<FGameplayTag, FPlayerStartList> CachePlayerStarts;
 
 	UPROPERTY()
 	TMap<FString, AActor*> ObjectDatas;

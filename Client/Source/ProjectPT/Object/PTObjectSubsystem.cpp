@@ -17,6 +17,7 @@
 #include "ProjectPT/Character/PTPawnData.h"
 #include "ProjectPT/Character/PTAICharacter.h"
 #include "ProjectPT/GameModes/PTGameModeBase.h"
+#include "ProjectPT/Character/PTAIComponent.h"
 
 UPTObjectSubsystem::UPTObjectSubsystem()
 {
@@ -53,18 +54,17 @@ void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag 
 		TArray<APTPlayerStart*> PlayerStartList = GetPlayerStartList(GameplayTag);
 		for (APTPlayerStart* PTPlayerStart : PlayerStartList)
 		{
-			AActor* Actor = SpawnActor(PawnData->PawnClass, PTPlayerStart->GetActorTransform(), nullptr);
-			if (Actor)
+			APawn* Pawn = SpawnActor(PawnData->PawnClass, PTPlayerStart->GetActorTransform(), nullptr);
+
+			if (Pawn)
 			{
-				if (APTAICharacter* PTAICharacter = Cast<APTAICharacter>(Actor))
+				if (APTGameModeBase* PTGameModeBase = GetWorld()->GetAuthGameMode<APTGameModeBase>())
 				{
-					PTAICharacter->SpawnDefaultController();
+					PTGameModeBase->RestartPlayer(Pawn->GetController());
 				}
 			}
 		}
 	}
-
-
 }
 
 APawn* UPTObjectSubsystem::SpawnActor(UClass* PawnClass, const FTransform& SpawnTransform, APawn* Instigator)
@@ -72,6 +72,7 @@ APawn* UPTObjectSubsystem::SpawnActor(UClass* PawnClass, const FTransform& Spawn
 	check(PawnClass);
 
 	FActorSpawnParameters SpawnInfo;
+	SpawnInfo.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 	SpawnInfo.Instigator = Instigator;
 	SpawnInfo.ObjectFlags |= RF_Transient;
 	SpawnInfo.bDeferConstruction = true;
@@ -82,11 +83,14 @@ APawn* UPTObjectSubsystem::SpawnActor(UClass* PawnClass, const FTransform& Spawn
 		{
 			RegisterActor(Actor);
 		}
+		
+		SpawnedPawn->FinishSpawning(SpawnTransform);
 		return SpawnedPawn;
 	}
 
 	return nullptr;
 }
+
 PRAGMA_ENABLE_OPTIMIZATION
 void UPTObjectSubsystem::RegisterActor(AActor* Actor)
 {

@@ -32,7 +32,17 @@ public:
 	void SetPlayerInputComponent();
 	UPTAbilitySystemComponent* GetAbilitySystemComponent() const { return AbilitySystemComponent; }
 
+	APlayerState* GetPlayerState()
+	{
+		APawn* Pawn = GetPawnChecked<APawn>();
+		return Pawn->GetPlayerState();
+	}
+
+	/*Actor Controller*/
+	void SpawnDefaultController();
+
 	/*Game Ability System*/
+	void InitializeGameAbilitySystem(AActor* IsOwnerActor);
 	void RegisterGameAbilitySystem(UPTAbilitySystemComponent* InASC, AActor* IsOwnerActor);
 	void UnRegisterGameAbilitySystem();
 

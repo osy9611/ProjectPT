@@ -918,7 +918,9 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\dataasset.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptpawndata.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\character\\ptaicharacter.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaicharacter.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaicharacter.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\character\\ptaicomponent.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaicomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
