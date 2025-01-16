@@ -29,6 +29,18 @@ public:
 	UPTAbilitySystemComponent* GetPTAbilitySystemComponent() const { return AbilitySystemComponent; }
 	UPTAttributeSet* GetPTAttributeSet() const { return AttributeSet; }
 
+	/*
+	* CreateDefaultSubobject는 생성자 내에서 사용하기 때문에
+	* NewObject로 써야함
+	*/
+	template<class T = UPTAttributeSet>
+	T* CreateAttribute()
+	{
+		if (!HasAnyFlags(RF_ClassDefaultObject))
+			AttributeSet = NewObject<T>(this, T::StaticClass(), TEXT("AttributeSet"));
+		return Cast<T>(AttributeSet);
+	}
+
 	UPROPERTY()
 	TObjectPtr<const UPTPawnData> PawnData;
 
@@ -40,6 +52,6 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = "PlayerState")
 	TObjectPtr<UPTAbilitySystemComponent> AbilitySystemComponent;
 
-	UPROPERTY(VisibleAnywhere,Category="PlayerState")
+	UPROPERTY(VisibleAnywhere, Category = "PlayerState")
 	TObjectPtr<UPTAttributeSet> AttributeSet;
 };

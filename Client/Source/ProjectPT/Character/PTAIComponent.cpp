@@ -120,8 +120,16 @@ void UPTAIComponent::HandleChangeInitState(UGameFrameworkComponentManager* Manag
 		{
 			APTPlayerState* PTPlayerState = GetWorld()->SpawnActor<APTPlayerState>(APTPlayerState::StaticClass());
 			if (PTPlayerState)
+			{
 				Pawn->SetPlayerState(PTPlayerState);
-			PawnExtComp->RegisterGameAbilitySystem(PTPlayerState->GetPTAbilitySystemComponent(), PTPlayerState);
+				PawnExtComp->RegisterGameAbilitySystem(PTPlayerState->GetPTAbilitySystemComponent(), PTPlayerState);
+
+				UPTAI_AttributeSet* AttributeSet = PTPlayerState->CreateAttribute<UPTAI_AttributeSet>();
+				AttributeSet->InitAttributeSet(FString::FromInt(TableId));
+			}
+
+			PTPlayerState->GetPTAttributeSet()->InitAttributeSet("1");
+
 
 			Pawn->SpawnDefaultController();
 		}

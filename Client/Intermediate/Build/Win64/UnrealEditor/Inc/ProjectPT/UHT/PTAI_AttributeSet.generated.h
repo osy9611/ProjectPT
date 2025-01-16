@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAI_AttributeSet_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPTAI_AttributeSet(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTAI_AttributeSet(UPTAI_AttributeSet&&); \

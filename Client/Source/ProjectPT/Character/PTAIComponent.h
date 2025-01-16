@@ -35,9 +35,16 @@ public:
 	virtual void HandleChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState) final;
 	virtual void CheckDefaultInitialization() final;
 
+	void SetMonsterID(int32 NewTableId) { this->TableId = NewTableId; }
+	int32 GetMonsterTableID() { return TableId; }
+
+
 	UFUNCTION(BlueprintCallable)
 	FTransform GetSkeletonMeshSocketTransform(FName SocketName);
 
 	UFUNCTION(BlueprintCallable)
 	FVector GetSkeletonMeshSocketPos(FName SocketName);
+
+private:
+	int32 TableId;
 };

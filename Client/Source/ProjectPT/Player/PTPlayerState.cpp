@@ -12,7 +12,6 @@
 APTPlayerState::APTPlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 	AbilitySystemComponent = ObjectInitializer.CreateDefaultSubobject<UPTAbilitySystemComponent>(this, TEXT("AbilitySystemComponent"));
-	AttributeSet = CreateDefaultSubobject<UPTCharacter_AttributeSet>(TEXT("AttributeSet"));
 }
 
 void APTPlayerState::PostInitializeComponents()
@@ -64,7 +63,5 @@ void APTPlayerState::SetPawnData(const UPTPawnData* InPawnData)
 		if (AbilitySet)
 			AbilitySet->GiveToAbilitySystem(AbilitySystemComponent, nullptr);
 	}
-
-	AttributeSet->InitAttributeSet("1001");
 }
 

@@ -13,5 +13,9 @@ UCLASS()
 class PROJECTPT_API UPTAI_AttributeSet : public UPTAttributeSet
 {
 	GENERATED_BODY()
-	
+public:
+	UPTAI_AttributeSet(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+
+	virtual void InitAttributeSet(FString RowName) override;
+
 };

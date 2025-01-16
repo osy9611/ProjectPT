@@ -12,10 +12,74 @@ void EmptyLinkFunctionForGeneratedCodeGenerateTableData() {}
 // Begin Cross Module References
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FMonsterData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSceneData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSkillData();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
+
+// Begin ScriptStruct FMonsterData
+static_assert(std::is_polymorphic<FMonsterData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FMonsterData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_MonsterData;
+class UScriptStruct* FMonsterData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_MonsterData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_MonsterData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FMonsterData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("MonsterData"));
+	}
+	return Z_Registration_Info_UScriptStruct_MonsterData.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FMonsterData>()
+{
+	return FMonsterData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FMonsterData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HP_MetaData[] = {
+		{ "Category", "MonsterData" },
+		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_HP;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMonsterData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FMonsterData_Statics::NewProp_HP = { "HP", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FMonsterData, HP), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HP_MetaData), NewProp_HP_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FMonsterData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMonsterData_Statics::NewProp_HP,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMonsterData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMonsterData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	Z_Construct_UScriptStruct_FTableRowBase,
+	&NewStructOps,
+	"MonsterData",
+	Z_Construct_UScriptStruct_FMonsterData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMonsterData_Statics::PropPointers),
+	sizeof(FMonsterData),
+	alignof(FMonsterData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMonsterData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FMonsterData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FMonsterData()
+{
+	if (!Z_Registration_Info_UScriptStruct_MonsterData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_MonsterData.InnerSingleton, Z_Construct_UScriptStruct_FMonsterData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_MonsterData.InnerSingleton;
+}
+// End ScriptStruct FMonsterData
 
 // Begin ScriptStruct FSceneData
 static_assert(std::is_polymorphic<FSceneData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FSceneData cannot be polymorphic unless super FTableRowBase is polymorphic");
@@ -185,11 +249,12 @@ UScriptStruct* Z_Construct_UScriptStruct_FSkillData()
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 389573294U) },
 		{ FSceneData::StaticStruct, Z_Construct_UScriptStruct_FSceneData_Statics::NewStructOps, TEXT("SceneData"), &Z_Registration_Info_UScriptStruct_SceneData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSceneData), 825144501U) },
 		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 1429027449U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_927013311(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_309400760(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);

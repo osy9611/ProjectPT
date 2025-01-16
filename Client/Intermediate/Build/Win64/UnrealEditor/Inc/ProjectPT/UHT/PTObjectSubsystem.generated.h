@@ -9,19 +9,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+struct FGameplayAbilityTargetDataHandle;
 #ifdef PROJECTPT_PTObjectSubsystem_generated_h
 #error "PTObjectSubsystem.generated.h already included, missing '#pragma once' in PTObjectSubsystem.h"
 #endif
 #define PROJECTPT_PTObjectSubsystem_generated_h
 
-#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_17_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_18_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPlayerStartList_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPlayerStartList>();
 
-#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_27_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execApplyDamage); \
+	DECLARE_FUNCTION(execApplyActorsDamage);
+
+
+#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_28_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTObjectSubsystem(); \
 	friend struct Z_Construct_UClass_UPTObjectSubsystem_Statics; \
@@ -30,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(UPTObjectSubsystem)
 
 
-#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_27_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTObjectSubsystem(UPTObjectSubsystem&&); \
@@ -42,12 +49,13 @@ public: \
 	NO_API virtual ~UPTObjectSubsystem();
 
 
-#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_24_PROLOG
-#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_27_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_25_PROLOG
+#define FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_28_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_27_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_27_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_28_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

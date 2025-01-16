@@ -34,6 +34,7 @@ struct Z_Construct_UClass_UPTAI_AttributeSet_Statics
 #endif
 		{ "IncludePath", "AbilitySystem/AttributeSet/PTAI_AttributeSet.h" },
 		{ "ModuleRelativePath", "AbilitySystem/AttributeSet/PTAI_AttributeSet.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -74,7 +75,6 @@ template<> PROJECTPT_API UClass* StaticClass<UPTAI_AttributeSet>()
 {
 	return UPTAI_AttributeSet::StaticClass();
 }
-UPTAI_AttributeSet::UPTAI_AttributeSet(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UPTAI_AttributeSet);
 UPTAI_AttributeSet::~UPTAI_AttributeSet() {}
 // End Class UPTAI_AttributeSet
@@ -83,10 +83,10 @@ UPTAI_AttributeSet::~UPTAI_AttributeSet() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAI_AttributeSet_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAI_AttributeSet, UPTAI_AttributeSet::StaticClass, TEXT("UPTAI_AttributeSet"), &Z_Registration_Info_UClass_UPTAI_AttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAI_AttributeSet), 985781895U) },
+		{ Z_Construct_UClass_UPTAI_AttributeSet, UPTAI_AttributeSet::StaticClass, TEXT("UPTAI_AttributeSet"), &Z_Registration_Info_UClass_UPTAI_AttributeSet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAI_AttributeSet), 1080216774U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAI_AttributeSet_h_2333901505(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAI_AttributeSet_h_1560679865(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAI_AttributeSet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAI_AttributeSet_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

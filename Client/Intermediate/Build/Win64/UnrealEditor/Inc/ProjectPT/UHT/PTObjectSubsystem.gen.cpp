@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "ProjectPT/Object/PTObjectSubsystem.h"
+#include "GameplayAbilities/Public/Abilities/GameplayAbilityTargetTypes.h"
 #include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTObjectSubsystem() {}
@@ -13,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodePTObjectSubsystem() {}
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UWorldSubsystem();
+GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerStart_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTObjectSubsystem();
@@ -84,9 +86,115 @@ UScriptStruct* Z_Construct_UScriptStruct_FPlayerStartList()
 }
 // End ScriptStruct FPlayerStartList
 
+// Begin Class UPTObjectSubsystem Function ApplyActorsDamage
+struct Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics
+{
+	struct PTObjectSubsystem_eventApplyActorsDamage_Parms
+	{
+		AActor* Owner;
+		FGameplayAbilityTargetDataHandle InData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Object/PTObjectSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InData_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Owner;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::NewProp_Owner = { "Owner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTObjectSubsystem_eventApplyActorsDamage_Parms, Owner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::NewProp_InData = { "InData", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTObjectSubsystem_eventApplyActorsDamage_Parms, InData), Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InData_MetaData), NewProp_InData_MetaData) }; // 2741862775
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::NewProp_Owner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::NewProp_InData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTObjectSubsystem, nullptr, "ApplyActorsDamage", nullptr, nullptr, Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::PTObjectSubsystem_eventApplyActorsDamage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::PTObjectSubsystem_eventApplyActorsDamage_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTObjectSubsystem::execApplyActorsDamage)
+{
+	P_GET_OBJECT(AActor,Z_Param_Owner);
+	P_GET_STRUCT_REF(FGameplayAbilityTargetDataHandle,Z_Param_Out_InData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ApplyActorsDamage(Z_Param_Owner,Z_Param_Out_InData);
+	P_NATIVE_END;
+}
+// End Class UPTObjectSubsystem Function ApplyActorsDamage
+
+// Begin Class UPTObjectSubsystem Function ApplyDamage
+struct Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics
+{
+	struct PTObjectSubsystem_eventApplyDamage_Parms
+	{
+		AActor* Onwer;
+		const AActor* TargetActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Object/PTObjectSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetActor_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Onwer;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::NewProp_Onwer = { "Onwer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTObjectSubsystem_eventApplyDamage_Parms, Onwer), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTObjectSubsystem_eventApplyDamage_Parms, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetActor_MetaData), NewProp_TargetActor_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::NewProp_Onwer,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::NewProp_TargetActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTObjectSubsystem, nullptr, "ApplyDamage", nullptr, nullptr, Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::PTObjectSubsystem_eventApplyDamage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::PTObjectSubsystem_eventApplyDamage_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTObjectSubsystem::execApplyDamage)
+{
+	P_GET_OBJECT(AActor,Z_Param_Onwer);
+	P_GET_OBJECT(AActor,Z_Param_TargetActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ApplyDamage(Z_Param_Onwer,Z_Param_TargetActor);
+	P_NATIVE_END;
+}
+// End Class UPTObjectSubsystem Function ApplyDamage
+
 // Begin Class UPTObjectSubsystem
 void UPTObjectSubsystem::StaticRegisterNativesUPTObjectSubsystem()
 {
+	UClass* Class = UPTObjectSubsystem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyActorsDamage", &UPTObjectSubsystem::execApplyActorsDamage },
+		{ "ApplyDamage", &UPTObjectSubsystem::execApplyDamage },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPTObjectSubsystem);
 UClass* Z_Construct_UClass_UPTObjectSubsystem_NoRegister()
@@ -115,6 +223,11 @@ struct Z_Construct_UClass_UPTObjectSubsystem_Statics
 	static const UECodeGen_Private::FMapPropertyParams NewProp_ObjectDatas;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPTObjectSubsystem_ApplyActorsDamage, "ApplyActorsDamage" }, // 1332590616
+		{ &Z_Construct_UFunction_UPTObjectSubsystem_ApplyDamage, "ApplyDamage" }, // 2140031185
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPTObjectSubsystem>::IsAbstract,
 	};
@@ -145,11 +258,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPTObjectSubsystem_Stat
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UPTObjectSubsystem_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UPTObjectSubsystem_Statics::PropPointers),
 	0,
 	0x001000A0u,
@@ -178,10 +291,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTObjectSubsyste
 		{ FPlayerStartList::StaticStruct, Z_Construct_UScriptStruct_FPlayerStartList_Statics::NewStructOps, TEXT("PlayerStartList"), &Z_Registration_Info_UScriptStruct_PlayerStartList, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerStartList), 2808894622U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTObjectSubsystem, UPTObjectSubsystem::StaticClass, TEXT("UPTObjectSubsystem"), &Z_Registration_Info_UClass_UPTObjectSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTObjectSubsystem), 218233841U) },
+		{ Z_Construct_UClass_UPTObjectSubsystem, UPTObjectSubsystem::StaticClass, TEXT("UPTObjectSubsystem"), &Z_Registration_Info_UClass_UPTObjectSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTObjectSubsystem), 2558926475U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_2952363780(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_2845519994(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTObjectSubsystem_h_Statics::ScriptStructInfo),
 	nullptr, 0);

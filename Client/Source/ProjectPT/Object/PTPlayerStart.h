@@ -18,4 +18,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|SpawnTag")
 	FGameplayTag SpawnTag;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|PawnMonsterId")
+	int32 TableId;
 };

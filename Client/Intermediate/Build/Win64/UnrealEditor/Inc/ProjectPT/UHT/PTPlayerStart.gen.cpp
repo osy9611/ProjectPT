@@ -40,8 +40,13 @@ struct Z_Construct_UClass_APTPlayerStart_Statics
 		{ "Category", "PT|SpawnTag" },
 		{ "ModuleRelativePath", "Object/PTPlayerStart.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TableId_MetaData[] = {
+		{ "Category", "PT|PawnMonsterId" },
+		{ "ModuleRelativePath", "Object/PTPlayerStart.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_SpawnTag;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_TableId;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -50,8 +55,10 @@ struct Z_Construct_UClass_APTPlayerStart_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_APTPlayerStart_Statics::NewProp_SpawnTag = { "SpawnTag", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APTPlayerStart, SpawnTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpawnTag_MetaData), NewProp_SpawnTag_MetaData) }; // 1298103297
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_APTPlayerStart_Statics::NewProp_TableId = { "TableId", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APTPlayerStart, TableId), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TableId_MetaData), NewProp_TableId_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APTPlayerStart_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APTPlayerStart_Statics::NewProp_SpawnTag,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APTPlayerStart_Statics::NewProp_TableId,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APTPlayerStart_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APTPlayerStart_Statics::DependentSingletons[])() = {
@@ -94,10 +101,10 @@ APTPlayerStart::~APTPlayerStart() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTPlayerStart_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APTPlayerStart, APTPlayerStart::StaticClass, TEXT("APTPlayerStart"), &Z_Registration_Info_UClass_APTPlayerStart, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTPlayerStart), 172203242U) },
+		{ Z_Construct_UClass_APTPlayerStart, APTPlayerStart::StaticClass, TEXT("APTPlayerStart"), &Z_Registration_Info_UClass_APTPlayerStart, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTPlayerStart), 1898282750U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTPlayerStart_h_1945990643(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTPlayerStart_h_663783142(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTPlayerStart_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTPlayerStart_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

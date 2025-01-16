@@ -20,8 +20,6 @@ protected:
 	
 public:
 	virtual void Tick(float DeltaTime) override;
-
-	void SetPlayerInputComponent();
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Character")
 	TObjectPtr<UPTPawnExtensionComponent> PawnExtComponent;

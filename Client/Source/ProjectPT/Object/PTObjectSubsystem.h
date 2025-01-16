@@ -10,6 +10,7 @@
 class UPTAbilitySystemComponent;
 class UPTPawnData;
 class APTPlayerStart;
+struct FGameplayAbilityTargetDataHandle;
 
 USTRUCT()
 struct FPlayerStartList
@@ -38,8 +39,14 @@ public:
 	void RegisterActor(AActor* Actor);
 	void ReturnActor(AActor* Actor);
 
-	void ApplyActorsDamage(AActor* Owner, const TArray<AActor>& TargetActors);
+	UFUNCTION(BlueprintCallable)
+	void ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData);
+
+	void ApplyActorsDamage(AActor* Owner, const TArray<AActor*> TargetActors);
+	
+	UFUNCTION(BlueprintCallable)
 	void ApplyDamage(AActor* Onwer, const AActor* TargetActor);
+
 	void ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const AActor* TargetActor);
 
 	void SetCachePlayerStart();

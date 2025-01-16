@@ -5,6 +5,14 @@
 #include "GenerateTableData.generated.h"
 
 USTRUCT(BlueprintType)
+struct FMonsterData : public FTableRowBase
+{
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HP;
+};
+USTRUCT(BlueprintType)
 struct FSceneData : public FTableRowBase
 {
 	GENERATED_USTRUCT_BODY()

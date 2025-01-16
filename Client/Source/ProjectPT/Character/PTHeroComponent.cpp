@@ -19,6 +19,7 @@
 #include "ProjectPT/Camera/PTCameraMode_ThirdPerson.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/Camera/PTCameraMode.h"
+#include "ProjectPT/AbilitySystem/AttributeSet/PTCharacter_AttributeSet.h"
 
 const FName UPTHeroComponent::NAME_ActorFeatureName("Hero");
 
@@ -144,6 +145,12 @@ void UPTHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* Man
 			PawnExtComp->RegisterGameAbilitySystem(PTPS->GetPTAbilitySystemComponent(), PTPS);
 		}
 
+		if (APTPlayerState* PlayerState = Pawn->GetPlayerState<APTPlayerState>())
+		{
+			UPTCharacter_AttributeSet* AttributeSet = PlayerState->CreateAttribute<UPTCharacter_AttributeSet>();
+			AttributeSet->InitAttributeSet("1001");
+		}
+
 		if (bIsLocallyControlled && PawnData)
 		{
 			if (UPTCameraComponent* CameraComponent = UPTCameraComponent::FindCameraComponent(Pawn))
@@ -182,7 +189,7 @@ void UPTHeroComponent::SetAbilityCameraMode(TSubclassOf<UPTCameraMode> CameraMod
 		if (UPTCameraComponent* CameraPomponent = UPTCameraComponent::FindCameraComponent(Pawn))
 		{
 			CameraPomponent->bAddFiledOfViewOffset = UseFovOffset;
-		} 
+		}
 	}
 }
 

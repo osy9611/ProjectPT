@@ -10,6 +10,7 @@
 #include "ProjectPT/Character/PTCharacter.h"
 #include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
+#include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
 #include "ProjectPT/AbilitySystem/GameplayEffect/PTGE_AttackDamage.h"
 #include "ProjectPT/GameModes/PTGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
@@ -58,9 +59,14 @@ void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag 
 
 			if (Pawn)
 			{
-				if (APTGameModeBase* PTGameModeBase = GetWorld()->GetAuthGameMode<APTGameModeBase>())
+				if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(Pawn))
 				{
-					PTGameModeBase->RestartPlayer(Pawn->GetController());
+					AIComponent->SetMonsterID(PTPlayerStart->TableId);
+				}
+
+				if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
+				{
+					PawnExtComp->SetPlayerInputComponent();
 				}
 			}
 		}
@@ -91,7 +97,6 @@ APawn* UPTObjectSubsystem::SpawnActor(UClass* PawnClass, const FTransform& Spawn
 	return nullptr;
 }
 
-PRAGMA_ENABLE_OPTIMIZATION
 void UPTObjectSubsystem::RegisterActor(AActor* Actor)
 {
 	check(Actor);
@@ -113,15 +118,48 @@ void UPTObjectSubsystem::ReturnActor(AActor* Actor)
 {
 }
 
-void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const TArray<AActor>& TargetActors)
+void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData)
+{
+	check(Owner);
+	UPTAbilitySystemComponent* OwnerASC = nullptr;
+	if (APTPlayerState* PlayerState = Cast<APTPlayerState>(Owner))
+	{
+		OwnerASC = PlayerState->GetPTAbilitySystemComponent();
+	}
+	else
+	{
+		OwnerASC = GetASC(Owner);
+	}
+	
+	if (!OwnerASC)
+	{
+		UE_LOG(PTLog, Error, TEXT("[ObjectSubsystem] OwnerASC Is Fail"));
+		return;
+	}
+
+	for (const TSharedPtr<FGameplayAbilityTargetData> Data : InData.Data)
+	{
+		if (!Data->HasHitResult())
+			continue;
+
+		if (const FHitResult* HitResult = Data->GetHitResult())
+		{
+			ApplyDamage(OwnerASC, HitResult->GetActor());
+		}
+	}
+}
+
+void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const TArray<AActor*> TargetActors)
 {
 	check(Owner);
 
+
 	UPTAbilitySystemComponent* OwnerASC = GetASC(Owner);
 
-	for (const AActor& TargetActor : TargetActors)
+	for (const AActor* TargetActor : TargetActors)
 	{
-		ApplyDamage(OwnerASC, &TargetActor);
+		//if(!ObjectDatas.Contains(TargetActor))
+		ApplyDamage(OwnerASC, TargetActor);
 	}
 }
 
@@ -161,14 +199,19 @@ void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const 
 	if (AActor** Actor = ObjectDatas.Find(ActorName))
 	{
 		UPTAbilitySystemComponent* TargetASC = GetASC(const_cast<AActor*>(TargetActor));
-		check(TargetASC);
+		if (!TargetASC)
+		{
+			UE_LOG(PTLog, Error, TEXT("[PTObjectSubSystem] ApplyDamage() : This Target Actor ASC Is nullptr [%s]"), *TargetActor->GetName());
+			return;
+		}
 
 		FGameplayEffectContextHandle EffectContext = OwnerASC->MakeEffectContext();
+		EffectContext.AddSourceObject(OwnerASC->GetOwner());
 		FGameplayEffectSpecHandle SpecHandle = OwnerASC->MakeOutgoingSpec(UPTGE_AttackDamage::StaticClass(), 1.0f, EffectContext);
-
+		float NewHealth = TargetASC->GetNumericAttribute(UPTAttributeSet::GetHealthAttribute());
 		if (SpecHandle.IsValid())
 		{
-			TargetASC->ApplyGameplayEffectSpecToTarget(*SpecHandle.Data.Get(), TargetASC);
+			FActiveGameplayEffectHandle ActiveGEHandle = TargetASC->ApplyGameplayEffectSpecToTarget(*SpecHandle.Data.Get(), TargetASC);
 		}
 	}
 	else
@@ -229,13 +272,10 @@ UPTAbilitySystemComponent* UPTObjectSubsystem::GetASC(AActor* Actor)
 		return nullptr;
 	}
 
-	if (APTCharacter* PTCharacter = Cast<APTCharacter>(Actor))
+	if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(Actor))
 	{
-		if (APTPlayerState* PTPlayerState = Cast<APTPlayerState>(PTCharacter->GetPlayerState()))
-		{
-			return PTPlayerState->GetPTAbilitySystemComponent();
-		}
+		return PawnExtComp->GetAbilitySystemComponent();
 	}
-
 	return nullptr;
 }
+PRAGMA_ENABLE_OPTIMIZATION
