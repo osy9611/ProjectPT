@@ -61,6 +61,7 @@ void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag 
 			{
 				if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(Pawn))
 				{
+					AIComponent->RegisterPTPlayerStart(PTPlayerStart);
 					AIComponent->SetMonsterID(PTPlayerStart->TableId);
 				}
 
@@ -192,8 +193,8 @@ void UPTObjectSubsystem::ApplyDamage(AActor* Owner, const AActor* TargetActor)
 
 void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const AActor* TargetActor)
 {
-	check(OwnerASC);
-	check(TargetActor);
+	if (!TargetActor || !OwnerASC)
+		return;
 
 	FString ActorName = TargetActor->GetName();
 	if (AActor** Actor = ObjectDatas.Find(ActorName))

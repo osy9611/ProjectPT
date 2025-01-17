@@ -2,7 +2,92 @@
 
 
 #include "PTPlayerAIController.h"
+#include "Perception/AIPerceptionComponent.h"
+#include "ProjectPT/Character/PTAIComponent.h"
+#include "ProjectPT/Object/PTPlayerStart.h"
+#include "ProjectPT/Table/GenerateTableData.h"
+#include "ProjectPT/Table/DataManagerSubsystem.h"
+#include "Perception/AISenseConfig_Sight.h"
 
 APTPlayerAIController::APTPlayerAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+{
+	AIPerceptionComponent = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerceptionComponent"));
+}
+
+void APTPlayerAIController::OnPossess(APawn* InPawn)
+{
+	Super::OnPossess(InPawn);
+
+	if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(InPawn))
+	{
+		APTPlayerStart* PlayerStart = AIComponent->GetPlayerStart();
+		if (!PlayerStart)
+			return;
+
+		SearchRadius = PlayerStart->Radius;
+		if (UseTableData)
+		{
+			if (UDataManagerSubsystem* DataManager = GetWorld()->GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
+			{
+				FMonsterData* MonsterData = DataManager->FindData<FMonsterData>(FString::FromInt(PlayerStart->TableId));
+				RegisterSightConfig(MonsterData);
+			}
+		}
+	}
+}
+
+void APTPlayerAIController::RegisterSightConfig(FMonsterData* MonsterData)
+{
+	if (!MonsterData)
+		return;
+
+	if (!AIPerceptionComponent->IsRegistered())
+	{
+		return;
+	}
+
+	UAISenseConfig_Sight* SightConfig = NewObject<UAISenseConfig_Sight>(this, UAISenseConfig_Sight::StaticClass(), TEXT("SightConfig"));
+	SightConfig->Implementation = UAISense_Sight::StaticClass();
+	SightConfig->SightRadius = MonsterData->SightRadius;
+	SightConfig->LoseSightRadius = MonsterData->LoseSightRadius;
+	SightConfig->PeripheralVisionAngleDegrees = MonsterData->PeripheralVisionAngleDegrees;
+	SightConfig->SetMaxAge(5.0f);
+	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+	SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+	SightConfig->DetectionByAffiliation.bDetectFriendlies = false;
+	SightConfig->SetStartsEnabled(true);
+
+	AIPerceptionComponent->ConfigureSense(*SightConfig);
+	AIPerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
+	AIPerceptionComponent->OnTargetPerceptionUpdated.AddDynamic(this, &ThisClass::OnTargetPerceptionUpdated);
+	AIPerceptionComponent->RegisterComponent();
+}
+
+bool APTPlayerAIController::IsTargetVisible(AActor* TargetActor)
+{
+	FVector EyeLocation;
+	FRotator EyeRotation;
+	GetActorEyesViewPoint(EyeLocation, EyeRotation);
+
+	FHitResult HitResult;
+	FVector TargetLocation = TargetActor->GetActorLocation();
+
+	//Start Line Trace
+	bool bHit = GetWorld()->LineTraceSingleByChannel(
+		HitResult,
+		EyeLocation,
+		TargetLocation,
+		ECC_Visibility
+	);
+
+	if (bHit && HitResult.GetActor() != TargetActor)
+	{
+		return false;
+	}
+
+	return true;
+}
+
+void APTPlayerAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
 }

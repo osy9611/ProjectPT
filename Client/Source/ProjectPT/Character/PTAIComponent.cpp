@@ -128,9 +128,6 @@ void UPTAIComponent::HandleChangeInitState(UGameFrameworkComponentManager* Manag
 				AttributeSet->InitAttributeSet(FString::FromInt(TableId));
 			}
 
-			PTPlayerState->GetPTAttributeSet()->InitAttributeSet("1");
-
-
 			Pawn->SpawnDefaultController();
 		}
 	}

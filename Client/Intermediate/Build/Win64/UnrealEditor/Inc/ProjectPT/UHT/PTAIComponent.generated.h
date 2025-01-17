@@ -14,12 +14,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTAIComponent_generated_h
 
-#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetSkeletonMeshSocketPos); \
 	DECLARE_FUNCTION(execGetSkeletonMeshSocketTransform);
 
 
-#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_20_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTAIComponent(); \
 	friend struct Z_Construct_UClass_UPTAIComponent_Statics; \
@@ -29,7 +29,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<UPTAIComponent*>(this); }
 
 
-#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_20_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTAIComponent(UPTAIComponent&&); \
@@ -41,13 +41,13 @@ public: \
 	NO_API virtual ~UPTAIComponent();
 
 
-#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_17_PROLOG
-#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_20_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_18_PROLOG
+#define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Character_PTAIComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Character_PTAIComponent_h_20_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Character_PTAIComponent_h_20_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

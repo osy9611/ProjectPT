@@ -71,7 +71,6 @@ FGameplayAbilityTargetDataHandle APTGameplayAbilityTargetActor_Trace::MakeTarget
 	//생성후 삭제되기까지의 시간
 	float DebugLifeTime = 5.0f;
 
-
 	//캡슐 디버그 메쉬그리기
 	DrawDebugCapsule(GetWorld(), Center, HalfHeight, AttackRadius, CapsuleRot, DrawColor, false, DebugLifeTime);
 #endif

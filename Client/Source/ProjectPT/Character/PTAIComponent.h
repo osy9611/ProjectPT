@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/PawnComponent.h"
 #include "Components/GameFrameworkInitStateInterface.h"
+#include "ProjectPT/Object/PTPlayerStart.h"
 #include "PTAIComponent.generated.h"
 
 class UPTAbilitySystemComponent;
@@ -39,6 +40,10 @@ public:
 	int32 GetMonsterTableID() { return TableId; }
 
 
+	/*PTPlayerStart*/
+	void RegisterPTPlayerStart(APTPlayerStart* InPlayerStart) { this->PlayerStart = InPlayerStart; }
+	APTPlayerStart* GetPlayerStart() { return PlayerStart.Get(); }
+
 	UFUNCTION(BlueprintCallable)
 	FTransform GetSkeletonMeshSocketTransform(FName SocketName);
 
@@ -46,5 +51,7 @@ public:
 	FVector GetSkeletonMeshSocketPos(FName SocketName);
 
 private:
+	UPROPERTY()
+	TWeakObjectPtr<APTPlayerStart> PlayerStart;
 	int32 TableId;
 };

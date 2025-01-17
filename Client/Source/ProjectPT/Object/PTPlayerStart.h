@@ -16,9 +16,23 @@ public:
 
 	FGameplayTag GetGameplayTag() { return SpawnTag; }
 
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|ShowRaidusInEditor")
+	bool ShowRadiusInEditor;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|ShowYAxis")
+	FVector YAxisInEditor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|SearchRadius")
+	float Radius;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|SpawnTag")
 	FGameplayTag SpawnTag;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|PawnMonsterId")
 	int32 TableId;
+	
 };

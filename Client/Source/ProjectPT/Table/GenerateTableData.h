@@ -11,6 +11,12 @@ struct FMonsterData : public FTableRowBase
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float HP;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SightRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float LoseSightRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float PeripheralVisionAngleDegrees;
 };
 USTRUCT(BlueprintType)
 struct FSceneData : public FTableRowBase

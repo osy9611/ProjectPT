@@ -14,6 +14,7 @@ COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UGameFrameworkInitStateInterface_NoRegister();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UPawnComponent();
+PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerStart_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTAIComponent();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTAIComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
@@ -144,7 +145,12 @@ struct Z_Construct_UClass_UPTAIComponent_Statics
 		{ "ToolTip", "AI \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xca\xb1\xef\xbf\xbd\xc8\xad\xef\xbf\xbd\xef\xbf\xbd \xc3\xb3\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb4\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae\nHeroCompoent\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xc3\xb7\xef\xbf\xbd\xef\xbf\xbd\xcc\xbe\xee\xb0\xa1 \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb4\xef\xbf\xbd \xef\xbf\xbd\xc3\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xca\xb1\xef\xbf\xbd\xc8\xad\xef\xbf\xbd\xef\xbf\xbd \xc3\xb3\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb4\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\nAIComponent\xef\xbf\xbd\xef\xbf\xbd GAS \xef\xbf\xbd\xef\xbf\xbd AttributSet\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xcf\xb1\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd8\xbc\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayerStart_MetaData[] = {
+		{ "ModuleRelativePath", "Character/PTAIComponent.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FWeakObjectPropertyParams NewProp_PlayerStart;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos, "GetSkeletonMeshSocketPos" }, // 2791546633
@@ -157,6 +163,11 @@ struct Z_Construct_UClass_UPTAIComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FWeakObjectPropertyParams Z_Construct_UClass_UPTAIComponent_Statics::NewProp_PlayerStart = { "PlayerStart", nullptr, (EPropertyFlags)0x0044000000000000, UECodeGen_Private::EPropertyGenFlags::WeakObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAIComponent, PlayerStart), Z_Construct_UClass_APTPlayerStart_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerStart_MetaData), NewProp_PlayerStart_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTAIComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAIComponent_Statics::NewProp_PlayerStart,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTAIComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTAIComponent_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UPawnComponent,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
@@ -171,11 +182,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPTAIComponent_Statics:
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	nullptr,
+	Z_Construct_UClass_UPTAIComponent_Statics::PropPointers,
 	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_UPTAIComponent_Statics::PropPointers),
 	UE_ARRAY_COUNT(InterfaceParams),
 	0x00B000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UPTAIComponent_Statics::Class_MetaDataParams), Z_Construct_UClass_UPTAIComponent_Statics::Class_MetaDataParams)
@@ -200,10 +211,10 @@ UPTAIComponent::~UPTAIComponent() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAIComponent, UPTAIComponent::StaticClass, TEXT("UPTAIComponent"), &Z_Registration_Info_UClass_UPTAIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAIComponent), 2737924397U) },
+		{ Z_Construct_UClass_UPTAIComponent, UPTAIComponent::StaticClass, TEXT("UPTAIComponent"), &Z_Registration_Info_UClass_UPTAIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAIComponent), 3111544584U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_1529414196(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_1193985549(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
