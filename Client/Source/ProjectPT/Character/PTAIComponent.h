@@ -39,10 +39,17 @@ public:
 	void SetMonsterID(int32 NewTableId) { this->TableId = NewTableId; }
 	int32 GetMonsterTableID() { return TableId; }
 
-
 	/*PTPlayerStart*/
 	void RegisterPTPlayerStart(APTPlayerStart* InPlayerStart) { this->PlayerStart = InPlayerStart; }
 	APTPlayerStart* GetPlayerStart() { return PlayerStart.Get(); }
+
+	/*AI Perception*/
+	void SendDamageEvent(AActor* Instigator,float DamageAmount);
+
+	/*AI Contents*/
+	UFUNCTION(BlueprintCallable)
+	bool IsTargetVisible(AActor* TargetActor);
+
 
 	UFUNCTION(BlueprintCallable)
 	FTransform GetSkeletonMeshSocketTransform(FName SocketName);

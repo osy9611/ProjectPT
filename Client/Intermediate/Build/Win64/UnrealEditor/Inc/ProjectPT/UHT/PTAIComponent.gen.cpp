@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodePTAIComponent() {}
 // Begin Cross Module References
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UGameFrameworkInitStateInterface_NoRegister();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UPawnComponent();
 PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerStart_NoRegister();
@@ -112,6 +113,63 @@ DEFINE_FUNCTION(UPTAIComponent::execGetSkeletonMeshSocketTransform)
 }
 // End Class UPTAIComponent Function GetSkeletonMeshSocketTransform
 
+// Begin Class UPTAIComponent Function IsTargetVisible
+struct Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics
+{
+	struct PTAIComponent_eventIsTargetVisible_Parms
+	{
+		AActor* TargetActor;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/*AI Contents*/" },
+#endif
+		{ "ModuleRelativePath", "Character/PTAIComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "AI Contents" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTAIComponent_eventIsTargetVisible_Parms, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((PTAIComponent_eventIsTargetVisible_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PTAIComponent_eventIsTargetVisible_Parms), &Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::NewProp_TargetActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTAIComponent, nullptr, "IsTargetVisible", nullptr, nullptr, Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::PTAIComponent_eventIsTargetVisible_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::PTAIComponent_eventIsTargetVisible_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTAIComponent_IsTargetVisible()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTAIComponent_IsTargetVisible_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTAIComponent::execIsTargetVisible)
+{
+	P_GET_OBJECT(AActor,Z_Param_TargetActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsTargetVisible(Z_Param_TargetActor);
+	P_NATIVE_END;
+}
+// End Class UPTAIComponent Function IsTargetVisible
+
 // Begin Class UPTAIComponent
 void UPTAIComponent::StaticRegisterNativesUPTAIComponent()
 {
@@ -119,6 +177,7 @@ void UPTAIComponent::StaticRegisterNativesUPTAIComponent()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetSkeletonMeshSocketPos", &UPTAIComponent::execGetSkeletonMeshSocketPos },
 		{ "GetSkeletonMeshSocketTransform", &UPTAIComponent::execGetSkeletonMeshSocketTransform },
+		{ "IsTargetVisible", &UPTAIComponent::execIsTargetVisible },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -155,6 +214,7 @@ struct Z_Construct_UClass_UPTAIComponent_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos, "GetSkeletonMeshSocketPos" }, // 2791546633
 		{ &Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform, "GetSkeletonMeshSocketTransform" }, // 2313109826
+		{ &Z_Construct_UFunction_UPTAIComponent_IsTargetVisible, "IsTargetVisible" }, // 2400802994
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -211,10 +271,10 @@ UPTAIComponent::~UPTAIComponent() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAIComponent, UPTAIComponent::StaticClass, TEXT("UPTAIComponent"), &Z_Registration_Info_UClass_UPTAIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAIComponent), 3111544584U) },
+		{ Z_Construct_UClass_UPTAIComponent, UPTAIComponent::StaticClass, TEXT("UPTAIComponent"), &Z_Registration_Info_UClass_UPTAIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAIComponent), 2170493233U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_1193985549(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_1085637832(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

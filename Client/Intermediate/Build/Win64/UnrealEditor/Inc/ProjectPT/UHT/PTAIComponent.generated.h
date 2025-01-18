@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef PROJECTPT_PTAIComponent_generated_h
 #error "PTAIComponent.generated.h already included, missing '#pragma once' in PTAIComponent.h"
 #endif
@@ -16,7 +17,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetSkeletonMeshSocketPos); \
-	DECLARE_FUNCTION(execGetSkeletonMeshSocketTransform);
+	DECLARE_FUNCTION(execGetSkeletonMeshSocketTransform); \
+	DECLARE_FUNCTION(execIsTargetVisible);
 
 
 #define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_INCLASS_NO_PURE_DECLS \

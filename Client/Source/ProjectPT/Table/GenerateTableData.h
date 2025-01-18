@@ -17,6 +17,8 @@ public:
 	float LoseSightRadius;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float PeripheralVisionAngleDegrees;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DefaultAttackRange;
 };
 USTRUCT(BlueprintType)
 struct FSceneData : public FTableRowBase

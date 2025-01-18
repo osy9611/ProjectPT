@@ -13,10 +13,28 @@ void UPTAI_AttributeSet::InitAttributeSet(FString RowName)
 	Super::InitAttributeSet(RowName);
 	if (UDataManagerSubsystem* DataManager = GetWorld()->GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
 	{
+		Skill_Default = *DataManager->FindData<FSkillData>("1001");
+
 		FMonsterData* MonsterData = DataManager->FindData<FMonsterData>(RowName);
 		if (MonsterData)
 		{
 			Health = MonsterData->HP;
 		}
 	}
+}
+
+FSkillData UPTAI_AttributeSet::GetSkillData(FGameplayTag GameplayTag)
+{
+	FSkillData Result = FSkillData();
+	if (GameplayTag.IsValid())
+	{
+		FString TagStr = GameplayTag.ToString();
+
+		if (TagStr == TEXT("InputTag.Ability.SkillDefault"))
+		{
+			Result = Skill_Default;
+		}
+	}
+
+	return Result;
 }

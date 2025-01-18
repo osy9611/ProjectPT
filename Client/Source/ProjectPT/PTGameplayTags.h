@@ -31,6 +31,9 @@ struct FPTGameplayTags
 	FGameplayTag InputTag_Look_Mouse;
 	FGameplayTag InputTag_Zoom;
 
+	//AI Event
+	FGameplayTag AI_Event_Attack;
+
 private:
 	static FPTGameplayTags GameplayTags;
 };

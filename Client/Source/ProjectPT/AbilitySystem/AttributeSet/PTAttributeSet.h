@@ -22,7 +22,7 @@ public:
 	UPTAttributeSet(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 	virtual void InitAttributeSet(FString RowName);
 
-	FSkillData GetSkillData(FGameplayTag GameplayTag);
+	virtual FSkillData GetSkillData(FGameplayTag GameplayTag);
 
 public:
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")

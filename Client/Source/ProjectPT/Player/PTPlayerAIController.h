@@ -4,11 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "ModularAIController.h"
+#include "ProjectPT/Character/PTAIComponent.h"
 #include "PTPlayerAIController.generated.h"
 
 struct FMonsterData;
 /**
- * 
+ *
  */
 UCLASS()
 class PROJECTPT_API APTPlayerAIController : public AModularAIController
@@ -20,20 +21,20 @@ public:
 	virtual void OnPossess(APawn* InPawn) override;
 
 	void RegisterSightConfig(FMonsterData* MonsterData);
-
-	UFUNCTION(BlueprintCallable)
-	bool IsTargetVisible(AActor* TargetActor);
-
-	UFUNCTION()
-	void OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus);
 	
-	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "UseTableData")
+	UFUNCTION(BlueprintCallable)
+	UPTAIComponent* GetAIComponent(AActor* Actor) { return UPTAIComponent::FindAIComponent(Actor); }
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UseTableData")
 	bool UseTableData;
 
 	UPROPERTY(BlueprintReadOnly, Category = "SearchRadius");
 	float SearchRadius;
 
-	UPROPERTY(VisibleAnywhere,BlueprintReadOnly, Category="AI")
+	UPROPERTY(BlueprintReadOnly, Category = "Default Attack Range")
+	float DefaultAttackRange = 100.0f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
 	TObjectPtr<UAIPerceptionComponent> AIPerceptionComponent;
 
 };

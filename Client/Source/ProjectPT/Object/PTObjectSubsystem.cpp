@@ -213,6 +213,11 @@ void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const 
 		if (SpecHandle.IsValid())
 		{
 			FActiveGameplayEffectHandle ActiveGEHandle = TargetASC->ApplyGameplayEffectSpecToTarget(*SpecHandle.Data.Get(), TargetASC);
+
+			if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(TargetActor))
+			{
+				AIComponent->SendDamageEvent(OwnerASC->GetOwner(), 1);
+			}
 		}
 	}
 	else

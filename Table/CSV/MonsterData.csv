@@ -1,3 +1,3 @@
-tableNo,HP,SightRadius,LoseSightRadius,PeripheralVisionAngleDegrees
-int,float,float,float,float
-1,100,1000,1500,30
+tableNo,HP,SightRadius,LoseSightRadius,PeripheralVisionAngleDegrees,DefaultAttackRange
+int,float,float,float,float,float
+1,100,1000,3500,30,1000

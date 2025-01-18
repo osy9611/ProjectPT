@@ -9,6 +9,8 @@
 #include "ProjectPT/PTGameplayTags.h"
 #include "Components/GameFrameworkComponentManager.h"
 #include "ProjectPT/Player/PTPlayerState.h"
+#include "Perception/AIPerceptionSystem.h"
+#include "Perception/AISense_Damage.h"
 
 const FName UPTAIComponent::NAME_ActorFeatureName("AI");
 
@@ -141,6 +143,46 @@ void UPTAIComponent::CheckDefaultInitialization()
 	const FPTGameplayTags& InitTags = FPTGameplayTags::Get();
 	static const TArray<FGameplayTag> StateChain = { InitTags.InitState_Spawned, InitTags.InitState_DataAvailable, InitTags.InitState_DataInitialized, InitTags.InitState_GameplayReady };
 	ContinueInitStateChain(StateChain);
+}
+
+void UPTAIComponent::SendDamageEvent(AActor* Instigator,float DamageAmount)
+{
+	if (APawn* Pawn = GetPawn<APawn>())
+	{
+		const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
+		FName Tag = FName(*GameplayTags.AI_Event_Attack.ToString());
+		UAISense_Damage::ReportDamageEvent(GetWorld(), Pawn, Instigator, DamageAmount, Pawn->GetActorLocation(), FVector::ZeroVector, Tag);
+	}
+}
+
+bool UPTAIComponent::IsTargetVisible(AActor* TargetActor)
+{
+	if (APawn* Pawn = GetPawn<APawn>())
+	{
+		FVector EyeLocation;
+		FRotator EyeRotation;
+		Pawn->GetActorEyesViewPoint(EyeLocation, EyeRotation);
+
+		FHitResult HitResult;
+		FVector TargetLocation = TargetActor->GetActorLocation();
+
+		//Start Line Trace
+		bool bHit = GetWorld()->LineTraceSingleByChannel(
+			HitResult,
+			EyeLocation,
+			TargetLocation,
+			ECC_Visibility
+		);
+
+		if (bHit && HitResult.GetActor() != TargetActor)
+		{
+			return false;
+		}
+
+		return true;
+	}
+
+	return false;
 }
 
 FTransform UPTAIComponent::GetSkeletonMeshSocketTransform(FName SocketName)

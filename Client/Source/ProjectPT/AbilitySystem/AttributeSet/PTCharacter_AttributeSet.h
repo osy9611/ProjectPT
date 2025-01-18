@@ -18,5 +18,5 @@ public:
 	UPTCharacter_AttributeSet(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	virtual void InitAttributeSet(FString RowName) override;
-public:
+	virtual FSkillData GetSkillData(FGameplayTag GameplayTag) override;
 };

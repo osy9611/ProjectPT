@@ -25,11 +25,15 @@ void APTPlayerAIController::OnPossess(APawn* InPawn)
 			return;
 
 		SearchRadius = PlayerStart->Radius;
+
 		if (UseTableData)
 		{
 			if (UDataManagerSubsystem* DataManager = GetWorld()->GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
 			{
 				FMonsterData* MonsterData = DataManager->FindData<FMonsterData>(FString::FromInt(PlayerStart->TableId));
+				
+				DefaultAttackRange = MonsterData->DefaultAttackRange;
+
 				RegisterSightConfig(MonsterData);
 			}
 		}
@@ -59,35 +63,5 @@ void APTPlayerAIController::RegisterSightConfig(FMonsterData* MonsterData)
 
 	AIPerceptionComponent->ConfigureSense(*SightConfig);
 	AIPerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
-	AIPerceptionComponent->OnTargetPerceptionUpdated.AddDynamic(this, &ThisClass::OnTargetPerceptionUpdated);
 	AIPerceptionComponent->RegisterComponent();
-}
-
-bool APTPlayerAIController::IsTargetVisible(AActor* TargetActor)
-{
-	FVector EyeLocation;
-	FRotator EyeRotation;
-	GetActorEyesViewPoint(EyeLocation, EyeRotation);
-
-	FHitResult HitResult;
-	FVector TargetLocation = TargetActor->GetActorLocation();
-
-	//Start Line Trace
-	bool bHit = GetWorld()->LineTraceSingleByChannel(
-		HitResult,
-		EyeLocation,
-		TargetLocation,
-		ECC_Visibility
-	);
-
-	if (bHit && HitResult.GetActor() != TargetActor)
-	{
-		return false;
-	}
-
-	return true;
-}
-
-void APTPlayerAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
-{
 }

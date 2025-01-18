@@ -17,7 +17,6 @@ APTAICharacter::APTAICharacter()
 void APTAICharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
 }
 
 void APTAICharacter::Tick(float DeltaTime)
