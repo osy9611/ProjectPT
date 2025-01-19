@@ -9,16 +9,10 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
-class UPTAIComponent;
 #ifdef PROJECTPT_PTPlayerAIController_generated_h
 #error "PTPlayerAIController.generated.h already included, missing '#pragma once' in PTPlayerAIController.h"
 #endif
 #define PROJECTPT_PTPlayerAIController_generated_h
-
-#define FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execGetAIComponent);
-
 
 #define FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_17_INCLASS_NO_PURE_DECLS \
 private: \
@@ -45,7 +39,6 @@ public: \
 #define FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_17_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_17_ENHANCED_CONSTRUCTORS \
 private: \

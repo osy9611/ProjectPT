@@ -18,7 +18,8 @@ void APTPlayerAIController::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
 
-	if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(InPawn))
+	AIComponent = UPTAIComponent::FindAIComponent(InPawn);
+	if (AIComponent.IsValid())
 	{
 		APTPlayerStart* PlayerStart = AIComponent->GetPlayerStart();
 		if (!PlayerStart)
@@ -31,7 +32,7 @@ void APTPlayerAIController::OnPossess(APawn* InPawn)
 			if (UDataManagerSubsystem* DataManager = GetWorld()->GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
 			{
 				FMonsterData* MonsterData = DataManager->FindData<FMonsterData>(FString::FromInt(PlayerStart->TableId));
-				
+
 				DefaultAttackRange = MonsterData->DefaultAttackRange;
 
 				RegisterSightConfig(MonsterData);
@@ -62,6 +63,6 @@ void APTPlayerAIController::RegisterSightConfig(FMonsterData* MonsterData)
 	SightConfig->SetStartsEnabled(true);
 
 	AIPerceptionComponent->ConfigureSense(*SightConfig);
-	AIPerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
+	//AIPerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
 	AIPerceptionComponent->RegisterComponent();
 }

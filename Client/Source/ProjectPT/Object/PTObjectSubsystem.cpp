@@ -125,7 +125,7 @@ void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbility
 	UPTAbilitySystemComponent* OwnerASC = nullptr;
 	if (APTPlayerState* PlayerState = Cast<APTPlayerState>(Owner))
 	{
-		OwnerASC = PlayerState->GetPTAbilitySystemComponent();
+		OwnerASC = GetASC(PlayerState->GetPawn());
 	}
 	else
 	{
@@ -216,7 +216,7 @@ void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const 
 
 			if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(TargetActor))
 			{
-				AIComponent->SendDamageEvent(OwnerASC->GetOwner(), 1);
+				AIComponent->SendDamageEvent(OwnerASC->GetAvatarActor(), 1);
 			}
 		}
 	}

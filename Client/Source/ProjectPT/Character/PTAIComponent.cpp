@@ -7,8 +7,9 @@
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAI_AttributeSet.h"
 #include "ProjectPT/Character/PTPawnExtensionComponent.h"
 #include "ProjectPT/PTGameplayTags.h"
-#include "Components/GameFrameworkComponentManager.h"
 #include "ProjectPT/Player/PTPlayerState.h"
+#include "ProjectPT/Physics/PTCollisionChannel.h"
+#include "Components/GameFrameworkComponentManager.h"
 #include "Perception/AIPerceptionSystem.h"
 #include "Perception/AISense_Damage.h"
 
@@ -155,6 +156,7 @@ void UPTAIComponent::SendDamageEvent(AActor* Instigator,float DamageAmount)
 	}
 }
 
+PRAGMA_DISABLE_OPTIMIZATION
 bool UPTAIComponent::IsTargetVisible(AActor* TargetActor)
 {
 	if (APawn* Pawn = GetPawn<APawn>())
@@ -166,13 +168,31 @@ bool UPTAIComponent::IsTargetVisible(AActor* TargetActor)
 		FHitResult HitResult;
 		FVector TargetLocation = TargetActor->GetActorLocation();
 
+		FCollisionQueryParams TraceParams;
+		TraceParams.bReturnPhysicalMaterial = false;
+		TraceParams.AddIgnoredActor(Pawn);
+
 		//Start Line Trace
 		bool bHit = GetWorld()->LineTraceSingleByChannel(
 			HitResult,
 			EyeLocation,
 			TargetLocation,
-			ECC_Visibility
+			PT_TraceChannel_Interaction,
+			TraceParams
 		);
+
+#if 0
+		DrawDebugLine(
+			GetWorld(),
+			EyeLocation,
+			TargetLocation,
+			FColor::Red,
+			false,
+			1.0f,
+			0,
+			1.0f
+		);
+#endif
 
 		if (bHit && HitResult.GetActor() != TargetActor)
 		{
@@ -185,6 +205,31 @@ bool UPTAIComponent::IsTargetVisible(AActor* TargetActor)
 	return false;
 }
 
+bool UPTAIComponent::IsAttackRange(AActor* TargetActor, float DefaultAttackRange)
+{
+	if (!TargetActor)
+	{
+		UE_LOG(PTLog, Log, TEXT("This TargetActor is nullptr"));
+		return false;
+	}
+
+	if (APawn* Pawn = GetPawn<APawn>())
+	{
+		float Distance = FVector::Dist(Pawn->GetActorLocation(), TargetActor->GetActorLocation());
+
+		if (DefaultAttackRange >= Distance)
+		{
+			if (IsTargetVisible(TargetActor))
+			{
+				return true;
+			}
+		}
+	}
+
+
+	return false;
+}
+PRAGMA_ENABLE_OPTIMIZATION
 FTransform UPTAIComponent::GetSkeletonMeshSocketTransform(FName SocketName)
 {
 	if (const APawn* Pawn = GetPawn<APawn>())

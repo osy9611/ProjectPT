@@ -22,9 +22,6 @@ public:
 
 	void RegisterSightConfig(FMonsterData* MonsterData);
 	
-	UFUNCTION(BlueprintCallable)
-	UPTAIComponent* GetAIComponent(AActor* Actor) { return UPTAIComponent::FindAIComponent(Actor); }
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UseTableData")
 	bool UseTableData;
 
@@ -36,5 +33,8 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
 	TObjectPtr<UAIPerceptionComponent> AIPerceptionComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
+	TWeakObjectPtr<UPTAIComponent> AIComponent;
 
 };

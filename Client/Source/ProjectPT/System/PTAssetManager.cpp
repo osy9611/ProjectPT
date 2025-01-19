@@ -75,7 +75,7 @@ void UPTAssetManager::AsynchronusLoadAsset(const FSoftObjectPath& AssetPath, TFu
 				UObject* LoadedAsset = AssetPath.ResolveObject();
 				if (LoadedAsset)
 				{
-					UE_LOG(PTLog, Error, TEXT("Asynchronus load complete : %s"), *AssetPath.ToString());
+					UE_LOG(PTLog, Log, TEXT("Asynchronus load complete : %s"), *AssetPath.ToString());
 					callback(LoadedAsset);
 				}
 				else

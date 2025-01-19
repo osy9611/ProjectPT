@@ -18,6 +18,7 @@ class AActor;
 #define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetSkeletonMeshSocketPos); \
 	DECLARE_FUNCTION(execGetSkeletonMeshSocketTransform); \
+	DECLARE_FUNCTION(execIsAttackRange); \
 	DECLARE_FUNCTION(execIsTargetVisible);
 
 

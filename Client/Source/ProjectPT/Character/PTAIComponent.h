@@ -50,6 +50,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsTargetVisible(AActor* TargetActor);
 
+	UFUNCTION(BlueprintCallable)
+	bool IsAttackRange(AActor* TargetActor, float DefaultAttackRange);
+
 
 	UFUNCTION(BlueprintCallable)
 	FTransform GetSkeletonMeshSocketTransform(FName SocketName);
