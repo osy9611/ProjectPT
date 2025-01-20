@@ -6,11 +6,13 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "ProjectPT/Player/PTPlayerAIController.h"
+#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTPlayerAIController() {}
 
 // Begin Cross Module References
 AIMODULE_API UClass* Z_Construct_UClass_UAIPerceptionComponent_NoRegister();
+GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 MODULARGAMEPLAYACTORS_API UClass* Z_Construct_UClass_AModularAIController();
 PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerAIController();
 PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerAIController_NoRegister();
@@ -18,9 +20,56 @@ PROJECTPT_API UClass* Z_Construct_UClass_UPTAIComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
+// Begin Class APTPlayerAIController Function ProcessAbility
+struct Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics
+{
+	struct PTPlayerAIController_eventProcessAbility_Parms
+	{
+		FGameplayTag Tag;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Player/PTPlayerAIController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Tag;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::NewProp_Tag = { "Tag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTPlayerAIController_eventProcessAbility_Parms, Tag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::NewProp_Tag,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APTPlayerAIController, nullptr, "ProcessAbility", nullptr, nullptr, Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::PropPointers), sizeof(Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::PTPlayerAIController_eventProcessAbility_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::Function_MetaDataParams), Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::PTPlayerAIController_eventProcessAbility_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_APTPlayerAIController_ProcessAbility()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APTPlayerAIController_ProcessAbility_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APTPlayerAIController::execProcessAbility)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_Tag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ProcessAbility(Z_Param_Tag);
+	P_NATIVE_END;
+}
+// End Class APTPlayerAIController Function ProcessAbility
+
 // Begin Class APTPlayerAIController
 void APTPlayerAIController::StaticRegisterNativesAPTPlayerAIController()
 {
+	UClass* Class = APTPlayerAIController::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ProcessAbility", &APTPlayerAIController::execProcessAbility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(APTPlayerAIController);
 UClass* Z_Construct_UClass_APTPlayerAIController_NoRegister()
@@ -69,6 +118,10 @@ struct Z_Construct_UClass_APTPlayerAIController_Statics
 	static const UECodeGen_Private::FWeakObjectPropertyParams NewProp_AIComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_APTPlayerAIController_ProcessAbility, "ProcessAbility" }, // 2089941948
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APTPlayerAIController>::IsAbstract,
 	};
@@ -101,11 +154,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_APTPlayerAIController_S
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_APTPlayerAIController_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_APTPlayerAIController_Statics::PropPointers),
 	0,
 	0x009002A4u,
@@ -131,10 +184,10 @@ APTPlayerAIController::~APTPlayerAIController() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APTPlayerAIController, APTPlayerAIController::StaticClass, TEXT("APTPlayerAIController"), &Z_Registration_Info_UClass_APTPlayerAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTPlayerAIController), 340632980U) },
+		{ Z_Construct_UClass_APTPlayerAIController, APTPlayerAIController::StaticClass, TEXT("APTPlayerAIController"), &Z_Registration_Info_UClass_APTPlayerAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTPlayerAIController), 1527477197U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_2741071772(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_196479116(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Player_PTPlayerAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

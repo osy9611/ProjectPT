@@ -64,7 +64,6 @@ void APTGameModeBase::HandleStartingNewPlayer_Implementation(APlayerController* 
 		Super::HandleStartingNewPlayer_Implementation(NewPlayer);
 	}
 }
-PRAGMA_ENABLE_OPTIMIZATION
 
 APawn* APTGameModeBase::SpawnDefaultPawnAtTransform_Implementation(AController* NewPlayer, const FTransform& SpawnTransform)
 {
@@ -90,7 +89,6 @@ APawn* APTGameModeBase::SpawnDefaultPawnAtTransform_Implementation(AController* 
 	return nullptr;
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 AActor* APTGameModeBase::ChoosePlayerStart_Implementation(AController* Player)
 {
 	if (UPTObjectSubsystem* PTObjectSubsystem = GetWorld()->GetSubsystem<UPTObjectSubsystem>())
@@ -106,6 +104,7 @@ AActor* APTGameModeBase::ChoosePlayerStart_Implementation(AController* Player)
 
 	return Super::ChoosePlayerStart_Implementation(Player);
 }
+
 void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 {
 	FPrimaryAssetId ExperienceId;
@@ -205,10 +204,28 @@ const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* 
 	if (ExperienceManagerComponent->IsExperienceLoaded())
 	{
 		const UPTExperienceDefinition* Experience = ExperienceManagerComponent->GetCurrentExperienceChecked();
-		if (Experience->DefaultPawnData)
+
+
+		ULocalPlayer* LocalPlayer = GetWorld()->GetFirstLocalPlayerFromController();
+		if (LocalPlayer)
 		{
-			return Experience->DefaultPawnData;
+			if (LocalPlayer->PlayerController == InController)
+			{
+				if (Experience->DefaultPawnData)
+				{
+					return Experience->DefaultPawnData;
+				}
+			}
+			else
+			{
+				if (Experience->AIPawnData)
+				{
+					return Experience->AIPawnData; 
+				}
+			}
 		}
+
+		
 	}
 
 	return nullptr;

@@ -10,16 +10,16 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
+struct FGameplayTag;
 #ifdef PROJECTPT_PTAIComponent_generated_h
 #error "PTAIComponent.generated.h already included, missing '#pragma once' in PTAIComponent.h"
 #endif
 #define PROJECTPT_PTAIComponent_generated_h
 
 #define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execGetSkeletonMeshSocketPos); \
-	DECLARE_FUNCTION(execGetSkeletonMeshSocketTransform); \
 	DECLARE_FUNCTION(execIsAttackRange); \
-	DECLARE_FUNCTION(execIsTargetVisible);
+	DECLARE_FUNCTION(execIsTargetVisible); \
+	DECLARE_FUNCTION(execProcessAbility);
 
 
 #define FID_Client_Source_ProjectPT_Character_PTAIComponent_h_21_INCLASS_NO_PURE_DECLS \

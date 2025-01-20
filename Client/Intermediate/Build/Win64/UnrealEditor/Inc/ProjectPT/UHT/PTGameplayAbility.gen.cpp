@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodePTGameplayAbility() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTCameraMode_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility();
@@ -204,9 +205,14 @@ struct Z_Construct_UClass_UPTGameplayAbility_Statics
 		{ "Category", "PT|AbilityActivation" },
 		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AnimMontage_MetaData[] = {
+		{ "Category", "PT|AnimMontage" },
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ActivationPolicy_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_ActivationPolicy;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AnimMontage;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -221,9 +227,11 @@ struct Z_Construct_UClass_UPTGameplayAbility_Statics
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UPTGameplayAbility_Statics::NewProp_ActivationPolicy_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UPTGameplayAbility_Statics::NewProp_ActivationPolicy = { "ActivationPolicy", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTGameplayAbility, ActivationPolicy), Z_Construct_UEnum_ProjectPT_EPTAbilityActivationPolicy, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivationPolicy_MetaData), NewProp_ActivationPolicy_MetaData) }; // 2255047541
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTGameplayAbility_Statics::NewProp_AnimMontage = { "AnimMontage", nullptr, (EPropertyFlags)0x0010000000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTGameplayAbility, AnimMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnimMontage_MetaData), NewProp_AnimMontage_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTGameplayAbility_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTGameplayAbility_Statics::NewProp_ActivationPolicy_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTGameplayAbility_Statics::NewProp_ActivationPolicy,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTGameplayAbility_Statics::NewProp_AnimMontage,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTGameplayAbility_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTGameplayAbility_Statics::DependentSingletons[])() = {
@@ -269,10 +277,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities
 		{ EPTAbilityActivationPolicy_StaticEnum, TEXT("EPTAbilityActivationPolicy"), &Z_Registration_Info_UEnum_EPTAbilityActivationPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2255047541U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTGameplayAbility, UPTGameplayAbility::StaticClass, TEXT("UPTGameplayAbility"), &Z_Registration_Info_UClass_UPTGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility), 588528544U) },
+		{ Z_Construct_UClass_UPTGameplayAbility, UPTGameplayAbility::StaticClass, TEXT("UPTGameplayAbility"), &Z_Registration_Info_UClass_UPTGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility), 4139559042U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_2514685446(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_2876357594(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::EnumInfo));

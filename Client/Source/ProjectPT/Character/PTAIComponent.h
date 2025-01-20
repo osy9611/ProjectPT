@@ -43,6 +43,10 @@ public:
 	void RegisterPTPlayerStart(APTPlayerStart* InPlayerStart) { this->PlayerStart = InPlayerStart; }
 	APTPlayerStart* GetPlayerStart() { return PlayerStart.Get(); }
 
+	/*GAS*/
+	UFUNCTION(BlueprintCallable)
+	void ProcessAbility(FGameplayTag Tag);
+
 	/*AI Perception*/
 	void SendDamageEvent(AActor* Instigator,float DamageAmount);
 
@@ -52,13 +56,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool IsAttackRange(AActor* TargetActor, float DefaultAttackRange);
-
-
-	UFUNCTION(BlueprintCallable)
-	FTransform GetSkeletonMeshSocketTransform(FName SocketName);
-
-	UFUNCTION(BlueprintCallable)
-	FVector GetSkeletonMeshSocketPos(FName SocketName);
 
 private:
 	UPROPERTY()

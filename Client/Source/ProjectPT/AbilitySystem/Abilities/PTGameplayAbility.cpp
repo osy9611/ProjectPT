@@ -4,6 +4,7 @@
 #include "PTGameplayAbility.h"
 #include "ProjectPT/Character/PTCharacter.h"
 #include "ProjectPT/Character/PTHeroComponent.h"
+#include "ProjectPT/Character/PTAICharacter.h"
 #include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/Camera/PTCameraMode.h"
 
@@ -16,16 +17,31 @@ APTCharacter* UPTGameplayAbility::GetPTCharacterFromActorInfo()
 	return CurrentActorInfo ? Cast<APTCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
 }
 
+APTAICharacter* UPTGameplayAbility::GetPTAICharacterFromActorInfo()
+{
+	return CurrentActorInfo ? Cast<APTAICharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
+}
+
 UPTHeroComponent* UPTGameplayAbility::GetPTHeroComponentFromActorInfo()
 {
 	return CurrentActorInfo ? UPTHeroComponent::FindHeroComponent(CurrentActorInfo->AvatarActor.Get()) : nullptr;
 }
+
+
 
 UPTAttributeSet* UPTGameplayAbility::GetPTAttribute()
 {
 	if (APTCharacter* PTCharacter = GetPTCharacterFromActorInfo())
 	{
 		if (APTPlayerState* PTPlayerState = PTCharacter->GetPlayerState<APTPlayerState>())
+		{
+			return PTPlayerState->GetPTAttributeSet();
+		}
+	}
+
+	if (APTAICharacter* AICharacter = GetPTAICharacterFromActorInfo())
+	{
+		if (APTPlayerState* PTPlayerState = AICharacter->GetPlayerState<APTPlayerState>())
 		{
 			return PTPlayerState->GetPTAttributeSet();
 		}

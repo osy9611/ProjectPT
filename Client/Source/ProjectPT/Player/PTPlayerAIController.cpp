@@ -66,3 +66,11 @@ void APTPlayerAIController::RegisterSightConfig(FMonsterData* MonsterData)
 	//AIPerceptionComponent->SetDominantSense(SightConfig->GetSenseImplementation());
 	AIPerceptionComponent->RegisterComponent();
 }
+
+void APTPlayerAIController::ProcessAbility(FGameplayTag Tag)
+{
+	if (AIComponent.Get())
+	{
+		AIComponent->ProcessAbility(Tag);
+	}	
+}

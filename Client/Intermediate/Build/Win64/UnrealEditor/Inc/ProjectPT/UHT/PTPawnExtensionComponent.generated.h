@@ -14,6 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTPawnExtensionComponent_generated_h
 
+#define FID_Client_Source_ProjectPT_Character_PTPawnExtensionComponent_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetSkeletonMeshSocketPos); \
+	DECLARE_FUNCTION(execGetSkeletonMeshSocketTransform);
+
+
 #define FID_Client_Source_ProjectPT_Character_PTPawnExtensionComponent_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTPawnExtensionComponent(); \
@@ -40,6 +45,7 @@ public: \
 #define FID_Client_Source_ProjectPT_Character_PTPawnExtensionComponent_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Client_Source_ProjectPT_Character_PTPawnExtensionComponent_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Character_PTPawnExtensionComponent_h_19_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Character_PTPawnExtensionComponent_h_19_ENHANCED_CONSTRUCTORS \
 private: \

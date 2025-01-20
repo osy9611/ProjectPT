@@ -37,11 +37,25 @@ void UPTAbilitySystemComponent::AbilitySpecInputReleased(FGameplayAbilitySpec& S
 {
 	Super::AbilitySpecInputPressed(Spec);
 
-	if(Spec.IsActive())
+	if (Spec.IsActive())
 		InvokeReplicatedEvent(EAbilityGenericReplicatedEvent::InputReleased, Spec.Handle, Spec.ActivationInfo.GetActivationPredictionKey());
 }
 
 PRAGMA_DISABLE_OPTIMIZATION
+void UPTAbilitySystemComponent::ProcessAbility(const FGameplayTag& Tag)
+{
+	if (Tag.IsValid())
+	{
+		for (const FGameplayAbilitySpec& AbilitySpec : ActivatableAbilities.Items)
+		{
+			if (AbilitySpec.Ability && !AbilitySpec.IsActive() && (AbilitySpec.DynamicAbilityTags.HasTagExact(Tag)))
+			{
+				TryActivateAbility(AbilitySpec.Handle);
+			}
+		}
+	}
+}
+
 void UPTAbilitySystemComponent::AbilityInputTagPressed(const FGameplayTag& InputTag)
 {
 	if (InputTag.IsValid())
@@ -81,10 +95,10 @@ void UPTAbilitySystemComponent::ProcessAbilityInput(float DeltaTime, bool bGameP
 {
 	TArray<FGameplayAbilitySpecHandle> ExecuteHandles;
 
-	for (const FGameplayAbilitySpecHandle& Handle: InputHeldSpecHandles)
+	for (const FGameplayAbilitySpecHandle& Handle : InputHeldSpecHandles)
 	{
 		if (const FGameplayAbilitySpec* AbilitySpec = FindAbilitySpecFromHandle(Handle))
-		{ 
+		{
 			if (AbilitySpec->Ability && !AbilitySpec->IsActive())
 			{
 				const UPTGameplayAbility* AbilityCDO = CastChecked<UPTGameplayAbility>(AbilitySpec->Ability);
@@ -119,7 +133,7 @@ void UPTAbilitySystemComponent::ProcessAbilityInput(float DeltaTime, bool bGameP
 
 	//Handle 등록시작
 	for (const FGameplayAbilitySpecHandle& Handle : ExecuteHandles)
-	{ 
+	{
 		TryActivateAbility(Handle);
 	}
 

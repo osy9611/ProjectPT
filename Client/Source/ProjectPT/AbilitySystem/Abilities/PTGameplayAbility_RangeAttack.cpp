@@ -4,6 +4,7 @@
 #include "ProjectPT/AbilitySystem/PTGameplayAbilityTargetData_SingleTargetHit.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
 #include "ProjectPT/Character/PTHeroComponent.h"
+#include "AIController.h"
 #include "Components/StaticMeshComponent.h"
 
 UPTGameplayAbility_RangeAttack::UPTGameplayAbility_RangeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
@@ -96,10 +97,7 @@ FTransform UPTGameplayAbility_RangeAttack::GetTargetingTransform(APawn* SourcePa
 	FVector CamLoc;
 	FRotator CamRot;
 
-	//PlayerController로 부터, Location과 Rotation 정보를 가져옴
-	APlayerController* PC = Cast<APlayerController>(Controller);
-	check(PC);
-	PC->GetPlayerViewPoint(CamLoc, CamRot);
+	Controller-> GetPlayerViewPoint(CamLoc, CamRot);
 
 	FVector AimDir = CamRot.Vector().GetSafeNormal();
 	FocalLoc = CamLoc + (AimDir * FocalDistance);
@@ -315,7 +313,8 @@ void UPTGameplayAbility_RangeAttack::OnTargetDataReadyCallback(const FGameplayAb
 
 		if (CommitAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo))
 		{
-			OnRangeWeaponTargetDataReady(LocalTargetDataHandle);
+			AActor* AvatarActor = CurrentActorInfo->AvatarActor.Get();
+			OnRangeWeaponTargetDataReady(AvatarActor,LocalTargetDataHandle);
 		}
 		else
 		{

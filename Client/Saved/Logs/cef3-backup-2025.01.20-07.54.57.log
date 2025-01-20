@@ -1,0 +1,3 @@
+[0120/164950.211:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[0120/165457.031:WARNING:backend_impl.cc(1837)] Destroying invalid entry.
+[0120/165457.733:WARNING:backend_impl.cc(1837)] Destroying invalid entry.

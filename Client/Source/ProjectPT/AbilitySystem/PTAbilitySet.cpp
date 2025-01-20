@@ -3,6 +3,7 @@
 
 #include "PTAbilitySet.h"
 #include "PTAbilitySystemComponent.h"
+#include "Animation/AnimMontage.h"
 
 void FPTAbilitySet_GrantedHandles::AddAbilitySpecHandle(const FGameplayAbilitySpecHandle& Handle)
 {
@@ -26,6 +27,7 @@ UPTAbilitySet::UPTAbilitySet(const FObjectInitializer& ObjectInitializer) : Supe
 {
 }
 
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySet::GiveToAbilitySystem(UPTAbilitySystemComponent* ASC, FPTAbilitySet_GrantedHandles* OutGrantedHandles, UObject* SourceObject)
 {
 	check(ASC);
@@ -41,6 +43,9 @@ void UPTAbilitySet::GiveToAbilitySystem(UPTAbilitySystemComponent* ASC, FPTAbili
 
 		UPTGameplayAbility* AbilityCDO = AbilityToGrant.Ability->GetDefaultObject<UPTGameplayAbility>();
 
+		if(AbilityToGrant.AnimMontage)
+			AbilityCDO->AnimMontage = AbilityToGrant.AnimMontage;
+
 		FGameplayAbilitySpec AbilitySpec(AbilityCDO, AbilityToGrant.AbilityLevel);
 		AbilitySpec.SourceObject = SourceObject;
 		AbilitySpec.DynamicAbilityTags.AddTag(AbilityToGrant.InputTag);
@@ -51,3 +56,4 @@ void UPTAbilitySet::GiveToAbilitySystem(UPTAbilitySystemComponent* ASC, FPTAbili
 
 	}
 }
+PRAGMA_ENABLE_OPTIMIZATION

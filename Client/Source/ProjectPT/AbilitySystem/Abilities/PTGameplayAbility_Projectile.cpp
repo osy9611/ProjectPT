@@ -5,7 +5,7 @@
 #include "ProjectPT/Pool/ObjectPoolSubsystem.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/Object/PTProjectile.h"
-#include "ProjectPT/Character/PTHeroComponent.h"
+#include "ProjectPT/Character/PTPawnExtensionComponent.h"
 #include "ProjectPT/Table/GenerateTableData.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
@@ -73,12 +73,12 @@ void UPTGameplayAbility_Projectile::CreateObject()
 		AActor* AvatarActor = CurrentActorInfo->AvatarActor.Get();
 		Projectile->IgnoreCollison(AvatarActor);
 
-		if (UPTHeroComponent* PTHeroComponent = GetPTHeroComponentFromActorInfo())
+		if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(CurrentActorInfo->AvatarActor.Get()))
 		{
-			FTransform Transform = PTHeroComponent->GetSkeletonMeshSocketTransform(FName(TEXT("Muzzle_03")));
+			FTransform Transform = PawnExtComp->GetSkeletonMeshSocketTransform(FName(TEXT("Muzzle_03")));
 
 			FSkillData SkillData = AttributeSet->GetSkillData(GetGameplayTag());
-		
+
 			Projectile->RegisterData(Transform.GetLocation(), AvatarActor->GetActorForwardVector(), SkillData.skillRange, SkillData.skillRadius, SkillData.skillSpeed);
 		}
 	}

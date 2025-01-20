@@ -56,6 +56,11 @@ public:
 	virtual bool CanChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState) const final;
 	virtual void CheckDefaultInitialization() final;
 
+	UFUNCTION(BlueprintCallable)
+	FTransform GetSkeletonMeshSocketTransform(FName SocketName);
+	UFUNCTION(BlueprintCallable)
+	FVector GetSkeletonMeshSocketPos(FName SocketName);
+
 	UPROPERTY(EditDefaultsOnly, Category = "PT|Pawn")
 	TObjectPtr<const UPTPawnData> PawnData;
 

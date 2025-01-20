@@ -54,7 +54,7 @@ public:
 
 	/*Called When Target Data Is Ready*/
 	UFUNCTION(BlueprintImplementableEvent)
-	void OnRangeWeaponTargetDataReady(const FGameplayAbilityTargetDataHandle& TargetData);
+	void OnRangeWeaponTargetDataReady(AActor* Owner,const FGameplayAbilityTargetDataHandle& TargetData);
 
 private:
 	FString MuzzleName;

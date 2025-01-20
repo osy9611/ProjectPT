@@ -14,11 +14,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTHeroComponent_generated_h
 
-#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execGetSkeletonMeshSocketPos); \
-	DECLARE_FUNCTION(execGetSkeletonMeshSocketTransform);
-
-
 #define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTHeroComponent(); \
@@ -45,7 +40,6 @@ public: \
 #define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_ENHANCED_CONSTRUCTORS \
 private: \

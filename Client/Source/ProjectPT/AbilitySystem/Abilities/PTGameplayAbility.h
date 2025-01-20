@@ -5,9 +5,11 @@
 #include "CoreMinimal.h"
 #include "Abilities/GameplayAbility.h"
 #include "GameplayTagContainer.h"
+#include "Animation/AnimMontage.h"
 #include "PTGameplayAbility.generated.h"
 
 class APTCharacter;
+class APTAICharacter;
 class FGamePlayAbilitySpecHandle;
 class UPTAttributeSet;
 class UPTCameraMode;
@@ -32,7 +34,10 @@ public:
 	UPTGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	APTCharacter* GetPTCharacterFromActorInfo();
+	APTAICharacter* GetPTAICharacterFromActorInfo();
+
 	UPTHeroComponent* GetPTHeroComponentFromActorInfo();
+
 	virtual UPTAttributeSet* GetPTAttribute();
 
 	virtual FGameplayTag GetGameplayTag(){ return GetCurrentAbilitySpec()->DynamicAbilityTags.GetByIndex(0); }
@@ -49,4 +54,7 @@ public:
 	EPTAbilityActivationPolicy ActivationPolicy;
 
 	TSubclassOf<UPTCameraMode> ActiveCameraMode;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "PT|AnimMontage")
+	UAnimMontage* AnimMontage;
 };

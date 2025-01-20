@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodePTAbilitySet() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimaryDataAsset();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilitySpecHandle();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
@@ -61,12 +62,17 @@ struct Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics
 		{ "Category", "PTAbilitySet_GameplayAbility" },
 		{ "ModuleRelativePath", "AbilitySystem/PTAbilitySet.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AnimMontage_MetaData[] = {
+		{ "Category", "PTAbilitySet_GameplayAbility" },
+		{ "ModuleRelativePath", "AbilitySystem/PTAbilitySet.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_Ability;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InputTag;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_AbilityLevel;
 	static void NewProp_isTrigger_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_isTrigger;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AnimMontage;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -82,11 +88,13 @@ void Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_is
 	((FPTAbilitySet_GameplayAbility*)Obj)->isTrigger = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_isTrigger = { "isTrigger", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FPTAbilitySet_GameplayAbility), &Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_isTrigger_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_isTrigger_MetaData), NewProp_isTrigger_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_AnimMontage = { "AnimMontage", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FPTAbilitySet_GameplayAbility, AnimMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnimMontage_MetaData), NewProp_AnimMontage_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_Ability,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_InputTag,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_AbilityLevel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_isTrigger,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewProp_AnimMontage,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::StructParams = {
@@ -210,8 +218,8 @@ struct Z_Construct_UClass_UPTAbilitySet_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAbilitySet_Statics::NewProp_GrantedGameplayAbilities_Inner = { "GrantedGameplayAbilities", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility, METADATA_PARAMS(0, nullptr) }; // 2309355762
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UPTAbilitySet_Statics::NewProp_GrantedGameplayAbilities = { "GrantedGameplayAbilities", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAbilitySet, GrantedGameplayAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GrantedGameplayAbilities_MetaData), NewProp_GrantedGameplayAbilities_MetaData) }; // 2309355762
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UPTAbilitySet_Statics::NewProp_GrantedGameplayAbilities_Inner = { "GrantedGameplayAbilities", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility, METADATA_PARAMS(0, nullptr) }; // 385646957
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UPTAbilitySet_Statics::NewProp_GrantedGameplayAbilities = { "GrantedGameplayAbilities", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAbilitySet, GrantedGameplayAbilities), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GrantedGameplayAbilities_MetaData), NewProp_GrantedGameplayAbilities_MetaData) }; // 385646957
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTAbilitySet_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAbilitySet_Statics::NewProp_GrantedGameplayAbilities_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAbilitySet_Statics::NewProp_GrantedGameplayAbilities,
@@ -257,14 +265,14 @@ UPTAbilitySet::~UPTAbilitySet() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FPTAbilitySet_GameplayAbility::StaticStruct, Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewStructOps, TEXT("PTAbilitySet_GameplayAbility"), &Z_Registration_Info_UScriptStruct_PTAbilitySet_GameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPTAbilitySet_GameplayAbility), 2309355762U) },
+		{ FPTAbilitySet_GameplayAbility::StaticStruct, Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics::NewStructOps, TEXT("PTAbilitySet_GameplayAbility"), &Z_Registration_Info_UScriptStruct_PTAbilitySet_GameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPTAbilitySet_GameplayAbility), 385646957U) },
 		{ FPTAbilitySet_GrantedHandles::StaticStruct, Z_Construct_UScriptStruct_FPTAbilitySet_GrantedHandles_Statics::NewStructOps, TEXT("PTAbilitySet_GrantedHandles"), &Z_Registration_Info_UScriptStruct_PTAbilitySet_GrantedHandles, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPTAbilitySet_GrantedHandles), 3153605528U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAbilitySet, UPTAbilitySet::StaticClass, TEXT("UPTAbilitySet"), &Z_Registration_Info_UClass_UPTAbilitySet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAbilitySet), 1766262997U) },
+		{ Z_Construct_UClass_UPTAbilitySet, UPTAbilitySet::StaticClass, TEXT("UPTAbilitySet"), &Z_Registration_Info_UClass_UPTAbilitySet, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAbilitySet), 1403358802U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_1114185543(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_3052310421(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_Statics::ScriptStructInfo),
 	nullptr, 0);

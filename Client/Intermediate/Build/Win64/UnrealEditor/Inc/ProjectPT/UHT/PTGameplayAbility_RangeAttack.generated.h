@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 struct FGameplayAbilityTargetDataHandle;
 #ifdef PROJECTPT_PTGameplayAbility_RangeAttack_generated_h
 #error "PTGameplayAbility_RangeAttack.generated.h already included, missing '#pragma once' in PTGameplayAbility_RangeAttack.h"

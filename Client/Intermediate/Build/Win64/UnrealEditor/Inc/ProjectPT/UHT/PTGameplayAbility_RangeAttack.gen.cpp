@@ -11,6 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTGameplayAbility_RangeAttack() {}
 
 // Begin Cross Module References
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility_RangeAttack();
@@ -113,12 +114,14 @@ DEFINE_FUNCTION(UPTGameplayAbility_RangeAttack::execGetMuzzleName)
 // Begin Class UPTGameplayAbility_RangeAttack Function OnRangeWeaponTargetDataReady
 struct PTGameplayAbility_RangeAttack_eventOnRangeWeaponTargetDataReady_Parms
 {
+	AActor* Owner;
 	FGameplayAbilityTargetDataHandle TargetData;
 };
 static FName NAME_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady = FName(TEXT("OnRangeWeaponTargetDataReady"));
-void UPTGameplayAbility_RangeAttack::OnRangeWeaponTargetDataReady(FGameplayAbilityTargetDataHandle const& TargetData)
+void UPTGameplayAbility_RangeAttack::OnRangeWeaponTargetDataReady(AActor* Owner, FGameplayAbilityTargetDataHandle const& TargetData)
 {
 	PTGameplayAbility_RangeAttack_eventOnRangeWeaponTargetDataReady_Parms Parms;
+	Parms.Owner=Owner;
 	Parms.TargetData=TargetData;
 	ProcessEvent(FindFunctionChecked(NAME_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady),&Parms);
 }
@@ -138,12 +141,15 @@ struct Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetD
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Owner;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_TargetData;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady_Statics::NewProp_Owner = { "Owner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_RangeAttack_eventOnRangeWeaponTargetDataReady_Parms, Owner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady_Statics::NewProp_TargetData = { "TargetData", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_RangeAttack_eventOnRangeWeaponTargetDataReady_Parms, TargetData), Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetData_MetaData), NewProp_TargetData_MetaData) }; // 2741862775
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady_Statics::NewProp_Owner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady_Statics::NewProp_TargetData,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady_Statics::PropPointers) < 2048);
@@ -219,7 +225,7 @@ struct Z_Construct_UClass_UPTGameplayAbility_RangeAttack_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_GetMuzzleName, "GetMuzzleName" }, // 12111767
-		{ &Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady, "OnRangeWeaponTargetDataReady" }, // 2210258296
+		{ &Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_OnRangeWeaponTargetDataReady, "OnRangeWeaponTargetDataReady" }, // 1530858722
 		{ &Z_Construct_UFunction_UPTGameplayAbility_RangeAttack_StartRangedWeaponTargeting, "StartRangedWeaponTargeting" }, // 3857365266
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -271,10 +277,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities
 		{ EPTAbilityTargetingSource_StaticEnum, TEXT("EPTAbilityTargetingSource"), &Z_Registration_Info_UEnum_EPTAbilityTargetingSource, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2516120183U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTGameplayAbility_RangeAttack, UPTGameplayAbility_RangeAttack::StaticClass, TEXT("UPTGameplayAbility_RangeAttack"), &Z_Registration_Info_UClass_UPTGameplayAbility_RangeAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_RangeAttack), 340871646U) },
+		{ Z_Construct_UClass_UPTGameplayAbility_RangeAttack, UPTGameplayAbility_RangeAttack::StaticClass, TEXT("UPTGameplayAbility_RangeAttack"), &Z_Registration_Info_UClass_UPTGameplayAbility_RangeAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_RangeAttack), 4248431800U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_RangeAttack_h_1076158688(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_RangeAttack_h_3491715234(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_RangeAttack_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_RangeAttack_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_RangeAttack_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_RangeAttack_h_Statics::EnumInfo));

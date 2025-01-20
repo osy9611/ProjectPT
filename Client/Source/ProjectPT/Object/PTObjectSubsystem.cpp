@@ -67,6 +67,7 @@ void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag 
 
 				if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
 				{
+					PawnExtComp->SetPawnData(PawnData);
 					PawnExtComp->SetPlayerInputComponent();
 				}
 			}

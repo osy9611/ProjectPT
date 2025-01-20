@@ -55,12 +55,6 @@ public:
 	void Input_AbilityInputTagPressed(FGameplayTag InputTag);
 	void Input_AbilityInputTagReleased(FGameplayTag InputTag);
 
-	UFUNCTION(BlueprintCallable)
-	FTransform GetSkeletonMeshSocketTransform(FName SocketName);
-
-	UFUNCTION(BlueprintCallable)
-	FVector GetSkeletonMeshSocketPos(FName SocketName);
-
 	UPROPERTY(EditAnywhere)
 	bool bIsMove = true;
 

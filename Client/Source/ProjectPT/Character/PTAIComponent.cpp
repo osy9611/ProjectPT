@@ -129,9 +129,15 @@ void UPTAIComponent::HandleChangeInitState(UGameFrameworkComponentManager* Manag
 
 				UPTAI_AttributeSet* AttributeSet = PTPlayerState->CreateAttribute<UPTAI_AttributeSet>();
 				AttributeSet->InitAttributeSet(FString::FromInt(TableId));
+
+				/*if (const UPTPawnData* PawnData = PawnExtComp->GetPawnData<UPTPawnData>())
+				{
+					PTPlayerState->SetPawnData(PawnData);
+				}*/
 			}
 
 			Pawn->SpawnDefaultController();
+
 		}
 	}
 }
@@ -146,7 +152,23 @@ void UPTAIComponent::CheckDefaultInitialization()
 	ContinueInitStateChain(StateChain);
 }
 
-void UPTAIComponent::SendDamageEvent(AActor* Instigator,float DamageAmount)
+void UPTAIComponent::ProcessAbility(FGameplayTag Tag)
+{
+	if (APawn* Pawn = GetPawn<APawn>())
+	{
+		APTPlayerState* PTPlayerState = Pawn->GetPlayerState<APTPlayerState>();
+
+		if (!PTPlayerState)
+			return;
+		UPTAbilitySystemComponent* ASC = PTPlayerState->GetPTAbilitySystemComponent();
+		if (ASC)
+		{
+			ASC->ProcessAbility(Tag);
+		}
+	}
+}
+
+void UPTAIComponent::SendDamageEvent(AActor* Instigator, float DamageAmount)
 {
 	if (APawn* Pawn = GetPawn<APawn>())
 	{
@@ -209,7 +231,7 @@ bool UPTAIComponent::IsAttackRange(AActor* TargetActor, float DefaultAttackRange
 {
 	if (!TargetActor)
 	{
-		UE_LOG(PTLog, Log, TEXT("This TargetActor is nullptr"));
+		//UE_LOG(PTLog, Log, TEXT("This TargetActor is nullptr"));
 		return false;
 	}
 
@@ -230,26 +252,3 @@ bool UPTAIComponent::IsAttackRange(AActor* TargetActor, float DefaultAttackRange
 	return false;
 }
 PRAGMA_ENABLE_OPTIMIZATION
-FTransform UPTAIComponent::GetSkeletonMeshSocketTransform(FName SocketName)
-{
-	if (const APawn* Pawn = GetPawn<APawn>())
-	{
-		if (const USkeletalMeshComponent* SkeletalMeshComponent = Pawn->FindComponentByClass<USkeletalMeshComponent>())
-		{
-			return SkeletalMeshComponent->GetSocketTransform(SocketName);
-		}
-	}
-	return FTransform();
-}
-
-FVector UPTAIComponent::GetSkeletonMeshSocketPos(FName SocketName)
-{
-	if (const APawn* Pawn = GetPawn<APawn>())
-	{
-		if (const USkeletalMeshComponent* SkeletalMeshComponent = Pawn->FindComponentByClass<USkeletalMeshComponent>())
-		{
-			return SkeletalMeshComponent->GetSocketLocation(SocketName);
-		}
-	}
-	return FVector();
-}

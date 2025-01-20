@@ -375,27 +375,3 @@ void UPTHeroComponent::Input_AbilityInputTagReleased(FGameplayTag InputTag)
 		}
 	}
 }
-
-FTransform UPTHeroComponent::GetSkeletonMeshSocketTransform(FName SocketName)
-{
-	if (const APawn* Pawn = GetPawn<APawn>())
-	{
-		if (const USkeletalMeshComponent* SkeletalMeshComponent = Pawn->FindComponentByClass<USkeletalMeshComponent>())
-		{
-			return SkeletalMeshComponent->GetSocketTransform(SocketName);
-		}
-	}
-	return FTransform();
-}
-
-FVector UPTHeroComponent::GetSkeletonMeshSocketPos(FName SocketName)
-{
-	if (const APawn* Pawn = GetPawn<APawn>())
-	{
-		if (const USkeletalMeshComponent* SkeletalMeshComponent = Pawn->FindComponentByClass<USkeletalMeshComponent>())
-		{
-			return SkeletalMeshComponent->GetSocketLocation(SocketName);
-		}
-	}
-	return FVector();
-}

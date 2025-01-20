@@ -9,6 +9,7 @@
 
 class UPTAbilitySystemComponent;
 class UPTGameplayAbility;
+class UAnimMontage;
 
 USTRUCT(BlueprintType)
 struct FPTAbilitySet_GameplayAbility
@@ -26,8 +27,11 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	bool isTrigger = false;
-};
 
+	UPROPERTY(EditDefaultsOnly)
+	UAnimMontage* AnimMontage;
+};
+ 
 USTRUCT(BlueprintType)
 struct FPTAbilitySet_GrantedHandles
 {

@@ -22,6 +22,9 @@ public:
 
 	void RegisterSightConfig(FMonsterData* MonsterData);
 	
+	UFUNCTION(BlueprintCallable)
+	void ProcessAbility(FGameplayTag Tag);
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UseTableData")
 	bool UseTableData;
 
@@ -36,5 +39,4 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
 	TWeakObjectPtr<UPTAIComponent> AIComponent;
-
 };

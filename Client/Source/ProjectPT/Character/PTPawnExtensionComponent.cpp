@@ -190,3 +190,27 @@ void UPTPawnExtensionComponent::CheckDefaultInitialization()
 
 	ContinueInitStateChain(StateChain);
 }
+
+FTransform UPTPawnExtensionComponent::GetSkeletonMeshSocketTransform(FName SocketName)
+{
+	if (const APawn* Pawn = GetPawn<APawn>())
+	{
+		if (const USkeletalMeshComponent* SkeletalMeshComponent = Pawn->FindComponentByClass<USkeletalMeshComponent>())
+		{
+			return SkeletalMeshComponent->GetSocketTransform(SocketName);
+		}
+	}
+	return FTransform();
+}
+
+FVector UPTPawnExtensionComponent::GetSkeletonMeshSocketPos(FName SocketName)
+{
+	if (const APawn* Pawn = GetPawn<APawn>())
+	{
+		if (const USkeletalMeshComponent* SkeletalMeshComponent = Pawn->FindComponentByClass<USkeletalMeshComponent>())
+		{
+			return SkeletalMeshComponent->GetSocketLocation(SocketName);
+		}
+	}
+	return FVector();
+}

@@ -14,21 +14,21 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTAbilitySet_generated_h
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_16_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_17_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPTAbilitySet_GameplayAbility_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPTAbilitySet_GameplayAbility>();
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_34_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_38_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPTAbilitySet_GrantedHandles_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPTAbilitySet_GrantedHandles>();
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_50_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_54_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTAbilitySet(); \
 	friend struct Z_Construct_UClass_UPTAbilitySet_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(UPTAbilitySet)
 
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_50_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_54_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTAbilitySet(UPTAbilitySet&&); \
@@ -49,12 +49,12 @@ public: \
 	NO_API virtual ~UPTAbilitySet();
 
 
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_47_PROLOG
-#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_50_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_51_PROLOG
+#define FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_54_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_50_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_50_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_54_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_PTAbilitySet_h_54_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

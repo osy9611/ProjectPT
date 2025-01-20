@@ -6,13 +6,13 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "ProjectPT/Character/PTAIComponent.h"
+#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTAIComponent() {}
 
 // Begin Cross Module References
-COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
-COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UGameFrameworkInitStateInterface_NoRegister();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UPawnComponent();
 PROJECTPT_API UClass* Z_Construct_UClass_APTPlayerStart_NoRegister();
@@ -20,98 +20,6 @@ PROJECTPT_API UClass* Z_Construct_UClass_UPTAIComponent();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTAIComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
-
-// Begin Class UPTAIComponent Function GetSkeletonMeshSocketPos
-struct Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics
-{
-	struct PTAIComponent_eventGetSkeletonMeshSocketPos_Parms
-	{
-		FName SocketName;
-		FVector ReturnValue;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Character/PTAIComponent.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FNamePropertyParams NewProp_SocketName;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::NewProp_SocketName = { "SocketName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTAIComponent_eventGetSkeletonMeshSocketPos_Parms, SocketName), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTAIComponent_eventGetSkeletonMeshSocketPos_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::NewProp_SocketName,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::NewProp_ReturnValue,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTAIComponent, nullptr, "GetSkeletonMeshSocketPos", nullptr, nullptr, Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::PTAIComponent_eventGetSkeletonMeshSocketPos_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::PTAIComponent_eventGetSkeletonMeshSocketPos_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(UPTAIComponent::execGetSkeletonMeshSocketPos)
-{
-	P_GET_PROPERTY(FNameProperty,Z_Param_SocketName);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	*(FVector*)Z_Param__Result=P_THIS->GetSkeletonMeshSocketPos(Z_Param_SocketName);
-	P_NATIVE_END;
-}
-// End Class UPTAIComponent Function GetSkeletonMeshSocketPos
-
-// Begin Class UPTAIComponent Function GetSkeletonMeshSocketTransform
-struct Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics
-{
-	struct PTAIComponent_eventGetSkeletonMeshSocketTransform_Parms
-	{
-		FName SocketName;
-		FTransform ReturnValue;
-	};
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Character/PTAIComponent.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FNamePropertyParams NewProp_SocketName;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::NewProp_SocketName = { "SocketName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTAIComponent_eventGetSkeletonMeshSocketTransform_Parms, SocketName), METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTAIComponent_eventGetSkeletonMeshSocketTransform_Parms, ReturnValue), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::NewProp_SocketName,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::NewProp_ReturnValue,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTAIComponent, nullptr, "GetSkeletonMeshSocketTransform", nullptr, nullptr, Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::PTAIComponent_eventGetSkeletonMeshSocketTransform_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::PTAIComponent_eventGetSkeletonMeshSocketTransform_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(UPTAIComponent::execGetSkeletonMeshSocketTransform)
-{
-	P_GET_PROPERTY(FNameProperty,Z_Param_SocketName);
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	*(FTransform*)Z_Param__Result=P_THIS->GetSkeletonMeshSocketTransform(Z_Param_SocketName);
-	P_NATIVE_END;
-}
-// End Class UPTAIComponent Function GetSkeletonMeshSocketTransform
 
 // Begin Class UPTAIComponent Function IsAttackRange
 struct Z_Construct_UFunction_UPTAIComponent_IsAttackRange_Statics
@@ -226,15 +134,62 @@ DEFINE_FUNCTION(UPTAIComponent::execIsTargetVisible)
 }
 // End Class UPTAIComponent Function IsTargetVisible
 
+// Begin Class UPTAIComponent Function ProcessAbility
+struct Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics
+{
+	struct PTAIComponent_eventProcessAbility_Parms
+	{
+		FGameplayTag Tag;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/*GAS*/" },
+#endif
+		{ "ModuleRelativePath", "Character/PTAIComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "GAS" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Tag;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::NewProp_Tag = { "Tag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTAIComponent_eventProcessAbility_Parms, Tag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::NewProp_Tag,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTAIComponent, nullptr, "ProcessAbility", nullptr, nullptr, Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::PTAIComponent_eventProcessAbility_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::PTAIComponent_eventProcessAbility_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTAIComponent_ProcessAbility()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTAIComponent_ProcessAbility_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTAIComponent::execProcessAbility)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_Tag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ProcessAbility(Z_Param_Tag);
+	P_NATIVE_END;
+}
+// End Class UPTAIComponent Function ProcessAbility
+
 // Begin Class UPTAIComponent
 void UPTAIComponent::StaticRegisterNativesUPTAIComponent()
 {
 	UClass* Class = UPTAIComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "GetSkeletonMeshSocketPos", &UPTAIComponent::execGetSkeletonMeshSocketPos },
-		{ "GetSkeletonMeshSocketTransform", &UPTAIComponent::execGetSkeletonMeshSocketTransform },
 		{ "IsAttackRange", &UPTAIComponent::execIsAttackRange },
 		{ "IsTargetVisible", &UPTAIComponent::execIsTargetVisible },
+		{ "ProcessAbility", &UPTAIComponent::execProcessAbility },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -269,10 +224,9 @@ struct Z_Construct_UClass_UPTAIComponent_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketPos, "GetSkeletonMeshSocketPos" }, // 2791546633
-		{ &Z_Construct_UFunction_UPTAIComponent_GetSkeletonMeshSocketTransform, "GetSkeletonMeshSocketTransform" }, // 2313109826
 		{ &Z_Construct_UFunction_UPTAIComponent_IsAttackRange, "IsAttackRange" }, // 9196268
 		{ &Z_Construct_UFunction_UPTAIComponent_IsTargetVisible, "IsTargetVisible" }, // 2400802994
+		{ &Z_Construct_UFunction_UPTAIComponent_ProcessAbility, "ProcessAbility" }, // 2601426692
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -329,10 +283,10 @@ UPTAIComponent::~UPTAIComponent() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAIComponent, UPTAIComponent::StaticClass, TEXT("UPTAIComponent"), &Z_Registration_Info_UClass_UPTAIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAIComponent), 2823486630U) },
+		{ Z_Construct_UClass_UPTAIComponent, UPTAIComponent::StaticClass, TEXT("UPTAIComponent"), &Z_Registration_Info_UClass_UPTAIComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAIComponent), 3954780159U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_382934052(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_3555112951(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTAIComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
