@@ -6,19 +6,21 @@
 #include "ProjectPT/PTLogChannels.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemGlobals.h"
+#include "Kismet/GameplayStatics.h"
 #include "ProjectPT/Character/PTPawnExtensionComponent.h"
 #include "ProjectPT/Character/PTCharacter.h"
 #include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
+#include "ProjectPT/AbilitySystem/AttributeSet/PTAI_AttributeSet.h"
 #include "ProjectPT/AbilitySystem/GameplayEffect/PTGE_AttackDamage.h"
 #include "ProjectPT/GameModes/PTGameModeBase.h"
-#include "Kismet/GameplayStatics.h"
 #include "ProjectPT/Object/PTPlayerStart.h"
 #include "ProjectPT/Character/PTPawnData.h"
 #include "ProjectPT/Character/PTAICharacter.h"
 #include "ProjectPT/GameModes/PTGameModeBase.h"
 #include "ProjectPT/Character/PTAIComponent.h"
+#include "ProjectPT/Extensions/PTUIMessageExtensions.h"
 
 UPTObjectSubsystem::UPTObjectSubsystem()
 {
@@ -210,11 +212,9 @@ void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const 
 		FGameplayEffectContextHandle EffectContext = OwnerASC->MakeEffectContext();
 		EffectContext.AddSourceObject(OwnerASC->GetOwner());
 		FGameplayEffectSpecHandle SpecHandle = OwnerASC->MakeOutgoingSpec(UPTGE_AttackDamage::StaticClass(), 1.0f, EffectContext);
-		float NewHealth = TargetASC->GetNumericAttribute(UPTAttributeSet::GetHealthAttribute());
 		if (SpecHandle.IsValid())
 		{
 			FActiveGameplayEffectHandle ActiveGEHandle = TargetASC->ApplyGameplayEffectSpecToTarget(*SpecHandle.Data.Get(), TargetASC);
-
 			if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(TargetActor))
 			{
 				AIComponent->SendDamageEvent(OwnerASC->GetAvatarActor(), 1);

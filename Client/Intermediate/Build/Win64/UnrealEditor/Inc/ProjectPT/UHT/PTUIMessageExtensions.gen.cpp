@@ -10,6 +10,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTUIMessageExtensions() {}
 
 // Begin Cross Module References
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUISkillCoolTimeMessage();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
@@ -144,15 +146,85 @@ UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage()
 }
 // End ScriptStruct FUIFireZoomMessage
 
+// Begin ScriptStruct FUIDamageMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_UIDamageMessage;
+class UScriptStruct* FUIDamageMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIDamageMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_UIDamageMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FUIDamageMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("UIDamageMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_UIDamageMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FUIDamageMessage>()
+{
+	return FUIDamageMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FUIDamageMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageAmount_MetaData[] = {
+		{ "Category", "UIDamageMessage" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetActor_MetaData[] = {
+		{ "Category", "UIDamageMessage" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUIDamageMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FUIDamageMessage, DamageAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageAmount_MetaData), NewProp_DamageAmount_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FUIDamageMessage, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetActor_MetaData), NewProp_TargetActor_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FUIDamageMessage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewProp_DamageAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewProp_TargetActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIDamageMessage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIDamageMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"UIDamageMessage",
+	Z_Construct_UScriptStruct_FUIDamageMessage_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIDamageMessage_Statics::PropPointers),
+	sizeof(FUIDamageMessage),
+	alignof(FUIDamageMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIDamageMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FUIDamageMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIDamageMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_UIDamageMessage.InnerSingleton, Z_Construct_UScriptStruct_FUIDamageMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_UIDamageMessage.InnerSingleton;
+}
+// End ScriptStruct FUIDamageMessage
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FUISkillCoolTimeMessage::StaticStruct, Z_Construct_UScriptStruct_FUISkillCoolTimeMessage_Statics::NewStructOps, TEXT("UISkillCoolTimeMessage"), &Z_Registration_Info_UScriptStruct_UISkillCoolTimeMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUISkillCoolTimeMessage), 3257997902U) },
 		{ FUIFireZoomMessage::StaticStruct, Z_Construct_UScriptStruct_FUIFireZoomMessage_Statics::NewStructOps, TEXT("UIFireZoomMessage"), &Z_Registration_Info_UScriptStruct_UIFireZoomMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIFireZoomMessage), 2541667117U) },
+		{ FUIDamageMessage::StaticStruct, Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewStructOps, TEXT("UIDamageMessage"), &Z_Registration_Info_UScriptStruct_UIDamageMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIDamageMessage), 1523961953U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3457889404(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_33070483(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);

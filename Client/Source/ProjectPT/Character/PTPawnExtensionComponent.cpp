@@ -6,6 +6,7 @@
 #include "ProjectPT/PTGameplayTags.h"
 #include "Components/GameFrameworkComponentManager.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
+#include <ProjectPT/Player/PTPlayerState.h>
 
 /*feature name을 component 단위니깐 component를 빼고 pawn extension만 넣는 것은 확인할 수 있다.*/
 const FName UPTPawnExtensionComponent::NAME_ActorFeatureName("PawnExtension");

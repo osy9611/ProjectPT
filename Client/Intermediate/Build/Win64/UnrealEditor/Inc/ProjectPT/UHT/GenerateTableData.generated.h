@@ -23,6 +23,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMonsterData>();
 
 #define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_26_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FPlayerData_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
+	typedef FTableRowBase Super;
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPlayerData>();
+
+#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_38_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSceneData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -30,7 +38,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMonsterData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSceneData>();
 
-#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_34_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Table_GenerateTableData_h_46_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSkillData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;

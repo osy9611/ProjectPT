@@ -19,6 +19,7 @@ void UPTAI_AttributeSet::InitAttributeSet(FString RowName)
 		if (MonsterData)
 		{
 			Health = MonsterData->HP;
+			MaxHealth = MonsterData->HP;
 		}
 	}
 }

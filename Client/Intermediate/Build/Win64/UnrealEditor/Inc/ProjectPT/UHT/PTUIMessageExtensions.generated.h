@@ -28,6 +28,13 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUISkillCoolTimeMess
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIFireZoomMessage>();
 
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_29_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FUIDamageMessage_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIDamageMessage>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h
 

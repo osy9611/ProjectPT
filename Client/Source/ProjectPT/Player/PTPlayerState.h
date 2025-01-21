@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerState.h"
+#include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "PTPlayerState.generated.h"
 
 class UPTPawnData;
@@ -37,7 +38,10 @@ public:
 	T* CreateAttribute()
 	{
 		if (!HasAnyFlags(RF_ClassDefaultObject))
+		{
 			AttributeSet = NewObject<T>(this, T::StaticClass(), TEXT("AttributeSet"));
+			AbilitySystemComponent->AddAttributeSetSubobject(AttributeSet.Get());
+		}
 		return Cast<T>(AttributeSet);
 	}
 

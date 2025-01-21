@@ -21,6 +21,18 @@ public:
 	float DefaultAttackRange;
 };
 USTRUCT(BlueprintType)
+struct FPlayerData : public FTableRowBase
+{
+	GENERATED_USTRUCT_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HP;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Skill_Default;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Skill_Q;
+};
+USTRUCT(BlueprintType)
 struct FSceneData : public FTableRowBase
 {
 	GENERATED_USTRUCT_BODY()

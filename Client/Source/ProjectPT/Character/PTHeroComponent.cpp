@@ -148,7 +148,7 @@ void UPTHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* Man
 		if (APTPlayerState* PlayerState = Pawn->GetPlayerState<APTPlayerState>())
 		{
 			UPTCharacter_AttributeSet* AttributeSet = PlayerState->CreateAttribute<UPTCharacter_AttributeSet>();
-			AttributeSet->InitAttributeSet("1001");
+			AttributeSet->InitAttributeSet("1");
 		}
 
 		if (bIsLocallyControlled && PawnData)

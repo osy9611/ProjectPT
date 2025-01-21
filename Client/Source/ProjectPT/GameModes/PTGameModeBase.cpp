@@ -205,7 +205,6 @@ const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* 
 	{
 		const UPTExperienceDefinition* Experience = ExperienceManagerComponent->GetCurrentExperienceChecked();
 
-
 		ULocalPlayer* LocalPlayer = GetWorld()->GetFirstLocalPlayerFromController();
 		if (LocalPlayer)
 		{
@@ -224,8 +223,6 @@ const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* 
 				}
 			}
 		}
-
-		
 	}
 
 	return nullptr;

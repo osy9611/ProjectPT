@@ -35,7 +35,8 @@ public class ProjectPT : ModuleRules
             "Slate",
             "SlateCore",
 			//AI
-			"AIModule"
+			"AIModule",
+            "GameplayMessageRuntime",
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

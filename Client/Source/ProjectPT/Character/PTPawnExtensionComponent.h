@@ -9,7 +9,7 @@
 
 class UPTPawnData;
 class UPTAbilitySystemComponent;
-
+class APTPlayerState;
 /**
  *
  */
@@ -32,10 +32,11 @@ public:
 	void SetPlayerInputComponent();
 	UPTAbilitySystemComponent* GetAbilitySystemComponent() const { return AbilitySystemComponent; }
 
-	APlayerState* GetPlayerState()
+	APTPlayerState* GetPlayerState()
 	{
 		APawn* Pawn = GetPawnChecked<APawn>();
-		return Pawn->GetPlayerState();
+		APTPlayerState* PlayerState = Pawn->GetPlayerState<APTPlayerState>();
+		return PlayerState;
 	}
 
 	/*Actor Controller*/

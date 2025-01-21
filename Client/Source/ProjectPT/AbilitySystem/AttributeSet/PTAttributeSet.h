@@ -21,17 +21,21 @@ class PROJECTPT_API UPTAttributeSet : public UAttributeSet
 public:
 	UPTAttributeSet(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 	virtual void InitAttributeSet(FString RowName);
-
 	virtual FSkillData GetSkillData(FGameplayTag GameplayTag);
 
+	//값이 변경 되기 전에 호출되는 함수
+	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
+	//Attribute에 적용된 후 호출됨
+	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
 public:
+	ATTRIBUTE_ACCESSORS(UPTAttributeSet, Health);
+	ATTRIBUTE_ACCESSORS(UPTAttributeSet, MaxHealth);
+
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData Health;
-	ATTRIBUTE_ACCESSORS(UPTAttributeSet, Health);
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
 	FGameplayAttributeData MaxHealth;
-	ATTRIBUTE_ACCESSORS(UPTAttributeSet, MaxHealth);
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attribute")
 	FGameplayAttributeData Mana;

@@ -22,3 +22,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool FireZoom;
 };
+
+USTRUCT(BlueprintType)
+struct FUIDamageMessage
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DamageAmount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AActor* TargetActor;
+
+};

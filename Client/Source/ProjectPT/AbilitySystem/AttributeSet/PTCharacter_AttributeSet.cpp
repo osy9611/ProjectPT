@@ -16,8 +16,12 @@ void UPTCharacter_AttributeSet::InitAttributeSet(FString RowName)
 	//Character와 관련된 데이터를 입력해서 등록해주면 될거같다.
 	if (UDataManagerSubsystem* DataManager = GetWorld()->GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
 	{
-		Skill_Default = *DataManager->FindData<FSkillData>("1001");
-		Skill_Q = *DataManager->FindData<FSkillData>("1002");
+		FPlayerData PlayerData = *DataManager->FindData<FPlayerData>(RowName);
+
+		Health = PlayerData.HP;
+		MaxHealth = PlayerData.HP;
+		Skill_Default = *DataManager->FindData<FSkillData>(FString::FromInt(PlayerData.Skill_Default));
+		Skill_Q = *DataManager->FindData<FSkillData>(FString::FromInt(PlayerData.Skill_Q));
 	}
 }
 FSkillData UPTCharacter_AttributeSet::GetSkillData(FGameplayTag GameplayTag)

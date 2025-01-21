@@ -4,7 +4,6 @@
 #include "PTPlayerState.h"
 #include "ProjectPT/GameModes/PTGameModeBase.h"
 #include "ProjectPT/GameModes/PTExperienceManagerComponent.h"
-#include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySet.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTCharacter_AttributeSet.h"
 #include "ProjectPT/Character/PTPawnData.h"
@@ -29,7 +28,6 @@ void APTPlayerState::PostInitializeComponents()
 	}
 
 	AbilitySystemComponent->InitAbilityActorInfo(this, GetPawn());
-
 	const AGameStateBase* GameState = GetWorld()->GetGameState();
 	check(GameState);
 
