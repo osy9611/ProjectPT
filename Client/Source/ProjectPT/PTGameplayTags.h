@@ -34,6 +34,9 @@ struct FPTGameplayTags
 	//AI Event
 	FGameplayTag AI_Event_Attack;
 
+	//GCN Event
+	FGameplayTag GameplayCue_RangeAttack_Damage;
+
 private:
 	static FPTGameplayTags GameplayTags;
 };

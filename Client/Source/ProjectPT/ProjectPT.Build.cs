@@ -36,7 +36,11 @@ public class ProjectPT : ModuleRules
             "SlateCore",
 			//AI
 			"AIModule",
+			//GameplayMessageRuntime
             "GameplayMessageRuntime",
+			//Niagara
+            "Niagara", 
+			"NiagaraCore",
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

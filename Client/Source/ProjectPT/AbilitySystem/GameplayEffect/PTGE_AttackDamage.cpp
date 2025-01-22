@@ -4,6 +4,7 @@
 #include "PTGE_AttackDamage.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAI_AttributeSet.h"
+#include "ProjectPT/PTGameplayTags.h"
 
 UPTGE_AttackDamage::UPTGE_AttackDamage()
 {
@@ -14,7 +15,6 @@ UPTDamageExecutionCalculation::UPTDamageExecutionCalculation()
 {
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTDamageExecutionCalculation::Execute_Implementation(const FGameplayEffectCustomExecutionParameters& ExecutionParams, OUT FGameplayEffectCustomExecutionOutput& OutExecutionOutput) const
 {
 	UAbilitySystemComponent* ASC = ExecutionParams.GetTargetAbilitySystemComponent();
@@ -30,6 +30,13 @@ void UPTDamageExecutionCalculation::Execute_Implementation(const FGameplayEffect
 	// Modifier를 OutExecutionOutput에 추가
 	OutExecutionOutput.AddOutputModifier(EvaluatedData);
 
+	if (ASC)
+	{
+		FGameplayEffectContextHandle Context = Spec.GetContext();
+		const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
+		FName Tag =GameplayTags.GameplayCue_RangeAttack_Damage.GetTagName();
+		ASC->ExecuteGameplayCue(FGameplayTag::RequestGameplayTag(Tag), Context);
+	}
+
 	UE_LOG(LogTemp, Log, TEXT("Damage Applied: %f"), EvaluatedData.Magnitude);
 }
-PRAGMA_ENABLE_OPTIMIZATION

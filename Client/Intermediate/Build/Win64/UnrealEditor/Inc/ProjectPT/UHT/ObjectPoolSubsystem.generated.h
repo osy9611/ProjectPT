@@ -9,12 +9,22 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UNiagaraComponent;
+class UNiagaraSystem;
 #ifdef PROJECTPT_ObjectPoolSubsystem_generated_h
 #error "ObjectPoolSubsystem.generated.h already included, missing '#pragma once' in ObjectPoolSubsystem.h"
 #endif
 #define PROJECTPT_ObjectPoolSubsystem_generated_h
 
-#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execReturnNiagaraSystem); \
+	DECLARE_FUNCTION(execGetNiagaraSystem); \
+	DECLARE_FUNCTION(execReturnActor); \
+	DECLARE_FUNCTION(execGetActor);
+
+
+#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUObjectPoolSubsystem(); \
 	friend struct Z_Construct_UClass_UObjectPoolSubsystem_Statics; \
@@ -23,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(UObjectPoolSubsystem)
 
 
-#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UObjectPoolSubsystem(UObjectPoolSubsystem&&); \
@@ -35,12 +45,13 @@ public: \
 	NO_API virtual ~UObjectPoolSubsystem();
 
 
-#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_11_PROLOG
-#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_14_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_14_PROLOG
+#define FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_14_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_14_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Pool_ObjectPoolSubsystem_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

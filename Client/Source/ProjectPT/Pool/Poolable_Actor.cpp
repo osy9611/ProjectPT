@@ -4,14 +4,14 @@
 #include "Poolable_Actor.h"
 #include "ProjectPT/PTLogChannels.h"
 
-void UPoolable_Actor::Init(UWorld* World, TSubclassOf<AActor> Actor, int32 count)
+void UPoolable_Actor::Init(UWorld* World, TSubclassOf<AActor> Actor, int32 Count)
 {
 	if (!Actor)
 	{
 		UE_LOG(PTLog, Log, TEXT("Actor Not Found"));
 	}
 	OriginalActor = Actor;
-	for (int32 i = 0; i < count; ++i)
+	for (int32 i = 0; i < Count; ++i)
 	{
 		if (AActor* NewActor = Create(World))
 		{
@@ -21,7 +21,7 @@ void UPoolable_Actor::Init(UWorld* World, TSubclassOf<AActor> Actor, int32 count
 	}
 }
 
-AActor* UPoolable_Actor::Get(UWorld* World)
+AActor* UPoolable_Actor::Get(UWorld* World, bool IsActive)
 {
 	AActor* Result;
 	if (ObjectPool.IsEmpty())
@@ -29,7 +29,7 @@ AActor* UPoolable_Actor::Get(UWorld* World)
 	else
 		Result = ObjectPool.Pop();
 
-	if (Result)
+	if (Result&& IsActive)
 		ShowActor(Result);
 
 	return Result;

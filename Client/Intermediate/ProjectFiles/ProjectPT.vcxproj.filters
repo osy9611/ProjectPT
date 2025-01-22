@@ -615,6 +615,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\Pool\Poolable_Actor.h">
       <Filter>Source\ProjectPT\Pool</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Pool\Poolable_NiagaraSystem.cpp">
+      <Filter>Source\ProjectPT\Pool</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Pool\Poolable_NiagaraSystem.h">
+      <Filter>Source\ProjectPT\Pool</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Sound">
       <UniqueIdentifier>{B3DE8056-3643-3122-BC41-265BE2EE6D4D}</UniqueIdentifier>
     </Filter>

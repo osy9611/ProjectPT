@@ -32,4 +32,7 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 
 	//AI Event Tags
 	AddTag(AI_Event_Attack, "AI.Event.Attack","");
+
+	//GCN Event
+	AddTag(GameplayCue_RangeAttack_Damage, "GameplayCue.RangeAttack.Damage", "");
 }
