@@ -20,6 +20,7 @@
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/Camera/PTCameraMode.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTCharacter_AttributeSet.h"
+#include "ProjectPT/Object/PTObjectSubsystem.h"
 
 const FName UPTHeroComponent::NAME_ActorFeatureName("Hero");
 
@@ -239,6 +240,9 @@ void UPTHeroComponent::InitializePlayerInput(UInputComponent* PlayerInputCompone
 	if (!Pawn)
 		return;
 
+	const AActor* Actor = Cast<AActor>(Pawn);
+	check(Actor);
+
 	const APlayerController* PC = GetController<APlayerController>();
 	check(PC);
 
@@ -259,6 +263,11 @@ void UPTHeroComponent::InitializePlayerInput(UInputComponent* PlayerInputCompone
 			if (const UPTInputConfig* InputConfig = PawnData->InputConfig)
 			{
 				const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
+
+				if (UPTObjectSubsystem* ObjectSubsystem = GetWorld()->GetSubsystem<UPTObjectSubsystem>())
+				{
+					ObjectSubsystem->RegisterActor(const_cast<AActor*>(Actor));
+				}
 
 				//Input Mapping Context를 순회하며, EnhanceInputLocalPlayerSubsystem에 추가한다
 				for (const FPTMappableConfigPair& Pair : DefaultInputConfigs)

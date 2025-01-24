@@ -5,6 +5,7 @@
 #include "Components/AudioComponent.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/System/PTAssetManager.h"
+#include "MetasoundSource.h"
 
 void UPTAudioSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -54,7 +55,6 @@ void UPTAudioSubsystem::UnRegisterData()
 		AudioComponent->UnregisterComponent();
 	}
 }
-PRAGMA_ENABLE_OPTIMIZATION
 UAudioComponent* UPTAudioSubsystem::GetAudioComponent(ESoundType Type)
 {
 	if (UAudioComponent** AudioComponentPtr = AudioComponents.Find(Type))
@@ -149,3 +149,5 @@ void UPTAudioSubsystem::FadeOutSound(ESoundType Type, float FadeDuration, float 
 		AudioComponent->FadeOut(FadeDuration, TargetVolume);
 	}
 }
+
+PRAGMA_ENABLE_OPTIMIZATION

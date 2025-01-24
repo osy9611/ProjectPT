@@ -26,7 +26,6 @@ public:
 	AActor* Create(UWorld* World) { return World->SpawnActor(OriginalActor); }
 
 	void HideActor(AActor* Actor);
-
 	void ShowActor(AActor* Actor);
 
 private:

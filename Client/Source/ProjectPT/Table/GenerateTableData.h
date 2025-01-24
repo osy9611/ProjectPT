@@ -19,6 +19,8 @@ public:
 	float PeripheralVisionAngleDegrees;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float DefaultAttackRange;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Skill1;
 };
 USTRUCT(BlueprintType)
 struct FPlayerData : public FTableRowBase
@@ -45,6 +47,8 @@ struct FSkillData : public FTableRowBase
 {
 	GENERATED_USTRUCT_BODY()
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SkillDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float skillRange;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

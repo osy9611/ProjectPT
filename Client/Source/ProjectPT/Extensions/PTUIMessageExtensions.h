@@ -35,3 +35,12 @@ public:
 	AActor* TargetActor;
 
 };
+
+USTRUCT(BlueprintType)
+struct FUIHPMessage
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HealthAmount;
+};

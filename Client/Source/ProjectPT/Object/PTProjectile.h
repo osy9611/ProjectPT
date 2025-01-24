@@ -8,6 +8,8 @@
 
 class UShapeComponent;
 
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnProjectileHit,const TArray<FHitResult>);
+
 UCLASS()
 class PROJECTPT_API APTProjectile : public AActor
 {
@@ -18,8 +20,8 @@ public:
 	APTProjectile();
 
 	virtual void BeginPlay() override;
-
 	virtual void Tick(float DeltaTime) override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 	virtual void IgnoreCollison(AActor* Actor);
 	virtual void RegisterData(const FVector& Pos, const FVector& Dir, float Range, float Raidus, float Speed);
@@ -43,7 +45,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "PT|IsCollisionHit")
 	bool IsCollisionHit;
 
+	FOnProjectileHit OnProjectileHit;
 private:
+
 	UPROPERTY()
 	FVector TargetLocation;
 

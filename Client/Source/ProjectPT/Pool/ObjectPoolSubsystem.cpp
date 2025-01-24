@@ -33,9 +33,12 @@ AActor* UObjectPoolSubsystem::GetActor(TSubclassOf<AActor> ClassType)
 		UPoolable_Actor* NewPool = NewObject<UPoolable_Actor>(this);
 		NewPool->Init(World, ClassType);
 		ObjectPools.Add(ClassType, NewPool);
+		PoolableActor = ObjectPools.Find(ClassType.Get());
 	}
 
-	return (*PoolableActor)->Get(World, true);
+	AActor* Result = (*PoolableActor)->Get(World, true);
+
+	return Result;
 }
 
 void UObjectPoolSubsystem::ReturnActor(AActor* Actor)

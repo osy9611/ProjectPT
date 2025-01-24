@@ -18,22 +18,3 @@ FSkillData UPTAttributeSet::GetSkillData(FGameplayTag GameplayTag)
 {
 	return FSkillData();
 }
-
-void UPTAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue)
-{
-	Super::PreAttributeChange(Attribute, NewValue);
-	if (Attribute == GetHealthAttribute())
-	{
-
-	}
-}
-
-void UPTAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data)
-{
-	Super::PostGameplayEffectExecute(Data);
-	if (Data.EvaluatedData.Attribute == GetHealthAttribute())
-	{
-		float NewHealth = GetHealth();
-		UE_LOG(LogTemp,Log, TEXT("PostGameplayEffectExecute: New Health Value: %f"), NewHealth);
-	}
-}

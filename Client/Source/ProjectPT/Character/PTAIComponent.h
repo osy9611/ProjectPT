@@ -6,6 +6,7 @@
 #include "Components/PawnComponent.h"
 #include "Components/GameFrameworkInitStateInterface.h"
 #include "ProjectPT/Object/PTPlayerStart.h"
+#include "ProjectPT/Player/PTPlayerState.h"
 #include "PTAIComponent.generated.h"
 
 class UPTAbilitySystemComponent;
@@ -35,6 +36,8 @@ public:
 	virtual bool CanChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState) const final;
 	virtual void HandleChangeInitState(UGameFrameworkComponentManager* Manager, FGameplayTag CurrentState, FGameplayTag DesiredState) final;
 	virtual void CheckDefaultInitialization() final;
+
+	void StartDeath();
 
 	void SetMonsterID(int32 NewTableId) { this->TableId = NewTableId; }
 	int32 GetMonsterTableID() { return TableId; }

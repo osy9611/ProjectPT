@@ -9,7 +9,11 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class APTAICharacter;
+class APTCharacter;
+class UPTAttributeSet;
 class UPTCameraMode;
+struct FGameplayTag;
 #ifdef PROJECTPT_PTGameplayAbility_generated_h
 #error "PTGameplayAbility.generated.h already included, missing '#pragma once' in PTGameplayAbility.h"
 #endif
@@ -17,7 +21,11 @@ class UPTCameraMode;
 
 #define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execClearCameraMode); \
-	DECLARE_FUNCTION(execSetCameraMode);
+	DECLARE_FUNCTION(execSetCameraMode); \
+	DECLARE_FUNCTION(execGetGameplayTag); \
+	DECLARE_FUNCTION(execGetPTAttribute); \
+	DECLARE_FUNCTION(execGetPTAICharacterFromActorInfo); \
+	DECLARE_FUNCTION(execGetPTCharacterFromActorInfo);
 
 
 #define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_32_INCLASS_NO_PURE_DECLS \

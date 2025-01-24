@@ -14,6 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTAnimInstance_generated_h
 
+#define FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_CALLBACK_WRAPPERS
 #define FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTAnimInstance(); \
@@ -41,6 +42,7 @@ public: \
 #define FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_CALLBACK_WRAPPERS \
 	FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_15_ENHANCED_CONSTRUCTORS \
 private: \

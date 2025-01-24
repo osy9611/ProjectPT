@@ -6,12 +6,14 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "ProjectPT/AbilitySystem/Abilities/PTGameplayAbility_Projectile.h"
+#include "GameplayAbilities/Public/Abilities/GameplayAbilityTargetTypes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTGameplayAbility_Projectile() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+GAMEPLAYABILITIES_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility_Projectile();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility_Projectile_NoRegister();
@@ -88,6 +90,55 @@ DEFINE_FUNCTION(UPTGameplayAbility_Projectile::execGetCoolTime)
 }
 // End Class UPTGameplayAbility_Projectile Function GetCoolTime
 
+// Begin Class UPTGameplayAbility_Projectile Function OnProjectileTargetDataReady
+struct PTGameplayAbility_Projectile_eventOnProjectileTargetDataReady_Parms
+{
+	AActor* Owner;
+	FGameplayAbilityTargetDataHandle TargetData;
+};
+static FName NAME_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady = FName(TEXT("OnProjectileTargetDataReady"));
+void UPTGameplayAbility_Projectile::OnProjectileTargetDataReady(AActor* Owner, FGameplayAbilityTargetDataHandle const& TargetData)
+{
+	PTGameplayAbility_Projectile_eventOnProjectileTargetDataReady_Parms Parms;
+	Parms.Owner=Owner;
+	Parms.TargetData=TargetData;
+	ProcessEvent(FindFunctionChecked(NAME_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady),&Parms);
+}
+struct Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility_Projectile.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetData_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Owner;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_TargetData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::NewProp_Owner = { "Owner", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_Projectile_eventOnProjectileTargetDataReady_Parms, Owner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::NewProp_TargetData = { "TargetData", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_Projectile_eventOnProjectileTargetDataReady_Parms, TargetData), Z_Construct_UScriptStruct_FGameplayAbilityTargetDataHandle, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetData_MetaData), NewProp_TargetData_MetaData) }; // 2741862775
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::NewProp_Owner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::NewProp_TargetData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTGameplayAbility_Projectile, nullptr, "OnProjectileTargetDataReady", nullptr, nullptr, Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::PropPointers), sizeof(PTGameplayAbility_Projectile_eventOnProjectileTargetDataReady_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08420800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::Function_MetaDataParams) };
+static_assert(sizeof(PTGameplayAbility_Projectile_eventOnProjectileTargetDataReady_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class UPTGameplayAbility_Projectile Function OnProjectileTargetDataReady
+
 // Begin Class UPTGameplayAbility_Projectile
 void UPTGameplayAbility_Projectile::StaticRegisterNativesUPTGameplayAbility_Projectile()
 {
@@ -131,6 +182,7 @@ struct Z_Construct_UClass_UPTGameplayAbility_Projectile_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTGameplayAbility_Projectile_CreateObject, "CreateObject" }, // 3031371847
 		{ &Z_Construct_UFunction_UPTGameplayAbility_Projectile_GetCoolTime, "GetCoolTime" }, // 221402816
+		{ &Z_Construct_UFunction_UPTGameplayAbility_Projectile_OnProjectileTargetDataReady, "OnProjectileTargetDataReady" }, // 3196281746
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -189,10 +241,10 @@ UPTGameplayAbility_Projectile::~UPTGameplayAbility_Projectile() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTGameplayAbility_Projectile, UPTGameplayAbility_Projectile::StaticClass, TEXT("UPTGameplayAbility_Projectile"), &Z_Registration_Info_UClass_UPTGameplayAbility_Projectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_Projectile), 3240517548U) },
+		{ Z_Construct_UClass_UPTGameplayAbility_Projectile, UPTGameplayAbility_Projectile::StaticClass, TEXT("UPTGameplayAbility_Projectile"), &Z_Registration_Info_UClass_UPTGameplayAbility_Projectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility_Projectile), 69889127U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_1063065311(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_2340795757(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -2,10 +2,41 @@
 
 
 #include "PTAI_AttributeSet.h"
+#include "GameplayEffectExtension.h"
+#include "GameFramework/GameplayMessageSubsystem.h"
+#include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
+#include "ProjectPT/PTGameplayTags.h"
+#include "ProjectPT/Character/PTAIComponent.h"
 #include "ProjectPT/Table/DataManagerSubsystem.h"
+#include "ProjectPT/Player/PTPlayerState.h"
 
+PRAGMA_DISABLE_OPTIMIZATION
 UPTAI_AttributeSet::UPTAI_AttributeSet(const FObjectInitializer& ObjectInitializer)
 {
+
+}
+
+void UPTAI_AttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue)
+{
+	Super::PreAttributeChange(Attribute, NewValue);
+}
+
+void UPTAI_AttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data)
+{
+	Super::PostGameplayEffectExecute(Data);
+
+	if (Data.EvaluatedData.Attribute == GetHealthAttribute())
+	{
+		float NowHealth = GetHealth();
+		if (NowHealth <= 0)
+		{
+			UAbilitySystemComponent* ASC = GetOwningAbilitySystemComponent();
+			if (UPTAIComponent* AIComp = UPTAIComponent::FindAIComponent(ASC->GetAvatarActor()))
+			{
+				AIComp->StartDeath();
+			}
+		}
+	}
 }
 
 void UPTAI_AttributeSet::InitAttributeSet(FString RowName)
@@ -20,6 +51,8 @@ void UPTAI_AttributeSet::InitAttributeSet(FString RowName)
 		{
 			Health = MonsterData->HP;
 			MaxHealth = MonsterData->HP;
+
+			Skill_Default = *DataManager->FindData<FSkillData>(FString::FromInt(MonsterData->Skill1));
 		}
 	}
 }
@@ -39,3 +72,4 @@ FSkillData UPTAI_AttributeSet::GetSkillData(FGameplayTag GameplayTag)
 
 	return Result;
 }
+PRAGMA_ENABLE_OPTIMIZATION

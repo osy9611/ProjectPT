@@ -15,4 +15,7 @@ class PROJECTPT_API UPTAnimInstance : public UAnimInstance
 	GENERATED_BODY()
 public:
 	virtual void NativeInitializeAnimation() override;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void CallEventDeath();
 };

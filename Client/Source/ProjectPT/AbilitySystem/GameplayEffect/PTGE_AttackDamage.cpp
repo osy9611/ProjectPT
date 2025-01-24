@@ -4,6 +4,7 @@
 #include "PTGE_AttackDamage.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAI_AttributeSet.h"
+#include "ProjectPT/Character/PTAIComponent.h"
 #include "ProjectPT/PTGameplayTags.h"
 
 UPTGE_AttackDamage::UPTGE_AttackDamage()
@@ -20,22 +21,33 @@ void UPTDamageExecutionCalculation::Execute_Implementation(const FGameplayEffect
 	UAbilitySystemComponent* ASC = ExecutionParams.GetTargetAbilitySystemComponent();
 	const FGameplayEffectSpec& Spec = ExecutionParams.GetOwningSpec();
 
+	const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
+
+	const float Damage = Spec.GetSetByCallerMagnitude(GameplayTags.GE_Event_Damage, false, 0.0f);
+
 	// Modifier를 직접 설정하여 적용
 	FGameplayModifierEvaluatedData EvaluatedData(
 		UPTAttributeSet::GetHealthAttribute(),  // Attribute
 		EGameplayModOp::Additive,               // Modifier Operation
-		-10.0f                                  // Modifier Magnitude (Damage)
+		-Damage                               // Modifier Magnitude (Damage)
 	);
 
 	// Modifier를 OutExecutionOutput에 추가
 	OutExecutionOutput.AddOutputModifier(EvaluatedData);
 
-	if (ASC)
+	if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(ASC->GetAvatarActor()))
 	{
-		FGameplayEffectContextHandle Context = Spec.GetContext();
-		const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
-		FName Tag =GameplayTags.GameplayCue_RangeAttack_Damage.GetTagName();
-		ASC->ExecuteGameplayCue(FGameplayTag::RequestGameplayTag(Tag), Context);
+		if (ASC)
+		{
+			FGameplayCueParameters CueParameters;
+			CueParameters.RawMagnitude = Damage;
+
+			FGameplayEffectContextHandle Context = Spec.GetContext();
+			FName Tag = GameplayTags.GameplayCue_RangeAttack_Damage.GetTagName();
+
+			//ASC->ExecuteGameplayCue(FGameplayTag::RequestGameplayTag(Tag), Context);
+			ASC->ExecuteGameplayCue(FGameplayTag::RequestGameplayTag(Tag), CueParameters);
+		}
 	}
 
 	UE_LOG(LogTemp, Log, TEXT("Damage Applied: %f"), EvaluatedData.Magnitude);

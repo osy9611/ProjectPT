@@ -177,8 +177,6 @@ void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentE
 		}
 	}
 
-
-
 	if (UPTAudioSubsystem* AudioSubSystem = GetGameInstance()->GetSubsystem<UPTAudioSubsystem>())
 	{
 		AudioSubSystem->RegisterData();

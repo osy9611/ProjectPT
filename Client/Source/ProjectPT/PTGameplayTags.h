@@ -31,8 +31,15 @@ struct FPTGameplayTags
 	FGameplayTag InputTag_Look_Mouse;
 	FGameplayTag InputTag_Zoom;
 
+	//UI Event
+	FGameplayTag UI_Event_Health;
+
 	//AI Event
 	FGameplayTag AI_Event_Attack;
+	FGameplayTag AI_Event_Death;
+
+	//GE Event
+	FGameplayTag GE_Event_Damage;
 
 	//GCN Event
 	FGameplayTag GameplayCue_RangeAttack_Damage;

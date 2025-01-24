@@ -9,10 +9,16 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FGameplayTag;
+struct FSkillData;
 #ifdef PROJECTPT_PTAttributeSet_generated_h
 #error "PTAttributeSet.generated.h already included, missing '#pragma once' in PTAttributeSet.h"
 #endif
 #define PROJECTPT_PTAttributeSet_generated_h
+
+#define FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetSkillData);
+
 
 #define FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_20_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +45,7 @@ public: \
 #define FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_20_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_AbilitySystem_AttributeSet_PTAttributeSet_h_20_ENHANCED_CONSTRUCTORS \
 private: \

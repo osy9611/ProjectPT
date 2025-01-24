@@ -33,13 +33,18 @@ class PROJECTPT_API UPTGameplayAbility : public UGameplayAbility
 public:
 	UPTGameplayAbility(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
+	UFUNCTION(BlueprintCallable)
 	APTCharacter* GetPTCharacterFromActorInfo();
+
+	UFUNCTION(BlueprintCallable)
 	APTAICharacter* GetPTAICharacterFromActorInfo();
 
 	UPTHeroComponent* GetPTHeroComponentFromActorInfo();
 
+	UFUNCTION(BlueprintCallable)
 	virtual UPTAttributeSet* GetPTAttribute();
-
+	
+	UFUNCTION(BlueprintCallable)
 	virtual FGameplayTag GetGameplayTag(){ return GetCurrentAbilitySpec()->DynamicAbilityTags.GetByIndex(0); }
 
 	UFUNCTION(BlueprintCallable)

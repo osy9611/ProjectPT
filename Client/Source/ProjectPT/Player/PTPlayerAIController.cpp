@@ -7,6 +7,7 @@
 #include "ProjectPT/Object/PTPlayerStart.h"
 #include "ProjectPT/Table/GenerateTableData.h"
 #include "ProjectPT/Table/DataManagerSubsystem.h"
+#include "BrainComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
 
 APTPlayerAIController::APTPlayerAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)

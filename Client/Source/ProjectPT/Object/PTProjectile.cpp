@@ -39,6 +39,12 @@ void APTProjectile::Tick(float DeltaTime)
 	CheckUpdate();
 }
 
+void APTProjectile::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+	Super::EndPlay(EndPlayReason);
+	OnProjectileHit.Clear();
+}
+
 void APTProjectile::IgnoreCollison(AActor* Actor)
 {
 	check(Actor);
@@ -48,7 +54,7 @@ void APTProjectile::IgnoreCollison(AActor* Actor)
 		CollisionComponent->IgnoreActorWhenMoving(Actor, true);
 }
 
-void APTProjectile::RegisterData(const FVector& Pos, const FVector& Dir, float Range,float Radius, float Speed)
+void APTProjectile::RegisterData(const FVector& Pos, const FVector& Dir, float Range, float Radius, float Speed)
 {
 	SetActorLocation(Pos);
 
@@ -94,15 +100,15 @@ void APTProjectile::CheckCollisionHit()
 {
 	SetActorTickEnabled(false);
 
-	FHitResult OutHit;
+	TArray<FHitResult> OutHit;
 	FCollisionQueryParams Params;
-	
+
 	FVector Start = GetActorLocation();
 	FVector End = GetActorLocation();
 
 	float Radius = TraceRadius;
 
-	bool Hit = GetWorld()->SweepSingleByChannel(
+	bool Hit = GetWorld()->SweepMultiByChannel(
 		OutHit,
 		Start,
 		End,
@@ -122,8 +128,6 @@ void APTProjectile::CheckCollisionHit()
 	DrawDebugCapsule(GetWorld(), Center, HalfHeight, Radius, CapsuleRot, DrawColor, false, DebugLifeTime);
 #endif
 
-	if (Hit)
-	{
-
-	}
+	if (OnProjectileHit.IsBound() && Hit)
+		OnProjectileHit.Broadcast(OutHit);
 }

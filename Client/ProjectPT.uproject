@@ -39,6 +39,11 @@
 		{
 			"Name": "CommonUI",
 			"Enabled": true
-		}
+		},
+		{
+ 
+            "Name": "Metasound", 
+            "Enabled": true 
+        }
 	]
 }

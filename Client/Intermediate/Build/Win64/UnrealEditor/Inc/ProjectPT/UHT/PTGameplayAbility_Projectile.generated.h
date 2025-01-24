@@ -9,6 +9,8 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+struct FGameplayAbilityTargetDataHandle;
 #ifdef PROJECTPT_PTGameplayAbility_Projectile_generated_h
 #error "PTGameplayAbility_Projectile.generated.h already included, missing '#pragma once' in PTGameplayAbility_Projectile.h"
 #endif
@@ -19,6 +21,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execGetCoolTime);
 
 
+#define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_CALLBACK_WRAPPERS
 #define FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTGameplayAbility_Projectile(); \
@@ -45,6 +48,7 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_CALLBACK_WRAPPERS \
 	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_Projectile_h_15_ENHANCED_CONSTRUCTORS \
 private: \

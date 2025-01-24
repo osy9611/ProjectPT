@@ -9,6 +9,7 @@
 #include "ProjectPT/Table/GenerateTableData.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
+#include "ProjectPT/Player/PTPlayerState.h"
 
 UPTGameplayAbility_Projectile::UPTGameplayAbility_Projectile(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -32,7 +33,6 @@ bool UPTGameplayAbility_Projectile::CommitAbilityCooldown(const FGameplayAbility
 		{
 			UPTAttributeSet* AttributeSet = GetPTAttribute();
 			FSkillData SkillData = AttributeSet->GetSkillData(GetGameplayTag());
-
 			Spec->SetDuration(SkillData.skillCoolTime, true);
 		}
 
@@ -75,11 +75,41 @@ void UPTGameplayAbility_Projectile::CreateObject()
 
 		if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(CurrentActorInfo->AvatarActor.Get()))
 		{
-			FTransform Transform = PawnExtComp->GetSkeletonMeshSocketTransform(FName(TEXT("Muzzle_03")));
-
+			Projectile->OnProjectileHit.AddUObject(this, &ThisClass::OnTargetDataReadyCallback);
 			FSkillData SkillData = AttributeSet->GetSkillData(GetGameplayTag());
-
+			FTransform Transform = PawnExtComp->GetSkeletonMeshSocketTransform(FName(SkillData.MuzzleName));
 			Projectile->RegisterData(Transform.GetLocation(), AvatarActor->GetActorForwardVector(), SkillData.skillRange, SkillData.skillRadius, SkillData.skillSpeed);
 		}
+	}
+}
+
+void UPTGameplayAbility_Projectile::OnTargetDataReadyCallback(const TArray<FHitResult> HitResults)
+{
+	if (HitResults.Num() == 0)
+		return;
+
+	FGameplayAbilityTargetDataHandle TargetData;
+	TargetData.UniqueId = 0;
+
+	TSharedPtr<FGameplayAbilityTargetData_ActorArray> NewTargetDatas = MakeShared<FGameplayAbilityTargetData_ActorArray>();
+	
+	for (const FHitResult& FoundHit : HitResults)
+	{
+		if (FoundHit.GetActor())
+		{
+			NewTargetDatas->TargetActorArray.Add(FoundHit.GetActor());
+		}
+	}
+	TargetData.Data.Add(NewTargetDatas);
+
+	UAbilitySystemComponent* ASC = CurrentActorInfo->AbilitySystemComponent.Get();
+	check(ASC);
+
+	if (const FGameplayAbilitySpec* AbilitySpec = ASC->FindAbilitySpecFromHandle(CurrentSpecHandle))
+	{
+		FGameplayAbilityTargetDataHandle LocalTargetDataHandle(MoveTemp(const_cast<FGameplayAbilityTargetDataHandle&>(TargetData)));
+
+		AActor* AvatarActor = CurrentActorInfo->AvatarActor.Get();
+		OnProjectileTargetDataReady(AvatarActor, LocalTargetDataHandle);
 	}
 }

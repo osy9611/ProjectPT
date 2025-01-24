@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodePTUIMessageExtensions() {}
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIHPMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUISkillCoolTimeMessage();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
@@ -215,6 +216,68 @@ UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage()
 }
 // End ScriptStruct FUIDamageMessage
 
+// Begin ScriptStruct FUIHPMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_UIHPMessage;
+class UScriptStruct* FUIHPMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIHPMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_UIHPMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FUIHPMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("UIHPMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_UIHPMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FUIHPMessage>()
+{
+	return FUIHPMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FUIHPMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HealthAmount_MetaData[] = {
+		{ "Category", "UIHPMessage" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_HealthAmount;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUIHPMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FUIHPMessage_Statics::NewProp_HealthAmount = { "HealthAmount", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FUIHPMessage, HealthAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HealthAmount_MetaData), NewProp_HealthAmount_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FUIHPMessage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIHPMessage_Statics::NewProp_HealthAmount,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIHPMessage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIHPMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"UIHPMessage",
+	Z_Construct_UScriptStruct_FUIHPMessage_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIHPMessage_Statics::PropPointers),
+	sizeof(FUIHPMessage),
+	alignof(FUIHPMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIHPMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FUIHPMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FUIHPMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIHPMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_UIHPMessage.InnerSingleton, Z_Construct_UScriptStruct_FUIHPMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_UIHPMessage.InnerSingleton;
+}
+// End ScriptStruct FUIHPMessage
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics
 {
@@ -222,9 +285,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FUISkillCoolTimeMessage::StaticStruct, Z_Construct_UScriptStruct_FUISkillCoolTimeMessage_Statics::NewStructOps, TEXT("UISkillCoolTimeMessage"), &Z_Registration_Info_UScriptStruct_UISkillCoolTimeMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUISkillCoolTimeMessage), 3257997902U) },
 		{ FUIFireZoomMessage::StaticStruct, Z_Construct_UScriptStruct_FUIFireZoomMessage_Statics::NewStructOps, TEXT("UIFireZoomMessage"), &Z_Registration_Info_UScriptStruct_UIFireZoomMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIFireZoomMessage), 2541667117U) },
 		{ FUIDamageMessage::StaticStruct, Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewStructOps, TEXT("UIDamageMessage"), &Z_Registration_Info_UScriptStruct_UIDamageMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIDamageMessage), 1523961953U) },
+		{ FUIHPMessage::StaticStruct, Z_Construct_UScriptStruct_FUIHPMessage_Statics::NewStructOps, TEXT("UIHPMessage"), &Z_Registration_Info_UScriptStruct_UIHPMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIHPMessage), 3844032259U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_33070483(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3697124441(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);

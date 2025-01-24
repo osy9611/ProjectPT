@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "ProjectPT/AbilitySystem/Abilities/PTGameplayAbility.h"
+#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTGameplayAbility() {}
 
@@ -13,6 +14,10 @@ void EmptyLinkFunctionForGeneratedCodePTGameplayAbility() {}
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility();
+GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
+PROJECTPT_API UClass* Z_Construct_UClass_APTAICharacter_NoRegister();
+PROJECTPT_API UClass* Z_Construct_UClass_APTCharacter_NoRegister();
+PROJECTPT_API UClass* Z_Construct_UClass_UPTAttributeSet_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTCameraMode_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTGameplayAbility_NoRegister();
@@ -122,6 +127,173 @@ DEFINE_FUNCTION(UPTGameplayAbility::execClearCameraMode)
 }
 // End Class UPTGameplayAbility Function ClearCameraMode
 
+// Begin Class UPTGameplayAbility Function GetGameplayTag
+struct Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics
+{
+	struct PTGameplayAbility_eventGetGameplayTag_Parms
+	{
+		FGameplayTag ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_eventGetGameplayTag_Parms, ReturnValue), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTGameplayAbility, nullptr, "GetGameplayTag", nullptr, nullptr, Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::PTGameplayAbility_eventGetGameplayTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::PTGameplayAbility_eventGetGameplayTag_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTGameplayAbility::execGetGameplayTag)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FGameplayTag*)Z_Param__Result=P_THIS->GetGameplayTag();
+	P_NATIVE_END;
+}
+// End Class UPTGameplayAbility Function GetGameplayTag
+
+// Begin Class UPTGameplayAbility Function GetPTAICharacterFromActorInfo
+struct Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics
+{
+	struct PTGameplayAbility_eventGetPTAICharacterFromActorInfo_Parms
+	{
+		APTAICharacter* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_eventGetPTAICharacterFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_APTAICharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTGameplayAbility, nullptr, "GetPTAICharacterFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::PTGameplayAbility_eventGetPTAICharacterFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::PTGameplayAbility_eventGetPTAICharacterFromActorInfo_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTGameplayAbility::execGetPTAICharacterFromActorInfo)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APTAICharacter**)Z_Param__Result=P_THIS->GetPTAICharacterFromActorInfo();
+	P_NATIVE_END;
+}
+// End Class UPTGameplayAbility Function GetPTAICharacterFromActorInfo
+
+// Begin Class UPTGameplayAbility Function GetPTAttribute
+struct Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics
+{
+	struct PTGameplayAbility_eventGetPTAttribute_Parms
+	{
+		UPTAttributeSet* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_eventGetPTAttribute_Parms, ReturnValue), Z_Construct_UClass_UPTAttributeSet_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTGameplayAbility, nullptr, "GetPTAttribute", nullptr, nullptr, Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::PTGameplayAbility_eventGetPTAttribute_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::PTGameplayAbility_eventGetPTAttribute_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTGameplayAbility::execGetPTAttribute)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPTAttributeSet**)Z_Param__Result=P_THIS->GetPTAttribute();
+	P_NATIVE_END;
+}
+// End Class UPTGameplayAbility Function GetPTAttribute
+
+// Begin Class UPTGameplayAbility Function GetPTCharacterFromActorInfo
+struct Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics
+{
+	struct PTGameplayAbility_eventGetPTCharacterFromActorInfo_Parms
+	{
+		APTCharacter* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AbilitySystem/Abilities/PTGameplayAbility.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTGameplayAbility_eventGetPTCharacterFromActorInfo_Parms, ReturnValue), Z_Construct_UClass_APTCharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTGameplayAbility, nullptr, "GetPTCharacterFromActorInfo", nullptr, nullptr, Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::PTGameplayAbility_eventGetPTCharacterFromActorInfo_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::PTGameplayAbility_eventGetPTCharacterFromActorInfo_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTGameplayAbility::execGetPTCharacterFromActorInfo)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APTCharacter**)Z_Param__Result=P_THIS->GetPTCharacterFromActorInfo();
+	P_NATIVE_END;
+}
+// End Class UPTGameplayAbility Function GetPTCharacterFromActorInfo
+
 // Begin Class UPTGameplayAbility Function SetCameraMode
 struct Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode_Statics
 {
@@ -181,6 +353,10 @@ void UPTGameplayAbility::StaticRegisterNativesUPTGameplayAbility()
 	UClass* Class = UPTGameplayAbility::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "ClearCameraMode", &UPTGameplayAbility::execClearCameraMode },
+		{ "GetGameplayTag", &UPTGameplayAbility::execGetGameplayTag },
+		{ "GetPTAICharacterFromActorInfo", &UPTGameplayAbility::execGetPTAICharacterFromActorInfo },
+		{ "GetPTAttribute", &UPTGameplayAbility::execGetPTAttribute },
+		{ "GetPTCharacterFromActorInfo", &UPTGameplayAbility::execGetPTCharacterFromActorInfo },
 		{ "SetCameraMode", &UPTGameplayAbility::execSetCameraMode },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -217,6 +393,10 @@ struct Z_Construct_UClass_UPTGameplayAbility_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTGameplayAbility_ClearCameraMode, "ClearCameraMode" }, // 3000964135
+		{ &Z_Construct_UFunction_UPTGameplayAbility_GetGameplayTag, "GetGameplayTag" }, // 1099813518
+		{ &Z_Construct_UFunction_UPTGameplayAbility_GetPTAICharacterFromActorInfo, "GetPTAICharacterFromActorInfo" }, // 3529376896
+		{ &Z_Construct_UFunction_UPTGameplayAbility_GetPTAttribute, "GetPTAttribute" }, // 3592778793
+		{ &Z_Construct_UFunction_UPTGameplayAbility_GetPTCharacterFromActorInfo, "GetPTCharacterFromActorInfo" }, // 647374732
 		{ &Z_Construct_UFunction_UPTGameplayAbility_SetCameraMode, "SetCameraMode" }, // 576287492
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -277,10 +457,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities
 		{ EPTAbilityActivationPolicy_StaticEnum, TEXT("EPTAbilityActivationPolicy"), &Z_Registration_Info_UEnum_EPTAbilityActivationPolicy, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2255047541U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTGameplayAbility, UPTGameplayAbility::StaticClass, TEXT("UPTGameplayAbility"), &Z_Registration_Info_UClass_UPTGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility), 4139559042U) },
+		{ Z_Construct_UClass_UPTGameplayAbility, UPTGameplayAbility::StaticClass, TEXT("UPTGameplayAbility"), &Z_Registration_Info_UClass_UPTGameplayAbility, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTGameplayAbility), 819976535U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_2876357594(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_2610858650(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_AbilitySystem_Abilities_PTGameplayAbility_h_Statics::EnumInfo));

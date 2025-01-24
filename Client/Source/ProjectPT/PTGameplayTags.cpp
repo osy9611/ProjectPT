@@ -30,8 +30,15 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(InputTag_Look_Mouse, "InputTag.Look.Mouse", "");
 	AddTag(InputTag_Zoom, "InputTag.Zoom", "");
 
+	//UI Event
+	AddTag(UI_Event_Health, "UI.Event.Health", "");
+
+	//GE Event
+	AddTag(GE_Event_Damage, "GameplayEffect.Event.Damage", "");
+
 	//AI Event Tags
 	AddTag(AI_Event_Attack, "AI.Event.Attack","");
+	AddTag(AI_Event_Death, "AI.Event.Death", "");
 
 	//GCN Event
 	AddTag(GameplayCue_RangeAttack_Damage, "GameplayCue.RangeAttack.Damage", "");

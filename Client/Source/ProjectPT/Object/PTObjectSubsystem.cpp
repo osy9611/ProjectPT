@@ -20,6 +20,7 @@
 #include "ProjectPT/Character/PTAICharacter.h"
 #include "ProjectPT/GameModes/PTGameModeBase.h"
 #include "ProjectPT/Character/PTAIComponent.h"
+#include "ProjectPT/PTGameplayTags.h"
 #include "ProjectPT/Extensions/PTUIMessageExtensions.h"
 
 UPTObjectSubsystem::UPTObjectSubsystem()
@@ -93,7 +94,7 @@ APawn* UPTObjectSubsystem::SpawnActor(UClass* PawnClass, const FTransform& Spawn
 		{
 			RegisterActor(Actor);
 		}
-		
+
 		SpawnedPawn->FinishSpawning(SpawnTransform);
 		return SpawnedPawn;
 	}
@@ -122,7 +123,7 @@ void UPTObjectSubsystem::ReturnActor(AActor* Actor)
 {
 }
 
-void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData)
+void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData, float Damage)
 {
 	check(Owner);
 	UPTAbilitySystemComponent* OwnerASC = nullptr;
@@ -134,7 +135,7 @@ void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbility
 	{
 		OwnerASC = GetASC(Owner);
 	}
-	
+
 	if (!OwnerASC)
 	{
 		UE_LOG(PTLog, Error, TEXT("[ObjectSubsystem] OwnerASC Is Fail"));
@@ -143,17 +144,32 @@ void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbility
 
 	for (const TSharedPtr<FGameplayAbilityTargetData> Data : InData.Data)
 	{
-		if (!Data->HasHitResult())
-			continue;
-
-		if (const FHitResult* HitResult = Data->GetHitResult())
+		
+		if (const FGameplayAbilityTargetData_ActorArray* ActorArrayData = static_cast<FGameplayAbilityTargetData_ActorArray*>(Data.Get()))
 		{
-			ApplyDamage(OwnerASC, HitResult->GetActor());
+			for (TWeakObjectPtr<AActor> Actor : ActorArrayData->TargetActorArray)
+			{
+				if (Actor.Get())
+				{
+					ApplyDamage(OwnerASC, Actor.Get(), Damage);
+				}
+			}
 		}
+
+		if (const FGameplayAbilityTargetData_SingleTargetHit* SingleTargetHitData = static_cast<FGameplayAbilityTargetData_SingleTargetHit*>(Data.Get()))
+		{
+			if (!Data->HasHitResult())
+				continue;
+			if (const FHitResult* HitResult = Data->GetHitResult())
+			{
+				ApplyDamage(OwnerASC, HitResult->GetActor(), Damage);
+			}
+		}
+
 	}
 }
 
-void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const TArray<AActor*> TargetActors)
+void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const TArray<AActor*> TargetActors, float Damage)
 {
 	check(Owner);
 
@@ -163,11 +179,11 @@ void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const TArray<AActor*> 
 	for (const AActor* TargetActor : TargetActors)
 	{
 		//if(!ObjectDatas.Contains(TargetActor))
-		ApplyDamage(OwnerASC, TargetActor);
+		ApplyDamage(OwnerASC, TargetActor, Damage);
 	}
 }
 
-void UPTObjectSubsystem::ApplyDamage(AActor* Owner, const AActor* TargetActor)
+void UPTObjectSubsystem::ApplyDamage(AActor* Owner, const AActor* TargetActor, float Damage)
 {
 	check(Owner);
 	check(TargetActor);
@@ -194,7 +210,7 @@ void UPTObjectSubsystem::ApplyDamage(AActor* Owner, const AActor* TargetActor)
 	}
 }
 
-void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const AActor* TargetActor)
+void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const AActor* TargetActor, float Damage)
 {
 	if (!TargetActor || !OwnerASC)
 		return;
@@ -214,6 +230,13 @@ void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const 
 		FGameplayEffectSpecHandle SpecHandle = OwnerASC->MakeOutgoingSpec(UPTGE_AttackDamage::StaticClass(), 1.0f, EffectContext);
 		if (SpecHandle.IsValid())
 		{
+			const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
+
+			SpecHandle.Data->SetSetByCallerMagnitude(
+				GameplayTags.GE_Event_Damage,
+				Damage
+			);
+
 			FActiveGameplayEffectHandle ActiveGEHandle = TargetASC->ApplyGameplayEffectSpecToTarget(*SpecHandle.Data.Get(), TargetASC);
 			if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(TargetActor))
 			{

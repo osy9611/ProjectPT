@@ -9,10 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UNiagaraComponent;
 #ifdef PROJECTPT_Poolable_NiagaraSystem_generated_h
 #error "Poolable_NiagaraSystem.generated.h already included, missing '#pragma once' in Poolable_NiagaraSystem.h"
 #endif
 #define PROJECTPT_Poolable_NiagaraSystem_generated_h
+
+#define FID_Client_Source_ProjectPT_Pool_Poolable_NiagaraSystem_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execReturn);
+
 
 #define FID_Client_Source_ProjectPT_Pool_Poolable_NiagaraSystem_h_15_INCLASS_NO_PURE_DECLS \
 private: \
@@ -41,6 +46,7 @@ public: \
 #define FID_Client_Source_ProjectPT_Pool_Poolable_NiagaraSystem_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Client_Source_ProjectPT_Pool_Poolable_NiagaraSystem_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Pool_Poolable_NiagaraSystem_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Pool_Poolable_NiagaraSystem_h_15_ENHANCED_CONSTRUCTORS \
 private: \

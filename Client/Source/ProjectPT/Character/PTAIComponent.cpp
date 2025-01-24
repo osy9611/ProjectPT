@@ -2,6 +2,7 @@
 
 
 #include "PTAIComponent.h"
+#include "PTAICharacter.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAI_AttributeSet.h"
@@ -9,6 +10,8 @@
 #include "ProjectPT/PTGameplayTags.h"
 #include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/Physics/PTCollisionChannel.h"
+#include "ProjectPT/Animation/PTAnimInstance.h"
+#include "ProjectPT/Player/PTPlayerAIController.h"
 #include "Components/GameFrameworkComponentManager.h"
 #include "Perception/AIPerceptionSystem.h"
 #include "Perception/AISense_Damage.h"
@@ -150,6 +153,28 @@ void UPTAIComponent::CheckDefaultInitialization()
 	const FPTGameplayTags& InitTags = FPTGameplayTags::Get();
 	static const TArray<FGameplayTag> StateChain = { InitTags.InitState_Spawned, InitTags.InitState_DataAvailable, InitTags.InitState_DataInitialized, InitTags.InitState_GameplayReady };
 	ContinueInitStateChain(StateChain);
+}
+
+void UPTAIComponent::StartDeath()
+{
+	const FPTGameplayTags& InitTags = FPTGameplayTags::Get();
+	ProcessAbility(InitTags.AI_Event_Death);
+
+	if (APawn* Pawn = GetPawn<APawn>())
+	{
+		APTAICharacter* Character = Cast<APTAICharacter>(Pawn);
+		USkeletalMeshComponent* SkeletalMeshComponent = Character->GetMesh();
+		
+		if (UPTAnimInstance* AnimInstance = Cast<UPTAnimInstance>(SkeletalMeshComponent->GetAnimInstance()))
+		{
+			AnimInstance->CallEventDeath();
+		}
+
+		if (UPrimitiveComponent* PrimitiveRoot = Cast<UPrimitiveComponent>(Pawn->GetRootComponent()))
+		{
+			PrimitiveRoot->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		}
+	}
 }
 
 void UPTAIComponent::ProcessAbility(FGameplayTag Tag)

@@ -327,6 +327,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility.h">
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_Death.cpp">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_Death.h">
+      <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\AbilitySystem\Abilities\PTGameplayAbility_Jump.cpp">
       <Filter>Source\ProjectPT\AbilitySystem\Abilities</Filter>
     </ClCompile>

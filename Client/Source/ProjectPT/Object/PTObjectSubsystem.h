@@ -40,14 +40,14 @@ public:
 	void ReturnActor(AActor* Actor);
 
 	UFUNCTION(BlueprintCallable)
-	void ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData);
+	void ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData,float Damage);
 
-	void ApplyActorsDamage(AActor* Owner, const TArray<AActor*> TargetActors);
-	
+	void ApplyActorsDamage(AActor* Owner,const TArray<AActor*> TargetActors,float Damage);
+
 	UFUNCTION(BlueprintCallable)
-	void ApplyDamage(AActor* Onwer, const AActor* TargetActor);
+	void ApplyDamage(AActor* Onwer, const AActor* TargetActor, float Damage);
 
-	void ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const AActor* TargetActor);
+	void ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const AActor* TargetActor, float Damage);
 
 	void SetCachePlayerStart();
 	TArray<APTPlayerStart*> GetPlayerStartList(FGameplayTag GameplayTag);

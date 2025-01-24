@@ -8,6 +8,7 @@
 #include "PTPlayerAIController.generated.h"
 
 struct FMonsterData;
+class UBrainComponent;
 /**
  *
  */
@@ -39,4 +40,5 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
 	TWeakObjectPtr<UPTAIComponent> AIComponent;
+
 };

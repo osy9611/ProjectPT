@@ -28,6 +28,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void CreateObject();
 
+	void OnTargetDataReadyCallback(const TArray<FHitResult> HitResults);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnProjectileTargetDataReady(AActor* Owner, const FGameplayAbilityTargetDataHandle& TargetData);
+
 	UPROPERTY(EditDefaultsOnly, Category="UseBPGameplayEffect")
 	bool UseBPGameplayEffect = false;
 

@@ -22,6 +22,8 @@ public:
 	void Init( int32 Count = 5);
 
 	UNiagaraComponent* Get(UNiagaraSystem* NiagaraSystem,AActor* OwnerActor, bool IsActive);
+
+	UFUNCTION(BlueprintCallable)
 	void Return(UNiagaraComponent* NiagaraComp);
 
 	UNiagaraComponent* Create();

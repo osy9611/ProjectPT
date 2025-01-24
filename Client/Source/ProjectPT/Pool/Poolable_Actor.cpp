@@ -23,13 +23,13 @@ void UPoolable_Actor::Init(UWorld* World, TSubclassOf<AActor> Actor, int32 Count
 
 AActor* UPoolable_Actor::Get(UWorld* World, bool IsActive)
 {
-	AActor* Result;
+	AActor* Result = nullptr;
 	if (ObjectPool.IsEmpty())
 		Result = Create(World);
 	else
 		Result = ObjectPool.Pop();
 
-	if (Result&& IsActive)
+	if (Result && IsActive)
 		ShowActor(Result);
 
 	return Result;

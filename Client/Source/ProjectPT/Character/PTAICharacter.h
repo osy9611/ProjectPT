@@ -23,5 +23,4 @@ public:
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Character")
 	TObjectPtr<UPTPawnExtensionComponent> PawnExtComponent;
-
 };
