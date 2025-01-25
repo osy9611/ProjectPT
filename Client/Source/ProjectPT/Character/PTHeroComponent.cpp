@@ -21,6 +21,7 @@
 #include "ProjectPT/Camera/PTCameraMode.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTCharacter_AttributeSet.h"
 #include "ProjectPT/Object/PTObjectSubsystem.h"
+#include "ProjectPT/Animation/PTAnimInstance.h"
 
 const FName UPTHeroComponent::NAME_ActorFeatureName("Hero");
 

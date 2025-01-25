@@ -10,6 +10,7 @@
 class UPTPawnData;
 class UPTAbilitySystemComponent;
 class APTPlayerState;
+class UPTAnimInstance;
 /**
  *
  */
@@ -31,6 +32,8 @@ public:
 	void SetPawnData(const UPTPawnData* InPawnData);
 	void SetPlayerInputComponent();
 	UPTAbilitySystemComponent* GetAbilitySystemComponent() const { return AbilitySystemComponent; }
+
+	UPTAnimInstance* GetAnimInstance();
 
 	APTPlayerState* GetPlayerState()
 	{

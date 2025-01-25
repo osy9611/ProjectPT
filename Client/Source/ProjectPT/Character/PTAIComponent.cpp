@@ -157,23 +157,23 @@ void UPTAIComponent::CheckDefaultInitialization()
 
 void UPTAIComponent::StartDeath()
 {
+	APawn* Pawn = GetPawn<APawn>();
+	check(Pawn);
+
 	const FPTGameplayTags& InitTags = FPTGameplayTags::Get();
 	ProcessAbility(InitTags.AI_Event_Death);
 
-	if (APawn* Pawn = GetPawn<APawn>())
+	if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
 	{
-		APTAICharacter* Character = Cast<APTAICharacter>(Pawn);
-		USkeletalMeshComponent* SkeletalMeshComponent = Character->GetMesh();
-		
-		if (UPTAnimInstance* AnimInstance = Cast<UPTAnimInstance>(SkeletalMeshComponent->GetAnimInstance()))
+		if (UPTAnimInstance* AnimInstance = PawnExtComp->GetAnimInstance())
 		{
 			AnimInstance->CallEventDeath();
 		}
+	}
 
-		if (UPrimitiveComponent* PrimitiveRoot = Cast<UPrimitiveComponent>(Pawn->GetRootComponent()))
-		{
-			PrimitiveRoot->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		}
+	if (UPrimitiveComponent* PrimitiveRoot = Cast<UPrimitiveComponent>(Pawn->GetRootComponent()))
+	{
+		PrimitiveRoot->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	}
 }
 

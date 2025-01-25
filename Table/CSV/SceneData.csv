@@ -1,4 +1,4 @@
-tableNo,DataPath
-int,string
-1,/Game/System/Experience/GameScene/DA_GameSceneData.DA_GameSceneData
-,
+tableNo,DataPath,BGMPath
+int,string,string
+1,/Game/System/Experience/GameScene/DA_GameSceneData.DA_GameSceneData,/Game/Audio/Sounds/BGM/desolate-world-121196.desolate-world-121196
+,,

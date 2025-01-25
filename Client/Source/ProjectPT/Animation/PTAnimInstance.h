@@ -17,5 +17,8 @@ public:
 	virtual void NativeInitializeAnimation() override;
 
 	UFUNCTION(BlueprintImplementableEvent)
+	void CallEventZoom(bool IsZoom);
+
+	UFUNCTION(BlueprintImplementableEvent)
 	void CallEventDeath();
 };

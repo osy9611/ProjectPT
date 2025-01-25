@@ -102,6 +102,7 @@ void APTProjectile::CheckCollisionHit()
 
 	TArray<FHitResult> OutHit;
 	FCollisionQueryParams Params;
+	Params.AddIgnoredActor(Owner);
 
 	FVector Start = GetActorLocation();
 	FVector End = GetActorLocation();

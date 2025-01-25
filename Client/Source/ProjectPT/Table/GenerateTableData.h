@@ -41,6 +41,8 @@ struct FSceneData : public FTableRowBase
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FString DataPath;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString BGMPath;
 };
 USTRUCT(BlueprintType)
 struct FSkillData : public FTableRowBase

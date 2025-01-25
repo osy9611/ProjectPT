@@ -44,6 +44,52 @@ UFunction* Z_Construct_UFunction_UPTAnimInstance_CallEventDeath()
 }
 // End Class UPTAnimInstance Function CallEventDeath
 
+// Begin Class UPTAnimInstance Function CallEventZoom
+struct PTAnimInstance_eventCallEventZoom_Parms
+{
+	bool IsZoom;
+};
+static FName NAME_UPTAnimInstance_CallEventZoom = FName(TEXT("CallEventZoom"));
+void UPTAnimInstance::CallEventZoom(bool IsZoom)
+{
+	PTAnimInstance_eventCallEventZoom_Parms Parms;
+	Parms.IsZoom=IsZoom ? true : false;
+	ProcessEvent(FindFunctionChecked(NAME_UPTAnimInstance_CallEventZoom),&Parms);
+}
+struct Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Animation/PTAnimInstance.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_IsZoom_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsZoom;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::NewProp_IsZoom_SetBit(void* Obj)
+{
+	((PTAnimInstance_eventCallEventZoom_Parms*)Obj)->IsZoom = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::NewProp_IsZoom = { "IsZoom", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PTAnimInstance_eventCallEventZoom_Parms), &Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::NewProp_IsZoom_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::NewProp_IsZoom,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTAnimInstance, nullptr, "CallEventZoom", nullptr, nullptr, Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::PropPointers), sizeof(PTAnimInstance_eventCallEventZoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::Function_MetaDataParams) };
+static_assert(sizeof(PTAnimInstance_eventCallEventZoom_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTAnimInstance_CallEventZoom()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTAnimInstance_CallEventZoom_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Class UPTAnimInstance Function CallEventZoom
+
 // Begin Class UPTAnimInstance
 void UPTAnimInstance::StaticRegisterNativesUPTAnimInstance()
 {
@@ -68,6 +114,7 @@ struct Z_Construct_UClass_UPTAnimInstance_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UPTAnimInstance_CallEventDeath, "CallEventDeath" }, // 2344783970
+		{ &Z_Construct_UFunction_UPTAnimInstance_CallEventZoom, "CallEventZoom" }, // 3963081572
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -116,10 +163,10 @@ UPTAnimInstance::~UPTAnimInstance() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAnimInstance, UPTAnimInstance::StaticClass, TEXT("UPTAnimInstance"), &Z_Registration_Info_UClass_UPTAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAnimInstance), 2961170453U) },
+		{ Z_Construct_UClass_UPTAnimInstance, UPTAnimInstance::StaticClass, TEXT("UPTAnimInstance"), &Z_Registration_Info_UClass_UPTAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAnimInstance), 1445124370U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_2762552124(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_2492129129(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Animation_PTAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

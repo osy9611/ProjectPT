@@ -20,4 +20,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void MoveSessionByTableID(int32 TableNo);
+	
+	void SetBGMSound(FString SoundPath);
 };

@@ -453,11 +453,15 @@ struct Z_Construct_UClass_UPTAudioSubsystem_Statics
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RegisterBGMSound_MetaData[] = {
+		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AudioComponents_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FStrPropertyParams NewProp_RegisterBGMSound;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AudioComponents_ValueProp;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_AudioComponents_Key_KeyProp_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_AudioComponents_Key_KeyProp;
@@ -478,11 +482,13 @@ struct Z_Construct_UClass_UPTAudioSubsystem_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_RegisterBGMSound = { "RegisterBGMSound", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAudioSubsystem, RegisterBGMSound), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RegisterBGMSound_MetaData), NewProp_RegisterBGMSound_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_AudioComponents_ValueProp = { "AudioComponents", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_AudioComponents_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_AudioComponents_Key_KeyProp = { "AudioComponents_Key", nullptr, (EPropertyFlags)0x0000000000080008, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_ProjectPT_ESoundType, METADATA_PARAMS(0, nullptr) }; // 990155653
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_AudioComponents = { "AudioComponents", nullptr, (EPropertyFlags)0x0040008000000008, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTAudioSubsystem, AudioComponents), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AudioComponents_MetaData), NewProp_AudioComponents_MetaData) }; // 990155653
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTAudioSubsystem_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_RegisterBGMSound,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_AudioComponents_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_AudioComponents_Key_KeyProp_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTAudioSubsystem_Statics::NewProp_AudioComponents_Key_KeyProp,
@@ -533,10 +539,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_
 		{ ESoundType_StaticEnum, TEXT("ESoundType"), &Z_Registration_Info_UEnum_ESoundType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 990155653U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTAudioSubsystem, UPTAudioSubsystem::StaticClass, TEXT("UPTAudioSubsystem"), &Z_Registration_Info_UClass_UPTAudioSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAudioSubsystem), 101779556U) },
+		{ Z_Construct_UClass_UPTAudioSubsystem, UPTAudioSubsystem::StaticClass, TEXT("UPTAudioSubsystem"), &Z_Registration_Info_UClass_UPTAudioSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAudioSubsystem), 2513586567U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_1011110366(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_2942553801(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::EnumInfo));

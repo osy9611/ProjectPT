@@ -919,7 +919,9 @@
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\generatetabledata.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\attributeset\\ptattributeset.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptattributeset.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcharacter_attributeset.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcharacter_attributeset.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\object\\ptobjectsubsystem.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptobjectsubsystem.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

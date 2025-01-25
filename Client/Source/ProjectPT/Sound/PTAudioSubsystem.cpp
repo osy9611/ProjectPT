@@ -55,6 +55,19 @@ void UPTAudioSubsystem::UnRegisterData()
 		AudioComponent->UnregisterComponent();
 	}
 }
+void UPTAudioSubsystem::RegisterPlaySoundAfterSceneLoading(const FString SoundPath)
+{
+	RegisterBGMSound = SoundPath;
+}
+
+void UPTAudioSubsystem::PlaySoundAfterSceneLoading()
+{
+	if (RegisterBGMSound.IsEmpty())
+		return;
+
+	PlaySound2D_ByPath(ESoundType::BGM, RegisterBGMSound);
+}
+
 UAudioComponent* UPTAudioSubsystem::GetAudioComponent(ESoundType Type)
 {
 	if (UAudioComponent** AudioComponentPtr = AudioComponents.Find(Type))

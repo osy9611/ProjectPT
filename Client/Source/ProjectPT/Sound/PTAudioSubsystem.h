@@ -18,6 +18,8 @@ enum class ESoundType : uint8
 	Max
 };
 
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnPlaySoundAfterSceneLoading, const FString);
+
 UCLASS(Blueprintable)
 class PROJECTPT_API UPTAudioSubsystem : public UGameInstanceSubsystem
 {
@@ -28,6 +30,9 @@ public:
 
 	void RegisterData();
 	void UnRegisterData();
+
+	void RegisterPlaySoundAfterSceneLoading(const FString SoundPath);
+	void PlaySoundAfterSceneLoading();
 
 	UAudioComponent* GetAudioComponent(ESoundType Type);
 	void SetVolume(ESoundType Type, float Volume);
@@ -51,11 +56,13 @@ public:
 	void FadeOutSound(ESoundType Type, float FadeDuration, float TargetVolume = 0.0f);
 
 private:
-
 	//Volume
 	float BGMVolume = 1.0f;
 	float SFXVolume = 1.0f;
 	float VoiceVolume = 1.0f;
+
+	UPROPERTY()
+	FString RegisterBGMSound;
 
 	UPROPERTY()
 	TMap<ESoundType, UAudioComponent*> AudioComponents;

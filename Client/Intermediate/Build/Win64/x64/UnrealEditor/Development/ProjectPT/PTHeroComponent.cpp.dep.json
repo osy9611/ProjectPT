@@ -135,7 +135,9 @@
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptattributeset.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcharacter_attributeset.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\object\\ptobjectsubsystem.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptobjectsubsystem.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptobjectsubsystem.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\animation\\ptaniminstance.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaniminstance.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

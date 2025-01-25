@@ -17,7 +17,7 @@ struct FSoftObjectPath;
 #endif
 #define PROJECTPT_PTAudioSubsystem_generated_h
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execFadeOutSound); \
 	DECLARE_FUNCTION(execFadeInSound); \
 	DECLARE_FUNCTION(execPlaySound2D_BySound); \
@@ -26,7 +26,7 @@ struct FSoftObjectPath;
 	DECLARE_FUNCTION(execPlaySound3D_ByPath);
 
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTAudioSubsystem(); \
 	friend struct Z_Construct_UClass_UPTAudioSubsystem_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(UPTAudioSubsystem)
 
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPTAudioSubsystem(); \
 private: \
@@ -49,13 +49,13 @@ public: \
 	NO_API virtual ~UPTAudioSubsystem();
 
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_21_PROLOG
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_24_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_23_PROLOG
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_24_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_24_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

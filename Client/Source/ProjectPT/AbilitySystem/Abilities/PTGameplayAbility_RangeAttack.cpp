@@ -6,6 +6,7 @@
 #include "ProjectPT/Character/PTHeroComponent.h"
 #include "AIController.h"
 #include "Components/StaticMeshComponent.h"
+#include "ProjectPT/Physics/PTCollisionChannel.h"
 
 UPTGameplayAbility_RangeAttack::UPTGameplayAbility_RangeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -248,7 +249,7 @@ FHitResult UPTGameplayAbility_RangeAttack::WeaponTrace(const FVector& StartTrace
 	
 	AddAdditionalTraceIgnoreActors(TraceParams);
 
-	const ECollisionChannel TraceChannel = DetermineTraceChannel(TraceParams, bIsSimulated);
+	const ECollisionChannel TraceChannel = PT_TraceChannel_Interaction;
 	if (SweepRadius > 0.0f)
 	{
 		GetWorld()->SweepMultiByChannel(HitResults, StartTrace, EndTrace, FQuat::Identity, TraceChannel, FCollisionShape::MakeSphere(SweepRadius), TraceParams);

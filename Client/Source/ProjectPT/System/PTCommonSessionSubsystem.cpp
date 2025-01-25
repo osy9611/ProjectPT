@@ -24,6 +24,12 @@ void UPTCommonSessionSubsystem::MoveSessionByTableID(int32 TableNo)
 			return;
 		}
 
+		if (UPTAudioSubsystem* AudioComponent = GetGameInstance()->GetSubsystem<UPTAudioSubsystem>())
+		{
+			AudioComponent->UnRegisterData();
+			AudioComponent->RegisterPlaySoundAfterSceneLoading(SceneData->BGMPath);
+		}
+
 		UPTAssetManager& AssetManager = UPTAssetManager::Get();
 		AssetManager.AsynchronusLoadAsset(SceneData->DataPath, [&](UObject* result)
 			{
@@ -33,11 +39,6 @@ void UPTCommonSessionSubsystem::MoveSessionByTableID(int32 TableNo)
 
 					if (MoveSessionData)
 					{
-						if (UPTAudioSubsystem* AudioComponent = GetGameInstance()->GetSubsystem<UPTAudioSubsystem>())
-						{
-							AudioComponent->UnRegisterData();
-						}
-							
 						GetWorld()->ServerTravel(MoveSessionData->CreateURL());
 					}
 				}

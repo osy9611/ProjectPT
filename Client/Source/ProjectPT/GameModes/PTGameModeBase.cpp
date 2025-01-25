@@ -180,6 +180,7 @@ void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentE
 	if (UPTAudioSubsystem* AudioSubSystem = GetGameInstance()->GetSubsystem<UPTAudioSubsystem>())
 	{
 		AudioSubSystem->RegisterData();
+		AudioSubSystem->PlaySoundAfterSceneLoading();
 	}
 }
 PRAGMA_ENABLE_OPTIMIZATION

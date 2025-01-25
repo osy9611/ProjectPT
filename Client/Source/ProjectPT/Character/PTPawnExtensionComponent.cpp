@@ -2,11 +2,14 @@
 
 
 #include "PTPawnExtensionComponent.h"
+#include "GameFramework/Character.h"
+#include "Components/GameFrameworkComponentManager.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/PTGameplayTags.h"
-#include "Components/GameFrameworkComponentManager.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
-#include <ProjectPT/Player/PTPlayerState.h>
+#include "ProjectPT/Animation/PTAnimInstance.h"
+#include "ProjectPT/Player/PTPlayerState.h"
+
 
 /*feature name을 component 단위니깐 component를 빼고 pawn extension만 넣는 것은 확인할 수 있다.*/
 const FName UPTPawnExtensionComponent::NAME_ActorFeatureName("PawnExtension");
@@ -32,6 +35,21 @@ void UPTPawnExtensionComponent::SetPawnData(const UPTPawnData* InPawnData)
 void UPTPawnExtensionComponent::SetPlayerInputComponent()
 {
 	CheckDefaultInitialization();
+}
+
+UPTAnimInstance* UPTPawnExtensionComponent::GetAnimInstance()
+{
+	if (APawn* Pawn = GetPawn<APawn>())
+	{
+		ACharacter* Character = Cast<ACharacter>(Pawn);
+		USkeletalMeshComponent* SkeletalMeshComponent = Character->GetMesh();
+
+		if (UPTAnimInstance* AnimInstance = Cast<UPTAnimInstance>(SkeletalMeshComponent->GetAnimInstance()))
+		{
+			return AnimInstance;
+		}
+	}
+	return nullptr;
 }
 
 void UPTPawnExtensionComponent::SpawnDefaultController()
