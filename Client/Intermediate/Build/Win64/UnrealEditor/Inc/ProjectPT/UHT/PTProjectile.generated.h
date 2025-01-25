@@ -15,22 +15,23 @@ class AActor;
 #endif
 #define PROJECTPT_PTProjectile_generated_h
 
-#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execCheckOwnerActor); \
 	DECLARE_FUNCTION(execCheckCollisionHit); \
 	DECLARE_FUNCTION(execReturnObject);
 
 
-#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPTProjectile(); \
 	friend struct Z_Construct_UClass_APTProjectile_Statics; \
 public: \
 	DECLARE_CLASS(APTProjectile, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ProjectPT"), NO_API) \
-	DECLARE_SERIALIZER(APTProjectile)
+	DECLARE_SERIALIZER(APTProjectile) \
+	virtual UObject* _getUObject() const override { return const_cast<APTProjectile*>(this); }
 
 
-#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APTProjectile(APTProjectile&&); \
@@ -42,13 +43,13 @@ public: \
 	NO_API virtual ~APTProjectile();
 
 
-#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_13_PROLOG
-#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_16_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_14_PROLOG
+#define FID_Client_Source_ProjectPT_Object_PTProjectile_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Object_PTProjectile_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Object_PTProjectile_h_16_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Object_PTProjectile_h_16_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Object_PTProjectile_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Object_PTProjectile_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Object_PTProjectile_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

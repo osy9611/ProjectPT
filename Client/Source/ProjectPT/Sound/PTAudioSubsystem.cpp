@@ -18,6 +18,7 @@ void UPTAudioSubsystem::Deinitialize()
 	AudioComponents.Empty();
 	Super::Deinitialize();
 }
+
 PRAGMA_DISABLE_OPTIMIZATION
 void UPTAudioSubsystem::RegisterData()
 {

@@ -6,6 +6,26 @@
 #include "UObject/NoExportTypes.h"
 #include "Poolable_Actor.generated.h"
 
+UINTERFACE(MinimalAPI)
+class UPoolableActor : public UInterface
+{
+	GENERATED_BODY()
+};
+
+class PROJECTPT_API IPoolableActor
+{
+	GENERATED_BODY()
+public:
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void K2_OnActive();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void K2_OnDeActive();
+
+	virtual void OnActive() = 0;
+	virtual void OnDeActive() = 0;
+};
 
 /**
  * 
@@ -25,8 +45,11 @@ public:
 
 	AActor* Create(UWorld* World) { return World->SpawnActor(OriginalActor); }
 
+	IPoolableActor* GetInterface(AActor* Actor);
+
 	void HideActor(AActor* Actor);
 	void ShowActor(AActor* Actor);
+
 
 private:
 	UPROPERTY()

@@ -17,6 +17,7 @@ ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UShapeComponent_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_APTProjectile();
 PROJECTPT_API UClass* Z_Construct_UClass_APTProjectile_NoRegister();
+PROJECTPT_API UClass* Z_Construct_UClass_UPoolableActor_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
@@ -186,6 +187,7 @@ struct Z_Construct_UClass_APTProjectile_Statics
 		{ &Z_Construct_UFunction_APTProjectile_ReturnObject, "ReturnObject" }, // 2521081561
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APTProjectile>::IsAbstract,
 	};
@@ -211,6 +213,9 @@ UObject* (*const Z_Construct_UClass_APTProjectile_Statics::DependentSingletons[]
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APTProjectile_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_APTProjectile_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UPoolableActor_NoRegister, (int32)VTABLE_OFFSET(APTProjectile, IPoolableActor), false },  // 3985566043
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_APTProjectile_Statics::ClassParams = {
 	&APTProjectile::StaticClass,
 	"Engine",
@@ -218,11 +223,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_APTProjectile_Statics::
 	DependentSingletons,
 	FuncInfo,
 	Z_Construct_UClass_APTProjectile_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_APTProjectile_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_APTProjectile_Statics::Class_MetaDataParams), Z_Construct_UClass_APTProjectile_Statics::Class_MetaDataParams)
 };
@@ -246,10 +251,10 @@ APTProjectile::~APTProjectile() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTProjectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APTProjectile, APTProjectile::StaticClass, TEXT("APTProjectile"), &Z_Registration_Info_UClass_APTProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTProjectile), 1360703718U) },
+		{ Z_Construct_UClass_APTProjectile, APTProjectile::StaticClass, TEXT("APTProjectile"), &Z_Registration_Info_UClass_APTProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APTProjectile), 3639500085U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTProjectile_h_1070323922(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTProjectile_h_3054298296(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTProjectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Object_PTProjectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "ProjectPT/Pool/Poolable_Actor.h"
 #include "PTProjectile.generated.h"
 
 class UShapeComponent;
@@ -11,7 +12,7 @@ class UShapeComponent;
 DECLARE_MULTICAST_DELEGATE_OneParam(FOnProjectileHit,const TArray<FHitResult>);
 
 UCLASS()
-class PROJECTPT_API APTProjectile : public AActor
+class PROJECTPT_API APTProjectile : public AActor, public IPoolableActor
 {
 	GENERATED_BODY()
 
@@ -26,6 +27,10 @@ public:
 	virtual void IgnoreCollison(AActor* Actor);
 	virtual void RegisterData(const FVector& Pos, const FVector& Dir, float Range, float Raidus, float Speed);
 	virtual void CheckUpdate();
+
+	virtual void OnActive() override;
+	virtual void OnDeActive() override;
+
 
 	UFUNCTION(BlueprintCallable)
 	virtual void ReturnObject();

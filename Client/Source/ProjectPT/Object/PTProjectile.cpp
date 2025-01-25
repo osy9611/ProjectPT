@@ -84,6 +84,14 @@ void APTProjectile::CheckUpdate()
 	}
 }
 
+void APTProjectile::OnActive()
+{
+}
+
+void APTProjectile::OnDeActive()
+{
+}
+
 void APTProjectile::ReturnObject()
 {
 	Owner = nullptr;

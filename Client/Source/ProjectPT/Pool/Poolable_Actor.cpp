@@ -43,9 +43,38 @@ void UPoolable_Actor::Return(AActor* Actor)
 	ObjectPool.Add(Actor);
 }
 
+IPoolableActor* UPoolable_Actor::GetInterface(AActor* Actor)
+{
+	check(Actor);
+
+	if (Actor->GetClass()->ImplementsInterface(UPoolableActor::StaticClass()))
+	{
+		return Cast<IPoolableActor>(Actor);
+	}
+
+	//if (Actor->Implements<IPoolableActor>())
+	//{
+	//	/*void* InterfaceAddress = Actor->GetInterfaceAddress(UPoolableActor::StaticClass());
+	//	if (InterfaceAddress)
+	//	{
+	//		return static_cast<IPoolableActor*>(InterfaceAddress);
+	//	}*/
+	//}
+
+	return nullptr;
+}
+
 void UPoolable_Actor::HideActor(AActor* Actor)
 {
 	check(Actor);
+
+	IPoolableActor* Interface = GetInterface(Actor);
+	if (Interface)
+	{
+		Interface->OnDeActive();
+
+		IPoolableActor::Execute_K2_OnDeActive(Actor);
+	}
 
 	Actor->SetActorHiddenInGame(true);
 	Actor->SetActorEnableCollision(false);
@@ -55,7 +84,15 @@ void UPoolable_Actor::HideActor(AActor* Actor)
 void UPoolable_Actor::ShowActor(AActor* Actor)
 {
 	check(Actor);
+
 	Actor->SetActorHiddenInGame(false);
 	Actor->SetActorEnableCollision(true);
 	Actor->SetActorTickEnabled(true);
+
+	IPoolableActor* Interface = GetInterface(Actor);
+	if (Interface)
+	{
+		Interface->OnActive();
+		IPoolableActor::Execute_K2_OnActive(Actor);
+	}
 }
