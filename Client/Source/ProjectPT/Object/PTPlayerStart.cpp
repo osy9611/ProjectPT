@@ -7,6 +7,7 @@ APTPlayerStart::APTPlayerStart(const FObjectInitializer& ObjectInitializer) : Su
 {
 }
 
+#if WITH_EDITOR
 void APTPlayerStart::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
 	if (!ShowRadiusInEditor)
@@ -24,3 +25,4 @@ void APTPlayerStart::PostEditChangeProperty(FPropertyChangedEvent& PropertyChang
 
 	}
 }
+#endif

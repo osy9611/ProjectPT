@@ -8,7 +8,6 @@
 #include "ProjectPT/PTGameplayTags.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/Animation/PTAnimInstance.h"
-#include "ProjectPT/Player/PTPlayerState.h"
 
 
 /*feature name을 component 단위니깐 component를 빼고 pawn extension만 넣는 것은 확인할 수 있다.*/
@@ -67,7 +66,7 @@ void UPTPawnExtensionComponent::InitializeGameAbilitySystem(AActor* IsOwnerActor
 	RegisterGameAbilitySystem(ASC, IsOwnerActor);
 
 }
-PRAGMA_DISABLE_OPTIMIZATION
+
 void UPTPawnExtensionComponent::RegisterGameAbilitySystem(UPTAbilitySystemComponent* InASC, AActor* IsOwnerActor)
 {
 	check(InASC && IsOwnerActor);
@@ -198,7 +197,6 @@ bool UPTPawnExtensionComponent::CanChangeInitState(UGameFrameworkComponentManage
 
 	return false;
 }
-PRAGMA_ENABLE_OPTIMIZATION
 void UPTPawnExtensionComponent::CheckDefaultInitialization()
 {
 	CheckDefaultInitializationForImplementers();

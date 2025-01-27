@@ -66,9 +66,17 @@
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\attributeset\\ptattributeset.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptattributeset.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcharacter_attributeset.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\gameplayeffectextension.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\gameplaymessagerouter\\source\\gameplaymessageruntime\\public\\gameframework\\gameplaymessagesubsystem.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\gameplaymessagerouter\\source\\gameplaymessageruntime\\public\\gameframework\\gameplaymessagetypes2.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\gameplaymessagerouter\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaymessageruntime\\uht\\gameplaymessagetypes2.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\gameplaymessagerouter\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaymessageruntime\\uht\\gameplaymessagesubsystem.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\table\\datamanagersubsystem.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptlogchannels.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\datamanagersubsystem.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\datamanagersubsystem.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\extensions\\ptuimessageextensions.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptuimessageextensions.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptgameplaytags.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

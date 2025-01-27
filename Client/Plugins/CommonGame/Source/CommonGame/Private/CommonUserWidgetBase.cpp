@@ -24,7 +24,6 @@ void UCommonUserWidgetBase::RegisterLayer(FGameplayTag LayerTag, UCommonActivata
 	}
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 UCommonActivatableWidget* UCommonUserWidgetBase::CreateWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
 {
 	if (UCommonActivatableWidgetContainerBase* LayerWidget = GetLayerWidget(LayerName))
@@ -46,9 +45,7 @@ UCommonActivatableWidget* UCommonUserWidgetBase::CreateWidgetToLayer(FGameplayTa
 
 	return nullptr;
 }
-PRAGMA_ENABLE_OPTIMIZATION
 
-PRAGMA_DISABLE_OPTIMIZATION
 UCommonActivatableWidget* UCommonUserWidgetBase::GetWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
 {
 	if (UCommonActivatableWidgetContainerBase* LayerWidget = GetLayerWidget(LayerName))
@@ -67,4 +64,3 @@ UCommonActivatableWidget* UCommonUserWidgetBase::GetWidgetToLayer(FGameplayTag L
 
 	return nullptr;
 }
-PRAGMA_ENABLE_OPTIMIZATION

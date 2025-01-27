@@ -27,7 +27,6 @@ UPTAbilitySet::UPTAbilitySet(const FObjectInitializer& ObjectInitializer) : Supe
 {
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySet::GiveToAbilitySystem(UPTAbilitySystemComponent* ASC, FPTAbilitySet_GrantedHandles* OutGrantedHandles, UObject* SourceObject)
 {
 	check(ASC);
@@ -56,4 +55,3 @@ void UPTAbilitySet::GiveToAbilitySystem(UPTAbilitySystemComponent* ASC, FPTAbili
 
 	}
 }
-PRAGMA_ENABLE_OPTIMIZATION

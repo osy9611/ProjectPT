@@ -93,7 +93,6 @@ FGameplayAbilityTargetDataHandle APTGameplayAbilityTargetActor_Trace::MakeTarget
 	return DataHandle;
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 bool APTGameplayAbilityTargetActor_Trace::CheckCollisionData()
 {
 	APTCharacter* Character = CastChecked<APTCharacter>(SourceActor);
@@ -133,4 +132,3 @@ bool APTGameplayAbilityTargetActor_Trace::CheckCollisionData()
 		Params);
 	return false;
 }
-PRAGMA_ENABLE_OPTIMIZATION

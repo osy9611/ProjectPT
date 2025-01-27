@@ -7,6 +7,8 @@
 #include "ProjectPT/PTLogChannels.h"
 #include "DataManagerSubsystem.generated.h"
 
+class UDataTable;
+
 /**
  *
  */

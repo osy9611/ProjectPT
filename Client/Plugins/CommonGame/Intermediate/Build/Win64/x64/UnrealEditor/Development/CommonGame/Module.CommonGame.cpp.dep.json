@@ -84,7 +84,6 @@
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\uimanagersubsystem.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commongame.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\commongame.h",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commongameinstance.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonlocalplayer.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonplayercontroller.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonsessionsubsystem.cpp",
@@ -99,9 +98,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assetregistry\\uht\\iassetregistry.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\genericplatform\\genericplatformchunkinstall.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\contentencryptionconfig.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\assetmanager.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonuserwidgetbase.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\uimanagersubsystem.cpp"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\assetmanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

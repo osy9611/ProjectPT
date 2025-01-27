@@ -88,13 +88,13 @@ void UUIManagerSubsystem::RegisterWidget(TSubclassOf<UCommonUserWidgetBase> Comm
 		CurrentWidgetClass = CommonWidget;
 	}
 }
-PRAGMA_DISABLE_OPTIMIZATION
+
 void UUIManagerSubsystem::CreateLayoutWidget(UCommonLocalPlayer* LocalPlayer)
 {
 	if (!LocalPlayer)
 	{
-		return;
 		UE_LOG(LogTemp, Error, TEXT("This PlayerController is Nullptr"));
+		return;
 	}
 
 	if (CurrentWidgetClass == nullptr)
@@ -117,7 +117,6 @@ void UUIManagerSubsystem::CreateLayoutWidget(UCommonLocalPlayer* LocalPlayer)
 	}
 
 }
-PRAGMA_ENABLE_OPTIMIZATION
 
 void UUIManagerSubsystem::AddToLayoutViewport(UCommonLocalPlayer* LocalPlayer)
 {

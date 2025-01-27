@@ -56,7 +56,6 @@ UClass* APTGameModeBase::GetDefaultPawnClassForController_Implementation(AContro
 	return Super::GetDefaultPawnClassForController_Implementation(InController);
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 void APTGameModeBase::HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer)
 {
 	if (IsExperienceLoaded())
@@ -183,7 +182,7 @@ void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentE
 		AudioSubSystem->PlaySoundAfterSceneLoading();
 	}
 }
-PRAGMA_ENABLE_OPTIMIZATION
+
 const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* InController) const
 {
 	if (InController)

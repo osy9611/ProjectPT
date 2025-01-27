@@ -7,8 +7,6 @@
 #include "NiagaraDataInterfaceArrayFunctionLibrary.h"
 #include "NiagaraFunctionLibrary.h"
 
-
-PRAGMA_DISABLE_OPTIMIZATION
 void UPoolable_NiagaraSystem::SpawnRootActor(UWorld& InWorld)
 {
 	// 액터 스폰 위치 및 회전 값 설정
@@ -16,7 +14,10 @@ void UPoolable_NiagaraSystem::SpawnRootActor(UWorld& InWorld)
 	FRotator SpawnRotation = FRotator(0.0f, 0.0f, 0.0f);
 
 	SpawnOwnerActor = InWorld.SpawnActor<AActor>(AActor::StaticClass(), SpawnLocation, SpawnRotation);
+
+#if WITH_EDITOR
 	SpawnOwnerActor->SetActorLabel(TEXT("NiagaraRoot"));
+#endif
 
 }
 void UPoolable_NiagaraSystem::Init(int32 Count)
@@ -66,5 +67,3 @@ UNiagaraComponent* UPoolable_NiagaraSystem::Create()
 {
 	return NewObject<UNiagaraComponent>(SpawnOwnerActor);
 }
-
-PRAGMA_ENABLE_OPTIMIZATION

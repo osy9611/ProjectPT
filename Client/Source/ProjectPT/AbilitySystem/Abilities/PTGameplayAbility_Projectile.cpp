@@ -20,8 +20,6 @@ void UPTGameplayAbility_Projectile::ActivateAbility(const FGameplayAbilitySpecHa
 	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
 }
 
-
-PRAGMA_DISABLE_OPTIMIZATION
 bool UPTGameplayAbility_Projectile::CommitAbilityCooldown(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const bool ForceCooldown, OUT FGameplayTagContainer* OptionalRelevantTags)
 {
 	if (!UseBPGameplayEffect)
@@ -43,7 +41,6 @@ bool UPTGameplayAbility_Projectile::CommitAbilityCooldown(const FGameplayAbility
 
 	return Super::CommitAbilityCooldown(Handle, ActorInfo, ActivationInfo, ForceCooldown, OptionalRelevantTags);
 }
-PRAGMA_ENABLE_OPTIMIZATION
 
 float UPTGameplayAbility_Projectile::GetCoolTime()
 {

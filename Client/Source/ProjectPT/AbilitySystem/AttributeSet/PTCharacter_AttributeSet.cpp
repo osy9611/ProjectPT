@@ -15,7 +15,6 @@ UPTCharacter_AttributeSet::UPTCharacter_AttributeSet(const FObjectInitializer& O
 
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTCharacter_AttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue)
 {
 	Super::PreAttributeChange(Attribute, NewValue);
@@ -70,4 +69,3 @@ FSkillData UPTCharacter_AttributeSet::GetSkillData(FGameplayTag GameplayTag)
 
 	return Result;
 }
-PRAGMA_ENABLE_OPTIMIZATION

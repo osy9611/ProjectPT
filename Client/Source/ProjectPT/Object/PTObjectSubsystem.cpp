@@ -44,7 +44,6 @@ void UPTObjectSubsystem::Deinitialize()
 	Super::Deinitialize();
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName)
 {
 	if (!PawnData)
@@ -308,4 +307,3 @@ UPTAbilitySystemComponent* UPTObjectSubsystem::GetASC(AActor* Actor)
 	}
 	return nullptr;
 }
-PRAGMA_ENABLE_OPTIMIZATION

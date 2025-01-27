@@ -12,7 +12,7 @@
 UPTCommonSessionSubsystem::UPTCommonSessionSubsystem()
 {
 }
-PRAGMA_DISABLE_OPTIMIZATION
+
 void UPTCommonSessionSubsystem::MoveSessionByTableID(int32 TableNo)
 {
 	if (UDataManagerSubsystem* DataManager = GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
@@ -45,4 +45,3 @@ void UPTCommonSessionSubsystem::MoveSessionByTableID(int32 TableNo)
 			});
 	}
 }
-PRAGMA_ENABLE_OPTIMIZATION

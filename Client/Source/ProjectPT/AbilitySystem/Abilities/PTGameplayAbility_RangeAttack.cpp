@@ -1,5 +1,6 @@
-#include "AbilitySystemComponent.h"
+
 #include "PTGameplayAbility_RangeAttack.h"
+#include "AbilitySystemComponent.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/AbilitySystem/PTGameplayAbilityTargetData_SingleTargetHit.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
@@ -11,7 +12,7 @@
 UPTGameplayAbility_RangeAttack::UPTGameplayAbility_RangeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 }
-PRAGMA_DISABLE_OPTIMIZATION
+
 void UPTGameplayAbility_RangeAttack::StartRangedWeaponTargeting()
 {
 	check(CurrentActorInfo);
@@ -48,7 +49,7 @@ void UPTGameplayAbility_RangeAttack::StartRangedWeaponTargeting()
 	//가공된 AbilityTargetData가 준비되었으므로, OnTargetDataReadyCallback을 호출한다.
 	OnTargetDataReadyCallback(TargetData, FGameplayTag());
 }
-PRAGMA_ENABLE_OPTIMIZATION
+
 void UPTGameplayAbility_RangeAttack::PerformLocalTargeting(TArray<FHitResult>& OutHits)
 {
 	APawn* const AvatarPawn = Cast<APawn>(GetAvatarActorFromActorInfo());

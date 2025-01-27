@@ -203,7 +203,6 @@ void UPTAIComponent::SendDamageEvent(AActor* Instigator, float DamageAmount)
 	}
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 bool UPTAIComponent::IsTargetVisible(AActor* TargetActor)
 {
 	if (APawn* Pawn = GetPawn<APawn>())
@@ -276,4 +275,3 @@ bool UPTAIComponent::IsAttackRange(AActor* TargetActor, float DefaultAttackRange
 
 	return false;
 }
-PRAGMA_ENABLE_OPTIMIZATION

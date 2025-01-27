@@ -4,7 +4,7 @@
 #include "CommonGameInstance.h"
 #include "UIManagerSubsystem.h"
 #include "CommonLocalPlayer.h"
-PRAGMA_DISABLE_OPTIMIZATION
+
 int32 UCommonGameInstance::AddLocalPlayer(ULocalPlayer* NewPlayer, FPlatformUserId UserId)
 {
 	int32 ReturnVal = Super::AddLocalPlayer(NewPlayer, UserId);
@@ -15,7 +15,7 @@ int32 UCommonGameInstance::AddLocalPlayer(ULocalPlayer* NewPlayer, FPlatformUser
 	}
 	return ReturnVal;
 }
-PRAGMA_ENABLE_OPTIMIZATION
+
 bool UCommonGameInstance::RemoveLocalPlayer(ULocalPlayer* ExistingPlayer)
 {
 	UCommonLocalPlayer* CommonLocalPlayer = Cast<UCommonLocalPlayer>(ExistingPlayer);

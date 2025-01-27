@@ -10,7 +10,6 @@
 #include "ProjectPT/Table/DataManagerSubsystem.h"
 #include "ProjectPT/Player/PTPlayerState.h"
 
-PRAGMA_DISABLE_OPTIMIZATION
 UPTAI_AttributeSet::UPTAI_AttributeSet(const FObjectInitializer& ObjectInitializer)
 {
 
@@ -72,4 +71,3 @@ FSkillData UPTAI_AttributeSet::GetSkillData(FGameplayTag GameplayTag)
 
 	return Result;
 }
-PRAGMA_ENABLE_OPTIMIZATION

@@ -41,7 +41,6 @@ void UPTAbilitySystemComponent::AbilitySpecInputReleased(FGameplayAbilitySpec& S
 		InvokeReplicatedEvent(EAbilityGenericReplicatedEvent::InputReleased, Spec.Handle, Spec.ActivationInfo.GetActivationPredictionKey());
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySystemComponent::ProcessAbility(const FGameplayTag& Tag)
 {
 	if (Tag.IsValid())
@@ -71,9 +70,7 @@ void UPTAbilitySystemComponent::AbilityInputTagPressed(const FGameplayTag& Input
 		}
 	}
 }
-PRAGMA_ENABLE_OPTIMIZATION
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySystemComponent::AbilityInputTagReleased(const FGameplayTag& InputTag)
 {
 	if (InputTag.IsValid())
@@ -88,9 +85,7 @@ void UPTAbilitySystemComponent::AbilityInputTagReleased(const FGameplayTag& Inpu
 		}
 	}
 }
-PRAGMA_ENABLE_OPTIMIZATION
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTAbilitySystemComponent::ProcessAbilityInput(float DeltaTime, bool bGamePaused)
 {
 	TArray<FGameplayAbilitySpecHandle> ExecuteHandles;
@@ -156,4 +151,3 @@ void UPTAbilitySystemComponent::ProcessAbilityInput(float DeltaTime, bool bGameP
 	InputPressedSpecHandles.Reset();
 	InputReleasedSpecHandles.Reset();
 }
-PRAGMA_ENABLE_OPTIMIZATION

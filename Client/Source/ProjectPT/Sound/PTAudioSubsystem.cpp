@@ -19,7 +19,6 @@ void UPTAudioSubsystem::Deinitialize()
 	Super::Deinitialize();
 }
 
-PRAGMA_DISABLE_OPTIMIZATION
 void UPTAudioSubsystem::RegisterData()
 {
 	int32 MaxCount = static_cast<int32>(ESoundType::Max);
@@ -163,5 +162,3 @@ void UPTAudioSubsystem::FadeOutSound(ESoundType Type, float FadeDuration, float 
 		AudioComponent->FadeOut(FadeDuration, TargetVolume);
 	}
 }
-
-PRAGMA_ENABLE_OPTIMIZATION

@@ -51,6 +51,7 @@
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\poolable_niagarasystem.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\pool\\poolable_niagarasystem.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\poolable_niagarasystem.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\projectpt.init.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptabilityset.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\ptabilityset.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\abilities\\ptgameplayability.h",
@@ -179,6 +180,9 @@
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\attributeset\\ptattributeset.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptattributeset.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptai_attributeset.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaniminstance.gen.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\animation\\ptaniminstance.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaniminstance.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptanimnotify_attackhitcheck.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\notify\\ptanimnotify_attackhitcheck.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptanimnotify_attackhitcheck.generated.h",
@@ -256,10 +260,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\source\\gameplayabilities\\public\\abilities\\gameplayabilitytargetdatafilter.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayabilitytargetdatafilter.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\gameplayabilitytargetactor.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayabilitytargetactor_trace.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayabilitytargetdata_singletargethit.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\abilitysystem\\ptgameplayabilitytargetdata_singletargethit.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayabilitytargetdata_singletargethit.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameplayabilitytargetactor_trace.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

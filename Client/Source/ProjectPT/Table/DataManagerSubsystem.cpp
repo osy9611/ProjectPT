@@ -4,6 +4,7 @@
 #include "DataManagerSubsystem.h"
 #include "EnumGenerateData.h"
 #include "Serialization/ObjectAndNameAsStringProxyArchive.h"
+#include "Engine/DataTable.h"
 
 UDataManagerSubsystem::UDataManagerSubsystem()
 {
@@ -51,7 +52,7 @@ void UDataManagerSubsystem::LoadAllDataTable()
 		if (UDataTable* DataTable = LoadObject<UDataTable>(nullptr, *AssetPath))
 		{
 			UE_LOG(PTLog, Log, TEXT("[UDataManageSubSystem] Table Load Success: %s"), *FileName);
-			FString Key = *(DataTable->GetRowStructName()).ToString();
+			FString Key = *(DataTable->RowStruct->GetName());
 			NewTableData.Add(Key, DataTable);
 		}
 		else
@@ -73,14 +74,19 @@ void UDataManagerSubsystem::LoadAllDataBinary()
 	TMap<FString, UDataTable*> NewTableData;
 
 	FString DataTableFolderPath = FPaths::ProjectContentDir() + TEXT("Table/Byte");
+
+	UE_LOG(PTLog, Error, TEXT("[UDataManageSubSystem] DataTableFolderPath : %s"), *DataTableFolderPath);
+
 	TArray<FString> FileNames;
 	IFileManager::Get().FindFiles(FileNames, *DataTableFolderPath, TEXT("*.byte"));
-
+	UE_LOG(PTLog, Error, TEXT("[UDataManageSubSystem] FileNames Count : %i"), FileNames.Num());
 	for (const FString& FileName : FileNames)
 	{
 		if (UDataTable* DataTable = DeserializeData(DataTableFolderPath + "/" + FileName))
 		{
-			FString Key = *(DataTable->GetRowStructName()).ToString();
+			FString Key = *(DataTable->RowStruct->GetName());
+
+			UE_LOG(PTLog, Error, TEXT("[UDataManageSubSystem] BinaryData Load : %s  Key: %s"), *FileName, *Key);
 			NewTableData.Add(Key, DataTable);
 		}
 		else

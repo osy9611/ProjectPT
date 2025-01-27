@@ -9,7 +9,7 @@
 UPTWidgetData::UPTWidgetData(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
 }
-PRAGMA_DISABLE_OPTIMIZATION
+
 void UPTWidgetData::RegisterWidgetData(UWorld* World)
 {
 	if (!World)
@@ -39,4 +39,3 @@ void UPTWidgetData::RegisterWidgetData(UWorld* World)
 
 	UE_LOG(PTLog, Log, TEXT("[UPTwidgetData] Complete RegisterWidget!!"));
 }
-PRAGMA_ENABLE_OPTIMIZATION
