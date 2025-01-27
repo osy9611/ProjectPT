@@ -67,7 +67,7 @@ Client/*_BuiltData.uasset
 Client/Saved/*
 
 # Compiled source files for the engine to use
-Client/Intermediate/*
+Client/Intermediate/
 Client/Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
