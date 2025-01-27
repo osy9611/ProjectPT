@@ -10,12 +10,12 @@
 			"CommonUserWidgetBase.gen.cpp.obj",
 			"UIManagerSubsystem.gen.cpp.obj",
 			"CommonGame.cpp.obj",
+			"CommonGameInstance.cpp.obj",
 			"CommonLocalPlayer.cpp.obj",
 			"CommonPlayerController.cpp.obj",
-			"CommonSessionSubsystem.cpp.obj",
-			"CommonGameInstance.cpp.obj",
 			"CommonUserWidgetBase.cpp.obj",
-			"UIManagerSubsystem.cpp.obj"
+			"UIManagerSubsystem.cpp.obj",
+			"CommonSessionSubsystem.cpp.obj"
 		]
 	}
 }

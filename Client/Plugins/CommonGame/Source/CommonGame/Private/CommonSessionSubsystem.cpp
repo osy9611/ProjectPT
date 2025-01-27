@@ -10,6 +10,7 @@ FString UMoveSessionData::GetMapName()
 	FAssetData MapAssetData;
 	if (UAssetManager::Get().GetPrimaryAssetData(MapID, MapAssetData))
 	{
+		UE_LOG(LogTemp, Error, TEXT("[CommonSessionSubsystem] GetMapName PacakageName %s"), *MapAssetData.PackageName.ToString());
 		return MapAssetData.PackageName.ToString();
 	}
 

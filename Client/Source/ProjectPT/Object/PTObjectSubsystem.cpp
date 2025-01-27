@@ -141,30 +141,46 @@ void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbility
 		return;
 	}
 
+	if (!InData.IsValid(0))
+	{
+		UE_LOG(PTLog, Error, TEXT("[ObjectSubsystem] This InData Is Not Valid"));
+		return;
+	}
+
 	for (const TSharedPtr<FGameplayAbilityTargetData> Data : InData.Data)
 	{
-		
-		if (const FGameplayAbilityTargetData_ActorArray* ActorArrayData = static_cast<FGameplayAbilityTargetData_ActorArray*>(Data.Get()))
+		if (Data->GetScriptStruct()->IsChildOf(FGameplayAbilityTargetData_ActorArray::StaticStruct()))
 		{
-			for (TWeakObjectPtr<AActor> Actor : ActorArrayData->TargetActorArray)
+			if (const FGameplayAbilityTargetData_ActorArray* ActorArrayData = static_cast<FGameplayAbilityTargetData_ActorArray*>(Data.Get()))
 			{
-				if (Actor.Get())
+				if (ActorArrayData->TargetActorArray.IsEmpty())
+					continue;
+
+				for (TWeakObjectPtr<AActor> Actor : ActorArrayData->TargetActorArray)
 				{
-					ApplyDamage(OwnerASC, Actor.Get(), Damage);
+					if (!Actor.IsValid())
+						continue;
+
+					if (Actor.Get())
+					{
+						ApplyDamage(OwnerASC, Actor.Get(), Damage);
+					}
 				}
 			}
 		}
 
-		if (const FGameplayAbilityTargetData_SingleTargetHit* SingleTargetHitData = static_cast<FGameplayAbilityTargetData_SingleTargetHit*>(Data.Get()))
+		if (Data->GetScriptStruct()->IsChildOf(FGameplayAbilityTargetData_SingleTargetHit::StaticStruct()))
 		{
-			if (!Data->HasHitResult())
-				continue;
-			if (const FHitResult* HitResult = Data->GetHitResult())
+			if (const FGameplayAbilityTargetData_SingleTargetHit* SingleTargetHitData = static_cast<FGameplayAbilityTargetData_SingleTargetHit*>(Data.Get()))
 			{
-				ApplyDamage(OwnerASC, HitResult->GetActor(), Damage);
+				if (!Data->HasHitResult())
+					continue;
+				if (const FHitResult* HitResult = Data->GetHitResult())
+				{
+					ApplyDamage(OwnerASC, HitResult->GetActor(), Damage);
+				}
 			}
 		}
-
 	}
 }
 

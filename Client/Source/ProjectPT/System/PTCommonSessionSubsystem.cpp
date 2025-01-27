@@ -37,9 +37,13 @@ void UPTCommonSessionSubsystem::MoveSessionByTableID(int32 TableNo)
 				{
 					UMoveSessionData* MoveSessionData = SceneData->CreateMoveSessionData();
 
+					UE_LOG(PTLog, Log, TEXT("[PTCommonSessionSubSystem] MoveSessionData Map : %s"), *MoveSessionData->MapID.ToString());
+
 					if (MoveSessionData)
 					{
-						GetWorld()->ServerTravel(MoveSessionData->CreateURL());
+						FString InURL = MoveSessionData->CreateURL();
+						UE_LOG(PTLog, Log, TEXT("[PTCommonSessionSubSystem] CreateURL : %s"), *InURL);
+						GetWorld()->ServerTravel(InURL);
 					}
 				}
 			});

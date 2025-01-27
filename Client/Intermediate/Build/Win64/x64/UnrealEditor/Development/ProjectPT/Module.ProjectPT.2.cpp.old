@@ -49,5 +49,4 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/Character/PTHeroComponent.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/Character/PTPawnData.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/GameModes/PTExperienceDefinition.cpp"
-#include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/GameModes/PTGameModeBase.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/GameModes/PTGameState.cpp"
