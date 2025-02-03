@@ -34,6 +34,8 @@ public:
 
 	UDataTable* DeserializeData(const FString& FilePath);
 
+	bool IsTableDataLoaded() { return bIsLoadData; }
+
 private:
 	//PIE 종료 시 GC이 모든 UObject를 정리한다.
 	//PIE 종료시 ReleaseSharedReference에서 문제가 생기는 이유는

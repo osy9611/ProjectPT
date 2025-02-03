@@ -549,6 +549,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_SpawnAI.h">
       <Filter>Source\ProjectPT\GameFeature</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_TableLoad.cpp">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_TableLoad.h">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_WorldActionBase.cpp">
       <Filter>Source\ProjectPT\GameFeature</Filter>
     </ClCompile>

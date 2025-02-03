@@ -50,6 +50,9 @@
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\gamefeatureaction_spawnai.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\gamefeature\\gamefeatureaction_spawnai.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\gamefeatureaction_spawnai.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\gamefeatureaction_tableload.gen.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\gamefeature\\gamefeatureaction_tableload.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\gamefeatureaction_tableload.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\gamefeatureaction_worldactionbase.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\generatetabledata.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\table\\generatetabledata.h",
@@ -244,6 +247,9 @@
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptexperienceactionset.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\gamemodes\\ptexperienceactionset.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptexperienceactionset.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptexperiencedefinition.gen.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\gamemodes\\ptexperiencedefinition.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptexperiencedefinition.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptexperiencemanagercomponent.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\gamemodes\\ptexperiencemanagercomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\modulargameplay\\source\\modulargameplay\\public\\components\\gamestatecomponent.h",
@@ -265,12 +271,7 @@
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\system\\ptgameinstance.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\commongameinstance.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongameinstance.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameinstance.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgamemodebase.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\gamemodes\\ptgamemodebase.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagsmanager.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagsmanager.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgamemodebase.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptgameinstance.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

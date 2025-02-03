@@ -856,6 +856,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_SpawnAI.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_TableLoad.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_TableLoad.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_WorldActionBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>

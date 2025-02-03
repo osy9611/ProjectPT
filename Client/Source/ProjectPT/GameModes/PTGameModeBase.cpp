@@ -113,7 +113,6 @@ void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 	if (!ExperienceId.IsValid() && UGameplayStatics::HasOption(OptionsString, TEXT("Experience")))
 	{
 		//Experience의 Value를 가져와서, PrimaryAssetId를 생성해준다
-
 		UE_LOG(PTLog, Log, TEXT("[GameModeBase] ExperienceId OptionString : %s"), *OptionsString);
 		const FString ExperienceFromOptions = UGameplayStatics::ParseOption(OptionsString, TEXT("Experience"));
 		ExperienceId = FPrimaryAssetId(FPrimaryAssetType(UPTExperienceDefinition::StaticClass()->GetFName()), FName(*ExperienceFromOptions));
@@ -121,11 +120,6 @@ void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 
 	if (!ExperienceId.IsValid())
 		ExperienceId = FPrimaryAssetId(FPrimaryAssetType("PTExperienceDefinition"), FName("BP_PTDefaultExperience"));
-
-	if (UDataManagerSubsystem* DataManager = GetGameInstance()->GetSubsystem<UDataManagerSubsystem>())
-	{
-		DataManager->LoadAllData();
-	}
 
 	OnMatchAssignmentGiven(ExperienceId);
 }

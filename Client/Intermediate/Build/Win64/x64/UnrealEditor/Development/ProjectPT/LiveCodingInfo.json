@@ -7,6 +7,7 @@
 			"EnumGenerateData.gen.cpp.obj",
 			"GameFeatureAction_AddWidgets.gen.cpp.obj",
 			"GameFeatureAction_SpawnAI.gen.cpp.obj",
+			"GameFeatureAction_TableLoad.gen.cpp.obj",
 			"GameFeatureAction_WorldActionBase.gen.cpp.obj",
 			"GenerateTableData.gen.cpp.obj",
 			"ObjectPoolSubsystem.gen.cpp.obj",
@@ -31,14 +32,14 @@
 			"PTCharacter_AttributeSet.gen.cpp.obj",
 			"PTCommonSessionSubsystem.gen.cpp.obj",
 			"PTExperienceActionSet.gen.cpp.obj",
+			"PTExperienceDefinition.gen.cpp.obj",
 			"PTExperienceManagerComponent.gen.cpp.obj",
 			"PTGameFeaturesProjectPolicy.gen.cpp.obj",
 			"PTGameInstance.gen.cpp.obj",
-			"PTGameModeBase.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
-			"PTExperienceDefinition.gen.cpp.obj"
+			"ProjectPT.init.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
+			"PTGameModeBase.gen.cpp.obj",
 			"PTGameplayAbility.gen.cpp.obj",
 			"PTGameplayAbilityTargetActor_Trace.gen.cpp.obj",
 			"PTGameplayAbilityTargetData_SingleTargetHit.gen.cpp.obj",
@@ -55,6 +56,7 @@
 			"PTInputConfig.gen.cpp.obj",
 			"PTLocalPlayer.gen.cpp.obj",
 			"PTMappableConfigPair.gen.cpp.obj",
+			"PTObjectSubsystem.gen.cpp.obj",
 			"PTPawnData.gen.cpp.obj",
 			"PTPawnExtensionComponent.gen.cpp.obj",
 			"PTPlayerAIController.gen.cpp.obj",
@@ -94,22 +96,25 @@
 			"PTAICharacter.cpp.obj",
 			"PTAIComponent.cpp.obj",
 			"PTCharacter.cpp.obj",
-			"PTHeroComponent.cpp.obj",
-			"PTPawnData.cpp.obj",
-			"PTPawnExtensionComponent.cpp.obj",
-			"PTObjectSubsystem.gen.cpp.obj"
+			"PTHeroComponent.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
+			"PTPawnData.cpp.obj",
+			"PTPawnExtensionComponent.cpp.obj",
 			"GameFeatureAction_AddWidgets.cpp.obj",
 			"GameFeatureAction_SpawnAI.cpp.obj",
+			"GameFeatureAction_TableLoad.cpp.obj",
 			"GameFeatureAction_WorldActionBase.cpp.obj",
 			"PTGameFeaturesProjectPolicy.cpp.obj",
 			"PTExperienceActionSet.cpp.obj",
+			"PTExperienceDefinition.cpp.obj",
+			"PTExperienceManagerComponent.cpp.obj",
 			"PTGameState.cpp.obj",
 			"PTSceneData.cpp.obj",
 			"PTInputComponent.cpp.obj",
 			"PTInputConfig.cpp.obj",
 			"PTMappableConfigPair.cpp.obj",
+			"PTObjectSubsystem.cpp.obj",
 			"PTPlayerStart.cpp.obj",
 			"PTProjectile.cpp.obj",
 			"PTLocalPlayer.cpp.obj",
@@ -132,10 +137,7 @@
 			"PTUIManagerSubsystem.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTExperienceDefinition.cpp.obj",
-			"PTExperienceManagerComponent.cpp.obj",
-			"PTGameModeBase.cpp.obj",
-			"PTObjectSubsystem.cpp.obj"
+			"PTGameModeBase.cpp.obj"
 		]
 	}
 }
