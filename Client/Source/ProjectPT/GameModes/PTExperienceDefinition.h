@@ -7,7 +7,6 @@
 #include "PTExperienceDefinition.generated.h"
 
 class UPTPawnData;
-class UPTWidgetData;
 class UPTExperienceActionSet;
 class UGameFeatureAction;
 /**
@@ -20,8 +19,6 @@ class PROJECTPT_API UPTExperienceDefinition : public UPrimaryDataAsset
 	
 public:
 
-	void RegisterWidgetData(UWorld* World);
-
 	UPROPERTY(EditDefaultsOnly, Category = GamePlay)
 	TArray<FString> GameFeaturesToEnable;
 
@@ -33,11 +30,4 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = Gameplay)
 	TObjectPtr<UPTPawnData> DefaultPawnData;
-
-	UPROPERTY(EditAnywhere,Category = Gameplay)
-	TObjectPtr<UPTWidgetData> DefaultWidgetData;
-
-	UPROPERTY(EditAnywhere, Category = Gameplay)
-	TObjectPtr<UPTPawnData> AIPawnData;
-
 };

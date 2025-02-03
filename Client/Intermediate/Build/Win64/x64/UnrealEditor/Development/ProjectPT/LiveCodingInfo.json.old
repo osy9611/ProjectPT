@@ -5,6 +5,8 @@
 			"CircumferenceMarkerWidget.gen.cpp.obj",
 			"DataManagerSubsystem.gen.cpp.obj",
 			"EnumGenerateData.gen.cpp.obj",
+			"GameFeatureAction_AddWidgets.gen.cpp.obj",
+			"GameFeatureAction_SpawnAI.gen.cpp.obj",
 			"GameFeatureAction_WorldActionBase.gen.cpp.obj",
 			"GenerateTableData.gen.cpp.obj",
 			"ObjectPoolSubsystem.gen.cpp.obj",
@@ -13,6 +15,7 @@
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
+			"PTActivatableWidget.gen.cpp.obj",
 			"PTAICharacter.gen.cpp.obj",
 			"PTAIComponent.gen.cpp.obj",
 			"PTAI_AttributeSet.gen.cpp.obj",
@@ -32,12 +35,11 @@
 			"PTGameFeaturesProjectPolicy.gen.cpp.obj",
 			"PTGameInstance.gen.cpp.obj",
 			"PTGameModeBase.gen.cpp.obj",
-			"PTGameplayAbility.gen.cpp.obj",
 			"ProjectPT.init.gen.cpp.obj",
-			"PTActivatableWidget.gen.cpp.obj",
 			"PTExperienceDefinition.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
+			"PTGameplayAbility.gen.cpp.obj",
 			"PTGameplayAbilityTargetActor_Trace.gen.cpp.obj",
 			"PTGameplayAbilityTargetData_SingleTargetHit.gen.cpp.obj",
 			"PTGameplayAbility_Death.gen.cpp.obj",
@@ -63,8 +65,8 @@
 			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
 			"PTSceneData.gen.cpp.obj",
+			"PTUIManagerSubsystem.gen.cpp.obj",
 			"PTUIMessageExtensions.gen.cpp.obj",
-			"PTWidgetData.gen.cpp.obj",
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
@@ -95,22 +97,19 @@
 			"PTCharacter.cpp.obj",
 			"PTHeroComponent.cpp.obj",
 			"PTPawnData.cpp.obj",
-			"PTPawnExtensionComponent.cpp.obj",
+			"PTPawnExtensionComponent.cpp.obj"
+		],
+		"Module.ProjectPT.3.cpp.obj": [
+			"GameFeatureAction_AddWidgets.cpp.obj",
+			"GameFeatureAction_SpawnAI.cpp.obj",
 			"GameFeatureAction_WorldActionBase.cpp.obj",
 			"PTGameFeaturesProjectPolicy.cpp.obj",
 			"PTExperienceActionSet.cpp.obj",
-			"PTGameModeBase.cpp.obj",
 			"PTGameState.cpp.obj",
 			"PTSceneData.cpp.obj",
 			"PTInputComponent.cpp.obj",
 			"PTInputConfig.cpp.obj",
-			"PTUIManagerSubsystem.gen.cpp.obj",
-			"PTExperienceDefinition.cpp.obj",
-			"PTExperienceManagerComponent.cpp.obj"
-		],
-		"Module.ProjectPT.3.cpp.obj": [
 			"PTMappableConfigPair.cpp.obj",
-			"PTObjectSubsystem.cpp.obj",
 			"PTPlayerStart.cpp.obj",
 			"PTProjectile.cpp.obj",
 			"PTLocalPlayer.cpp.obj",
@@ -129,11 +128,14 @@
 			"PTGameInstance.cpp.obj",
 			"DataManagerSubsystem.cpp.obj",
 			"EnumGenerateData.cpp.obj",
-			"PTWidgetData.cpp.obj",
+			"PTActivatableWidget.cpp.obj",
+			"PTUIManagerSubsystem.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTActivatableWidget.cpp.obj",
-			"PTUIManagerSubsystem.cpp.obj"
+			"PTExperienceDefinition.cpp.obj",
+			"PTExperienceManagerComponent.cpp.obj",
+			"PTGameModeBase.cpp.obj",
+			"PTObjectSubsystem.cpp.obj"
 		]
 	}
 }

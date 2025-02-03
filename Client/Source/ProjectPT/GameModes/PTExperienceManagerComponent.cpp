@@ -10,6 +10,7 @@
 #include "PTExperienceActionSet.h"
 #include "GameFeaturesSubsystemSettings.h"
 
+PRAGMA_DISABLE_OPTIMIZATION
 void UPTExperienceManagerComponent::CallOrRegister_OnExperienceLoaded(FOnExperienceLoaded::FDelegate&& Delegate)
 {
 	if (IsExperienceLoaded())
@@ -52,6 +53,14 @@ void UPTExperienceManagerComponent::StartExperienceLoad()
 
 	TSet<FPrimaryAssetId> BundleAssetList;
 	BundleAssetList.Add(CurrentExperience->GetPrimaryAssetId());
+
+	for (const TObjectPtr<UPTExperienceActionSet>& ActionSet : CurrentExperience->ActionSets)
+	{
+		if (ActionSet)
+		{
+			BundleAssetList.Add(ActionSet->GetPrimaryAssetId());
+		}
+	}
 
 	TArray<FName> BundlesToLoad;
 	{
@@ -111,7 +120,7 @@ void UPTExperienceManagerComponent::OnExperienceLoadComplete()
 		for (const FString& PluginURL : GameFeaturePluginURLs)
 		{
 			//매 Plugin이 로딩 및 활성화 이후, OnGameFeaturePluginLoadCompletes 콜백 함수 등록
-			UGameFeaturesSubsystem::Get().LoadAndActivateGameFeaturePlugin(PluginURL,FGameFeaturePluginLoadComplete::CreateUObject(this, &ThisClass::OnGameFeaturePluginLoadComplete));
+			UGameFeaturesSubsystem::Get().LoadAndActivateGameFeaturePlugin(PluginURL, FGameFeaturePluginLoadComplete::CreateUObject(this, &ThisClass::OnGameFeaturePluginLoadComplete));
 		}
 	}
 	else
@@ -129,7 +138,7 @@ void UPTExperienceManagerComponent::OnGameFeaturePluginLoadComplete(const UE::Ga
 	{
 		//GameFeaturePlugin 로딩이 다 끝났을 경우, 기존대로 Loaded로서, OnExperienceFullLoadCompleted를 호출한다.
 		//GameFeaturePluing 로딩과 활성화가 끝났다면? UGameFeatureAction을 활성화 해야한다.
-		OnExperienceLoadComplete();
+		OnExperienceFullLoadCompleted();
 	}
 }
 
@@ -139,7 +148,7 @@ void UPTExperienceManagerComponent::OnExperienceFullLoadCompleted()
 
 	//GaemFeature Plugin의 로딩과 활성화 이후, GameFeature Action 들을 활성화 시켜야함
 	{
-		LoadState = EPTExperienceLoadState::Loaded;
+		LoadState = EPTExperienceLoadState::ExecutingActions;
 		FGameFeatureActivatingContext Context;
 		{
 			//월드의 핸들을 세팅해준다
@@ -181,3 +190,4 @@ const UPTExperienceDefinition* UPTExperienceManagerComponent::GetCurrentExperien
 	check(CurrentExperience != nullptr);
 	return CurrentExperience;
 }
+PRAGMA_ENABLE_OPTIMIZATION

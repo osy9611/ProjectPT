@@ -34,22 +34,22 @@ public:
 	virtual void Deinitialize() override;
 
 	void SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName);
-
 	APawn* SpawnActor(UClass* PawnClass, const FTransform& SpawnTransform, APawn* Instigator);
 	void RegisterActor(AActor* Actor);
 	void ReturnActor(AActor* Actor);
 
 	UFUNCTION(BlueprintCallable)
-	void ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData,float Damage);
-
-	void ApplyActorsDamage(AActor* Owner,const TArray<AActor*> TargetActors,float Damage);
+	void ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData, float Damage);
+	void ApplyActorsDamage(AActor* Owner, const TArray<AActor*> TargetActors, float Damage);
 
 	UFUNCTION(BlueprintCallable)
 	void ApplyDamage(AActor* Onwer, const AActor* TargetActor, float Damage);
-
 	void ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const AActor* TargetActor, float Damage);
 
 	void SetCachePlayerStart();
+
+	UPTPawnData* GetPawnData();
+
 	TArray<APTPlayerStart*> GetPlayerStartList(FGameplayTag GameplayTag);
 
 private:
@@ -63,5 +63,6 @@ private:
 	UPROPERTY()
 	TMap<FString, AActor*> ObjectDatas;
 
-	TObjectPtr<UPTPawnData> AIPanwData;
+	UPROPERTY()
+	TWeakObjectPtr<UPTPawnData> AIPawnData;
 };

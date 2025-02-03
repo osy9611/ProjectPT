@@ -537,6 +537,18 @@
     <Filter Include="Source\ProjectPT\GameFeature">
       <UniqueIdentifier>{F30BFD9B-C5A5-3CD0-8D86-8C1B81B5EEE4}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_AddWidgets.cpp">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_AddWidgets.h">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_SpawnAI.cpp">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_SpawnAI.h">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_WorldActionBase.cpp">
       <Filter>Source\ProjectPT\GameFeature</Filter>
     </ClCompile>
@@ -745,12 +757,6 @@
       <Filter>Source\ProjectPT\UI</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.h">
-      <Filter>Source\ProjectPT\UI</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProjectPT\UI\PTWidgetData.cpp">
-      <Filter>Source\ProjectPT\UI</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\UI\PTWidgetData.h">
       <Filter>Source\ProjectPT\UI</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Weapon">

@@ -54,6 +54,7 @@ void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag 
 
 	if (PawnData->PawnClass)
 	{
+		AIPawnData = const_cast<UPTPawnData*>(PawnData);
 		TArray<APTPlayerStart*> PlayerStartList = GetPlayerStartList(GameplayTag);
 		for (APTPlayerStart* PTPlayerStart : PlayerStartList)
 		{
@@ -307,6 +308,16 @@ void UPTObjectSubsystem::SetCachePlayerStart()
 
 	IsLoaded = true;
 	UE_LOG(PTLog, Log, TEXT("[ObjectSubSystem] Complete CachePlayerStart!"))
+}
+
+UPTPawnData* UPTObjectSubsystem::GetPawnData()
+{
+	if (AIPawnData.IsValid())
+	{
+		return AIPawnData.Get();
+	}
+
+	return nullptr;
 }
 
 UPTAbilitySystemComponent* UPTObjectSubsystem::GetASC(AActor* Actor)

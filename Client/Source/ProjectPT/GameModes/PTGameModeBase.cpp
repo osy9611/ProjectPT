@@ -151,20 +151,6 @@ bool APTGameModeBase::IsExperienceLoaded() const
 
 void APTGameModeBase::OnExperienceLoaded(const UPTExperienceDefinition* CurrentExperience)
 {
-	if (CurrentExperience->DefaultWidgetData)
-	{
-		const_cast<UPTExperienceDefinition*>(CurrentExperience)->RegisterWidgetData(GetWorld());
-	}
-
-	if (CurrentExperience->AIPawnData)
-	{
-		if (UPTObjectSubsystem* ObjectSubSystem = GetWorld()->GetSubsystem<UPTObjectSubsystem>())
-		{
-			FGameplayTag GameplayTag = UGameplayTagsManager::Get().RequestGameplayTag(FName(TEXT("Spawn.Monster")));
-			ObjectSubSystem->SpawnAIActor(CurrentExperience->AIPawnData.Get(), GameplayTag, TEXT("AI"));
-		}
-	}
-
 	for (FConstPlayerControllerIterator Iterator = GetWorld()->GetPlayerControllerIterator(); Iterator; ++Iterator)
 	{
 		APlayerController* PC = Cast<APlayerController>(*Iterator);
@@ -217,10 +203,14 @@ const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* 
 			}
 			else
 			{
-				if (Experience->AIPawnData)
+				if (UPTObjectSubsystem* ObjectSubsystem = GetWorld()->GetSubsystem<UPTObjectSubsystem>())
+				{
+					return ObjectSubsystem->GetPawnData();
+				}
+				/*if (Experience->AIPawnData)
 				{
 					return Experience->AIPawnData; 
-				}
+				}*/
 			}
 		}
 	}

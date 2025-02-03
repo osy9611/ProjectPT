@@ -16,7 +16,6 @@ PROJECTPT_API UClass* Z_Construct_UClass_UPTExperienceActionSet_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTExperienceDefinition();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTExperienceDefinition_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTPawnData_NoRegister();
-PROJECTPT_API UClass* Z_Construct_UClass_UPTWidgetData_NoRegister();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
@@ -61,14 +60,6 @@ struct Z_Construct_UClass_UPTExperienceDefinition_Statics
 		{ "Category", "Gameplay" },
 		{ "ModuleRelativePath", "GameModes/PTExperienceDefinition.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultWidgetData_MetaData[] = {
-		{ "Category", "Gameplay" },
-		{ "ModuleRelativePath", "GameModes/PTExperienceDefinition.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AIPawnData_MetaData[] = {
-		{ "Category", "Gameplay" },
-		{ "ModuleRelativePath", "GameModes/PTExperienceDefinition.h" },
-	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_GameFeaturesToEnable_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_GameFeaturesToEnable;
@@ -77,8 +68,6 @@ struct Z_Construct_UClass_UPTExperienceDefinition_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Actions_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_Actions;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultPawnData;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultWidgetData;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_AIPawnData;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -93,8 +82,6 @@ const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UPTExperienceDe
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_Actions_Inner = { "Actions", nullptr, (EPropertyFlags)0x0106000000080008, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UGameFeatureAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Actions_Inner_MetaData), NewProp_Actions_Inner_MetaData) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_Actions = { "Actions", nullptr, (EPropertyFlags)0x0114008000010009, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTExperienceDefinition, Actions), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Actions_MetaData), NewProp_Actions_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultPawnData = { "DefaultPawnData", nullptr, (EPropertyFlags)0x0114000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTExperienceDefinition, DefaultPawnData), Z_Construct_UClass_UPTPawnData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultPawnData_MetaData), NewProp_DefaultPawnData_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultWidgetData = { "DefaultWidgetData", nullptr, (EPropertyFlags)0x0114000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTExperienceDefinition, DefaultWidgetData), Z_Construct_UClass_UPTWidgetData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultWidgetData_MetaData), NewProp_DefaultWidgetData_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_AIPawnData = { "AIPawnData", nullptr, (EPropertyFlags)0x0114000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPTExperienceDefinition, AIPawnData), Z_Construct_UClass_UPTPawnData_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AIPawnData_MetaData), NewProp_AIPawnData_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTExperienceDefinition_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_GameFeaturesToEnable_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_GameFeaturesToEnable,
@@ -103,8 +90,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTExperi
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_Actions_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_Actions,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultPawnData,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_DefaultWidgetData,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPTExperienceDefinition_Statics::NewProp_AIPawnData,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTExperienceDefinition_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTExperienceDefinition_Statics::DependentSingletons[])() = {
@@ -148,10 +133,10 @@ UPTExperienceDefinition::~UPTExperienceDefinition() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTExperienceDefinition, UPTExperienceDefinition::StaticClass, TEXT("UPTExperienceDefinition"), &Z_Registration_Info_UClass_UPTExperienceDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTExperienceDefinition), 3754280352U) },
+		{ Z_Construct_UClass_UPTExperienceDefinition, UPTExperienceDefinition::StaticClass, TEXT("UPTExperienceDefinition"), &Z_Registration_Info_UClass_UPTExperienceDefinition, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTExperienceDefinition), 4014349461U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_3864379112(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_3525041606(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_GameModes_PTExperienceDefinition_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
