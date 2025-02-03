@@ -2,9 +2,13 @@
 
 
 #include "PTExperienceManagerComponent.h"
-#include <ProjectPT/System/PTAssetManager.h>
+#include "ProjectPT/System/PTAssetManager.h"
 #include "PTExperienceDefinition.h"
-#include <GameFeaturesSubsystemSettings.h>
+#include "GameFeaturesSubsystem.h"
+#include "GameFeatureAction.h"
+#include "PTExperienceActionSet.h"
+#include "PTExperienceActionSet.h"
+#include "GameFeaturesSubsystemSettings.h"
 
 void UPTExperienceManagerComponent::CallOrRegister_OnExperienceLoaded(FOnExperienceLoaded::FDelegate&& Delegate)
 {
@@ -81,15 +85,92 @@ void UPTExperienceManagerComponent::OnExperienceLoadComplete()
 	check(LoadState == EPTExperienceLoadState::Loading);
 	check(CurrentExperience);
 
-	OnExperienceFullLoadCompleted();
+	GameFeaturePluginURLs.Reset();
+
+	auto CollectGameFeaturePluginURLs = [This = this](const UPrimaryDataAsset* Context, const TArray<FString>& FeaturePluginList)
+		{
+			//FeaturePluginList를 순회하며, PluginURL을 ExperienceManagerComponent의 GameFeaturePluginURLs에 추가해준다.
+			for (const FString& PluginName : FeaturePluginList)
+			{
+				FString PluginURL;
+				if (UGameFeaturesSubsystem::Get().GetPluginURLByName(PluginName, PluginURL))
+				{
+					This->GameFeaturePluginURLs.AddUnique(PluginURL);
+				}
+			}
+		};
+
+	//GameFeatureToEnable에 있는 Plugin만 일단 활성화할 GameFeature Plugin 후보군으로 등록
+	CollectGameFeaturePluginURLs(CurrentExperience, CurrentExperience->GameFeaturesToEnable);
+
+	//GameFeaturePluginURLs에 등록된 Plugin을 로딩 및 활성화
+	NumGameFeaturePluginsLoading = GameFeaturePluginURLs.Num();
+	if (NumGameFeaturePluginsLoading)
+	{
+		LoadState = EPTExperienceLoadState::LoadingGameFeatures;
+		for (const FString& PluginURL : GameFeaturePluginURLs)
+		{
+			//매 Plugin이 로딩 및 활성화 이후, OnGameFeaturePluginLoadCompletes 콜백 함수 등록
+			UGameFeaturesSubsystem::Get().LoadAndActivateGameFeaturePlugin(PluginURL,FGameFeaturePluginLoadComplete::CreateUObject(this, &ThisClass::OnGameFeaturePluginLoadComplete));
+		}
+	}
+	else
+	{
+		OnExperienceFullLoadCompleted();
+	}
+}
+
+void UPTExperienceManagerComponent::OnGameFeaturePluginLoadComplete(const UE::GameFeatures::FResult& Result)
+{
+	//매 GameFeature Plugin이 로딩될 때, 해당 함수가 콜백으로 불린다.
+	NumGameFeaturePluginsLoading--;
+
+	if (NumGameFeaturePluginsLoading == 0)
+	{
+		//GameFeaturePlugin 로딩이 다 끝났을 경우, 기존대로 Loaded로서, OnExperienceFullLoadCompleted를 호출한다.
+		//GameFeaturePluing 로딩과 활성화가 끝났다면? UGameFeatureAction을 활성화 해야한다.
+		OnExperienceLoadComplete();
+	}
 }
 
 void UPTExperienceManagerComponent::OnExperienceFullLoadCompleted()
 {
  	check(LoadState != EPTExperienceLoadState::Loaded);
 
-	LoadState = EPTExperienceLoadState::Loaded;
+	//GaemFeature Plugin의 로딩과 활성화 이후, GameFeature Action 들을 활성화 시켜야함
+	{
+		LoadState = EPTExperienceLoadState::Loaded;
+		FGameFeatureActivatingContext Context;
+		{
+			//월드의 핸들을 세팅해준다
+			const FWorldContext* ExistingWorldContext = GEngine->GetWorldContextFromWorld(GetWorld());
+			if (ExistingWorldContext)
+				Context.SetRequiredWorldContextHandle(ExistingWorldContext->ContextHandle);
+		}
 
+		auto ActivateListOfActions = [&Context](const TArray<UGameFeatureAction*>& ActionList)
+			{
+				for (UGameFeatureAction* Action : ActionList)
+				{
+					//명시적으로 GameFeatureAction에 대해 Registering -> Loading -> Activation 순으로 호출한다
+					if (Action)
+					{
+						Action->OnGameFeatureRegistering();
+						Action->OnGameFeatureLoading();
+						Action->OnGameFeatureActivating(Context);
+					}
+				}
+			};
+
+		ActivateListOfActions(CurrentExperience->Actions);
+
+		for (const TObjectPtr<UPTExperienceActionSet>& ActionSet : CurrentExperience->ActionSets)
+		{
+			ActivateListOfActions(ActionSet->Actions);
+		}
+	}
+
+	LoadState = EPTExperienceLoadState::Loaded;
 	OnExperienceLoaded.Broadcast(CurrentExperience);
 	OnExperienceLoaded.Clear();
 }

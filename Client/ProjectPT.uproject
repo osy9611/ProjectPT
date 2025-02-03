@@ -16,7 +16,8 @@
 				"GameplayAbilities",
 				"CoreUObject",
 				"CommonGame",
-				"CommonUI"
+				"CommonUI",
+				"GameFeatures"
 			]
 		}
 	],
@@ -41,9 +42,12 @@
 			"Enabled": true
 		},
 		{
- 
-            "Name": "Metasound", 
-            "Enabled": true 
-        }
+			"Name": "Metasound",
+			"Enabled": true
+		},
+		{
+			"Name": "ShooterGame",
+			"Enabled": true
+		}
 	]
 }

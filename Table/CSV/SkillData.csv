@@ -1,5 +1,5 @@
 tableNo,SkillDamage,skillRange,skillRadius,skillSpeed,skillCoolTime,MuzzleName,CollisionType
 int,float,float,float,float,float,string,CollisionType
 1001,30,25000,0,0,0,Muzzle_01,RayTrace
-1002,50,1000,100,600,3,Muzzle_03,Sphere
-1003,30,25000,0,0,0,Muzzle_01,RayTrace
+1002,50,5000,100,600,3,Muzzle_03,Sphere
+1003,10,25000,0,0,0,Muzzle_01,RayTrace

@@ -102,6 +102,21 @@
     <None Include="..\..\Plugins\CommonGame\Resources\Icon128.png">
       <Filter>Plugins\CommonGame\Resources</Filter>
     </None>
+    <Filter Include="Plugins\GameFeatures">
+      <UniqueIdentifier>{33C51FE3-4BD4-3B9E-9F42-5CCDEE9DF75F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\GameFeatures\ShooterGame">
+      <UniqueIdentifier>{814D7A80-CB73-37E5-843A-0C5AA21A6742}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\GameFeatures\ShooterGame\ShooterGame.uplugin">
+      <Filter>Plugins\GameFeatures\ShooterGame</Filter>
+    </None>
+    <Filter Include="Plugins\GameFeatures\ShooterGame\Resources">
+      <UniqueIdentifier>{B4DDB5B6-6A13-3E81-9F10-DC0D523CD7B1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\GameFeatures\ShooterGame\Resources\Icon128.png">
+      <Filter>Plugins\GameFeatures\ShooterGame\Resources</Filter>
+    </None>
     <Filter Include="Plugins\GameplayMessageRouter">
       <UniqueIdentifier>{9D7281A3-00CF-37CE-AB96-C65F44BCD644}</UniqueIdentifier>
     </Filter>
@@ -135,6 +150,27 @@
     <None Include="..\..\Plugins\TableGenerator\Resources\PlaceholderButtonIcon.svg">
       <Filter>Plugins\TableGenerator\Resources</Filter>
     </None>
+    <Filter Include="Plugins\GameFeatures\ShooterGame\Source">
+      <UniqueIdentifier>{2883C052-B77D-3883-BF4E-34060A53E4F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime">
+      <UniqueIdentifier>{15EF0B28-A3E7-31FF-B98B-E0A94DB0E301}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime\ShooterGameRuntime.Build.cs">
+      <Filter>Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime</Filter>
+    </None>
+    <Filter Include="Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime\Private">
+      <UniqueIdentifier>{5B8C3169-086E-35EA-8A78-BAFF65F639C7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime\Private\ShooterGameRuntimeModule.cpp">
+      <Filter>Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime\Public">
+      <UniqueIdentifier>{B5EACD09-6579-390B-8C0C-391AA4A8A2BA}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime\Public\ShooterGameRuntimeModule.h">
+      <Filter>Plugins\GameFeatures\ShooterGame\Source\ShooterGameRuntime\Public</Filter>
+    </ClInclude>
     <Filter Include="Plugins\GameplayMessageRouter\Source">
       <UniqueIdentifier>{AD63915F-3CDB-3083-840D-0F0A56F9C437}</UniqueIdentifier>
     </Filter>
@@ -498,9 +534,30 @@
     <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTUIMessageExtensions.h">
       <Filter>Source\ProjectPT\Extensions</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\GameFeature">
+      <UniqueIdentifier>{F30BFD9B-C5A5-3CD0-8D86-8C1B81B5EEE4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_WorldActionBase.cpp">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_WorldActionBase.h">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameFeature\PTGameFeaturesProjectPolicy.cpp">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameFeature\PTGameFeaturesProjectPolicy.h">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\GameModes">
       <UniqueIdentifier>{62F36A1F-4F07-3667-B7AC-FDCBE51DE3A6}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTExperienceActionSet.cpp">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTExperienceActionSet.h">
+      <Filter>Source\ProjectPT\GameModes</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\GameModes\PTExperienceDefinition.cpp">
       <Filter>Source\ProjectPT\GameModes</Filter>
     </ClCompile>

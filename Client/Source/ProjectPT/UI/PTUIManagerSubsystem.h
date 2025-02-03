@@ -19,11 +19,4 @@ class PROJECTPT_API UPTUIManagerSubsystem : public UUIManagerSubsystem
 public:
 	void ShowMouseCursor();
 	void HideMouseCursor();
-
-	UFUNCTION(BlueprintCallable)
-	void HandleNotifyGameplayTag(TSubclassOf<UPTActivatableWidget> ActivateWidget, FGameplayTag LayerName, FGameplayTag GameplayTag);
-
-
-	UFUNCTION(BlueprintCallable)
-	void K2_HandleNotifyGameplayTag(TSubclassOf<UPTActivatableWidget> ActivateWidget, FGameplayTag LayerName, FGameplayTag GameplayTag);
 };

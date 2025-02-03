@@ -3706,6 +3706,18 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/GameFeatures/ShooterGame/Binaries/Win64/UnrealEditor-ShooterGameRuntime.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GameFeatures/ShooterGame/Binaries/Win64/UnrealEditor-ShooterGameRuntime.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/GameFeatures/ShooterGame/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/Binaries/Win64/UnrealEditor-GameplayMessageNodes.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -26816,6 +26828,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/GameFeatures/ShooterGame/ShooterGame.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/GameplayMessageRouter/GameplayMessageRouter.uplugin",
 			"Type": "UFS"
 		},
@@ -26985,6 +27001,7 @@
 		"RigVM",
 		"SequencerAnimTools",
 		"SequencerScripting",
+		"ShooterGame",
 		"SignificanceManager",
 		"SkeletalReduction",
 		"SoundFields",

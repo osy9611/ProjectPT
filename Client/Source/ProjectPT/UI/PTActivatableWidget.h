@@ -33,11 +33,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void HideMouseCursor();
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void OnNotify(FGameplayTag GamePlayTag);
-
-	void OnNotify_Implementation(FGameplayTag GamePlayTag);
-
 	//Input 贸府 规侥
 	UPROPERTY(EditDefaultsOnly, Category = Input)
 	ECommonInputMode InputMode = ECommonInputMode::All;
@@ -45,5 +40,4 @@ public:
 	//Mouse 贸府 规侥
 	UPROPERTY(EditDefaultsOnly, Category = Input)
 	EMouseCaptureMode MouseCaptureMode = EMouseCaptureMode::CapturePermanently;
-
 };

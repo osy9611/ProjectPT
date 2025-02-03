@@ -36,15 +36,6 @@ void UUIManagerSubsystem::NotifyPlayerAdded(UCommonLocalPlayer* LocalPlayer)
 				CreateLayoutWidget(LocalPlayer);
 			}
 		});
-
-	/*if (CurrentWidget)
-	{
-		AddToLayoutViewport(LocalPlayer);
-	}
-	else
-	{
-		CreateLayoutWidget(LocalPlayer);
-	}*/
 }
 
 void UUIManagerSubsystem::NotifyPlayerRemoved(UCommonLocalPlayer* LocalPlayer)
@@ -63,24 +54,6 @@ void UUIManagerSubsystem::NotifyPlayerDestroyed(UCommonLocalPlayer* LocalPlayer)
 	RemoveLayoutFromViewport();
 }
 
-
-//ACommonPlayerController* UUIManagerSubsystem::GetCommonPlayerController(UCommonLocalPlayer* LocalPlayer)
-//{
-//	if (!LocalPlayer)
-//	{
-//		UE_LOG(LogTemp, Error, TEXT("[UIManagerSubsystem] GetCommonPlayerController() This LocalPlayer is Null"));
-//		return nullptr;
-//	}
-//
-//	if (APlayerController* PC = LocalPlayer->GetPlayerController(GetWorld()))
-//	{
-//		if (ACommonPlayerController* CommonPlayerController = Cast<ACommonPlayerController>(PC))
-//			return CommonPlayerController;
-//	}
-//
-//	return nullptr;
-//}
-
 void UUIManagerSubsystem::RegisterWidget(TSubclassOf<UCommonUserWidgetBase> CommonWidget)
 {
 	if (CurrentWidgetClass != CommonWidget)
@@ -93,7 +66,7 @@ void UUIManagerSubsystem::CreateLayoutWidget(UCommonLocalPlayer* LocalPlayer)
 {
 	if (!LocalPlayer)
 	{
-		UE_LOG(LogTemp, Error, TEXT("This PlayerController is Nullptr"));
+		UE_LOG(LogTemp, Error, TEXT("[UIManageSubsystem]This PlayerController is Nullptr"));
 		return;
 	}
 
@@ -108,14 +81,12 @@ void UUIManagerSubsystem::CreateLayoutWidget(UCommonLocalPlayer* LocalPlayer)
 
 	if (APlayerController* PlayerController = LocalPlayer->GetPlayerController(GetWorld()))
 	{
-
 		if (UCommonUserWidgetBase* NewWidgetBase = CreateWidget<UCommonUserWidgetBase>(PlayerController, CurrentWidgetClass))
 		{
 			CurrentWidget = NewWidgetBase;
 			AddToLayoutViewport(LocalPlayer);
 		}
 	}
-
 }
 
 void UUIManagerSubsystem::AddToLayoutViewport(UCommonLocalPlayer* LocalPlayer)
@@ -140,9 +111,20 @@ UCommonActivatableWidget* UUIManagerSubsystem::CreateWidgetClass(FGameplayTag La
 {
 	if (!ActivatableWidgetClass)
 	{
-		UE_LOG(LogTemp, Log, TEXT("This ActivatableWidgetClass Is Null"));
+		UE_LOG(LogTemp, Log, TEXT("[UIManagerSubsystem] CreateWidgetClass() : This ActivatableWidgetClass Is Null"));
 		return nullptr;
 	}
 
 	return CreateWidgetClass<UCommonActivatableWidget>(LayerName, ActivatableWidgetClass->GetClass());
+}
+
+UCommonActivatableWidget* UUIManagerSubsystem::GetWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass)
+{
+	if (!ActivatableWidgetClass)
+	{
+		UE_LOG(LogTemp, Log, TEXT("[UIManagerSubsystem] GetWidgetClass() : This ActivatableWidgetClass Is Null"));
+		return nullptr;
+	}
+
+	return GetWidgetClass<UCommonActivatableWidget>(LayerName,ActivatableWidgetClass->GetClass());
 }

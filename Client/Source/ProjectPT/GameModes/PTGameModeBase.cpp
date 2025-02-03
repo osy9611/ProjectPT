@@ -131,7 +131,7 @@ void APTGameModeBase::HandleMatchAssignmentIfNotExceptingOne()
 }
 
 void APTGameModeBase::OnMatchAssignmentGiven(FPrimaryAssetId ExperienceId)
-{
+{	
 	check(ExperienceId.IsValid());
 
 	UPTExperienceManagerComponent* ExperienceManagerComponent = GameState->FindComponentByClass<UPTExperienceManagerComponent>();

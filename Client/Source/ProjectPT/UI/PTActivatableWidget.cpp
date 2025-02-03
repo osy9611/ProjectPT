@@ -42,7 +42,3 @@ void UPTActivatableWidget::HideMouseCursor()
 	}
 	UIManagerSubsystem->HideMouseCursor();
 }
-
-void UPTActivatableWidget::OnNotify_Implementation(FGameplayTag GamePlayTag)
-{
-}

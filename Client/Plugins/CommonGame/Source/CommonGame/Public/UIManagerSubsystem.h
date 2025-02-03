@@ -27,8 +27,6 @@ public:
 	virtual void NotifyPlayerRemoved(UCommonLocalPlayer* LocalPlayer);
 	virtual void NotifyPlayerDestroyed(UCommonLocalPlayer* LocalPlayer);
 
-	//ACommonPlayerController* GetCommonPlayerController(UCommonLocalPlayer* LocalPlayer);
-
 	void RegisterWidget(TSubclassOf<UCommonUserWidgetBase> CommonWidget);
 	void CreateLayoutWidget(UCommonLocalPlayer* PlayerController);
 	void AddToLayoutViewport(UCommonLocalPlayer* PlayerController);
@@ -37,7 +35,10 @@ public:
 	UFUNCTION(BlueprintCallable)
 	UCommonActivatableWidget* CreateWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass);
 
-	template<typename T = UCommonActivatableWidget>
+	UFUNCTION(BlueprintCallable)
+	UCommonActivatableWidget* GetWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass);
+
+	template<typename T = UCommonActivatableWidget> 
 	T* CreateWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
 
 	template<typename T = UCommonActivatableWidget>

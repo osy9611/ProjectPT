@@ -8,6 +8,8 @@
 
 class UPTPawnData;
 class UPTWidgetData;
+class UPTExperienceActionSet;
+class UGameFeatureAction;
 /**
  * 
  */
@@ -19,6 +21,15 @@ class PROJECTPT_API UPTExperienceDefinition : public UPrimaryDataAsset
 public:
 
 	void RegisterWidgetData(UWorld* World);
+
+	UPROPERTY(EditDefaultsOnly, Category = GamePlay)
+	TArray<FString> GameFeaturesToEnable;
+
+	UPROPERTY(EditDefaultsOnly, Category = GamePlay)
+	TArray<TObjectPtr<UPTExperienceActionSet>> ActionSets;
+
+	UPROPERTY(EditDefaultsOnly, Instanced, Category = "Actions")
+	TArray<TObjectPtr<UGameFeatureAction>>Actions;
 
 	UPROPERTY(EditAnywhere, Category = Gameplay)
 	TObjectPtr<UPTPawnData> DefaultPawnData;

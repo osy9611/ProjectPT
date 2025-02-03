@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/GameStateComponent.h"
+#include "GameFeaturePluginOperationResult.h"
 #include "PTExperienceManagerComponent.generated.h"
 
 class UPTExperienceDefinition;
@@ -12,7 +13,10 @@ enum class EPTExperienceLoadState
 {
 	Unloaded,
 	Loading,
+	LoadingGameFeatures,
+	ExecutingActions,
 	Loaded,
+	Deactivating
 };
 
 DECLARE_MULTICAST_DELEGATE_OneParam(FOnExperienceLoaded, const UPTExperienceDefinition*);
@@ -34,6 +38,7 @@ public:
 	void SetCurrentExperience(FPrimaryAssetId ExperienceId);
 	void StartExperienceLoad();
 	void OnExperienceLoadComplete();
+	void OnGameFeaturePluginLoadComplete(const UE::GameFeatures::FResult& Result);
 	void OnExperienceFullLoadCompleted();
 	const UPTExperienceDefinition* GetCurrentExperienceChecked() const;
 public:
@@ -45,4 +50,8 @@ public:
 
 	//로딩이 완료된 이후 Broadcasting Delegate
 	FOnExperienceLoaded OnExperienceLoaded;
+
+	//활성화된 GameFeature Plugin들
+	int32 NumGameFeaturePluginsLoading = 0;
+	TArray<FString> GameFeaturePluginURLs;
 };

@@ -9,7 +9,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-struct FGameplayTag;
 #ifdef PROJECTPT_PTActivatableWidget_generated_h
 #error "PTActivatableWidget.generated.h already included, missing '#pragma once' in PTActivatableWidget.h"
 #endif
@@ -20,7 +19,6 @@ struct FGameplayTag;
 	DECLARE_FUNCTION(execShowMouseCursor);
 
 
-#define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_CALLBACK_WRAPPERS
 #define FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTActivatableWidget(); \
@@ -47,7 +45,6 @@ public: \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_CALLBACK_WRAPPERS \
 	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_21_ENHANCED_CONSTRUCTORS \
 private: \

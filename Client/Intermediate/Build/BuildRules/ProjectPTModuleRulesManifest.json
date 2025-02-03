@@ -2,6 +2,7 @@
 	"SourceFiles": [
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Source\\ProjectPT\\ProjectPT.Build.cs",
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Plugins\\CommonGame\\Source\\CommonGame\\CommonGame.Build.cs",
+		"D:\\Study\\Unreal\\ProjectPT\\Client\\Plugins\\GameFeatures\\ShooterGame\\Source\\ShooterGameRuntime\\ShooterGameRuntime.Build.cs",
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Plugins\\GameplayMessageRouter\\Source\\GameplayMessageNodes\\GameplayMessageNodes.Build.cs",
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Plugins\\GameplayMessageRouter\\Source\\GameplayMessageRuntime\\GameplayMessageRuntime.Build.cs",
 		"D:\\Study\\Unreal\\ProjectPT\\Client\\Plugins\\ModularGameplayActors\\Source\\ModularGameplayActors\\ModularGameplayActors.Build.cs",
