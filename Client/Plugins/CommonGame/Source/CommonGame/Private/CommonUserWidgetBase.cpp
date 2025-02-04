@@ -3,6 +3,7 @@
 
 #include "CommonUserWidgetBase.h"
 #include "CommonActivatableWidget.h"
+#include "Kismet/GameplayStatics.h"
 
 UCommonUserWidgetBase::UCommonUserWidgetBase()
 {
@@ -24,29 +25,31 @@ void UCommonUserWidgetBase::RegisterLayer(FGameplayTag LayerTag, UCommonActivata
 	}
 }
 
-UCommonActivatableWidget* UCommonUserWidgetBase::CreateWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
+UCommonActivatableWidgetBase* UCommonUserWidgetBase::CreateWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
 {
 	if (UCommonActivatableWidgetContainerBase* LayerWidget = GetLayerWidget(LayerName))
 	{
-		if (UCommonActivatableWidget* ActivateWidget = GetWidgetToLayer(LayerName, ActivatableWidgetClass))
+		UCommonActivatableWidget* ActivateWidget = GetWidgetToLayer(LayerName, ActivatableWidgetClass);
+		if (ActivateWidget)
 		{
 			if (LayerWidget->GetActiveWidget() != ActivateWidget)
 			{
 				LayerWidget->RemoveWidget(*ActivateWidget);
 				LayerWidget->AddWidgetInstance(*ActivateWidget);
 			}
-			return ActivateWidget;
 		}
 		else
 		{
-			return LayerWidget->AddWidget(ActivatableWidgetClass);
+			ActivateWidget = LayerWidget->AddWidget(ActivatableWidgetClass);
 		}
+
+		return Cast<UCommonActivatableWidgetBase>(ActivateWidget);
 	}
 
 	return nullptr;
 }
 
-UCommonActivatableWidget* UCommonUserWidgetBase::GetWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
+UCommonActivatableWidgetBase* UCommonUserWidgetBase::GetWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
 {
 	if (UCommonActivatableWidgetContainerBase* LayerWidget = GetLayerWidget(LayerName))
 	{
@@ -58,7 +61,7 @@ UCommonActivatableWidget* UCommonUserWidgetBase::GetWidgetToLayer(FGameplayTag L
 
 		if (FoundWidget)
 		{
-			return *FoundWidget;
+			return Cast<UCommonActivatableWidgetBase>(*FoundWidget);
 		}
 	}
 

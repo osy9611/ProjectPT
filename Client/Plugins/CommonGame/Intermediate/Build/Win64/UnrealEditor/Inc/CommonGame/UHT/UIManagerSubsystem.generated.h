@@ -9,7 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UCommonActivatableWidget;
+class UCommonActivatableWidgetBase;
 struct FGameplayTag;
 #ifdef COMMONGAME_UIManagerSubsystem_generated_h
 #error "UIManagerSubsystem.generated.h already included, missing '#pragma once' in UIManagerSubsystem.h"
@@ -17,8 +17,8 @@ struct FGameplayTag;
 #define COMMONGAME_UIManagerSubsystem_generated_h
 
 #define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execGetWidgetClass); \
-	DECLARE_FUNCTION(execCreateWidgetClass);
+	DECLARE_FUNCTION(execGetActivatableWidgetClass); \
+	DECLARE_FUNCTION(execCreateActivatableWidgetClass);
 
 
 #define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_20_INCLASS_NO_PURE_DECLS \

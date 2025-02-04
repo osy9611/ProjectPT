@@ -12,24 +12,24 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeUIManagerSubsystem() {}
 
 // Begin Cross Module References
+COMMONGAME_API UClass* Z_Construct_UClass_UCommonActivatableWidgetBase_NoRegister();
 COMMONGAME_API UClass* Z_Construct_UClass_UCommonUserWidgetBase_NoRegister();
 COMMONGAME_API UClass* Z_Construct_UClass_UUIManagerSubsystem();
 COMMONGAME_API UClass* Z_Construct_UClass_UUIManagerSubsystem_NoRegister();
-COMMONUI_API UClass* Z_Construct_UClass_UCommonActivatableWidget_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_UGameInstanceSubsystem();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_CommonGame();
 // End Cross Module References
 
-// Begin Class UUIManagerSubsystem Function CreateWidgetClass
-struct Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics
+// Begin Class UUIManagerSubsystem Function CreateActivatableWidgetClass
+struct Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics
 {
-	struct UIManagerSubsystem_eventCreateWidgetClass_Parms
+	struct UIManagerSubsystem_eventCreateActivatableWidgetClass_Parms
 	{
 		FGameplayTag LayerName;
-		UCommonActivatableWidget* ActivatableWidgetClass;
-		UCommonActivatableWidget* ReturnValue;
+		UCommonActivatableWidgetBase* ActivatableWidgetClass;
+		UCommonActivatableWidgetBase* ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -48,45 +48,45 @@ struct Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::NewProp_LayerName = { "LayerName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventCreateWidgetClass_Parms, LayerName), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::NewProp_ActivatableWidgetClass = { "ActivatableWidgetClass", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventCreateWidgetClass_Parms, ActivatableWidgetClass), Z_Construct_UClass_UCommonActivatableWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivatableWidgetClass_MetaData), NewProp_ActivatableWidgetClass_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventCreateWidgetClass_Parms, ReturnValue), Z_Construct_UClass_UCommonActivatableWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::NewProp_LayerName,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::NewProp_ActivatableWidgetClass,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::NewProp_LayerName = { "LayerName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventCreateActivatableWidgetClass_Parms, LayerName), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::NewProp_ActivatableWidgetClass = { "ActivatableWidgetClass", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventCreateActivatableWidgetClass_Parms, ActivatableWidgetClass), Z_Construct_UClass_UCommonActivatableWidgetBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivatableWidgetClass_MetaData), NewProp_ActivatableWidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventCreateActivatableWidgetClass_Parms, ReturnValue), Z_Construct_UClass_UCommonActivatableWidgetBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::NewProp_LayerName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::NewProp_ActivatableWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUIManagerSubsystem, nullptr, "CreateWidgetClass", nullptr, nullptr, Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::PropPointers), sizeof(Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::UIManagerSubsystem_eventCreateWidgetClass_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::Function_MetaDataParams), Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::UIManagerSubsystem_eventCreateWidgetClass_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUIManagerSubsystem, nullptr, "CreateActivatableWidgetClass", nullptr, nullptr, Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::PropPointers), sizeof(Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::UIManagerSubsystem_eventCreateActivatableWidgetClass_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::Function_MetaDataParams), Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::UIManagerSubsystem_eventCreateActivatableWidgetClass_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UUIManagerSubsystem::execCreateWidgetClass)
+DEFINE_FUNCTION(UUIManagerSubsystem::execCreateActivatableWidgetClass)
 {
 	P_GET_STRUCT(FGameplayTag,Z_Param_LayerName);
-	P_GET_OBJECT(UCommonActivatableWidget,Z_Param_ActivatableWidgetClass);
+	P_GET_OBJECT(UCommonActivatableWidgetBase,Z_Param_ActivatableWidgetClass);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(UCommonActivatableWidget**)Z_Param__Result=P_THIS->CreateWidgetClass(Z_Param_LayerName,Z_Param_ActivatableWidgetClass);
+	*(UCommonActivatableWidgetBase**)Z_Param__Result=P_THIS->CreateActivatableWidgetClass(Z_Param_LayerName,Z_Param_ActivatableWidgetClass);
 	P_NATIVE_END;
 }
-// End Class UUIManagerSubsystem Function CreateWidgetClass
+// End Class UUIManagerSubsystem Function CreateActivatableWidgetClass
 
-// Begin Class UUIManagerSubsystem Function GetWidgetClass
-struct Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics
+// Begin Class UUIManagerSubsystem Function GetActivatableWidgetClass
+struct Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics
 {
-	struct UIManagerSubsystem_eventGetWidgetClass_Parms
+	struct UIManagerSubsystem_eventGetActivatableWidgetClass_Parms
 	{
 		FGameplayTag LayerName;
-		UCommonActivatableWidget* ActivatableWidgetClass;
-		UCommonActivatableWidget* ReturnValue;
+		UCommonActivatableWidgetBase* ActivatableWidgetClass;
+		UCommonActivatableWidgetBase* ReturnValue;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -105,44 +105,44 @@ struct Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::NewProp_LayerName = { "LayerName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventGetWidgetClass_Parms, LayerName), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::NewProp_ActivatableWidgetClass = { "ActivatableWidgetClass", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventGetWidgetClass_Parms, ActivatableWidgetClass), Z_Construct_UClass_UCommonActivatableWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivatableWidgetClass_MetaData), NewProp_ActivatableWidgetClass_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventGetWidgetClass_Parms, ReturnValue), Z_Construct_UClass_UCommonActivatableWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::NewProp_LayerName,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::NewProp_ActivatableWidgetClass,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::NewProp_ReturnValue,
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::NewProp_LayerName = { "LayerName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventGetActivatableWidgetClass_Parms, LayerName), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(0, nullptr) }; // 1298103297
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::NewProp_ActivatableWidgetClass = { "ActivatableWidgetClass", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventGetActivatableWidgetClass_Parms, ActivatableWidgetClass), Z_Construct_UClass_UCommonActivatableWidgetBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActivatableWidgetClass_MetaData), NewProp_ActivatableWidgetClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UIManagerSubsystem_eventGetActivatableWidgetClass_Parms, ReturnValue), Z_Construct_UClass_UCommonActivatableWidgetBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::NewProp_LayerName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::NewProp_ActivatableWidgetClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::NewProp_ReturnValue,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUIManagerSubsystem, nullptr, "GetWidgetClass", nullptr, nullptr, Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::PropPointers), sizeof(Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::UIManagerSubsystem_eventGetWidgetClass_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::Function_MetaDataParams), Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::UIManagerSubsystem_eventGetWidgetClass_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UUIManagerSubsystem, nullptr, "GetActivatableWidgetClass", nullptr, nullptr, Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::PropPointers), sizeof(Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::UIManagerSubsystem_eventGetActivatableWidgetClass_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::Function_MetaDataParams), Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::UIManagerSubsystem_eventGetActivatableWidgetClass_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UUIManagerSubsystem::execGetWidgetClass)
+DEFINE_FUNCTION(UUIManagerSubsystem::execGetActivatableWidgetClass)
 {
 	P_GET_STRUCT(FGameplayTag,Z_Param_LayerName);
-	P_GET_OBJECT(UCommonActivatableWidget,Z_Param_ActivatableWidgetClass);
+	P_GET_OBJECT(UCommonActivatableWidgetBase,Z_Param_ActivatableWidgetClass);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(UCommonActivatableWidget**)Z_Param__Result=P_THIS->GetWidgetClass(Z_Param_LayerName,Z_Param_ActivatableWidgetClass);
+	*(UCommonActivatableWidgetBase**)Z_Param__Result=P_THIS->GetActivatableWidgetClass(Z_Param_LayerName,Z_Param_ActivatableWidgetClass);
 	P_NATIVE_END;
 }
-// End Class UUIManagerSubsystem Function GetWidgetClass
+// End Class UUIManagerSubsystem Function GetActivatableWidgetClass
 
 // Begin Class UUIManagerSubsystem
 void UUIManagerSubsystem::StaticRegisterNativesUUIManagerSubsystem()
 {
 	UClass* Class = UUIManagerSubsystem::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "CreateWidgetClass", &UUIManagerSubsystem::execCreateWidgetClass },
-		{ "GetWidgetClass", &UUIManagerSubsystem::execGetWidgetClass },
+		{ "CreateActivatableWidgetClass", &UUIManagerSubsystem::execCreateActivatableWidgetClass },
+		{ "GetActivatableWidgetClass", &UUIManagerSubsystem::execGetActivatableWidgetClass },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -179,8 +179,8 @@ struct Z_Construct_UClass_UUIManagerSubsystem_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UUIManagerSubsystem_CreateWidgetClass, "CreateWidgetClass" }, // 3059405942
-		{ &Z_Construct_UFunction_UUIManagerSubsystem_GetWidgetClass, "GetWidgetClass" }, // 358536951
+		{ &Z_Construct_UFunction_UUIManagerSubsystem_CreateActivatableWidgetClass, "CreateActivatableWidgetClass" }, // 4264354228
+		{ &Z_Construct_UFunction_UUIManagerSubsystem_GetActivatableWidgetClass, "GetActivatableWidgetClass" }, // 2715247097
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -237,10 +237,10 @@ UUIManagerSubsystem::~UUIManagerSubsystem() {}
 struct Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UUIManagerSubsystem, UUIManagerSubsystem::StaticClass, TEXT("UUIManagerSubsystem"), &Z_Registration_Info_UClass_UUIManagerSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUIManagerSubsystem), 658051166U) },
+		{ Z_Construct_UClass_UUIManagerSubsystem, UUIManagerSubsystem::StaticClass, TEXT("UUIManagerSubsystem"), &Z_Registration_Info_UClass_UUIManagerSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UUIManagerSubsystem), 3570814641U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_2255643088(TEXT("/Script/CommonGame"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_2374608354(TEXT("/Script/CommonGame"),
 	Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

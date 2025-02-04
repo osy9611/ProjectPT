@@ -107,7 +107,7 @@ void UUIManagerSubsystem::RemoveLayoutFromViewport()
 	}
 }
 
-UCommonActivatableWidget* UUIManagerSubsystem::CreateWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass)
+UCommonActivatableWidgetBase* UUIManagerSubsystem::CreateActivatableWidgetClass(FGameplayTag LayerName, UCommonActivatableWidgetBase* ActivatableWidgetClass)
 {
 	if (!ActivatableWidgetClass)
 	{
@@ -115,10 +115,10 @@ UCommonActivatableWidget* UUIManagerSubsystem::CreateWidgetClass(FGameplayTag La
 		return nullptr;
 	}
 
-	return CreateWidgetClass<UCommonActivatableWidget>(LayerName, ActivatableWidgetClass->GetClass());
+	return CreateActivatableWidgetClass<UCommonActivatableWidgetBase>(LayerName, ActivatableWidgetClass->GetClass());
 }
 
-UCommonActivatableWidget* UUIManagerSubsystem::GetWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass)
+UCommonActivatableWidgetBase* UUIManagerSubsystem::GetActivatableWidgetClass(FGameplayTag LayerName, UCommonActivatableWidgetBase* ActivatableWidgetClass)
 {
 	if (!ActivatableWidgetClass)
 	{
@@ -126,5 +126,5 @@ UCommonActivatableWidget* UUIManagerSubsystem::GetWidgetClass(FGameplayTag Layer
 		return nullptr;
 	}
 
-	return GetWidgetClass<UCommonActivatableWidget>(LayerName,ActivatableWidgetClass->GetClass());
+	return GetActivatableWidgetClass<UCommonActivatableWidgetBase>(LayerName,ActivatableWidgetClass->GetClass());
 }

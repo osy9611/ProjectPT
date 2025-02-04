@@ -10,8 +10,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePTActivatableWidget() {}
 
 // Begin Cross Module References
+COMMONGAME_API UClass* Z_Construct_UClass_UCommonActivatableWidgetBase();
 COMMONINPUT_API UEnum* Z_Construct_UEnum_CommonInput_ECommonInputMode();
-COMMONUI_API UClass* Z_Construct_UClass_UCommonActivatableWidget();
 ENGINE_API UEnum* Z_Construct_UEnum_Engine_EMouseCaptureMode();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTActivatableWidget();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTActivatableWidget_NoRegister();
@@ -153,7 +153,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPTActiva
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTActivatableWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPTActivatableWidget_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_UCommonActivatableWidget,
+	(UObject* (*)())Z_Construct_UClass_UCommonActivatableWidgetBase,
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPTActivatableWidget_Statics::DependentSingletons) < 16);
@@ -192,10 +192,10 @@ UPTActivatableWidget::~UPTActivatableWidget() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTActivatableWidget, UPTActivatableWidget::StaticClass, TEXT("UPTActivatableWidget"), &Z_Registration_Info_UClass_UPTActivatableWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTActivatableWidget), 729978260U) },
+		{ Z_Construct_UClass_UPTActivatableWidget, UPTActivatableWidget::StaticClass, TEXT("UPTActivatableWidget"), &Z_Registration_Info_UClass_UPTActivatableWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTActivatableWidget), 149284403U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_1435351506(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_3570589363(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTActivatableWidget_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -24,7 +24,7 @@ private: \
 	static void StaticRegisterNativesUPTActivatableWidget(); \
 	friend struct Z_Construct_UClass_UPTActivatableWidget_Statics; \
 public: \
-	DECLARE_CLASS(UPTActivatableWidget, UCommonActivatableWidget, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/ProjectPT"), NO_API) \
+	DECLARE_CLASS(UPTActivatableWidget, UCommonActivatableWidgetBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/ProjectPT"), NO_API) \
 	DECLARE_SERIALIZER(UPTActivatableWidget)
 
 

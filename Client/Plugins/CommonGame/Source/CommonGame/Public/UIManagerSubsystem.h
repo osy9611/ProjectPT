@@ -6,7 +6,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "GameplayTagContainer.h"
 #include "CommonUserWidgetBase.h"
-#include "CommonActivatableWidget.h"
+#include "CommonActivatableWidgetBase.h"
 #include "Widgets/CommonActivatableWidgetContainer.h"
 #include "UIManagerSubsystem.generated.h"
 
@@ -33,16 +33,16 @@ public:
 	void RemoveLayoutFromViewport();
 
 	UFUNCTION(BlueprintCallable)
-	UCommonActivatableWidget* CreateWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass);
+	UCommonActivatableWidgetBase* CreateActivatableWidgetClass(FGameplayTag LayerName, UCommonActivatableWidgetBase* ActivatableWidgetClass);
 
 	UFUNCTION(BlueprintCallable)
-	UCommonActivatableWidget* GetWidgetClass(FGameplayTag LayerName, UCommonActivatableWidget* ActivatableWidgetClass);
+	UCommonActivatableWidgetBase* GetActivatableWidgetClass(FGameplayTag LayerName, UCommonActivatableWidgetBase* ActivatableWidgetClass);
 
-	template<typename T = UCommonActivatableWidget> 
-	T* CreateWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
+	template<typename T = UCommonActivatableWidgetBase>
+	T* CreateActivatableWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
 
-	template<typename T = UCommonActivatableWidget>
-	T* GetWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
+	template<typename T = UCommonActivatableWidgetBase>
+	T* GetActivatableWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
 
 	UPROPERTY(Transient)
 	TSubclassOf<UCommonUserWidgetBase> CurrentWidgetClass;
@@ -56,7 +56,7 @@ public:
 };
 
 template<typename T>
-T* UUIManagerSubsystem::CreateWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
+T* UUIManagerSubsystem::CreateActivatableWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
 {
 	if (!CurrentWidget)
 	{
@@ -68,7 +68,7 @@ T* UUIManagerSubsystem::CreateWidgetClass(FGameplayTag LayerName, UClass* Activa
 }
 
 template<typename T>
-T* UUIManagerSubsystem::GetWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
+T* UUIManagerSubsystem::GetActivatableWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass)
 {
 	if (!CurrentWidget)
 	{

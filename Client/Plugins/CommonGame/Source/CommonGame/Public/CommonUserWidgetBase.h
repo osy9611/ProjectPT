@@ -6,9 +6,10 @@
 #include "CommonUserWidget.h"
 #include "GameplayTagContainer.h"
 #include "Widgets/CommonActivatableWidgetContainer.h"
+#include "CommonActivatableWidgetBase.h"
 #include "CommonUserWidgetBase.generated.h"
 
-class UCommonActivatableWidget;
+class UCommonActivatableWidgetBase;
 /**
  *
  */
@@ -24,8 +25,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void RegisterLayer(FGameplayTag LayerTag, UCommonActivatableWidgetContainerBase* LayerWidget);
 
-	UCommonActivatableWidget* CreateWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
-	UCommonActivatableWidget* GetWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
+	UFUNCTION(BlueprintCallable)
+	UCommonActivatableWidgetBase* CreateWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
+
+	UFUNCTION(BlueprintCallable)
+	UCommonActivatableWidgetBase* GetWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
 
 	UPROPERTY(Transient)
 	TMap<FGameplayTag, TObjectPtr<UCommonActivatableWidgetContainerBase>> Layers;

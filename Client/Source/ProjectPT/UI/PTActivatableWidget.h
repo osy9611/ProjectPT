@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "CommonActivatableWidget.h"
+#include "CommonActivatableWidgetBase.h"
 #include "PTActivatableWidget.generated.h"
 
 class UPTUIManagerSubsystem;
@@ -16,7 +16,7 @@ struct FGameplayTag;
  * 2. Input(Mouse or Keyboard 殿) 贸府 规过阑 沥狼
  */
 UCLASS()
-class PROJECTPT_API UPTActivatableWidget : public UCommonActivatableWidget
+class PROJECTPT_API UPTActivatableWidget : public UCommonActivatableWidgetBase
 {
 	GENERATED_BODY()
 
@@ -40,4 +40,5 @@ public:
 	//Mouse 贸府 规侥
 	UPROPERTY(EditDefaultsOnly, Category = Input)
 	EMouseCaptureMode MouseCaptureMode = EMouseCaptureMode::CapturePermanently;
+
 };

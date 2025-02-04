@@ -48,6 +48,9 @@
     <Filter Include="Plugins\CommonGame\Source\CommonGame\Private">
       <UniqueIdentifier>{D9E7423B-BEF6-3131-8177-EB9838C31B49}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonActivatableWidgetBase.cpp">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonGame.cpp">
       <Filter>Plugins\CommonGame\Source\CommonGame\Private</Filter>
     </ClCompile>
@@ -72,6 +75,9 @@
     <Filter Include="Plugins\CommonGame\Source\CommonGame\Public">
       <UniqueIdentifier>{A960B343-5B8A-3A84-8C5C-DF32BD009E63}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonActivatableWidgetBase.h">
+      <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonGame.h">
       <Filter>Plugins\CommonGame\Source\CommonGame\Public</Filter>
     </ClInclude>

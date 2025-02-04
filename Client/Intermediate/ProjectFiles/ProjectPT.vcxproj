@@ -570,6 +570,10 @@
     <None Include="..\..\Config\DefaultGameplayTags.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Plugins\CommonGame\Source\CommonGame\CommonGame.Build.cs"/>
+    <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonActivatableWidgetBase.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\Plugins\CommonGame\Source\CommonGame\Private\CommonGame.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -598,6 +602,7 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
+    <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonActivatableWidgetBase.h"/>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonGame.h"/>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonGameInstance.h"/>
     <ClInclude Include="..\..\Plugins\CommonGame\Source\CommonGame\Public\CommonLocalPlayer.h"/>
