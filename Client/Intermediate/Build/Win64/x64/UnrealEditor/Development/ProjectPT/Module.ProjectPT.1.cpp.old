@@ -31,3 +31,4 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTExperienceDefinition.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTExperienceManagerComponent.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTGameFeaturesProjectPolicy.gen.cpp"
+#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTGameInstance.gen.cpp"

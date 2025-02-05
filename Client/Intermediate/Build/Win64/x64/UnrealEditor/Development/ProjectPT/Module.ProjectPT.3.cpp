@@ -34,6 +34,7 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/System/PTGameInstance.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/Table/DataManagerSubsystem.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/Table/EnumGenerateData.cpp"
+#include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/UI/PTActivatableWidget.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/UI/PTUIManagerSubsystem.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/UI/Weapon/CircumferenceMarkerWidget.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Source/ProjectPT/UI/Weapon/SCircumferenceMarkerWidget.cpp"

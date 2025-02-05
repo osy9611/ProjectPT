@@ -2,10 +2,12 @@
 	"RemapUnityFiles": 
 	{
 		"Module.CommonGame.cpp.obj": [
+			"CommonActivatableWidgetBase.gen.cpp.obj",
 			"CommonGameInstance.gen.cpp.obj",
 			"CommonLocalPlayer.gen.cpp.obj",
 			"CommonPlayerController.gen.cpp.obj",
 			"CommonSessionSubsystem.gen.cpp.obj",
+			"CommonActivatableWidgetBase.cpp.obj",
 			"CommonGame.cpp.obj",
 			"CommonGameInstance.cpp.obj",
 			"CommonLocalPlayer.cpp.obj",

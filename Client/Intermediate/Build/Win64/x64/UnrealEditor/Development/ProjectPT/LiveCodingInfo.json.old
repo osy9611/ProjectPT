@@ -34,11 +34,11 @@
 			"PTExperienceDefinition.gen.cpp.obj",
 			"PTExperienceManagerComponent.gen.cpp.obj",
 			"PTGameFeaturesProjectPolicy.gen.cpp.obj",
+			"PTGameInstance.gen.cpp.obj",
 			"ProjectPT.init.gen.cpp.obj",
 			"PTActivatableWidget.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
-			"PTGameInstance.gen.cpp.obj",
 			"PTGameModeBase.gen.cpp.obj",
 			"PTGameplayAbility.gen.cpp.obj",
 			"PTGameplayAbilityTargetActor_Trace.gen.cpp.obj",
