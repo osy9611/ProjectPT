@@ -13,9 +13,11 @@
 			"ObjectPoolSubsystem.gen.cpp.obj",
 			"Poolable_Actor.gen.cpp.obj",
 			"Poolable_NiagaraSystem.gen.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
+			"PTActivatableWidget.gen.cpp.obj",
 			"PTAICharacter.gen.cpp.obj",
 			"PTAIComponent.gen.cpp.obj",
 			"PTAI_AttributeSet.gen.cpp.obj",
@@ -34,9 +36,7 @@
 			"PTExperienceDefinition.gen.cpp.obj",
 			"PTExperienceManagerComponent.gen.cpp.obj",
 			"PTGameFeaturesProjectPolicy.gen.cpp.obj",
-			"PTGameInstance.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
-			"PTActivatableWidget.gen.cpp.obj"
+			"PTGameInstance.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
 			"PTGameModeBase.gen.cpp.obj",
@@ -66,6 +66,7 @@
 			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
 			"PTSceneData.gen.cpp.obj",
+			"PTUIManagerSubsystem.gen.cpp.obj",
 			"PTUIMessageExtensions.gen.cpp.obj",
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
@@ -95,8 +96,7 @@
 			"PTAICharacter.cpp.obj",
 			"PTAIComponent.cpp.obj",
 			"PTCharacter.cpp.obj",
-			"PTHeroComponent.cpp.obj",
-			"PTUIManagerSubsystem.gen.cpp.obj"
+			"PTHeroComponent.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
 			"PTPawnData.cpp.obj",
@@ -134,10 +134,10 @@
 			"PTGameInstance.cpp.obj",
 			"DataManagerSubsystem.cpp.obj",
 			"EnumGenerateData.cpp.obj",
+			"PTActivatableWidget.cpp.obj",
 			"PTUIManagerSubsystem.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
-			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTActivatableWidget.cpp.obj"
+			"SCircumferenceMarkerWidget.cpp.obj"
 		]
 	}
 }
