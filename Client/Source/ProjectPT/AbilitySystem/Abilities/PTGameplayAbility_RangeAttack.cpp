@@ -23,10 +23,6 @@ void UPTGameplayAbility_RangeAttack::StartRangedWeaponTargeting()
 	UAbilitySystemComponent* ASC = CurrentActorInfo->AbilitySystemComponent.Get();
 	check(ASC);
 
-
-	FGameplayAbilitySpec*  TEST = GetCurrentAbilitySpec();
-	TEST->DynamicAbilityTags.GetByIndex(0);
-
 	//총알의 궤적의 Hit 정보 계산
 	TArray<FHitResult> FoundHits;
 	PerformLocalTargeting(FoundHits);

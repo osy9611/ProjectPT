@@ -71,7 +71,6 @@
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
-			"PTGameplayAbility_Death.cpp.obj",
 			"PTGameplayAbility_Jump.cpp.obj",
 			"PTGameplayAbility_MeleeAttack.cpp.obj",
 			"PTGameplayAbility_MeleeHitCheck.cpp.obj",
@@ -96,7 +95,8 @@
 			"PTAICharacter.cpp.obj",
 			"PTAIComponent.cpp.obj",
 			"PTCharacter.cpp.obj",
-			"PTHeroComponent.cpp.obj"
+			"PTHeroComponent.cpp.obj",
+			"PTGameplayAbility_Death.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
 			"PTPawnData.cpp.obj",
