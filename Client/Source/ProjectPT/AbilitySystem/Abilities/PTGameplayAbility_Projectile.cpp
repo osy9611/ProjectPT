@@ -69,15 +69,42 @@ void UPTGameplayAbility_Projectile::CreateObject()
 
 		AActor* AvatarActor = CurrentActorInfo->AvatarActor.Get();
 		Projectile->IgnoreCollison(AvatarActor);
+		Projectile->OnProjectileHit.AddUObject(this, &ThisClass::OnTargetDataReadyCallback);
 
-		if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(CurrentActorInfo->AvatarActor.Get()))
+		if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(AvatarActor))
 		{
-			Projectile->OnProjectileHit.AddUObject(this, &ThisClass::OnTargetDataReadyCallback);
 			FSkillData SkillData = AttributeSet->GetSkillData(GetGameplayTag());
-			FTransform Transform = PawnExtComp->GetSkeletonMeshSocketTransform(FName(SkillData.MuzzleName));
-			Projectile->RegisterData(Transform.GetLocation(), AvatarActor->GetActorForwardVector(), SkillData.skillRange, SkillData.skillRadius, SkillData.skillSpeed);
+			FTransform MuzzleTransform = PawnExtComp->GetSkeletonMeshSocketTransform(FName(SkillData.MuzzleName));
+			FTransform TargetTransform = GetTargetingTransform(Cast<APawn>(AvatarActor), MuzzleTransform);
+			Projectile->RegisterData(MuzzleTransform.GetTranslation(), TargetTransform.GetUnitAxis(EAxis::X), SkillData.skillRange, SkillData.skillRadius, SkillData.skillSpeed);
 		}
+		
 	}
+}
+
+FTransform UPTGameplayAbility_Projectile::GetTargetingTransform(APawn* SourcePawn, FTransform MuzzleTrans)
+{
+	check(SourcePawn);
+
+	AController* Controller = SourcePawn->Controller;
+	UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(SourcePawn);
+	if (Controller == nullptr || PawnExtComp == nullptr)
+		return FTransform();
+
+	double FocalDistance = 1024.0f;
+	FVector FocalLoc;
+	FVector CamLoc;
+	FRotator CamRot;
+
+	Controller->GetPlayerViewPoint(CamLoc, CamRot);
+
+	FVector AimDir = CamRot.Vector().GetSafeNormal();
+	FocalLoc = CamLoc + (AimDir * FocalDistance);
+
+	FVector MuzzleLoc = MuzzleTrans.GetLocation();
+	FVector FinalCamLoc = FocalLoc + (((MuzzleLoc - FocalLoc) | AimDir) * AimDir);
+
+	return FTransform(CamRot, FinalCamLoc);
 }
 
 void UPTGameplayAbility_Projectile::OnTargetDataReadyCallback(const TArray<FHitResult> HitResults)
@@ -89,7 +116,7 @@ void UPTGameplayAbility_Projectile::OnTargetDataReadyCallback(const TArray<FHitR
 	TargetData.UniqueId = 0;
 
 	TSharedPtr<FGameplayAbilityTargetData_ActorArray> NewTargetDatas = MakeShared<FGameplayAbilityTargetData_ActorArray>();
-	
+
 	for (const FHitResult& FoundHit : HitResults)
 	{
 		if (FoundHit.GetActor())

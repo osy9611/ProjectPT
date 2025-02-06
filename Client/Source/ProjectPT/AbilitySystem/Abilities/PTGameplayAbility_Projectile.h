@@ -18,15 +18,15 @@ public:
 	UPTGameplayAbility_Projectile(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
-	
 	virtual bool CommitAbilityCooldown(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const bool ForceCooldown, OUT FGameplayTagContainer* OptionalRelevantTags = nullptr) override;
 	
-
 	UFUNCTION(BlueprintCallable)
 	float GetCoolTime();
 
 	UFUNCTION(BlueprintCallable)
 	void CreateObject();
+
+	FTransform GetTargetingTransform(APawn* SourcePawn,FTransform MuzzleTrans);
 
 	void OnTargetDataReadyCallback(const TArray<FHitResult> HitResults);
 

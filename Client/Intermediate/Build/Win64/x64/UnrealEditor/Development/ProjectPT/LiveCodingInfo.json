@@ -13,9 +13,11 @@
 			"ObjectPoolSubsystem.gen.cpp.obj",
 			"Poolable_Actor.gen.cpp.obj",
 			"Poolable_NiagaraSystem.gen.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
+			"PTActivatableWidget.gen.cpp.obj",
 			"PTAICharacter.gen.cpp.obj",
 			"PTAIComponent.gen.cpp.obj",
 			"PTAI_AttributeSet.gen.cpp.obj",
@@ -34,9 +36,7 @@
 			"PTExperienceDefinition.gen.cpp.obj",
 			"PTExperienceManagerComponent.gen.cpp.obj",
 			"PTGameFeaturesProjectPolicy.gen.cpp.obj",
-			"PTGameInstance.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
-			"PTActivatableWidget.gen.cpp.obj"
+			"PTGameInstance.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
 			"PTGameModeBase.gen.cpp.obj",
@@ -75,7 +75,6 @@
 			"PTGameplayAbility_Jump.cpp.obj",
 			"PTGameplayAbility_MeleeAttack.cpp.obj",
 			"PTGameplayAbility_MeleeHitCheck.cpp.obj",
-			"PTGameplayAbility_Projectile.cpp.obj",
 			"PTGameplayAbility_RangeAttack.cpp.obj",
 			"PTAI_AttributeSet.cpp.obj",
 			"PTAttributeSet.cpp.obj",
@@ -96,7 +95,8 @@
 			"PTAICharacter.cpp.obj",
 			"PTAIComponent.cpp.obj",
 			"PTCharacter.cpp.obj",
-			"PTHeroComponent.cpp.obj"
+			"PTHeroComponent.cpp.obj",
+			"PTGameplayAbility_Projectile.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
 			"PTPawnData.cpp.obj",
