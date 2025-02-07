@@ -22,9 +22,9 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 
 ### Experience 및 GameFeature
 - Lyra의 Experience 시스템을 분석하여 게임 모드 관리 적용
+  - **[Experience](https://github.com/osy9611/ProjectPT/wiki/Experience)**
 - GameFeature를 활용하여 독립적인 기능 로드 및 활성화 구현
-- **[Experience](https://github.com/osy9611/ProjectPT/wiki/Experience)**
-- **[GameFeature](https://github.com/osy9611/ProjectPT/wiki/GameFeature)**
+  - **[GameFeature](https://github.com/osy9611/ProjectPT/wiki/GameFeature)**
 
 ### AI 시스템
 - AIComponent를 통한 AI 초기화 및 AttributeSet 관리
@@ -38,8 +38,13 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 
 ### 데이터 관리 (DataTable & AssetManager)
 - CSV 기반 DataTable 자동 생성 및 직렬화 저장
-- Unreal의 AssetManager를 Addressable과 비교하여 리소스 관리 최적화
-- **[DataTable](https://github.com/osy9611/ProjectPT/wiki/DataTable)**
-- **[AssetManager](https://github.com/osy9611/ProjectPT/wiki/AssetManager)**
+  - **[DataTable](https://github.com/osy9611/ProjectPT/wiki/DataTable)**
+- Unreal의 AssetManager를 Unity의 Addressable과 비교하여 리소스 로드 및 관리
+  - **[AssetManager](https://github.com/osy9611/ProjectPT/wiki/AssetManager)**
 
+### Subsystem (Unity의 Manager 시스템을 Unreal에 적용)
+- Unity에서 사용했던 Manager 패턴을 Unreal의 Subsystem 구조로 변환
+- 게임 내 시스템을 `GameInstanceSubsystem` 및 `WorldSubsystem`으로 관리
+- **[Subsystem](https://github.com/osy9611/ProjectPT/wiki/Subsystem)**
+  
 ---
