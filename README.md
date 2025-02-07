@@ -18,33 +18,33 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 
 ###  Gameplay Ability System (GAS)
 - Unreal의 GAS 시스템을 활용하여 능력(스킬) 및 상태 효과를 관리
-- **[더 보기](https://github.com/osy9611/ProjectPT/wiki/Gameplay-Ability-System)**
+- **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Gameplay-Ability-System)**
 
 ### Experience 및 GameFeature
 - Lyra의 Experience 시스템을 분석하여 게임 모드 관리 적용
-  - **[더 보기](https://github.com/osy9611/ProjectPT/wiki/Experience)**
+  - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Experience)**
 - GameFeature를 활용하여 독립적인 기능 로드 및 활성화 구현
-  - **[더 보기](https://github.com/osy9611/ProjectPT/wiki/GameFeature)**
+  - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/GameFeature)**
 
 ### AI 시스템
 - AIComponent를 통한 AI 초기화 및 AttributeSet 관리
 - AIController와 AI Perception을 이용한 감지 및 행동 패턴 구현
-- **[더 보기](https://github.com/osy9611/ProjectPT/wiki/AI)**
+- **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/AI)**
 
 ### UI 시스템
 - Unity의 UIManager를 Unreal의 `UIManagerSubsystem`으로 변환
 - `GameplayTag` 기반 UI Layer 관리 (Static, Dynamic, System)
-- **[더 보기](https://github.com/osy9611/ProjectPT/wiki/UISystem)**
+- **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/UISystem)**
 
 ### 데이터 관리 (DataTable & AssetManager)
 - CSV 기반 DataTable 자동 생성 및 직렬화 저장
-  - **[더 보기](https://github.com/osy9611/ProjectPT/wiki/DataTable)**
+  - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/DataTable)**
 - Unreal의 AssetManager를 Unity의 Addressable과 비교하여 리소스 로드 및 관리
-  - **[더 보기](https://github.com/osy9611/ProjectPT/wiki/AssetManager)**
+  - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/AssetManager)**
 
 ### Subsystem (Unity의 Manager 시스템을 Unreal에 적용)
 - Unity에서 사용했던 Manager 패턴을 Unreal의 Subsystem 구조로 변환
 - 게임 내 시스템을 `GameInstanceSubsystem` 및 `WorldSubsystem`으로 관리
-- **[더 보기](https://github.com/osy9611/ProjectPT/wiki/Subsystem)**
+- **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Subsystem)**
   
 ---
