@@ -12,6 +12,9 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 - [ GitHub 위키](https://github.com/osy9611/ProjectPT/wiki)
 - [ Unity 프로젝트 (ProjectT)](https://github.com/osy9611/ProjectT)
 
+**영상 링크**
+- [ 영상 링크 ](https://youtu.be/AaxhsxUV9HY)
+
 ---
 
 ## 주요 시스템 개요
@@ -32,8 +35,8 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/AI)**
 
 ### UI 시스템
-- Unity의 UIManager를 Unreal의 `UIManagerSubsystem`으로 변환
-- `GameplayTag` 기반 UI Layer 관리 (Static, Dynamic, System)
+- Unity의 UIManager를 Unreal의 UIManagerSubsystem 으로 변환
+- GameplayTag 기반 UI Layer 관리 (Static, Dynamic, System)
 - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/UISystem)**
 
 ### 데이터 관리 (DataTable & AssetManager)
