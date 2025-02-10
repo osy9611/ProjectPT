@@ -4,7 +4,7 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-// IWYU pragma: private, include "Table/EnumGenerateData.h"
+// IWYU pragma: private, include "Data/EnumGenerateData.h"
 #include "Templates/IsUEnumClass.h"
 #include "UObject/ObjectMacros.h"
 #include "UObject/ReflectedTypeAccessors.h"
@@ -16,7 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define PROJECTPT_EnumGenerateData_generated_h
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Table_EnumGenerateData_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 
 
 #define FOREACH_ENUM_EPTELEMENTTYPE(op) \

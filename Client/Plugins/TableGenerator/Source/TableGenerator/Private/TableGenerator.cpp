@@ -134,8 +134,8 @@ void FTableGeneratorModule::FillMenu(FMenuBuilder& MenuBuilder)
 		MenuBuilder.AddMenuEntry(
 			FTableGeneratorCommands::Get().Cmd_SettingConfig,
 			NAME_None,
-			FText::FromString("Create Folders"),
-			FText::FromString("Create necessary folders."),
+			FText::FromString("TableConfigSetting"),
+			FText::FromString("Table Config Settings."),
 			FSlateIcon()
 		);
 	}
@@ -185,17 +185,17 @@ void FTableGeneratorModule::ImportCSVData()
 
 void FTableGeneratorModule::GenerateByte()
 {
-	FString DataTableFolderPath = FPaths::ProjectContentDir() + TEXT("Table/Data");
+	FString DataTableFolderPath = FPaths::ProjectContentDir() + TEXT("Data/Data");
 	TArray<FString> FileNames;
 	IFileManager::Get().FindFiles(FileNames, *DataTableFolderPath, TEXT("*.uasset"));
 
 	for (const FString& FileName : FileNames)
 	{
-		FString AssetPath = FString::Printf(TEXT("/Game/Table/Data/%s"), *FPaths::GetBaseFilename(FileName));
+		FString AssetPath = FString::Printf(TEXT("/Game/Data/Data/%s"), *FPaths::GetBaseFilename(FileName));
 		
 		if (UDataTable* DataTable = LoadObject<UDataTable>(nullptr, *AssetPath))
 		{
-			FString OutputPath = FPaths::ProjectContentDir()+FString::Printf(TEXT("/Table/Byte/%s.byte"), *DataTable->GetName());
+			FString OutputPath = FPaths::ProjectContentDir()+FString::Printf(TEXT("/Data/Byte/%s.byte"), *DataTable->GetName());
 			
 			TArray<uint8> BinaryData;
 			FMemoryWriter MemoryWriter(BinaryData, true);
@@ -229,7 +229,7 @@ void FTableGeneratorModule::SettingConfig()
 void FTableGeneratorModule::LoadConfigData()
 {
 	FString FileStr;
-	FString FilePath = FPaths::ProjectContentDir() + TEXT("/Table/Config/Config.json");
+	FString FilePath = FPaths::ProjectContentDir() + TEXT("/Data/Config/Config.json");
 
 	FString JsonContent;
 	if (!FFileHelper::LoadFileToString(JsonContent, *FilePath))
@@ -266,7 +266,7 @@ void FTableGeneratorModule::SaveConfigData()
 	if (FJsonSerializer::Serialize(JsonObject.ToSharedRef(), JsonWriter))
 	{
 		//Json 파일 저장
-		FString FilePath = FPaths::ProjectContentDir() + TEXT("/Table/Config/Config.json");
+		FString FilePath = FPaths::ProjectContentDir() + TEXT("/Data/Config/Config.json");
 		if (FFileHelper::SaveStringToFile(JsonContent, *FilePath))
 		{
 			UE_LOG(LogTemp, Log, TEXT("Success Json File!!"), *FilePath);

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProjectPT/Table/GenerateTableData.h"
+#include "ProjectPT/Data/GenerateTableData.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGenerateTableData() {}
 
@@ -39,31 +39,31 @@ struct Z_Construct_UScriptStruct_FMonsterData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HP_MetaData[] = {
 		{ "Category", "MonsterData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SightRadius_MetaData[] = {
 		{ "Category", "MonsterData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LoseSightRadius_MetaData[] = {
 		{ "Category", "MonsterData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PeripheralVisionAngleDegrees_MetaData[] = {
 		{ "Category", "MonsterData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultAttackRange_MetaData[] = {
 		{ "Category", "MonsterData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Skill1_MetaData[] = {
 		{ "Category", "MonsterData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_HP;
@@ -137,19 +137,19 @@ struct Z_Construct_UScriptStruct_FPlayerData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HP_MetaData[] = {
 		{ "Category", "PlayerData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Skill_Default_MetaData[] = {
 		{ "Category", "PlayerData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Skill_Q_MetaData[] = {
 		{ "Category", "PlayerData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_HP;
@@ -214,15 +214,15 @@ struct Z_Construct_UScriptStruct_FSceneData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DataPath_MetaData[] = {
 		{ "Category", "SceneData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BGMPath_MetaData[] = {
 		{ "Category", "SceneData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_DataPath;
@@ -284,35 +284,35 @@ struct Z_Construct_UScriptStruct_FSkillData_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SkillDamage_MetaData[] = {
 		{ "Category", "SkillData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skillRange_MetaData[] = {
 		{ "Category", "SkillData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skillRadius_MetaData[] = {
 		{ "Category", "SkillData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skillSpeed_MetaData[] = {
 		{ "Category", "SkillData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_skillCoolTime_MetaData[] = {
 		{ "Category", "SkillData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MuzzleName_MetaData[] = {
 		{ "Category", "SkillData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CollisionType_MetaData[] = {
 		{ "Category", "SkillData" },
-		{ "ModuleRelativePath", "Table/GenerateTableData.h" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SkillDamage;
@@ -337,7 +337,7 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FSkillDa
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_skillCoolTime = { "skillCoolTime", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSkillData, skillCoolTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_skillCoolTime_MetaData), NewProp_skillCoolTime_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_MuzzleName = { "MuzzleName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSkillData, MuzzleName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MuzzleName_MetaData), NewProp_MuzzleName_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_CollisionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_CollisionType = { "CollisionType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSkillData, CollisionType), Z_Construct_UEnum_ProjectPT_ECollisionType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionType_MetaData), NewProp_CollisionType_MetaData) }; // 3224060965
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_CollisionType = { "CollisionType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSkillData, CollisionType), Z_Construct_UEnum_ProjectPT_ECollisionType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionType_MetaData), NewProp_CollisionType_MetaData) }; // 4236091643
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FSkillData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_SkillDamage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSkillData_Statics::NewProp_skillRange,
@@ -373,18 +373,18 @@ UScriptStruct* Z_Construct_UScriptStruct_FSkillData()
 // End ScriptStruct FSkillData
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 470400122U) },
-		{ FPlayerData::StaticStruct, Z_Construct_UScriptStruct_FPlayerData_Statics::NewStructOps, TEXT("PlayerData"), &Z_Registration_Info_UScriptStruct_PlayerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerData), 2587343279U) },
-		{ FSceneData::StaticStruct, Z_Construct_UScriptStruct_FSceneData_Statics::NewStructOps, TEXT("SceneData"), &Z_Registration_Info_UScriptStruct_SceneData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSceneData), 218834144U) },
-		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 3129719393U) },
+		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 4054298180U) },
+		{ FPlayerData::StaticStruct, Z_Construct_UScriptStruct_FPlayerData_Statics::NewStructOps, TEXT("PlayerData"), &Z_Registration_Info_UScriptStruct_PlayerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerData), 3805507274U) },
+		{ FSceneData::StaticStruct, Z_Construct_UScriptStruct_FSceneData_Statics::NewStructOps, TEXT("SceneData"), &Z_Registration_Info_UScriptStruct_SceneData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSceneData), 2898749887U) },
+		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 146149087U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_1136709651(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_1671601260(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_GenerateTableData_h_Statics::ScriptStructInfo),
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -18,6 +18,24 @@ enum class ESoundType : uint8
 	Max
 };
 
+
+USTRUCT()
+struct FSoundOptionData
+{
+	GENERATED_BODY()
+public:
+	bool MainVolumeMute = false;
+	bool EffectVolumeMute = false;
+	bool VoiceVolumeMute = false;
+	bool BGMVolumeMuete = false;
+
+	float MainVolumeRatio = 1.0f;
+	float EffectVolumeRatio = 1.0f;
+	float VoiceVolumeRatio = 1.0f;
+	float BGMVolumeRatio = 1.0f;
+};
+
+
 DECLARE_MULTICAST_DELEGATE_OneParam(FOnPlaySoundAfterSceneLoading, const FString);
 
 UCLASS(Blueprintable)
@@ -30,6 +48,8 @@ public:
 
 	void RegisterData();
 	void UnRegisterData();
+
+	void RegisterSoundOptionData(const FSoundOptionData& OptionData);
 
 	void RegisterPlaySoundAfterSceneLoading(const FString SoundPath);
 	void PlaySoundAfterSceneLoading();
@@ -50,12 +70,15 @@ public:
 	void PlaySound2D_BySound(ESoundType Type, USoundBase* Sound);
 
 	UFUNCTION(BlueprintCallable)
-	void FadeInSound(ESoundType Type, float FadeDuration, float TargetVolume= 1.0f);
+	void FadeInSound(ESoundType Type, float FadeDuration, float TargetVolume = 1.0f);
 
 	UFUNCTION(BlueprintCallable)
 	void FadeOutSound(ESoundType Type, float FadeDuration, float TargetVolume = 0.0f);
 
 private:
+
+	FSoundOptionData SoundOptionData;
+
 	//Volume
 	float BGMVolume = 1.0f;
 	float SFXVolume = 1.0f;

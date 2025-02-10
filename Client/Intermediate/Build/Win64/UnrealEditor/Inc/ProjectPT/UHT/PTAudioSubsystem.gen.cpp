@@ -19,6 +19,7 @@ ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTAudioSubsystem();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTAudioSubsystem_NoRegister();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ESoundType();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSoundOptionData();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
@@ -84,6 +85,56 @@ UEnum* Z_Construct_UEnum_ProjectPT_ESoundType()
 	return Z_Registration_Info_UEnum_ESoundType.InnerSingleton;
 }
 // End Enum ESoundType
+
+// Begin ScriptStruct FSoundOptionData
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_SoundOptionData;
+class UScriptStruct* FSoundOptionData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_SoundOptionData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_SoundOptionData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FSoundOptionData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("SoundOptionData"));
+	}
+	return Z_Registration_Info_UScriptStruct_SoundOptionData.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FSoundOptionData>()
+{
+	return FSoundOptionData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FSoundOptionData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSoundOptionData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"SoundOptionData",
+	nullptr,
+	0,
+	sizeof(FSoundOptionData),
+	alignof(FSoundOptionData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSoundOptionData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FSoundOptionData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FSoundOptionData()
+{
+	if (!Z_Registration_Info_UScriptStruct_SoundOptionData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_SoundOptionData.InnerSingleton, Z_Construct_UScriptStruct_FSoundOptionData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_SoundOptionData.InnerSingleton;
+}
+// End ScriptStruct FSoundOptionData
 
 // Begin Class UPTAudioSubsystem Function FadeInSound
 struct Z_Construct_UFunction_UPTAudioSubsystem_FadeInSound_Statics
@@ -538,13 +589,16 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ESoundType_StaticEnum, TEXT("ESoundType"), &Z_Registration_Info_UEnum_ESoundType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 990155653U) },
 	};
+	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
+		{ FSoundOptionData::StaticStruct, Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewStructOps, TEXT("SoundOptionData"), &Z_Registration_Info_UScriptStruct_SoundOptionData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSoundOptionData), 1745137118U) },
+	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPTAudioSubsystem, UPTAudioSubsystem::StaticClass, TEXT("UPTAudioSubsystem"), &Z_Registration_Info_UClass_UPTAudioSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAudioSubsystem), 2513586567U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_2942553801(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_1681667142(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ClassInfo),
-	nullptr, 0,
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

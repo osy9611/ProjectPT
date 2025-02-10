@@ -4,7 +4,7 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-// IWYU pragma: private, include "Table/DataManagerSubsystem.h"
+// IWYU pragma: private, include "Data/DataManagerSubsystem.h"
 #include "UObject/ObjectMacros.h"
 #include "UObject/ScriptMacros.h"
 
@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_DataManagerSubsystem_generated_h
 
-#define FID_Client_Source_ProjectPT_Table_DataManagerSubsystem_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Data_DataManagerSubsystem_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUDataManagerSubsystem(); \
 	friend struct Z_Construct_UClass_UDataManagerSubsystem_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UDataManagerSubsystem)
 
 
-#define FID_Client_Source_ProjectPT_Table_DataManagerSubsystem_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Data_DataManagerSubsystem_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UDataManagerSubsystem(UDataManagerSubsystem&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~UDataManagerSubsystem();
 
 
-#define FID_Client_Source_ProjectPT_Table_DataManagerSubsystem_h_15_PROLOG
-#define FID_Client_Source_ProjectPT_Table_DataManagerSubsystem_h_18_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_DataManagerSubsystem_h_15_PROLOG
+#define FID_Client_Source_ProjectPT_Data_DataManagerSubsystem_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Table_DataManagerSubsystem_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Table_DataManagerSubsystem_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Data_DataManagerSubsystem_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Data_DataManagerSubsystem_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> PROJECTPT_API UClass* StaticClass<class UDataManagerSubsystem>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Table_DataManagerSubsystem_h
+#define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Data_DataManagerSubsystem_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

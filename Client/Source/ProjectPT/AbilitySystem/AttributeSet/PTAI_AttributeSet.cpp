@@ -7,7 +7,7 @@
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/PTGameplayTags.h"
 #include "ProjectPT/Character/PTAIComponent.h"
-#include "ProjectPT/Table/DataManagerSubsystem.h"
+#include "ProjectPT/Data/DataManagerSubsystem.h"
 #include "ProjectPT/Player/PTPlayerState.h"
 
 UPTAI_AttributeSet::UPTAI_AttributeSet(const FObjectInitializer& ObjectInitializer)

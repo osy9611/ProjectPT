@@ -3,6 +3,7 @@
 	{
 		"Module.CommonGame.cpp.obj": [
 			"CommonActivatableWidgetBase.gen.cpp.obj",
+			"CommonGame.init.gen.cpp.obj",
 			"CommonGameInstance.gen.cpp.obj",
 			"CommonLocalPlayer.gen.cpp.obj",
 			"CommonPlayerController.gen.cpp.obj",
@@ -16,8 +17,7 @@
 			"CommonPlayerController.cpp.obj",
 			"CommonSessionSubsystem.cpp.obj",
 			"CommonUserWidgetBase.cpp.obj",
-			"UIManagerSubsystem.cpp.obj",
-			"CommonGame.init.gen.cpp.obj"
+			"UIManagerSubsystem.cpp.obj"
 		]
 	}
 }

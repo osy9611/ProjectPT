@@ -55,6 +55,11 @@ void UPTAudioSubsystem::UnRegisterData()
 		AudioComponent->UnregisterComponent();
 	}
 }
+void UPTAudioSubsystem::RegisterSoundOptionData(const FSoundOptionData& OptionData)
+{
+	SoundOptionData = OptionData;
+}
+
 void UPTAudioSubsystem::RegisterPlaySoundAfterSceneLoading(const FString SoundPath)
 {
 	RegisterBGMSound = SoundPath;

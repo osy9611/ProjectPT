@@ -534,6 +534,45 @@
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTPawnExtensionComponent.h">
       <Filter>Source\ProjectPT\Character</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\Data">
+      <UniqueIdentifier>{37FDA2B4-D351-302D-8618-4F8C8BC5FB21}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorageSubsystem.cpp">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorageSubsystem.h">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\DataManagerSubsystem.cpp">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\DataManagerSubsystem.h">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\EnumGenerateData.cpp">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\EnumGenerateData.h">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\GenerateTableData.h">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Data\ClientLocalStorage">
+      <UniqueIdentifier>{38A10AD8-C4FC-3BA4-9FA9-1D9CF42DA735}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ClientLocalStorageBase.cpp">
+      <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ClientLocalStorageBase.h">
+      <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.cpp">
+      <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.h">
+      <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Extensions">
       <UniqueIdentifier>{41503613-6DDD-3295-9A1F-4C5E9D6A7F42}</UniqueIdentifier>
     </Filter>
@@ -737,24 +776,6 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\System\PTGameInstance.h">
       <Filter>Source\ProjectPT\System</Filter>
-    </ClInclude>
-    <Filter Include="Source\ProjectPT\Table">
-      <UniqueIdentifier>{B1224CBA-04C0-387D-8747-7E0CDF0917FC}</UniqueIdentifier>
-    </Filter>
-    <ClCompile Include="..\..\Source\ProjectPT\Table\DataManagerSubsystem.cpp">
-      <Filter>Source\ProjectPT\Table</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Table\DataManagerSubsystem.h">
-      <Filter>Source\ProjectPT\Table</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\ProjectPT\Table\EnumGenerateData.cpp">
-      <Filter>Source\ProjectPT\Table</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Table\EnumGenerateData.h">
-      <Filter>Source\ProjectPT\Table</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\ProjectPT\Table\GenerateTableData.h">
-      <Filter>Source\ProjectPT\Table</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI">
       <UniqueIdentifier>{EA9F777F-5F64-34D7-AA65-F10ACCC8EA74}</UniqueIdentifier>

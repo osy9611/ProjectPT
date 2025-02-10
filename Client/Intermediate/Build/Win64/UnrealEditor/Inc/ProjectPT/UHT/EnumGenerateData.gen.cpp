@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ProjectPT/Table/EnumGenerateData.h"
+#include "ProjectPT/Data/EnumGenerateData.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEnumGenerateData() {}
 
@@ -47,7 +47,7 @@ struct Z_Construct_UEnum_ProjectPT_EPTElementType_Statics
 		{ "ILLUSION_TYPE2.Comment", "//\xec\x96\xb4\xeb\x91\xa0\n" },
 		{ "ILLUSION_TYPE2.Name", "EPTElementType::ILLUSION_TYPE2" },
 		{ "ILLUSION_TYPE2.ToolTip", "\xec\x96\xb4\xeb\x91\xa0" },
-		{ "ModuleRelativePath", "Table/EnumGenerateData.h" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
 		{ "NONE.Name", "EPTElementType::NONE" },
 		{ "SUPERHUMAN_TYPE.Name", "EPTElementType::SUPERHUMAN_TYPE" },
 	};
@@ -106,7 +106,7 @@ struct Z_Construct_UEnum_ProjectPT_EMonsterType_Statics
 		{ "BOSS.Comment", "//\xec\x9d\xbc\xeb\xb0\x98\n" },
 		{ "BOSS.Name", "EMonsterType::BOSS" },
 		{ "BOSS.ToolTip", "\xec\x9d\xbc\xeb\xb0\x98" },
-		{ "ModuleRelativePath", "Table/EnumGenerateData.h" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
 		{ "NORMAL.Name", "EMonsterType::NORMAL" },
 		{ "UNIQUE.Comment", "//\xeb\xb3\xb4\xec\x8a\xa4\n" },
 		{ "UNIQUE.Name", "EMonsterType::UNIQUE" },
@@ -167,7 +167,7 @@ struct Z_Construct_UEnum_ProjectPT_ECollisionType_Statics
 		{ "Capsule.Comment", "//\xea\xb5\xac\xed\x98\x95\n" },
 		{ "Capsule.Name", "ECollisionType::Capsule" },
 		{ "Capsule.ToolTip", "\xea\xb5\xac\xed\x98\x95" },
-		{ "ModuleRelativePath", "Table/EnumGenerateData.h" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
 		{ "RayTrace.Name", "ECollisionType::RayTrace" },
 		{ "Sphere.Comment", "//\xeb\xa0\x88\xec\x9d\xb4\n" },
 		{ "Sphere.Name", "ECollisionType::Sphere" },
@@ -205,17 +205,17 @@ UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType()
 // End Enum ECollisionType
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_Statics
+struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EPTElementType_StaticEnum, TEXT("EPTElementType"), &Z_Registration_Info_UEnum_EPTElementType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1995855187U) },
-		{ EMonsterType_StaticEnum, TEXT("EMonsterType"), &Z_Registration_Info_UEnum_EMonsterType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1246490867U) },
-		{ ECollisionType_StaticEnum, TEXT("ECollisionType"), &Z_Registration_Info_UEnum_ECollisionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3224060965U) },
+		{ EPTElementType_StaticEnum, TEXT("EPTElementType"), &Z_Registration_Info_UEnum_EPTElementType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3142800082U) },
+		{ EMonsterType_StaticEnum, TEXT("EMonsterType"), &Z_Registration_Info_UEnum_EMonsterType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 815457047U) },
+		{ ECollisionType_StaticEnum, TEXT("ECollisionType"), &Z_Registration_Info_UEnum_ECollisionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4236091643U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_3076800305(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_1736256908(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Table_EnumGenerateData_h_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));
 // End Registration
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

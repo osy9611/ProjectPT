@@ -850,6 +850,32 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTPawnExtensionComponent.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorageSubsystem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorageSubsystem.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\DataManagerSubsystem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\DataManagerSubsystem.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\EnumGenerateData.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\EnumGenerateData.h"/>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\GenerateTableData.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ClientLocalStorageBase.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ClientLocalStorageBase.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.h"/>
     <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTUIMessageExtensions.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_AddWidgets.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
@@ -992,17 +1018,6 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\System\PTGameInstance.h"/>
-    <ClCompile Include="..\..\Source\ProjectPT\Table\DataManagerSubsystem.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Table\DataManagerSubsystem.h"/>
-    <ClCompile Include="..\..\Source\ProjectPT\Table\EnumGenerateData.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\Table\EnumGenerateData.h"/>
-    <ClInclude Include="..\..\Source\ProjectPT\Table\GenerateTableData.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\UI\PTActivatableWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>

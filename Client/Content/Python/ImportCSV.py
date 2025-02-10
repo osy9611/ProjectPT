@@ -8,7 +8,7 @@ import csv
 def create_tabledatas():
     project_name = unreal.Paths.get_base_filename(unreal.Paths.get_project_file_path())
     #LoadJson
-    json_file_path = unreal.SystemLibrary.get_project_directory() + "/Content/Table/Config/Config.json"
+    json_file_path = unreal.SystemLibrary.get_project_directory() + "/Content/Data/Config/Config.json"
     print(project_name)
     print(json_file_path)
 
@@ -30,7 +30,7 @@ def create_tabledatas():
             csv_file_path = os.path.join(csv_folder,file)
             ustruct_name = f'/Script/{project_name}.{file_name}'
             data_table_name = f"DT_{file_name}"
-            asset_folder = "/Game/Table/Data"
+            asset_folder = "/Game/Data/Data"
             create_tabledata(csv_file_path, ustruct_name, data_table_name, asset_folder)
 
 def create_tabledata(csv_file_path, ustruct_name, data_table_name, asset_folder):

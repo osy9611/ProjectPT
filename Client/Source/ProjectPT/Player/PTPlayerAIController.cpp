@@ -5,8 +5,8 @@
 #include "Perception/AIPerceptionComponent.h"
 #include "ProjectPT/Character/PTAIComponent.h"
 #include "ProjectPT/Object/PTPlayerStart.h"
-#include "ProjectPT/Table/GenerateTableData.h"
-#include "ProjectPT/Table/DataManagerSubsystem.h"
+#include "ProjectPT/Data/GenerateTableData.h"
+#include "ProjectPT/Data/DataManagerSubsystem.h"
 #include "BrainComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
 

@@ -4,8 +4,8 @@
 #include "PTCharacter_AttributeSet.h"
 #include "GameplayEffectExtension.h"
 #include "GameFramework/GameplayMessageSubsystem.h"
-#include "ProjectPT/Table/DataManagerSubsystem.h"
-#include "ProjectPT/Table/EnumGenerateData.h"
+#include "ProjectPT/Data/DataManagerSubsystem.h"
+#include "ProjectPT/Data/EnumGenerateData.h"
 #include "ProjectPT/Extensions/PTUIMessageExtensions.h"
 #include "ProjectPT/PTGameplayTags.h"
 

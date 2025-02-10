@@ -2,8 +2,8 @@
 
 
 #include "PTCommonSessionSubsystem.h"
-#include "ProjectPT/Table/GenerateTableData.h"
-#include "ProjectPT/Table/DataManagerSubsystem.h"
+#include "ProjectPT/Data/GenerateTableData.h"
+#include "ProjectPT/Data/DataManagerSubsystem.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/GameModes/PTSceneData.h"
 #include "ProjectPT/Sound/PTAudioSubsystem.h"

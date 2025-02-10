@@ -6,7 +6,7 @@
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/Object/PTProjectile.h"
 #include "ProjectPT/Character/PTPawnExtensionComponent.h"
-#include "ProjectPT/Table/GenerateTableData.h"
+#include "ProjectPT/Data/GenerateTableData.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
 #include "ProjectPT/Player/PTPlayerState.h"

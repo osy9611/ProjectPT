@@ -69,14 +69,14 @@ def create_file():
 enum_save_folder= ""
 
 #Load Enum File
-json_file_path = unreal.SystemLibrary.get_project_directory() + "/Content/" + project_name + "/Table/Config/Config.json"
+json_file_path = unreal.SystemLibrary.get_project_directory() + "/Content/" + project_name + "/Data/Config/Config.json"
 
 if os.path.exists(json_file_path):
     try:
         with open(json_file_path,'r') as file:
             data = json.load(file)
             project_name = unreal.Paths.get_base_filename(unreal.Paths.get_project_file_path())
-            enum_save_folder = unreal.SystemLibrary.get_project_directory() + "Source/" + project_name + "/Table"
+            enum_save_folder = unreal.SystemLibrary.get_project_directory() + "Source/" + project_name + "/Data"
             enum_folder_path = data["EnumFolderPath"]
     except json.JSONDecodeError as e:
         print("Json Load Faile : {e}")

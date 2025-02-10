@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
 #include "AbilitySystemComponent.h"
-#include "ProjectPT/Table/GenerateTableData.h"
+#include "ProjectPT/Data/GenerateTableData.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAttributeSet.h"
 #include "PTCharacter_AttributeSet.generated.h"
 
@@ -25,6 +25,4 @@ public:
 
 	virtual void InitAttributeSet(FString RowName) override;
 	virtual FSkillData GetSkillData(FGameplayTag GameplayTag) override;
-
-
 };

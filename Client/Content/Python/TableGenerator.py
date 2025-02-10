@@ -182,7 +182,7 @@ def recompile_and_reload():
 
 
 #Load Json file
-json_file_path = unreal.SystemLibrary.get_project_directory() + "/Content/" + project_name + "/Table/Config/Config.json"
+json_file_path = unreal.SystemLibrary.get_project_directory() + "/Content/" + project_name + "/Data/Config/Config.json"
 print(json_file_path)
 
 if os.path.exists(json_file_path):
@@ -190,7 +190,7 @@ if os.path.exists(json_file_path):
         with open(json_file_path,'r') as file:
             data = json.load(file)
             project_name = unreal.Paths.get_base_filename(unreal.Paths.get_project_file_path())
-            struct_save_folder = unreal.SystemLibrary.get_project_directory() + "Source/" + project_name + "/Table"
+            struct_save_folder = unreal.SystemLibrary.get_project_directory() + "Source/" + project_name + "/Data"
             csv_folder = data["CSVFolderPath"]
             enum_folder = data["EnumFolderPath"]
             use_live_coding  = data["UseLiveCoding"]
