@@ -104,22 +104,62 @@ struct Z_Construct_UScriptStruct_FSoundOptionData_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainVolumeMute_MetaData[] = {
+		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VolumeMutes_MetaData[] = {
+		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainVolumeRatio_MetaData[] = {
+		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VolumeRatios_MetaData[] = {
 		{ "ModuleRelativePath", "Sound/PTAudioSubsystem.h" },
 	};
 #endif // WITH_METADATA
+	static void NewProp_MainVolumeMute_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_MainVolumeMute;
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_VolumeMutes_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_VolumeMutes;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MainVolumeRatio;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_VolumeRatios_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_VolumeRatios;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSoundOptionData>();
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
+void Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_MainVolumeMute_SetBit(void* Obj)
+{
+	((FSoundOptionData*)Obj)->MainVolumeMute = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_MainVolumeMute = { "MainVolumeMute", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FSoundOptionData), &Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_MainVolumeMute_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainVolumeMute_MetaData), NewProp_MainVolumeMute_MetaData) };
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeMutes_Inner = { "VolumeMutes", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeMutes = { "VolumeMutes", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSoundOptionData, VolumeMutes), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VolumeMutes_MetaData), NewProp_VolumeMutes_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_MainVolumeRatio = { "MainVolumeRatio", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSoundOptionData, MainVolumeRatio), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainVolumeRatio_MetaData), NewProp_MainVolumeRatio_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeRatios_Inner = { "VolumeRatios", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeRatios = { "VolumeRatios", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FSoundOptionData, VolumeRatios), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VolumeRatios_MetaData), NewProp_VolumeRatios_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FSoundOptionData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_MainVolumeMute,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeMutes_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeMutes,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_MainVolumeRatio,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeRatios_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewProp_VolumeRatios,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSoundOptionData_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSoundOptionData_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
 	nullptr,
 	&NewStructOps,
 	"SoundOptionData",
-	nullptr,
-	0,
+	Z_Construct_UScriptStruct_FSoundOptionData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSoundOptionData_Statics::PropPointers),
 	sizeof(FSoundOptionData),
 	alignof(FSoundOptionData),
 	RF_Public|RF_Transient|RF_MarkAsNative,
@@ -590,13 +630,13 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_
 		{ ESoundType_StaticEnum, TEXT("ESoundType"), &Z_Registration_Info_UEnum_ESoundType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 990155653U) },
 	};
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FSoundOptionData::StaticStruct, Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewStructOps, TEXT("SoundOptionData"), &Z_Registration_Info_UScriptStruct_SoundOptionData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSoundOptionData), 1745137118U) },
+		{ FSoundOptionData::StaticStruct, Z_Construct_UScriptStruct_FSoundOptionData_Statics::NewStructOps, TEXT("SoundOptionData"), &Z_Registration_Info_UScriptStruct_SoundOptionData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSoundOptionData), 1572408232U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UPTAudioSubsystem, UPTAudioSubsystem::StaticClass, TEXT("UPTAudioSubsystem"), &Z_Registration_Info_UClass_UPTAudioSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTAudioSubsystem), 2513586567U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_1681667142(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_3186313266(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_Statics::EnumInfo));

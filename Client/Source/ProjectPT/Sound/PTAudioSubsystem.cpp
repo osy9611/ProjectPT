@@ -58,6 +58,26 @@ void UPTAudioSubsystem::UnRegisterData()
 void UPTAudioSubsystem::RegisterSoundOptionData(const FSoundOptionData& OptionData)
 {
 	SoundOptionData = OptionData;
+	UpdateSoundOptionData(SoundOptionData);
+}
+
+void UPTAudioSubsystem::UpdateSoundOptionData(const FSoundOptionData& OptionData)
+{
+	for (auto& AudioComponent : AudioComponents)
+	{
+		ESoundType SoundType = AudioComponent.Key;
+
+		bool MuteOption = OptionData.VolumeMutes[static_cast<int32>(SoundType)];
+		if (OptionData.MainVolumeMute || MuteOption)
+		{
+			AudioComponent.Value->SetVolumeMultiplier(0.0f);
+		}
+		else
+		{
+			float VolumeRatio = OptionData.VolumeRatios[static_cast<int32>(SoundType)] * OptionData.MainVolumeRatio;
+			AudioComponent.Value->SetVolumeMultiplier(VolumeRatio);
+		}
+	}
 }
 
 void UPTAudioSubsystem::RegisterPlaySoundAfterSceneLoading(const FString SoundPath)

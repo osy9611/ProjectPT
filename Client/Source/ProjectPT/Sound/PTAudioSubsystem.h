@@ -19,21 +19,31 @@ enum class ESoundType : uint8
 };
 
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FSoundOptionData
 {
 	GENERATED_BODY()
-public:
-	bool MainVolumeMute = false;
-	bool EffectVolumeMute = false;
-	bool VoiceVolumeMute = false;
-	bool BGMVolumeMuete = false;
 
-	float MainVolumeRatio = 1.0f;
-	float EffectVolumeRatio = 1.0f;
-	float VoiceVolumeRatio = 1.0f;
-	float BGMVolumeRatio = 1.0f;
+public:
+	FSoundOptionData()
+	{
+		VolumeMutes.Init(false, static_cast<int32>(ESoundType::Max));
+		VolumeRatios.Init(1.0f, static_cast<int32>(ESoundType::Max));
+	}
+
+	UPROPERTY()
+	bool MainVolumeMute;
+
+	UPROPERTY()
+	TArray<bool> VolumeMutes;
+
+	UPROPERTY()
+	float MainVolumeRatio;
+
+	UPROPERTY()
+	TArray<float> VolumeRatios;
 };
+
 
 
 DECLARE_MULTICAST_DELEGATE_OneParam(FOnPlaySoundAfterSceneLoading, const FString);
@@ -50,6 +60,8 @@ public:
 	void UnRegisterData();
 
 	void RegisterSoundOptionData(const FSoundOptionData& OptionData);
+
+	void UpdateSoundOptionData(const FSoundOptionData& OptionData);
 
 	void RegisterPlaySoundAfterSceneLoading(const FString SoundPath);
 	void PlaySoundAfterSceneLoading();
@@ -78,11 +90,6 @@ public:
 private:
 
 	FSoundOptionData SoundOptionData;
-
-	//Volume
-	float BGMVolume = 1.0f;
-	float SFXVolume = 1.0f;
-	float VoiceVolume = 1.0f;
 
 	UPROPERTY()
 	FString RegisterBGMSound;
