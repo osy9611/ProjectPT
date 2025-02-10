@@ -13,7 +13,7 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 - [ Unity 프로젝트 (ProjectT)](https://github.com/osy9611/ProjectT)
 
 **영상 링크**
-- [ 영상 링크 ] (https://youtu.be/AaxhsxUV9HY)
+- [ 영상 링크 ](https://youtu.be/AaxhsxUV9HY)
 
 ---
 
