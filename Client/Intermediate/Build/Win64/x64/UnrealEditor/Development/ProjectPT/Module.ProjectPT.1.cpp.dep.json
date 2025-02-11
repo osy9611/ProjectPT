@@ -241,13 +241,7 @@
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameramode.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameracomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode_thirdperson.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameramode_thirdperson.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode_thirdperson.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcharacter.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\character\\ptcharacter.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcharacter.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode.gen.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

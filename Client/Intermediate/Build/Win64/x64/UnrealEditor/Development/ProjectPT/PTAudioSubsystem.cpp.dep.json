@@ -34,6 +34,12 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\contentencryptionconfig.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\assetmanager.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptassetmanager.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\data\\clientlocalstoragesubsystem.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\data\\clientlocalstorage\\clientlocalstoragebase.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\savegame.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\savegame.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\clientlocalstoragebase.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\clientlocalstoragesubsystem.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\metasound\\source\\metasoundengine\\public\\metasoundsource.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\metasound\\source\\metasoundengine\\public\\interfaces\\metasoundoutputformatinterfaces.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\metasound\\source\\metasoundfrontend\\public\\metasoundfrontenddocument.h",
@@ -99,7 +105,9 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\metasound\\intermediate\\build\\win64\\unrealeditor\\inc\\metasoundengine\\uht\\metasound.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\sound\\soundwaveprocedural.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\soundwaveprocedural.generated.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\metasound\\intermediate\\build\\win64\\unrealeditor\\inc\\metasoundengine\\uht\\metasoundsource.generated.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\metasound\\intermediate\\build\\win64\\unrealeditor\\inc\\metasoundengine\\uht\\metasoundsource.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\data\\clientlocalstorage\\optionstorage.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\optionstorage.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

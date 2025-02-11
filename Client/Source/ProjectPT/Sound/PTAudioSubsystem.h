@@ -31,16 +31,16 @@ public:
 		VolumeRatios.Init(1.0f, static_cast<int32>(ESoundType::Max));
 	}
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadOnly, SaveGame, Category = "MainVolumeMute")
 	bool MainVolumeMute;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadOnly, SaveGame, Category = "VolumeMutes")
 	TArray<bool> VolumeMutes;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadOnly, SaveGame, Category = "MainVolumeRatio")
 	float MainVolumeRatio;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadOnly, SaveGame, Category = "VolumeRatios")
 	TArray<float> VolumeRatios;
 };
 
@@ -61,12 +61,21 @@ public:
 
 	void RegisterSoundOptionData(const FSoundOptionData& OptionData);
 
-	void UpdateSoundOptionData(const FSoundOptionData& OptionData);
+	UFUNCTION(BlueprintCallable)
+	void UpdateSoundOption();
+
+	UFUNCTION(BlueprintCallable)
+	void SaveSoundOptionData();
 
 	void RegisterPlaySoundAfterSceneLoading(const FString SoundPath);
 	void PlaySoundAfterSceneLoading();
 
 	UAudioComponent* GetAudioComponent(ESoundType Type);
+
+	UFUNCTION(BlueprintCallable)
+	void SetMainVolume(float Volume);
+
+	UFUNCTION(BlueprintCallable)
 	void SetVolume(ESoundType Type, float Volume);
 
 	UFUNCTION(BlueprintCallable)
@@ -87,9 +96,10 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void FadeOutSound(ESoundType Type, float FadeDuration, float TargetVolume = 0.0f);
 
-private:
-
+	UPROPERTY(BlueprintReadOnly, Category = "SoudOptionData")
 	FSoundOptionData SoundOptionData;
+
+private:
 
 	UPROPERTY()
 	FString RegisterBGMSound;

@@ -26,5 +26,3 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTAttributeSet.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTCameraComponent.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTCameraMode.gen.cpp"
-#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTCameraMode_ThirdPerson.gen.cpp"
-#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTCharacter.gen.cpp"

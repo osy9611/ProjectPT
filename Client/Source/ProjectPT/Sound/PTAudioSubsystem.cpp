@@ -5,12 +5,14 @@
 #include "Components/AudioComponent.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/System/PTAssetManager.h"
+#include "ProjectPT/Data//ClientLocalStorageSubsystem.h"
 #include "MetasoundSource.h"
+#include "ProjectPT/Data/ClientLocalStorage/OptionStorage.h"
 
 void UPTAudioSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
-	
+
 }
 
 void UPTAudioSubsystem::Deinitialize()
@@ -21,6 +23,7 @@ void UPTAudioSubsystem::Deinitialize()
 
 void UPTAudioSubsystem::RegisterData()
 {
+	bool IsUpdateSoundOption = false;
 	int32 MaxCount = static_cast<int32>(ESoundType::Max);
 	for (int32 i = 0; i < MaxCount; ++i)
 	{
@@ -30,6 +33,7 @@ void UPTAudioSubsystem::RegisterData()
 		{
 			AudioComponent = NewObject<UAudioComponent>(this);
 			AudioComponents.Add(SoundType, AudioComponent);
+			IsUpdateSoundOption = true;
 		}
 
 		if (SoundType == ESoundType::BGM)
@@ -38,6 +42,11 @@ void UPTAudioSubsystem::RegisterData()
 		}
 		AudioComponent->RegisterComponentWithWorld(GetWorld());
 		//AudioComponent->RegisterComponent();
+	}
+
+	if (IsUpdateSoundOption)
+	{
+		UpdateSoundOption();
 	}
 }
 void UPTAudioSubsystem::UnRegisterData()
@@ -58,25 +67,43 @@ void UPTAudioSubsystem::UnRegisterData()
 void UPTAudioSubsystem::RegisterSoundOptionData(const FSoundOptionData& OptionData)
 {
 	SoundOptionData = OptionData;
-	UpdateSoundOptionData(SoundOptionData);
+	UpdateSoundOption();
 }
 
-void UPTAudioSubsystem::UpdateSoundOptionData(const FSoundOptionData& OptionData)
+void UPTAudioSubsystem::UpdateSoundOption()
 {
 	for (auto& AudioComponent : AudioComponents)
 	{
 		ESoundType SoundType = AudioComponent.Key;
 
-		bool MuteOption = OptionData.VolumeMutes[static_cast<int32>(SoundType)];
-		if (OptionData.MainVolumeMute || MuteOption)
+		bool MuteOption = SoundOptionData.VolumeMutes[static_cast<int32>(SoundType)];
+		if (SoundOptionData.MainVolumeMute || MuteOption)
 		{
 			AudioComponent.Value->SetVolumeMultiplier(0.0f);
 		}
 		else
 		{
-			float VolumeRatio = OptionData.VolumeRatios[static_cast<int32>(SoundType)] * OptionData.MainVolumeRatio;
+			float VolumeRatio = SoundOptionData.VolumeRatios[static_cast<int32>(SoundType)] * SoundOptionData.MainVolumeRatio;
 			AudioComponent.Value->SetVolumeMultiplier(VolumeRatio);
 		}
+	}
+}
+
+void UPTAudioSubsystem::SaveSoundOptionData()
+{
+	if (UClientLocalStorageSubsystem* LocalStorageSubsystem = GetWorld()->GetGameInstance()->GetSubsystem< UClientLocalStorageSubsystem>())
+	{
+		UOptionStorage* OptionStorage = LocalStorageSubsystem->CreateStorageType<UOptionStorage>(ELocalStorageType::Option, UOptionStorage::StaticClass());
+		if (!OptionStorage)
+		{
+			UE_LOG(PTLog, Error, TEXT("[PTAudioSubsystem] Fail Save SoundOption"));
+			return;
+		}
+		OptionStorage->SoundData = SoundOptionData;
+		OptionStorage->SaveData();
+
+
+		UE_LOG(PTLog, Log, TEXT("[PTAudioSubsystem]  Success Save SoundOption"));
 	}
 }
 
@@ -112,11 +139,19 @@ UAudioComponent* UPTAudioSubsystem::GetAudioComponent(ESoundType Type)
 	return nullptr;
 }
 
+void UPTAudioSubsystem::SetMainVolume(float Volume)
+{
+	SoundOptionData.MainVolumeRatio = Volume;
+	UpdateSoundOption();
+}
+
 void UPTAudioSubsystem::SetVolume(ESoundType Type, float Volume)
 {
 	if (UAudioComponent* AudioComponent = GetAudioComponent(Type))
 	{
 		AudioComponent->SetVolumeMultiplier(Volume);
+		SoundOptionData.VolumeRatios[static_cast<int32>(Type)] = Volume;
+		UpdateSoundOption();
 	}
 }
 

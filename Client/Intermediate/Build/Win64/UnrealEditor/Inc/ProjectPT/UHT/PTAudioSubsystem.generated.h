@@ -30,7 +30,11 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSoundOptionData>();
 	DECLARE_FUNCTION(execPlaySound2D_BySound); \
 	DECLARE_FUNCTION(execPlaySound2D_ByPath); \
 	DECLARE_FUNCTION(execPlaySound3D_BySound); \
-	DECLARE_FUNCTION(execPlaySound3D_ByPath);
+	DECLARE_FUNCTION(execPlaySound3D_ByPath); \
+	DECLARE_FUNCTION(execSetVolume); \
+	DECLARE_FUNCTION(execSetMainVolume); \
+	DECLARE_FUNCTION(execSaveSoundOptionData); \
+	DECLARE_FUNCTION(execUpdateSoundOption);
 
 
 #define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_INCLASS_NO_PURE_DECLS \

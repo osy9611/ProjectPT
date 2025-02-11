@@ -29,12 +29,12 @@
 			"PTAttributeSet.gen.cpp.obj",
 			"PTCameraComponent.gen.cpp.obj",
 			"PTCameraMode.gen.cpp.obj",
-			"PTCameraMode_ThirdPerson.gen.cpp.obj",
-			"PTCharacter.gen.cpp.obj",
 			"ProjectPT.init.gen.cpp.obj",
 			"PTAudioSubsystem.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
+			"PTCameraMode_ThirdPerson.gen.cpp.obj",
+			"PTCharacter.gen.cpp.obj",
 			"PTCharacter_AttributeSet.gen.cpp.obj",
 			"PTCommonSessionSubsystem.gen.cpp.obj",
 			"PTExperienceActionSet.gen.cpp.obj",
@@ -79,16 +79,16 @@
 			"PTGameplayAbility_MeleeAttack.cpp.obj",
 			"PTGameplayAbility_MeleeHitCheck.cpp.obj",
 			"PTGameplayAbility_Projectile.cpp.obj",
-			"PTGameplayAbility_RangeAttack.cpp.obj",
+			"PTGameplayAbility_RangeAttack.cpp.obj"
+		],
+		"Module.ProjectPT.3.cpp.obj": [
 			"PTAI_AttributeSet.cpp.obj",
 			"PTAttributeSet.cpp.obj",
 			"PTCharacter_AttributeSet.cpp.obj",
 			"PTGE_AttackDamage.cpp.obj",
 			"UPTGE_SkillCoolTime.cpp.obj",
 			"PTAnimNotify_AttackHitCheck.cpp.obj",
-			"PTAbilitySet.cpp.obj"
-		],
-		"Module.ProjectPT.3.cpp.obj": [
+			"PTAbilitySet.cpp.obj",
 			"PTAbilitySystemComponent.cpp.obj",
 			"PTGameplayAbilityTargetActor_Trace.cpp.obj",
 			"PTGameplayAbilityTargetData_SingleTargetHit.cpp.obj",
