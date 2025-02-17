@@ -822,6 +822,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailCellData.h">
       <Filter>Source\ProjectPT\UI\Mail</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailDetailPopup.cpp">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailDetailPopup.h">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailWidget.cpp">
       <Filter>Source\ProjectPT\UI\Mail</Filter>
     </ClCompile>

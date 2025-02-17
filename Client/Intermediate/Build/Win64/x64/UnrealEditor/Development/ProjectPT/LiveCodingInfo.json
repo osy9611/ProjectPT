@@ -11,12 +11,10 @@
 			"GameFeatureAction_SpawnAI.gen.cpp.obj",
 			"GameFeatureAction_TableLoad.gen.cpp.obj",
 			"GameFeatureAction_WorldActionBase.gen.cpp.obj",
-			"GenerateTableData.gen.cpp.obj",
 			"ObjectPoolSubsystem.gen.cpp.obj",
 			"OptionStorage.gen.cpp.obj",
 			"Poolable_Actor.gen.cpp.obj",
 			"Poolable_NiagaraSystem.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
@@ -30,7 +28,9 @@
 			"PTAttributeSet.gen.cpp.obj",
 			"PTAudioSubsystem.gen.cpp.obj",
 			"PTCameraComponent.gen.cpp.obj",
-			"PTCameraMode.gen.cpp.obj"
+			"PTCameraMode.gen.cpp.obj",
+			"GenerateTableData.gen.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
 			"PTCameraMode_ThirdPerson.gen.cpp.obj",
@@ -60,6 +60,7 @@
 			"PTLocalPlayer.gen.cpp.obj",
 			"PTMailCell.gen.cpp.obj",
 			"PTMailCellData.gen.cpp.obj",
+			"PTMailDetailPopup.gen.cpp.obj",
 			"PTMailWidget.gen.cpp.obj",
 			"PTMappableConfigPair.gen.cpp.obj",
 			"PTObjectSubsystem.gen.cpp.obj",
@@ -73,11 +74,11 @@
 			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
 			"PTSceneData.gen.cpp.obj",
-			"PTServerData.gen.cpp.obj",
-			"PTUIManagerSubsystem.gen.cpp.obj",
-			"PTUIMessageExtensions.gen.cpp.obj"
+			"PTServerData.gen.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
+			"PTUIManagerSubsystem.gen.cpp.obj",
+			"PTUIMessageExtensions.gen.cpp.obj",
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
@@ -144,17 +145,18 @@
 			"PTGameplayTags.cpp.obj",
 			"PTLogChannels.cpp.obj",
 			"PTAudioSubsystem.cpp.obj",
-			"PTAssetManager.cpp.obj",
 			"PTCommonSessionSubsystem.cpp.obj",
 			"PTGameInstance.cpp.obj",
 			"PTMailCell.cpp.obj",
 			"PTMailCellData.cpp.obj",
+			"PTMailDetailPopup.cpp.obj",
 			"PTMailWidget.cpp.obj",
 			"SPTMailCell_Slate.cpp.obj",
 			"PTActivatableWidget.cpp.obj",
 			"PTUIManagerSubsystem.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
-			"SCircumferenceMarkerWidget.cpp.obj"
+			"SCircumferenceMarkerWidget.cpp.obj",
+			"PTAssetManager.cpp.obj"
 		]
 	}
 }
