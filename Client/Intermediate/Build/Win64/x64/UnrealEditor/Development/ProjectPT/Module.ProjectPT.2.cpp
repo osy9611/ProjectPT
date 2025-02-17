@@ -41,3 +41,4 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTSceneData.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTServerData.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTUIManagerSubsystem.gen.cpp"
+#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTUIMessageExtensions.gen.cpp"

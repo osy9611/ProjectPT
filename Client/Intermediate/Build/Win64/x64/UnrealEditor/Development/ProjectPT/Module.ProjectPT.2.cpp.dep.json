@@ -349,7 +349,10 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonactivatablewidgetcontainer.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commonuserwidgetbase.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\uimanagersubsystem.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptuimanagersubsystem.generated.h"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptuimanagersubsystem.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptuimessageextensions.gen.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\extensions\\ptuimessageextensions.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptuimessageextensions.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

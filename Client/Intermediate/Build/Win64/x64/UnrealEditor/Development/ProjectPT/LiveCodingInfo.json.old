@@ -150,11 +150,11 @@
 			"PTMailWidget.cpp.obj",
 			"SPTMailCell_Slate.cpp.obj",
 			"PTActivatableWidget.cpp.obj",
-			"PTUIManagerSubsystem.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
 			"PTAbilitySystemComponent.cpp.obj",
-			"PTGameplayTags.cpp.obj"
+			"PTGameplayTags.cpp.obj",
+			"PTUIManagerSubsystem.cpp.obj"
 		]
 	}
 }
