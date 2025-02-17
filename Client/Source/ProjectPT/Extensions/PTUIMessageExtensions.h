@@ -44,3 +44,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float HealthAmount;
 };
+
+USTRUCT(BlueprintType)
+struct FUIUpdateMailMessage
+{
+	GENERATED_BODY()
+};

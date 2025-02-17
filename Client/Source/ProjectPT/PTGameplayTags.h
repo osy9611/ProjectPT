@@ -33,6 +33,7 @@ struct FPTGameplayTags
 
 	//UI Event
 	FGameplayTag UI_Event_Health;
+	FGameplayTag UI_Event_MailUpdate;
 
 	//AI Event
 	FGameplayTag AI_Event_Attack;

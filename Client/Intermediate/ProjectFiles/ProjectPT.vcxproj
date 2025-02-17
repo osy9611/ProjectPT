@@ -866,6 +866,11 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\EnumGenerateData.h"/>
     <ClInclude Include="..\..\Source\ProjectPT\Data\GenerateTableData.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\PTPlayerDataSubsystem.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\PTPlayerDataSubsystem.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ClientLocalStorageBase.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
@@ -876,6 +881,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTServerData.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTServerData.h"/>
     <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTUIMessageExtensions.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_AddWidgets.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
@@ -1028,6 +1038,26 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailCell.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailCell.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailCellData.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailCellData.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailWidget.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\SPTMailCell_Slate.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\SPTMailCell_Slate.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Weapon\CircumferenceMarkerWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>

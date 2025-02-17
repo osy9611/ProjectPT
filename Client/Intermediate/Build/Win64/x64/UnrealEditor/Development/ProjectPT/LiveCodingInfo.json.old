@@ -27,13 +27,13 @@
 			"PTAnimNotify_AttackHitCheck.gen.cpp.obj",
 			"PTAssetManager.gen.cpp.obj",
 			"PTAttributeSet.gen.cpp.obj",
+			"PTAudioSubsystem.gen.cpp.obj",
 			"PTCameraComponent.gen.cpp.obj",
 			"PTCameraMode.gen.cpp.obj",
-			"PTCameraMode_ThirdPerson.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
-			"PTAudioSubsystem.gen.cpp.obj"
+			"ProjectPT.init.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
+			"PTCameraMode_ThirdPerson.gen.cpp.obj",
 			"PTCharacter.gen.cpp.obj",
 			"PTCharacter_AttributeSet.gen.cpp.obj",
 			"PTCommonSessionSubsystem.gen.cpp.obj",
@@ -58,6 +58,9 @@
 			"PTInputComponent.gen.cpp.obj",
 			"PTInputConfig.gen.cpp.obj",
 			"PTLocalPlayer.gen.cpp.obj",
+			"PTMailCell.gen.cpp.obj",
+			"PTMailCellData.gen.cpp.obj",
+			"PTMailWidget.gen.cpp.obj",
 			"PTMappableConfigPair.gen.cpp.obj",
 			"PTObjectSubsystem.gen.cpp.obj",
 			"PTPawnData.gen.cpp.obj",
@@ -65,12 +68,16 @@
 			"PTPlayerAIController.gen.cpp.obj",
 			"PTPlayerCameraManager.gen.cpp.obj",
 			"PTPlayerController.gen.cpp.obj",
+			"PTPlayerDataSubsystem.gen.cpp.obj",
 			"PTPlayerStart.gen.cpp.obj",
 			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
 			"PTSceneData.gen.cpp.obj",
+			"PTServerData.gen.cpp.obj",
 			"PTUIManagerSubsystem.gen.cpp.obj",
-			"PTUIMessageExtensions.gen.cpp.obj",
+			"PTUIMessageExtensions.gen.cpp.obj"
+		],
+		"Module.ProjectPT.3.cpp.obj": [
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
@@ -82,14 +89,11 @@
 			"PTGameplayAbility_RangeAttack.cpp.obj",
 			"PTAI_AttributeSet.cpp.obj",
 			"PTAttributeSet.cpp.obj",
-			"PTCharacter_AttributeSet.cpp.obj"
-		],
-		"Module.ProjectPT.3.cpp.obj": [
+			"PTCharacter_AttributeSet.cpp.obj",
 			"PTGE_AttackDamage.cpp.obj",
 			"UPTGE_SkillCoolTime.cpp.obj",
 			"PTAnimNotify_AttackHitCheck.cpp.obj",
 			"PTAbilitySet.cpp.obj",
-			"PTAbilitySystemComponent.cpp.obj",
 			"PTGameplayAbilityTargetActor_Trace.cpp.obj",
 			"PTGameplayAbilityTargetData_SingleTargetHit.cpp.obj",
 			"PTAbilityTask_Trace.cpp.obj",
@@ -109,6 +113,8 @@
 			"OptionStorage.cpp.obj",
 			"DataManagerSubsystem.cpp.obj",
 			"EnumGenerateData.cpp.obj",
+			"PTPlayerDataSubsystem.cpp.obj",
+			"PTServerData.cpp.obj",
 			"GameFeatureAction_AddWidgets.cpp.obj",
 			"GameFeatureAction_SpawnAI.cpp.obj",
 			"GameFeatureAction_TableLoad.cpp.obj",
@@ -134,16 +140,21 @@
 			"Poolable_Actor.cpp.obj",
 			"Poolable_NiagaraSystem.cpp.obj",
 			"ProjectPT.cpp.obj",
-			"PTGameplayTags.cpp.obj",
 			"PTLogChannels.cpp.obj",
+			"PTAudioSubsystem.cpp.obj",
 			"PTAssetManager.cpp.obj",
 			"PTCommonSessionSubsystem.cpp.obj",
 			"PTGameInstance.cpp.obj",
+			"PTMailCell.cpp.obj",
+			"PTMailCellData.cpp.obj",
+			"PTMailWidget.cpp.obj",
+			"SPTMailCell_Slate.cpp.obj",
 			"PTActivatableWidget.cpp.obj",
 			"PTUIManagerSubsystem.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTAudioSubsystem.cpp.obj"
+			"PTAbilitySystemComponent.cpp.obj",
+			"PTGameplayTags.cpp.obj"
 		]
 	}
 }

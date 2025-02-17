@@ -15,6 +15,7 @@ PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIHPMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUISkillCoolTimeMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateMailMessage();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
@@ -278,6 +279,57 @@ UScriptStruct* Z_Construct_UScriptStruct_FUIHPMessage()
 }
 // End ScriptStruct FUIHPMessage
 
+// Begin ScriptStruct FUIUpdateMailMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_UIUpdateMailMessage;
+class UScriptStruct* FUIUpdateMailMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIUpdateMailMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_UIUpdateMailMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FUIUpdateMailMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("UIUpdateMailMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_UIUpdateMailMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FUIUpdateMailMessage>()
+{
+	return FUIUpdateMailMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUIUpdateMailMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"UIUpdateMailMessage",
+	nullptr,
+	0,
+	sizeof(FUIUpdateMailMessage),
+	alignof(FUIUpdateMailMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateMailMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIUpdateMailMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_UIUpdateMailMessage.InnerSingleton, Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_UIUpdateMailMessage.InnerSingleton;
+}
+// End ScriptStruct FUIUpdateMailMessage
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics
 {
@@ -286,9 +338,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FUIFireZoomMessage::StaticStruct, Z_Construct_UScriptStruct_FUIFireZoomMessage_Statics::NewStructOps, TEXT("UIFireZoomMessage"), &Z_Registration_Info_UScriptStruct_UIFireZoomMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIFireZoomMessage), 2541667117U) },
 		{ FUIDamageMessage::StaticStruct, Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewStructOps, TEXT("UIDamageMessage"), &Z_Registration_Info_UScriptStruct_UIDamageMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIDamageMessage), 1523961953U) },
 		{ FUIHPMessage::StaticStruct, Z_Construct_UScriptStruct_FUIHPMessage_Statics::NewStructOps, TEXT("UIHPMessage"), &Z_Registration_Info_UScriptStruct_UIHPMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIHPMessage), 3844032259U) },
+		{ FUIUpdateMailMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::NewStructOps, TEXT("UIUpdateMailMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateMailMessage), 856343851U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3697124441(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3515430052(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);

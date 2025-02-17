@@ -1,4 +1,4 @@
 tableNo,DataPath,BGMPath
 int,string,string
 1,/ShooterGame/Experiences/DA_GameSceneData.DA_GameSceneData,/Game/Audio/Sounds/BGM/desolate-world-121196.desolate-world-121196
-,,
+2,/Game/System/Experience/Lobby/DA_LobbySceneData.DA_LobbySceneData,

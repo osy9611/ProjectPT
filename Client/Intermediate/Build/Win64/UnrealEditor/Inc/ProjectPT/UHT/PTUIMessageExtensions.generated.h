@@ -42,6 +42,13 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIDamageMessage>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIHPMessage>();
 
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_51_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIUpdateMailMessage>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h
 

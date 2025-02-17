@@ -35,7 +35,7 @@ void UPTAbilitySystemComponent::AbilitySpecInputPressed(FGameplayAbilitySpec& Sp
 
 void UPTAbilitySystemComponent::AbilitySpecInputReleased(FGameplayAbilitySpec& Spec)
 {
-	Super::AbilitySpecInputPressed(Spec);
+	Super::AbilitySpecInputReleased(Spec);
 
 	if (Spec.IsActive())
 		InvokeReplicatedEvent(EAbilityGenericReplicatedEvent::InputReleased, Spec.Handle, Spec.ActivationInfo.GetActivationPredictionKey());

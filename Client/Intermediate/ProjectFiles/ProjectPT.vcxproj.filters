@@ -558,6 +558,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\Data\GenerateTableData.h">
       <Filter>Source\ProjectPT\Data</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\PTPlayerDataSubsystem.cpp">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\PTPlayerDataSubsystem.h">
+      <Filter>Source\ProjectPT\Data</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Data\ClientLocalStorage">
       <UniqueIdentifier>{38A10AD8-C4FC-3BA4-9FA9-1D9CF42DA735}</UniqueIdentifier>
     </Filter>
@@ -572,6 +578,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.h">
       <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\Data\ServerDatas">
+      <UniqueIdentifier>{881B9BA3-DA1B-3864-AFDA-2D2C11C20372}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTServerData.cpp">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTServerData.h">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\Extensions">
       <UniqueIdentifier>{41503613-6DDD-3295-9A1F-4C5E9D6A7F42}</UniqueIdentifier>
@@ -791,6 +806,33 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.h">
       <Filter>Source\ProjectPT\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\Mail">
+      <UniqueIdentifier>{6375D000-EFF3-322C-A138-32ECFD096572}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailCell.cpp">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailCell.h">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailCellData.cpp">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailCellData.h">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailWidget.cpp">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailWidget.h">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\SPTMailCell_Slate.cpp">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\SPTMailCell_Slate.h">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Weapon">
       <UniqueIdentifier>{EFD4EA53-523A-33D8-95F6-89D05CDF5827}</UniqueIdentifier>
