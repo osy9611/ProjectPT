@@ -67,3 +67,20 @@ UCommonActivatableWidgetBase* UCommonUserWidgetBase::GetWidgetToLayer(FGameplayT
 
 	return nullptr;
 }
+
+UCommonActivatableWidgetBase* UCommonUserWidgetBase::GetWidgetToLayer(FGameplayTag LayerName, const FString& WidgetName)
+{
+	if (UCommonActivatableWidgetContainerBase* LayerWidget = GetLayerWidget(LayerName))
+	{
+		const TArray<UCommonActivatableWidget*>& Widgets = LayerWidget->GetWidgetList();
+		UCommonActivatableWidget* const* FoundWidget = Widgets.FindByPredicate([&](UCommonActivatableWidget* Widget) {
+			UE_LOG(LogTemp, Log, TEXT("Widget Static Class : %s, ActivatableWidgetClass Static Class : %s"), *Widget->GetName(), *WidgetName);
+			return Widget->GetName().Contains(WidgetName);
+			});
+		if (FoundWidget)
+		{
+			return Cast<UCommonActivatableWidgetBase>(*FoundWidget);
+		}
+	}
+	return nullptr;
+}

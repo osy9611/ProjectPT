@@ -38,6 +38,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	UCommonActivatableWidgetBase* GetActivatableWidgetClass(FGameplayTag LayerName, UCommonActivatableWidgetBase* ActivatableWidgetClass);
 
+	UFUNCTION(BlueprintCallable)
+	UCommonActivatableWidgetBase* GetActivatableWidgetName(FGameplayTag LayerName, const FString& WidgetName);
+
 	template<typename T = UCommonActivatableWidgetBase>
 	T* CreateActivatableWidgetClass(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
 

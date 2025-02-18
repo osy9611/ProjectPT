@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PROJECTPT_PTUIManagerSubsystem_generated_h
 
-#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTUIManagerSubsystem(); \
 	friend struct Z_Construct_UClass_UPTUIManagerSubsystem_Statics; \
@@ -23,9 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UPTUIManagerSubsystem)
 
 
-#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_17_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UPTUIManagerSubsystem(); \
+#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTUIManagerSubsystem(UPTUIManagerSubsystem&&); \
@@ -37,12 +35,12 @@ public: \
 	NO_API virtual ~UPTUIManagerSubsystem();
 
 
-#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_14_PROLOG
-#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_17_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_15_PROLOG
+#define FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

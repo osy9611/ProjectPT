@@ -47,7 +47,6 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commoninput\\uht\\commoninputactiondomain.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonactivatablewidget.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commonactivatablewidgetbase.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongame.init.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongameinstance.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\commongameinstance.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commongameinstance.generated.h",
@@ -82,9 +81,6 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\scommonanimatedswitcher.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonactivatablewidgetcontainer.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\commonuserwidgetbase.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\uimanagersubsystem.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\uimanagersubsystem.h",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\uimanagersubsystem.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonactivatablewidgetbase.cpp",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
@@ -98,6 +94,8 @@
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commongame.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\commongame.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commongameinstance.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\public\\uimanagersubsystem.h",
+            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\intermediate\\build\\win64\\unrealeditor\\inc\\commongame\\uht\\uimanagersubsystem.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonlocalplayer.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonplayercontroller.cpp",
             "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonsessionsubsystem.cpp",
@@ -112,9 +110,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assetregistry\\uht\\iassetregistry.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\genericplatform\\genericplatformchunkinstall.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\contentencryptionconfig.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\assetmanager.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\commonuserwidgetbase.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\plugins\\commongame\\source\\commongame\\private\\uimanagersubsystem.cpp"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\assetmanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

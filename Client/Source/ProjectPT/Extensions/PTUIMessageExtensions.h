@@ -50,3 +50,17 @@ struct FUIUpdateMailMessage
 {
 	GENERATED_BODY()
 };
+
+USTRUCT(BlueprintType)
+struct FDeleteMailMessage
+{
+	GENERATED_BODY()
+};
+
+USTRUCT(BlueprintType)
+struct FRecieveRewardMessage
+{
+	GENERATED_BODY()
+public:
+	TArray<FString> Pids;
+};

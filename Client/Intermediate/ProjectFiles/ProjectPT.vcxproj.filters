@@ -828,6 +828,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailDetailPopup.h">
       <Filter>Source\ProjectPT\UI\Mail</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailItemCell.cpp">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\PTMailItemCell.h">
+      <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Mail\PTMailWidget.cpp">
       <Filter>Source\ProjectPT\UI\Mail</Filter>
     </ClCompile>
@@ -839,6 +845,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\SPTMailCell_Slate.h">
       <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\System">
+      <UniqueIdentifier>{A197357C-A558-3CBB-BC54-CA42FBE122CB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\System\PTSystemPopup.cpp">
+      <Filter>Source\ProjectPT\UI\System</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\System\PTSystemPopup.h">
+      <Filter>Source\ProjectPT\UI\System</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Weapon">
       <UniqueIdentifier>{EFD4EA53-523A-33D8-95F6-89D05CDF5827}</UniqueIdentifier>

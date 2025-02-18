@@ -31,6 +31,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	UCommonActivatableWidgetBase* GetWidgetToLayer(FGameplayTag LayerName, UClass* ActivatableWidgetClass);
 
+	UCommonActivatableWidgetBase* GetWidgetToLayer(FGameplayTag LayerName, const FString& WidgetName);
+
 	UPROPERTY(Transient)
 	TMap<FGameplayTag, TObjectPtr<UCommonActivatableWidgetContainerBase>> Layers;
 };

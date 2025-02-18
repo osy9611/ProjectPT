@@ -45,6 +45,10 @@ struct FPTGameplayTags
 	//GCN Event
 	FGameplayTag GameplayCue_RangeAttack_Damage;
 
+	//Request Event(가상으로 서버가 있다고 작업하기 위해서 일단 추가함)
+	FGameplayTag Request_DeleteAllMail;
+	FGameplayTag Request_ReceiveAllReward;
+	FGameplayTag Request_ReceiveReward;
 private:
 	static FPTGameplayTags GameplayTags;
 };

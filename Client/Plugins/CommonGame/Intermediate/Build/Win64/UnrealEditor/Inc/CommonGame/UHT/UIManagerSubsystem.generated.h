@@ -17,6 +17,7 @@ struct FGameplayTag;
 #define COMMONGAME_UIManagerSubsystem_generated_h
 
 #define FID_Client_Plugins_CommonGame_Source_CommonGame_Public_UIManagerSubsystem_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetActivatableWidgetName); \
 	DECLARE_FUNCTION(execGetActivatableWidgetClass); \
 	DECLARE_FUNCTION(execCreateActivatableWidgetClass);
 

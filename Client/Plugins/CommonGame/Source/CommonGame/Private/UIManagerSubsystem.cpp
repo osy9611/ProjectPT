@@ -49,7 +49,7 @@ void UUIManagerSubsystem::NotifyPlayerRemoved(UCommonLocalPlayer* LocalPlayer)
 void UUIManagerSubsystem::NotifyPlayerDestroyed(UCommonLocalPlayer* LocalPlayer)
 {
 	check(LocalPlayer);
-	
+
 	LocalPlayer->OnPlayerContollerSet.RemoveAll(this);
 	RemoveLayoutFromViewport();
 }
@@ -126,5 +126,17 @@ UCommonActivatableWidgetBase* UUIManagerSubsystem::GetActivatableWidgetClass(FGa
 		return nullptr;
 	}
 
-	return GetActivatableWidgetClass<UCommonActivatableWidgetBase>(LayerName,ActivatableWidgetClass->GetClass());
+	return GetActivatableWidgetClass<UCommonActivatableWidgetBase>(LayerName, ActivatableWidgetClass->GetClass());
+}
+
+UCommonActivatableWidgetBase* UUIManagerSubsystem::GetActivatableWidgetName(FGameplayTag LayerName, const FString& WidgetName)
+{
+	if (WidgetName.IsEmpty())
+	{
+		UE_LOG(LogTemp, Log, TEXT("[UIManagerSubsystem] GetActivatableWidgetClass() : This WidgetNams Is Null"));
+		return nullptr;
+	}
+
+
+	return CurrentWidget->GetWidgetToLayer(LayerName, WidgetName);
 }

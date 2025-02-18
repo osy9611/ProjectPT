@@ -49,6 +49,20 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIHPMessage>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIUpdateMailMessage>();
 
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_57_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FDeleteMailMessage_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FDeleteMailMessage>();
+
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_63_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FRecieveRewardMessage_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FRecieveRewardMessage>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h
 

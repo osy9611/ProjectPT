@@ -27,6 +27,7 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTMailCell.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTMailCellData.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTMailDetailPopup.gen.cpp"
+#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTMailItemCell.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTMailWidget.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTMappableConfigPair.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTObjectSubsystem.gen.cpp"
@@ -40,4 +41,3 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTPlayerState.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTProjectile.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTSceneData.gen.cpp"
-#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTServerData.gen.cpp"
