@@ -4,16 +4,21 @@
 #include "PTUIManagerSubsystem.h"
 #include "PTActivatableWidget.h"
 #include "ProjectPT/System/PTAssetManager.h"
-#include "ProjectPT/PTLogChannels.h"
+#include "ProjectPT/UI//System/PTRewardPopup.h"
 #include "ProjectPT/UI/System/PTSystemPopup.h"
+#include "ProjectPT/Data/ServerDatas/PTServerData.h"
 #include "GameplayTagContainer.h"
 
 UPTUIManagerSubsystem::UPTUIManagerSubsystem()
 {
+	DynamicPopupPath = "/Game/UI/HUD/System/Reward/WBP_RewardPopup.WBP_RewardPopup_C";
 	SystemPopupPath = "/Game/UI/HUD/System/WBP_SystemPopup.WBP_SystemPopup_C";
 
 	FString TagString = TEXT("UI.Layer.System");
 	SystemLayerTag = FGameplayTag::RequestGameplayTag(FName(*TagString));
+
+	TagString = TEXT("UI.Layer.Dynamic");
+	DynamicLayerTag = FGameplayTag::RequestGameplayTag(FName(*TagString));
 
 }
 
@@ -40,7 +45,7 @@ void UPTUIManagerSubsystem::HideMouseCursor()
 
 void UPTUIManagerSubsystem::ShowSystemPopup(FString Title, FString Desc, FString YesText, TFunction<void()> YesCallback, FString NoText, TFunction<void()> NoCallback)
 {
-	UPTSystemPopup* SystemPopup = GetSystePopup();
+	UPTSystemPopup* SystemPopup = GetWidget<UPTSystemPopup>(SystemLayerTag, "WBP_SystemLayout", SystemPopupPath);
 	if (SystemPopup)
 	{
 		SystemPopup->ShowSystemPopup(Title, Desc, YesText, YesCallback, NoText, NoCallback);
@@ -50,34 +55,19 @@ void UPTUIManagerSubsystem::ShowSystemPopup(FString Title, FString Desc, FString
 void UPTUIManagerSubsystem::ShowSystemPopup(FString Title, FString Desc, FString YesText, TFunction<void()> YesCallback)
 {
 
-	UPTSystemPopup* SystemPopup = GetSystePopup();
+	UPTSystemPopup* SystemPopup = GetWidget<UPTSystemPopup>(SystemLayerTag, "WBP_SystemLayout",SystemPopupPath);
 	if (SystemPopup)
 	{
 		SystemPopup->ShowSystemPopup(Title, Desc, YesText, YesCallback);
 	}
 }
 
-UPTSystemPopup* UPTUIManagerSubsystem::GetSystePopup()
+void UPTUIManagerSubsystem::ShowItemRewardPopup(TArray<FItemReward> RewardDatas)
 {
-	UCommonActivatableWidgetBase* WidgetBase = GetActivatableWidgetName(SystemLayerTag, "WBP_SystemLayout");
-	if (!WidgetBase)
+	UPTRewardPopup* RewardPopup = GetWidget<UPTRewardPopup>(DynamicLayerTag, "WBP_DynamicLayout", DynamicPopupPath);
+	if (RewardPopup)
 	{
-		UE_LOG(PTLog, Error, TEXT("[PTUIManagerSubsystem] Not Found WBP_SystemLayout"));
-		return nullptr;
+		RewardPopup->ShowRewardPopup(RewardDatas);
 	}
-
-	UUserWidget* PopupWidget = WidgetBase->GetWidget("WBP_SystemLayout");
-	if (!PopupWidget)
-	{
-		TSubclassOf<UUserWidget> WidgetClass = StaticLoadClass(UUserWidget::StaticClass(), nullptr, *SystemPopupPath);
-
-		if (WidgetClass)
-		{
-			PopupWidget = WidgetBase->CreateWidgetClass(WidgetClass, true);
-		}
-	}
-
-	UPTSystemPopup* SystemPopup = Cast<UPTSystemPopup>(PopupWidget);
-
-	return SystemPopup;
 }
+

@@ -6,6 +6,7 @@
 			"ClientLocalStorageBase.gen.cpp.obj",
 			"ClientLocalStorageSubsystem.gen.cpp.obj",
 			"DataManagerSubsystem.gen.cpp.obj",
+			"EnumGenerateData.gen.cpp.obj",
 			"GameFeatureAction_AddWidgets.gen.cpp.obj",
 			"GameFeatureAction_Lobby.gen.cpp.obj",
 			"GameFeatureAction_SpawnAI.gen.cpp.obj",
@@ -31,7 +32,6 @@
 			"PTAudioSubsystem.gen.cpp.obj",
 			"PTCameraComponent.gen.cpp.obj",
 			"PTCameraMode.gen.cpp.obj",
-			"EnumGenerateData.gen.cpp.obj",
 			"ProjectPT.init.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
@@ -79,6 +79,8 @@
 		],
 		"Module.ProjectPT.3.cpp.obj": [
 			"PTProjectile.gen.cpp.obj",
+			"PTRewardCell.gen.cpp.obj",
+			"PTRewardPopup.gen.cpp.obj",
 			"PTSceneData.gen.cpp.obj",
 			"PTServerData.gen.cpp.obj",
 			"PTSystemPopup.gen.cpp.obj",
@@ -148,6 +150,7 @@
 			"Poolable_Actor.cpp.obj",
 			"Poolable_NiagaraSystem.cpp.obj",
 			"ProjectPT.cpp.obj",
+			"PTGameplayTags.cpp.obj",
 			"PTLogChannels.cpp.obj",
 			"PTAudioSubsystem.cpp.obj",
 			"PTAssetManager.cpp.obj",
@@ -162,11 +165,12 @@
 			"PTMailWidget.cpp.obj",
 			"SPTMailCell_Slate.cpp.obj",
 			"PTActivatableWidget.cpp.obj",
-			"PTUIManagerSubsystem.cpp.obj",
+			"PTRewardPopup.cpp.obj",
 			"PTSystemPopup.cpp.obj",
+			"PTRewardCell.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTGameplayTags.cpp.obj"
+			"PTUIManagerSubsystem.cpp.obj"
 		]
 	}
 }

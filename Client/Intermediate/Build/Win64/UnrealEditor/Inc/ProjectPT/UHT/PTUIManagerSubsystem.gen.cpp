@@ -30,9 +30,6 @@ struct Z_Construct_UClass_UPTUIManagerSubsystem_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "UI/PTUIManagerSubsystem.h" },
 		{ "ModuleRelativePath", "UI/PTUIManagerSubsystem.h" },
 	};
@@ -83,10 +80,10 @@ UPTUIManagerSubsystem::~UPTUIManagerSubsystem() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTUIManagerSubsystem, UPTUIManagerSubsystem::StaticClass, TEXT("UPTUIManagerSubsystem"), &Z_Registration_Info_UClass_UPTUIManagerSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTUIManagerSubsystem), 595126833U) },
+		{ Z_Construct_UClass_UPTUIManagerSubsystem, UPTUIManagerSubsystem::StaticClass, TEXT("UPTUIManagerSubsystem"), &Z_Registration_Info_UClass_UPTUIManagerSubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTUIManagerSubsystem), 3119788489U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_488590017(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_1751535635(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_UI_PTUIManagerSubsystem_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

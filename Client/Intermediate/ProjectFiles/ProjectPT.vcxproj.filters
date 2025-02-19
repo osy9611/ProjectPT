@@ -882,6 +882,15 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\System\PTSystemPopup.h">
       <Filter>Source\ProjectPT\UI\System</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\System\Reward">
+      <UniqueIdentifier>{8A51029A-8A45-3680-AEBF-DB64BC5C7923}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\System\Reward\PTRewardCell.cpp">
+      <Filter>Source\ProjectPT\UI\System\Reward</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\System\Reward\PTRewardCell.h">
+      <Filter>Source\ProjectPT\UI\System\Reward</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Weapon">
       <UniqueIdentifier>{EFD4EA53-523A-33D8-95F6-89D05CDF5827}</UniqueIdentifier>
     </Filter>
