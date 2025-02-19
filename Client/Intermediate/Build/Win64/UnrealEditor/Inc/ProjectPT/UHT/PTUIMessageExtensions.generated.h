@@ -56,7 +56,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIUpdateMailMessage
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FDeleteMailMessage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_63_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_65_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRecieveRewardMessage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 

@@ -16,3 +16,7 @@
 ,!Enumerator,Sphere,,구형
 ,!Enumerator,Capsule,,캡슐
 ,!Enumerator,Box,!End,박스
+,,,,
+,!Enum,RedDotType,,
+,!Enumerator,Mail,,메일
+,!Enumerator,Inventory,!End,인벤토리

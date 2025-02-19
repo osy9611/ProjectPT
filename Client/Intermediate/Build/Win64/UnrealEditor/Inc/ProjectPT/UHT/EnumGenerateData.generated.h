@@ -50,4 +50,12 @@ enum class ECollisionType : uint8;
 template<> struct TIsUEnumClass<ECollisionType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<ECollisionType>();
 
+#define FOREACH_ENUM_EREDDOTTYPE(op) \
+	op(ERedDotType::Mail) \
+	op(ERedDotType::Inventory) 
+
+enum class ERedDotType : uint8;
+template<> struct TIsUEnumClass<ERedDotType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<ERedDotType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

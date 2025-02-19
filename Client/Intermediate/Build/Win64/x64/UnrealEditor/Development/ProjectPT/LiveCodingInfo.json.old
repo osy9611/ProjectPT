@@ -6,8 +6,8 @@
 			"ClientLocalStorageBase.gen.cpp.obj",
 			"ClientLocalStorageSubsystem.gen.cpp.obj",
 			"DataManagerSubsystem.gen.cpp.obj",
-			"EnumGenerateData.gen.cpp.obj",
 			"GameFeatureAction_AddWidgets.gen.cpp.obj",
+			"GameFeatureAction_Lobby.gen.cpp.obj",
 			"GameFeatureAction_SpawnAI.gen.cpp.obj",
 			"GameFeatureAction_TableLoad.gen.cpp.obj",
 			"GameFeatureAction_WorldActionBase.gen.cpp.obj",
@@ -20,6 +20,7 @@
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
 			"PTActivatableWidget.gen.cpp.obj",
+			"PTActivatableWidget_Lobby.gen.cpp.obj",
 			"PTAICharacter.gen.cpp.obj",
 			"PTAIComponent.gen.cpp.obj",
 			"PTAI_AttributeSet.gen.cpp.obj",
@@ -30,6 +31,7 @@
 			"PTAudioSubsystem.gen.cpp.obj",
 			"PTCameraComponent.gen.cpp.obj",
 			"PTCameraMode.gen.cpp.obj",
+			"EnumGenerateData.gen.cpp.obj",
 			"ProjectPT.init.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
@@ -57,6 +59,7 @@
 			"PTHeroComponent.gen.cpp.obj",
 			"PTInputComponent.gen.cpp.obj",
 			"PTInputConfig.gen.cpp.obj",
+			"PTLobbyContentButton.gen.cpp.obj",
 			"PTLocalPlayer.gen.cpp.obj",
 			"PTMailCell.gen.cpp.obj",
 			"PTMailCellData.gen.cpp.obj",
@@ -72,13 +75,14 @@
 			"PTPlayerController.gen.cpp.obj",
 			"PTPlayerDataSubsystem.gen.cpp.obj",
 			"PTPlayerStart.gen.cpp.obj",
-			"PTPlayerState.gen.cpp.obj",
-			"PTProjectile.gen.cpp.obj",
-			"PTSceneData.gen.cpp.obj"
+			"PTPlayerState.gen.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
+			"PTProjectile.gen.cpp.obj",
+			"PTSceneData.gen.cpp.obj",
 			"PTServerData.gen.cpp.obj",
 			"PTSystemPopup.gen.cpp.obj",
+			"PTUIManagerSubsystem.gen.cpp.obj",
 			"PTUIMessageExtensions.gen.cpp.obj",
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
@@ -119,6 +123,7 @@
 			"PTPlayerDataSubsystem.cpp.obj",
 			"PTServerData.cpp.obj",
 			"GameFeatureAction_AddWidgets.cpp.obj",
+			"GameFeatureAction_Lobby.cpp.obj",
 			"GameFeatureAction_SpawnAI.cpp.obj",
 			"GameFeatureAction_TableLoad.cpp.obj",
 			"GameFeatureAction_WorldActionBase.cpp.obj",
@@ -148,6 +153,8 @@
 			"PTAssetManager.cpp.obj",
 			"PTCommonSessionSubsystem.cpp.obj",
 			"PTGameInstance.cpp.obj",
+			"PTActivatableWidget_Lobby.cpp.obj",
+			"PTLobbyContentButton.cpp.obj",
 			"PTMailCell.cpp.obj",
 			"PTMailCellData.cpp.obj",
 			"PTMailDetailPopup.cpp.obj",
@@ -155,12 +162,11 @@
 			"PTMailWidget.cpp.obj",
 			"SPTMailCell_Slate.cpp.obj",
 			"PTActivatableWidget.cpp.obj",
+			"PTUIManagerSubsystem.cpp.obj",
 			"PTSystemPopup.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTUIManagerSubsystem.gen.cpp.obj",
-			"PTGameplayTags.cpp.obj",
-			"PTUIManagerSubsystem.cpp.obj"
+			"PTGameplayTags.cpp.obj"
 		]
 	}
 }

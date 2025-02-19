@@ -55,6 +55,8 @@ USTRUCT(BlueprintType)
 struct FDeleteMailMessage
 {
 	GENERATED_BODY()
+public:
+	TArray<FString> Pids;
 };
 
 USTRUCT(BlueprintType)

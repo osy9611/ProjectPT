@@ -46,6 +46,7 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 
 	//Request Event(가상으로 서버가 있다고 작업하기 위해서 잃단 추가함)
 	AddTag(Request_DeleteAllMail, "Request.DeleteAllMail","");
+	AddTag(Request_DeleteMail, "Request,DeleteMail", "");
 	AddTag(Request_ReceiveAllReward, "Request.ReceiveAllReward","");
 	AddTag(Request_ReceiveReward, "Request.ReceiveReward", "");
 }

@@ -603,6 +603,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_AddWidgets.h">
       <Filter>Source\ProjectPT\GameFeature</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_Lobby.cpp">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_Lobby.h">
+      <Filter>Source\ProjectPT\GameFeature</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_SpawnAI.cpp">
       <Filter>Source\ProjectPT\GameFeature</Filter>
     </ClCompile>
@@ -807,6 +813,21 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.h">
       <Filter>Source\ProjectPT\UI</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\Lobby">
+      <UniqueIdentifier>{08321B69-4FC3-3577-A0FC-2A72E574157A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Lobby\PTActivatableWidget_Lobby.cpp">
+      <Filter>Source\ProjectPT\UI\Lobby</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Lobby\PTActivatableWidget_Lobby.h">
+      <Filter>Source\ProjectPT\UI\Lobby</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Lobby\PTLobbyContentButton.cpp">
+      <Filter>Source\ProjectPT\UI\Lobby</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Lobby\PTLobbyContentButton.h">
+      <Filter>Source\ProjectPT\UI\Lobby</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Mail">
       <UniqueIdentifier>{6375D000-EFF3-322C-A138-32ECFD096572}</UniqueIdentifier>
     </Filter>
@@ -849,6 +870,12 @@
     <Filter Include="Source\ProjectPT\UI\System">
       <UniqueIdentifier>{A197357C-A558-3CBB-BC54-CA42FBE122CB}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\System\PTRewardPopup.cpp">
+      <Filter>Source\ProjectPT\UI\System</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\System\PTRewardPopup.h">
+      <Filter>Source\ProjectPT\UI\System</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\System\PTSystemPopup.cpp">
       <Filter>Source\ProjectPT\UI\System</Filter>
     </ClCompile>
