@@ -60,7 +60,10 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 - AIComponent를 통한 AI 초기화 및 AttributeSet 관리
 - AIController와 AI Perception을 이용한 감지 및 행동 패턴 구현
 - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/AI)**
-
-
+- **작업 결과**
+  
+  <a href="https://github.com/osy9611/ProjectPT/wiki/AI">
+    <img src="https://github.com/user-attachments/assets/3d397b01-cf37-4e33-b9f5-4b65a8e188e9" width="50%" height="50%" alt="AI 작업 결과">
+  </a>
   
 ---
