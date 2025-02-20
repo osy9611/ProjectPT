@@ -127,15 +127,15 @@ void APTProjectile::CheckCollisionHit()
 		Params
 	);
 
-#if ENABLE_DRAW_DEBUG
-	FVector TraceVec = GetActorForwardVector();
-	FVector Center = GetActorLocation() + TraceVec * 0.5f;
-	float HalfHeight = 0.5 + Radius;
-	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
-	FColor DrawColor = Hit ? FColor::Green : FColor::Red;
-	float DebugLifeTime = 5.0f;
-	DrawDebugCapsule(GetWorld(), Center, HalfHeight, Radius, CapsuleRot, DrawColor, false, DebugLifeTime);
-#endif
+//#if ENABLE_DRAW_DEBUG
+//	FVector TraceVec = GetActorForwardVector();
+//	FVector Center = GetActorLocation() + TraceVec * 0.5f;
+//	float HalfHeight = 0.5 + Radius;
+//	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
+//	FColor DrawColor = Hit ? FColor::Green : FColor::Red;
+//	float DebugLifeTime = 5.0f;
+//	DrawDebugCapsule(GetWorld(), Center, HalfHeight, Radius, CapsuleRot, DrawColor, false, DebugLifeTime);
+//#endif
 
 	if (OnProjectileHit.IsBound() && Hit)
 		OnProjectileHit.Broadcast(OutHit);

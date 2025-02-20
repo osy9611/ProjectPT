@@ -8,6 +8,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeProjectPT_init() {}
 	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_OnChangeRedDot__DelegateSignature();
+	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_OnToggleChanged__DelegateSignature();
 	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_TraceResultDelegate__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_ProjectPT;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_ProjectPT()
@@ -16,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeProjectPT_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_OnChangeRedDot__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_OnToggleChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_TraceResultDelegate__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
@@ -23,13 +25,13 @@ void EmptyLinkFunctionForGeneratedCodeProjectPT_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x5A9EE71E,
-				0xE41C309E,
+				0x1FE21F9C,
+				0x9DECB1E7,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ProjectPT.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_ProjectPT.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProjectPT(Z_Construct_UPackage__Script_ProjectPT, TEXT("/Script/ProjectPT"), Z_Registration_Info_UPackage__Script_ProjectPT, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x5A9EE71E, 0xE41C309E));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProjectPT(Z_Construct_UPackage__Script_ProjectPT, TEXT("/Script/ProjectPT"), Z_Registration_Info_UPackage__Script_ProjectPT, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x1FE21F9C, 0x9DECB1E7));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

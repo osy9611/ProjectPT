@@ -119,7 +119,7 @@ UCommonActivatableWidgetBase* UUIManagerSubsystem::CreateActivatableWidgetClass(
 }
 
 UCommonActivatableWidgetBase* UUIManagerSubsystem::GetActivatableWidgetClass(FGameplayTag LayerName, UCommonActivatableWidgetBase* ActivatableWidgetClass)
-{
+ {
 	if (!ActivatableWidgetClass)
 	{
 		UE_LOG(LogTemp, Log, TEXT("[UIManagerSubsystem] GetWidgetClass() : This ActivatableWidgetClass Is Null"));

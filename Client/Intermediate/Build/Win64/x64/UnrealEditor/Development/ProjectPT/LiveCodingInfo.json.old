@@ -39,6 +39,7 @@
 			"PTCharacter.gen.cpp.obj",
 			"PTCharacter_AttributeSet.gen.cpp.obj",
 			"PTCommonSessionSubsystem.gen.cpp.obj",
+			"PTEventWidget.gen.cpp.obj",
 			"PTExperienceActionSet.gen.cpp.obj",
 			"PTExperienceDefinition.gen.cpp.obj",
 			"PTExperienceManagerComponent.gen.cpp.obj",
@@ -73,11 +74,11 @@
 			"PTPlayerAIController.gen.cpp.obj",
 			"PTPlayerCameraManager.gen.cpp.obj",
 			"PTPlayerController.gen.cpp.obj",
-			"PTPlayerDataSubsystem.gen.cpp.obj",
-			"PTPlayerStart.gen.cpp.obj",
-			"PTPlayerState.gen.cpp.obj"
+			"PTPlayerDataSubsystem.gen.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
+			"PTPlayerStart.gen.cpp.obj",
+			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
 			"PTRewardCell.gen.cpp.obj",
 			"PTRewardPopup.gen.cpp.obj",
@@ -87,6 +88,8 @@
 			"PTUIManagerSubsystem.gen.cpp.obj",
 			"PTUIMessageExtensions.gen.cpp.obj",
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
+			"ToggleButtonWidget.gen.cpp.obj",
+			"ToggleGroupWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
 			"PTGameplayAbility_Death.cpp.obj",
@@ -132,7 +135,6 @@
 			"PTGameFeaturesProjectPolicy.cpp.obj",
 			"PTExperienceActionSet.cpp.obj",
 			"PTExperienceDefinition.cpp.obj",
-			"PTExperienceManagerComponent.cpp.obj",
 			"PTGameModeBase.cpp.obj",
 			"PTGameState.cpp.obj",
 			"PTSceneData.cpp.obj",
@@ -141,7 +143,6 @@
 			"PTMappableConfigPair.cpp.obj",
 			"PTObjectSubsystem.cpp.obj",
 			"PTPlayerStart.cpp.obj",
-			"PTProjectile.cpp.obj",
 			"PTLocalPlayer.cpp.obj",
 			"PTPlayerAIController.cpp.obj",
 			"PTPlayerController.cpp.obj",
@@ -150,11 +151,15 @@
 			"Poolable_Actor.cpp.obj",
 			"Poolable_NiagaraSystem.cpp.obj",
 			"ProjectPT.cpp.obj",
+			"PTGameplayTags.cpp.obj",
 			"PTLogChannels.cpp.obj",
 			"PTAudioSubsystem.cpp.obj",
 			"PTAssetManager.cpp.obj",
 			"PTCommonSessionSubsystem.cpp.obj",
 			"PTGameInstance.cpp.obj",
+			"ToggleButtonWidget.cpp.obj",
+			"ToggleGroupWidget.cpp.obj",
+			"PTEventWidget.cpp.obj",
 			"PTActivatableWidget_Lobby.cpp.obj",
 			"PTLobbyContentButton.cpp.obj",
 			"PTMailCell.cpp.obj",
@@ -170,7 +175,8 @@
 			"PTRewardCell.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTGameplayTags.cpp.obj"
+			"PTExperienceManagerComponent.cpp.obj",
+			"PTProjectile.cpp.obj"
 		]
 	}
 }
