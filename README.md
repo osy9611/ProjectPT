@@ -17,6 +17,15 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 
 ---
 
+## 콘텐츠
+
+### Mail
+- 붕괴 스타레일 우편 시스템을 모작한 콘텐츠
+- **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Mail)**
+- 작업 결과
+
+<img src="https://github.com/user-attachments/assets/de08e167-ad53-49b5-b85b-f5280df9bf9c" width="50%" height="50%">
+
 ## 주요 시스템 개요
 
 ###  Gameplay Ability System (GAS)
