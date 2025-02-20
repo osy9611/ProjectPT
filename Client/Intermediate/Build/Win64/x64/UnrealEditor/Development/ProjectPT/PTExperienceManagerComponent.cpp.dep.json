@@ -44,7 +44,8 @@
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\gamemodes\\ptexperienceactionset.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptexperienceactionset.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gamefeatures\\source\\gamefeatures\\public\\gamefeaturessubsystemsettings.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gamefeatures\\intermediate\\build\\win64\\unrealeditor\\inc\\gamefeatures\\uht\\gamefeaturessubsystemsettings.generated.h"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\runtime\\gamefeatures\\intermediate\\build\\win64\\unrealeditor\\inc\\gamefeatures\\uht\\gamefeaturessubsystemsettings.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptlogchannels.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

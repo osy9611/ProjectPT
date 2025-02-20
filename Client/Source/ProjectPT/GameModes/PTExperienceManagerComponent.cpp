@@ -9,6 +9,7 @@
 #include "PTExperienceActionSet.h"
 #include "PTExperienceActionSet.h"
 #include "GameFeaturesSubsystemSettings.h"
+#include "ProjectPT/PTLogChannels.h"
 
 PRAGMA_DISABLE_OPTIMIZATION
 void UPTExperienceManagerComponent::CallOrRegister_OnExperienceLoaded(FOnExperienceLoaded::FDelegate&& Delegate)
@@ -28,7 +29,12 @@ void UPTExperienceManagerComponent::SetCurrentExperience(FPrimaryAssetId Experie
 	{
 		FSoftObjectPath AssetPath = AssetManager.GetPrimaryAssetPath(ExperienceId);
 		AssetClass = Cast<UClass>(AssetPath.TryLoad());
+
+
+		UE_LOG(PTLog, Log, TEXT("[UPTExperienceManagerComponent] ExperienceID : %s"), *ExperienceId.ToString());
+		UE_LOG(PTLog, Log, TEXT("[UPTExperienceManagerComponent] AssetPath : %s"), *AssetPath.ToString());
 	}
+
 
 	//CDO로 가져온 이유
 	//객체를 직접 생성하지 않고도 클래스의 기본 데이터의 접근하기 위함

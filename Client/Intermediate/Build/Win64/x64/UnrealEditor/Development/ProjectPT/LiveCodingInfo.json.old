@@ -150,7 +150,6 @@
 			"Poolable_Actor.cpp.obj",
 			"Poolable_NiagaraSystem.cpp.obj",
 			"ProjectPT.cpp.obj",
-			"PTGameplayTags.cpp.obj",
 			"PTLogChannels.cpp.obj",
 			"PTAudioSubsystem.cpp.obj",
 			"PTAssetManager.cpp.obj",
@@ -165,12 +164,13 @@
 			"PTMailWidget.cpp.obj",
 			"SPTMailCell_Slate.cpp.obj",
 			"PTActivatableWidget.cpp.obj",
+			"PTUIManagerSubsystem.cpp.obj",
 			"PTRewardPopup.cpp.obj",
 			"PTSystemPopup.cpp.obj",
 			"PTRewardCell.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
 			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTUIManagerSubsystem.cpp.obj"
+			"PTGameplayTags.cpp.obj"
 		]
 	}
 }
