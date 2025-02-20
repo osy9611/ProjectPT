@@ -26,7 +26,7 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 
 <img src="https://github.com/user-attachments/assets/de08e167-ad53-49b5-b85b-f5280df9bf9c" width="50%" height="50%">
 
-## 주요 시스템 개요
+## 주요 시스템
 
 ###  Gameplay Ability System (GAS)
 - Unreal의 GAS 시스템을 활용하여 능력(스킬) 및 상태 효과를 관리
