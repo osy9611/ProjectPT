@@ -24,7 +24,7 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Mail)**
 - **작업 결과**
   <a href="https://github.com/osy9611/ProjectPT/wiki/Mail">
-    <img src="https://github.com/user-attachments/assets/de08e167-ad53-49b5-b85b-f5280df9bf9c" style="width:50%;" alt="우편 시스템 작업 결과 GIF">
+    <img src="https://github.com/user-attachments/assets/de08e167-ad53-49b5-b85b-f5280df9bf9c" width="50%" height="50%" alt="우편 시스템 작업 결과 GIF">
   </a>
 
 ## 주요 시스템
