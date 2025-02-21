@@ -1043,16 +1043,31 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.h"/>
-    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleButtonWidget.cpp">
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleButtonWidget.h"/>
-    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupWidget.cpp">
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleWidget.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleData.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupWidget.h"/>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleData.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleGroupListWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleGroupListWidget.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventToggle.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\PTEventToggle.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventToggleData.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\PTEventToggleData.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>

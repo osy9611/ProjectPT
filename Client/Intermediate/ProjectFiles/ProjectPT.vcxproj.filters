@@ -819,21 +819,42 @@
     <Filter Include="Source\ProjectPT\UI\Common\ToggleGroup">
       <UniqueIdentifier>{8B618154-DBBF-3F09-AE78-442D11DC1D06}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleButtonWidget.cpp">
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleWidget.cpp">
       <Filter>Source\ProjectPT\UI\Common\ToggleGroup</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleButtonWidget.h">
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleWidget.h">
       <Filter>Source\ProjectPT\UI\Common\ToggleGroup</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupWidget.cpp">
-      <Filter>Source\ProjectPT\UI\Common\ToggleGroup</Filter>
+    <Filter Include="Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList">
+      <UniqueIdentifier>{7D59A59F-D971-3631-BF1B-12EC7C52729D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleData.cpp">
+      <Filter>Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupWidget.h">
-      <Filter>Source\ProjectPT\UI\Common\ToggleGroup</Filter>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleData.h">
+      <Filter>Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleGroupListWidget.cpp">
+      <Filter>Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList\ToggleGroupListWidget.h">
+      <Filter>Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupList</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Event">
       <UniqueIdentifier>{B6315B22-7609-352B-BB65-D16304C44485}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventToggle.cpp">
+      <Filter>Source\ProjectPT\UI\Event</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\PTEventToggle.h">
+      <Filter>Source\ProjectPT\UI\Event</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventToggleData.cpp">
+      <Filter>Source\ProjectPT\UI\Event</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\PTEventToggleData.h">
+      <Filter>Source\ProjectPT\UI\Event</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventWidget.cpp">
       <Filter>Source\ProjectPT\UI\Event</Filter>
     </ClCompile>

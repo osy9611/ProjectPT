@@ -39,6 +39,7 @@
 			"PTCharacter.gen.cpp.obj",
 			"PTCharacter_AttributeSet.gen.cpp.obj",
 			"PTCommonSessionSubsystem.gen.cpp.obj",
+			"PTEventToggleButton.gen.cpp.obj",
 			"PTEventWidget.gen.cpp.obj",
 			"PTExperienceActionSet.gen.cpp.obj",
 			"PTExperienceDefinition.gen.cpp.obj",
@@ -74,10 +75,10 @@
 			"PTPlayerAIController.gen.cpp.obj",
 			"PTPlayerCameraManager.gen.cpp.obj",
 			"PTPlayerController.gen.cpp.obj",
-			"PTPlayerDataSubsystem.gen.cpp.obj",
-			"PTPlayerStart.gen.cpp.obj"
+			"PTPlayerDataSubsystem.gen.cpp.obj"
 		],
 		"Module.ProjectPT.3.cpp.obj": [
+			"PTPlayerStart.gen.cpp.obj",
 			"PTPlayerState.gen.cpp.obj",
 			"PTProjectile.gen.cpp.obj",
 			"PTRewardCell.gen.cpp.obj",
@@ -88,7 +89,9 @@
 			"PTUIManagerSubsystem.gen.cpp.obj",
 			"PTUIMessageExtensions.gen.cpp.obj",
 			"SCircumferenceMarkerWidget.gen.cpp.obj",
+			"ToggleButtonData.gen.cpp.obj",
 			"ToggleButtonWidget.gen.cpp.obj",
+			"ToggleGroupListWidget.gen.cpp.obj",
 			"ToggleGroupWidget.gen.cpp.obj",
 			"UPTGE_SkillCoolTime.gen.cpp.obj",
 			"PTGameplayAbility.cpp.obj",
@@ -135,6 +138,7 @@
 			"PTGameFeaturesProjectPolicy.cpp.obj",
 			"PTExperienceActionSet.cpp.obj",
 			"PTExperienceDefinition.cpp.obj",
+			"PTExperienceManagerComponent.cpp.obj",
 			"PTGameModeBase.cpp.obj",
 			"PTGameState.cpp.obj",
 			"PTSceneData.cpp.obj",
@@ -143,6 +147,7 @@
 			"PTMappableConfigPair.cpp.obj",
 			"PTObjectSubsystem.cpp.obj",
 			"PTPlayerStart.cpp.obj",
+			"PTProjectile.cpp.obj",
 			"PTLocalPlayer.cpp.obj",
 			"PTPlayerAIController.cpp.obj",
 			"PTPlayerController.cpp.obj",
@@ -158,7 +163,10 @@
 			"PTCommonSessionSubsystem.cpp.obj",
 			"PTGameInstance.cpp.obj",
 			"ToggleButtonWidget.cpp.obj",
+			"ToggleButtonData.cpp.obj",
+			"ToggleGroupListWidget.cpp.obj",
 			"ToggleGroupWidget.cpp.obj",
+			"PTEventToggleButton.cpp.obj",
 			"PTEventWidget.cpp.obj",
 			"PTActivatableWidget_Lobby.cpp.obj",
 			"PTLobbyContentButton.cpp.obj",
@@ -174,9 +182,7 @@
 			"PTSystemPopup.cpp.obj",
 			"PTRewardCell.cpp.obj",
 			"CircumferenceMarkerWidget.cpp.obj",
-			"SCircumferenceMarkerWidget.cpp.obj",
-			"PTExperienceManagerComponent.cpp.obj",
-			"PTProjectile.cpp.obj"
+			"SCircumferenceMarkerWidget.cpp.obj"
 		]
 	}
 }
