@@ -17,14 +17,14 @@ struct FSoftObjectPath;
 #endif
 #define PROJECTPT_PTAudioSubsystem_generated_h
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_25_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_26_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSoundOptionData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSoundOptionData>();
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_55_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execFadeOutSound); \
 	DECLARE_FUNCTION(execFadeInSound); \
 	DECLARE_FUNCTION(execPlaySound2D_BySound); \
@@ -37,7 +37,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSoundOptionData>();
 	DECLARE_FUNCTION(execUpdateSoundOption);
 
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_55_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTAudioSubsystem(); \
 	friend struct Z_Construct_UClass_UPTAudioSubsystem_Statics; \
@@ -46,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(UPTAudioSubsystem)
 
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_55_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPTAudioSubsystem(); \
 private: \
@@ -60,13 +60,13 @@ public: \
 	NO_API virtual ~UPTAudioSubsystem();
 
 
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_51_PROLOG
-#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_52_PROLOG
+#define FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_55_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_54_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_55_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_55_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Sound_PTAudioSubsystem_h_55_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

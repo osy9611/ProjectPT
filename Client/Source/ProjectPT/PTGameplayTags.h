@@ -34,7 +34,7 @@ struct FPTGameplayTags
 	//UI Event
 	FGameplayTag UI_Event_Health;
 	FGameplayTag UI_Event_MailUpdate;
-
+	FGameplayTag UI_Event_EventUpdate;
 	//AI Event
 	FGameplayTag AI_Event_Attack;
 	FGameplayTag AI_Event_Death;
@@ -50,6 +50,8 @@ struct FPTGameplayTags
 	FGameplayTag Request_DeleteMail;
 	FGameplayTag Request_ReceiveAllReward;
 	FGameplayTag Request_ReceiveReward;
+
+	FGameplayTag Requeset_GetEventData;
 private:
 	static FPTGameplayTags GameplayTags;
 };

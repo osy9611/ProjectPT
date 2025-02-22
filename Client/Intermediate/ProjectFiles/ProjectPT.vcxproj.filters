@@ -573,6 +573,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ClientLocalStorageBase.h">
       <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ContentsStorage.cpp">
+      <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\ContentsStorage.h">
+      <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.cpp">
       <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
     </ClCompile>
@@ -586,6 +592,24 @@
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTServerData.h">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData.cpp">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData.h">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Event.cpp">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Event.h">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Mail.cpp">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Mail.h">
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\Extensions">

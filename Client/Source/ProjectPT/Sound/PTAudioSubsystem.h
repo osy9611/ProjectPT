@@ -6,6 +6,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "PTAudioSubsystem.generated.h"
 
+struct FOptionData;
 /**
  *
  */

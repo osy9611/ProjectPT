@@ -52,7 +52,8 @@ template<> PROJECTPT_API UEnum* StaticEnum<ECollisionType>();
 
 #define FOREACH_ENUM_EREDDOTTYPE(op) \
 	op(ERedDotType::Mail) \
-	op(ERedDotType::Inventory) 
+	op(ERedDotType::Inventory) \
+	op(ERedDotType::Event) 
 
 enum class ERedDotType : uint8;
 template<> struct TIsUEnumClass<ERedDotType> { enum { Value = true }; };

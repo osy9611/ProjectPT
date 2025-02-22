@@ -19,4 +19,5 @@
 ,,,,
 ,!Enum,RedDotType,,
 ,!Enumerator,Mail,,메일
-,!Enumerator,Inventory,!End,인벤토리
+,!Enumerator,Inventory,,인벤토리
+,!Enumerator,Event,!End,이벤트

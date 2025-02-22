@@ -33,6 +33,7 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	//UI Event
 	AddTag(UI_Event_Health, "UI.Event.Health", "");
 	AddTag(UI_Event_MailUpdate, "UI.Event.MailUpdate","");
+	AddTag(UI_Event_EventUpdate, "UI.Event.EventUpdate", "");
 
 	//GE Event
 	AddTag(GE_Event_Damage, "GameplayEffect.Event.Damage", "");
@@ -49,4 +50,5 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(Request_DeleteMail, "Request.DeleteMail", "");
 	AddTag(Request_ReceiveAllReward, "Request.ReceiveAllReward","");
 	AddTag(Request_ReceiveReward, "Request.ReceiveReward", "");
+	AddTag(Requeset_GetEventData, "Request.GetEvent", "");
 }

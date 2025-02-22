@@ -12,11 +12,13 @@ void EmptyLinkFunctionForGeneratedCodePTUIMessageExtensions() {}
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FDeleteMailMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetEventMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRecieveRewardMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIHPMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUISkillCoolTimeMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateEventMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateMailMessage();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
@@ -332,6 +334,57 @@ UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateMailMessage()
 }
 // End ScriptStruct FUIUpdateMailMessage
 
+// Begin ScriptStruct FUIUpdateEventMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_UIUpdateEventMessage;
+class UScriptStruct* FUIUpdateEventMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIUpdateEventMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_UIUpdateEventMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FUIUpdateEventMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("UIUpdateEventMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_UIUpdateEventMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FUIUpdateEventMessage>()
+{
+	return FUIUpdateEventMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUIUpdateEventMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"UIUpdateEventMessage",
+	nullptr,
+	0,
+	sizeof(FUIUpdateEventMessage),
+	alignof(FUIUpdateEventMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateEventMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIUpdateEventMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_UIUpdateEventMessage.InnerSingleton, Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_UIUpdateEventMessage.InnerSingleton;
+}
+// End ScriptStruct FUIUpdateEventMessage
+
 // Begin ScriptStruct FDeleteMailMessage
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_DeleteMailMessage;
 class UScriptStruct* FDeleteMailMessage::StaticStruct()
@@ -434,6 +487,57 @@ UScriptStruct* Z_Construct_UScriptStruct_FRecieveRewardMessage()
 }
 // End ScriptStruct FRecieveRewardMessage
 
+// Begin ScriptStruct FGetEventMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_GetEventMessage;
+class UScriptStruct* FGetEventMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_GetEventMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_GetEventMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGetEventMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("GetEventMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_GetEventMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FGetEventMessage>()
+{
+	return FGetEventMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FGetEventMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGetEventMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGetEventMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"GetEventMessage",
+	nullptr,
+	0,
+	sizeof(FGetEventMessage),
+	alignof(FGetEventMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGetEventMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FGetEventMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FGetEventMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_GetEventMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_GetEventMessage.InnerSingleton, Z_Construct_UScriptStruct_FGetEventMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_GetEventMessage.InnerSingleton;
+}
+// End ScriptStruct FGetEventMessage
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics
 {
@@ -443,11 +547,13 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FUIDamageMessage::StaticStruct, Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewStructOps, TEXT("UIDamageMessage"), &Z_Registration_Info_UScriptStruct_UIDamageMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIDamageMessage), 1523961953U) },
 		{ FUIHPMessage::StaticStruct, Z_Construct_UScriptStruct_FUIHPMessage_Statics::NewStructOps, TEXT("UIHPMessage"), &Z_Registration_Info_UScriptStruct_UIHPMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIHPMessage), 3844032259U) },
 		{ FUIUpdateMailMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::NewStructOps, TEXT("UIUpdateMailMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateMailMessage), 856343851U) },
+		{ FUIUpdateEventMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewStructOps, TEXT("UIUpdateEventMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateEventMessage), 714011506U) },
 		{ FDeleteMailMessage::StaticStruct, Z_Construct_UScriptStruct_FDeleteMailMessage_Statics::NewStructOps, TEXT("DeleteMailMessage"), &Z_Registration_Info_UScriptStruct_DeleteMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDeleteMailMessage), 4251612553U) },
 		{ FRecieveRewardMessage::StaticStruct, Z_Construct_UScriptStruct_FRecieveRewardMessage_Statics::NewStructOps, TEXT("RecieveRewardMessage"), &Z_Registration_Info_UScriptStruct_RecieveRewardMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRecieveRewardMessage), 2168281164U) },
+		{ FGetEventMessage::StaticStruct, Z_Construct_UScriptStruct_FGetEventMessage_Statics::NewStructOps, TEXT("GetEventMessage"), &Z_Registration_Info_UScriptStruct_GetEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetEventMessage), 1679700882U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3078167545(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3024160760(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);
