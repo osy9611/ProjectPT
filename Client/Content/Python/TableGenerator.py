@@ -25,10 +25,23 @@ struct_save_folder = ""
 
 def next_line(file):
     file.write("\n")
+    
+# CSV 셀 값을 처리하는 함수 (TArray 타입의 경우 쉼표를 세미콜론으로 치환)
+def process_csv_cell(cell_value, field_type):
+    # field_type의 소문자 비교: TArray<...> 인 경우
+    if str(field_type).lower().startswith("tarray<") and str(field_type).lower().endswith(">"):
+        # 쉼표(,)를 세미콜론(;)으로 치환
+        return cell_value.replace(",", ";")
+    return cell_value
 
 #type def
 def get_unreal_type(type):
     str_type = str(type).lower()
+
+    if str_type.startswith("tarray<") and str_type.endswith(">"):
+         inner_type_str = str_type[len("tarray<"):-1].strip()
+         inner_unreal_type = get_unreal_type(inner_type_str)
+         return "TArray<" + inner_unreal_type + ">"
 
     if str_type == "int" or str_type == "int32":
         return "int32"

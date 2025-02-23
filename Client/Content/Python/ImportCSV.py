@@ -47,12 +47,28 @@ def create_tabledata(csv_file_path, ustruct_name, data_table_name, asset_folder)
     
     #CSV를 추출해서 순 데이터만 존재하는 임시파일 생성
     origin_rows=[]
+    tarray_columns = [] 
+    # with open(csv_file_path,'r') as origin:
+    #     csv_reader = csv.reader(origin)
+    #     id_row_index = sys.maxsize
+
+    #     for index,row in enumerate(csv_reader):
+    #         if index == 1:
+    #             continue
+    #         origin_rows.append(row)
+    #     print(origin_rows)
+
     with open(csv_file_path,'r') as origin:
         csv_reader = csv.reader(origin)
         id_row_index = sys.maxsize
 
         for index,row in enumerate(csv_reader):
             if index == 1:
+                for idx, cell in enumerate(row):
+                    cell_stripped = cell.strip().lower()
+                    if cell_stripped.startswith("tarray<") and cell_stripped.endswith(">"):
+                        tarray_columns.append(idx)
+                        print(f"TArray type found in column {idx}: {cell}")
                 continue
             origin_rows.append(row)
 
@@ -63,12 +79,20 @@ def create_tabledata(csv_file_path, ustruct_name, data_table_name, asset_folder)
     with open(temp_csv_path,'w') as temp_csv:
         for row in origin_rows:
             for index,data in enumerate(row):
+                if index in tarray_columns:
+                    if origin_rows[0] != row:
+                        print(row)
+                        data = "("+data+")"
+                        #data = "(1,0,0)"
+                    if (',' in data) or ('(' in data) or (')' in data):
+                        data = f'"{data}"'
 
+                    print(data)
                 temp_csv.write(data)
                 if index != len(row):
                     temp_csv.write(",")
 
-                print(data)
+                
             
             temp_csv.write('\n')
     
