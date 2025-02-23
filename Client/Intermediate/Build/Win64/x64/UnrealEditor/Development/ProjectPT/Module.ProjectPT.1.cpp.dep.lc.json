@@ -34,6 +34,9 @@
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\clientlocalstoragesubsystem.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\data\\clientlocalstoragesubsystem.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\clientlocalstoragesubsystem.generated.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\contentsstorage.gen.cpp",
+            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\data\\clientlocalstorage\\contentsstorage.h",
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\contentsstorage.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\datamanagersubsystem.gen.cpp",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\data\\datamanagersubsystem.h",
             "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\ptlogchannels.h",
@@ -240,15 +243,7 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\assetmanager.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptassetmanager.generated.h",
             "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptattributeset.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaudiosubsystem.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameracomponent.gen.cpp",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameracomponent.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\cameracomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\source\\projectpt\\camera\\ptcameramode.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameracomponent.generated.h",
-            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptcameramode.gen.cpp"
+            "d:\\study\\unreal\\projectpt\\client\\intermediate\\build\\win64\\unrealeditor\\inc\\projectpt\\uht\\ptaudiosubsystem.gen.cpp"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

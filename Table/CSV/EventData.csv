@@ -1,3 +1,4 @@
-tableNo,eventName,eventDesc
-int,string,string
-10011,별사냥 게임,별사냥 게임입니다
+tableNo,eventName,eventDesc,bannerPath,toggleImgPath
+int,string,string,string,string
+10011,별사냥 게임,별사냥 게임입니다,/Game/UI/HUD/Event/WBP_EventBanner_Default.WBP_EventBanner_Default,/Game/Painting_Landscape_1/Textures/Paintings/Australia/T_Landscape_Australia_01.T_Landscape_Australia_01
+10012,별의 선물,별의 선물입니다.,/Game/UI/HUD/Event/WBP_EventTicket.WBP_EventTicket,/Game/Painting_Landscape_1/Textures/Paintings/Bahamas/T_Landscape_Bahamas_01.T_Landscape_Bahamas_01

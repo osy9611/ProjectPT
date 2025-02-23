@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjectPTModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+158d6a206e09d8caedc3a9648562562afc081696")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc75d21a4816d8abe6c3044a8f57cea409956b1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjectPTModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjectPTModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

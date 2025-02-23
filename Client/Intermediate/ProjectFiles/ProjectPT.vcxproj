@@ -1093,6 +1093,31 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\Event\PTEventWidget.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\Banner\PTEventBanner.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\Banner\PTEventBanner.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\Banner\PTEventBanner_Default.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\Banner\PTEventBanner_Default.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\Banner\PTEventBanner_Ticket.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\Banner\PTEventBanner_Ticket.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Item\PTItemCell.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Item\PTItemCell.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Item\PTItemCellData.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Item\PTItemCellData.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Lobby\PTActivatableWidget_Lobby.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>

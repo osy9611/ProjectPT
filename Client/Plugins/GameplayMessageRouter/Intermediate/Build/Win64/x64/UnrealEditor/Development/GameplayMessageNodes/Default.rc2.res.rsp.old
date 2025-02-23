@@ -77,9 +77,8 @@
 /DNDEBUG=1
 /DUE_BUILD_DEVELOPMENT=1
 /DORIGINAL_FILE_NAME="UnrealEditor-GameplayMessageNodes.dll"
-/DBUILD_ICON_FILE_NAME="\"D:\\Study\\Unreal\\LyraStarterGame\\Build\\Windows\\Application.ico\""
+/DBUILD_ICON_FILE_NAME="\"..\\Build\\Windows\\Resources\\Default.ico\""
 /DPROJECT_COPYRIGHT_STRING="Fill out your copyright notice in the Description page of Project Settings."
-/DPROJECT_PRODUCT_NAME=Lyra
-/DPROJECT_PRODUCT_IDENTIFIER=LyraStarterGame
-/fo "D:\Study\Unreal\LyraStarterGame\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageNodes\Default.rc2.res"
+/DPROJECT_PRODUCT_IDENTIFIER=ProjectPT
+/fo "D:\Study\Unreal\ProjectPT\Client\Plugins\GameplayMessageRouter\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayMessageNodes\Default.rc2.res"
 "..\Build\Windows\Resources\Default.rc2"

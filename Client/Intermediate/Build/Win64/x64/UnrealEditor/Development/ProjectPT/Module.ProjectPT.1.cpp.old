@@ -2,6 +2,7 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/CircumferenceMarkerWidget.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/ClientLocalStorageBase.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/ClientLocalStorageSubsystem.gen.cpp"
+#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/ContentsStorage.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/DataManagerSubsystem.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/EnumGenerateData.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/GameFeatureAction_AddWidgets.gen.cpp"
@@ -28,5 +29,3 @@
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTAssetManager.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTAttributeSet.gen.cpp"
 #include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTAudioSubsystem.gen.cpp"
-#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTCameraComponent.gen.cpp"
-#include "D:/Study/Unreal/ProjectPT/Client/Intermediate/Build/Win64/UnrealEditor/Inc/ProjectPT/UHT/PTCameraMode.gen.cpp"
