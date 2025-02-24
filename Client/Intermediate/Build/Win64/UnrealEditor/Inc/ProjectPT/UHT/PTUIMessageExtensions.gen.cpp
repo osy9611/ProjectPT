@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodePTUIMessageExtensions() {}
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FDeleteMailMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetEventMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetEventRewardMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRecieveRewardMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage();
@@ -355,20 +356,36 @@ struct Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics
 		{ "BlueprintType", "true" },
 		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SetFirstList_MetaData[] = {
+		{ "Category", "UIUpdateEventMessage" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
 #endif // WITH_METADATA
+	static void NewProp_SetFirstList_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_SetFirstList;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
 		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUIUpdateEventMessage>();
 	}
 	static const UECodeGen_Private::FStructParams StructParams;
 };
+void Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewProp_SetFirstList_SetBit(void* Obj)
+{
+	((FUIUpdateEventMessage*)Obj)->SetFirstList = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewProp_SetFirstList = { "SetFirstList", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FUIUpdateEventMessage), &Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewProp_SetFirstList_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SetFirstList_MetaData), NewProp_SetFirstList_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewProp_SetFirstList,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::StructParams = {
 	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
 	nullptr,
 	&NewStructOps,
 	"UIUpdateEventMessage",
-	nullptr,
-	0,
+	Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::PropPointers),
 	sizeof(FUIUpdateEventMessage),
 	alignof(FUIUpdateEventMessage),
 	RF_Public|RF_Transient|RF_MarkAsNative,
@@ -538,6 +555,57 @@ UScriptStruct* Z_Construct_UScriptStruct_FGetEventMessage()
 }
 // End ScriptStruct FGetEventMessage
 
+// Begin ScriptStruct FGetEventRewardMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_GetEventRewardMessage;
+class UScriptStruct* FGetEventRewardMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_GetEventRewardMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_GetEventRewardMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGetEventRewardMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("GetEventRewardMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_GetEventRewardMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FGetEventRewardMessage>()
+{
+	return FGetEventRewardMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGetEventRewardMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"GetEventRewardMessage",
+	nullptr,
+	0,
+	sizeof(FGetEventRewardMessage),
+	alignof(FGetEventRewardMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FGetEventRewardMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_GetEventRewardMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_GetEventRewardMessage.InnerSingleton, Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_GetEventRewardMessage.InnerSingleton;
+}
+// End ScriptStruct FGetEventRewardMessage
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics
 {
@@ -547,13 +615,14 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FUIDamageMessage::StaticStruct, Z_Construct_UScriptStruct_FUIDamageMessage_Statics::NewStructOps, TEXT("UIDamageMessage"), &Z_Registration_Info_UScriptStruct_UIDamageMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIDamageMessage), 1523961953U) },
 		{ FUIHPMessage::StaticStruct, Z_Construct_UScriptStruct_FUIHPMessage_Statics::NewStructOps, TEXT("UIHPMessage"), &Z_Registration_Info_UScriptStruct_UIHPMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIHPMessage), 3844032259U) },
 		{ FUIUpdateMailMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::NewStructOps, TEXT("UIUpdateMailMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateMailMessage), 856343851U) },
-		{ FUIUpdateEventMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewStructOps, TEXT("UIUpdateEventMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateEventMessage), 714011506U) },
+		{ FUIUpdateEventMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewStructOps, TEXT("UIUpdateEventMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateEventMessage), 752352978U) },
 		{ FDeleteMailMessage::StaticStruct, Z_Construct_UScriptStruct_FDeleteMailMessage_Statics::NewStructOps, TEXT("DeleteMailMessage"), &Z_Registration_Info_UScriptStruct_DeleteMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDeleteMailMessage), 4251612553U) },
 		{ FRecieveRewardMessage::StaticStruct, Z_Construct_UScriptStruct_FRecieveRewardMessage_Statics::NewStructOps, TEXT("RecieveRewardMessage"), &Z_Registration_Info_UScriptStruct_RecieveRewardMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRecieveRewardMessage), 2168281164U) },
 		{ FGetEventMessage::StaticStruct, Z_Construct_UScriptStruct_FGetEventMessage_Statics::NewStructOps, TEXT("GetEventMessage"), &Z_Registration_Info_UScriptStruct_GetEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetEventMessage), 1679700882U) },
+		{ FGetEventRewardMessage::StaticStruct, Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics::NewStructOps, TEXT("GetEventRewardMessage"), &Z_Registration_Info_UScriptStruct_GetEventRewardMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetEventRewardMessage), 1950954237U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3024160760(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_112282105(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);

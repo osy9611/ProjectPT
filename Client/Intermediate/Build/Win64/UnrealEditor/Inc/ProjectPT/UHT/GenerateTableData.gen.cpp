@@ -16,6 +16,7 @@ PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FEventData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FMonsterData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FPlayerData();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRewardData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSceneData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSkillData();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
@@ -360,6 +361,76 @@ UScriptStruct* Z_Construct_UScriptStruct_FPlayerData()
 }
 // End ScriptStruct FPlayerData
 
+// Begin ScriptStruct FRewardData
+static_assert(std::is_polymorphic<FRewardData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FRewardData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_RewardData;
+class UScriptStruct* FRewardData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_RewardData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_RewardData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FRewardData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("RewardData"));
+	}
+	return Z_Registration_Info_UScriptStruct_RewardData.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FRewardData>()
+{
+	return FRewardData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FRewardData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_itemID_MetaData[] = {
+		{ "Category", "RewardData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Amount_MetaData[] = {
+		{ "Category", "RewardData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_itemID;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Amount;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRewardData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRewardData_Statics::NewProp_itemID = { "itemID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRewardData, itemID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_itemID_MetaData), NewProp_itemID_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FRewardData_Statics::NewProp_Amount = { "Amount", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FRewardData, Amount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Amount_MetaData), NewProp_Amount_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FRewardData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRewardData_Statics::NewProp_itemID,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FRewardData_Statics::NewProp_Amount,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRewardData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRewardData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	Z_Construct_UScriptStruct_FTableRowBase,
+	&NewStructOps,
+	"RewardData",
+	Z_Construct_UScriptStruct_FRewardData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRewardData_Statics::PropPointers),
+	sizeof(FRewardData),
+	alignof(FRewardData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRewardData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FRewardData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FRewardData()
+{
+	if (!Z_Registration_Info_UScriptStruct_RewardData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_RewardData.InnerSingleton, Z_Construct_UScriptStruct_FRewardData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_RewardData.InnerSingleton;
+}
+// End ScriptStruct FRewardData
+
 // Begin ScriptStruct FSceneData
 static_assert(std::is_polymorphic<FSceneData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FSceneData cannot be polymorphic unless super FTableRowBase is polymorphic");
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_SceneData;
@@ -546,11 +617,12 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_
 		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 1381918572U) },
 		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 4054298180U) },
 		{ FPlayerData::StaticStruct, Z_Construct_UScriptStruct_FPlayerData_Statics::NewStructOps, TEXT("PlayerData"), &Z_Registration_Info_UScriptStruct_PlayerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerData), 3805507274U) },
+		{ FRewardData::StaticStruct, Z_Construct_UScriptStruct_FRewardData_Statics::NewStructOps, TEXT("RewardData"), &Z_Registration_Info_UScriptStruct_RewardData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRewardData), 1045036157U) },
 		{ FSceneData::StaticStruct, Z_Construct_UScriptStruct_FSceneData_Statics::NewStructOps, TEXT("SceneData"), &Z_Registration_Info_UScriptStruct_SceneData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSceneData), 2898749887U) },
 		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 146149087U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_891127973(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_2907117605(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);

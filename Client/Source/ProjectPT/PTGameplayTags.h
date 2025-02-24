@@ -51,7 +51,8 @@ struct FPTGameplayTags
 	FGameplayTag Request_ReceiveAllReward;
 	FGameplayTag Request_ReceiveReward;
 
-	FGameplayTag Requeset_GetEventData;
+	FGameplayTag Request_GetEventData;
+	FGameplayTag Request_GetEventReward;
 private:
 	static FPTGameplayTags GameplayTags;
 };

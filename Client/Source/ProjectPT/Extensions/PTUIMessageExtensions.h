@@ -55,6 +55,9 @@ USTRUCT(BlueprintType)
 struct FUIUpdateEventMessage
 {
 	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool SetFirstList;
 };
 
 USTRUCT(BlueprintType)
@@ -77,5 +80,14 @@ USTRUCT(BlueprintType)
 struct FGetEventMessage
 {
 	GENERATED_BODY()
+};
+
+USTRUCT(BlueprintType)
+struct FGetEventRewardMessage
+{
+	GENERATED_BODY()
+public:
+	FString EventID;
+	TArray<FString> EvnetRewardIDs;
 };
 

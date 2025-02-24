@@ -50,5 +50,6 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(Request_DeleteMail, "Request.DeleteMail", "");
 	AddTag(Request_ReceiveAllReward, "Request.ReceiveAllReward","");
 	AddTag(Request_ReceiveReward, "Request.ReceiveReward", "");
-	AddTag(Requeset_GetEventData, "Request.GetEvent", "");
+	AddTag(Request_GetEventData, "Request.GetEvent", "");
+	AddTag(Request_GetEventReward, "Request.GetEventReward", "");
 }

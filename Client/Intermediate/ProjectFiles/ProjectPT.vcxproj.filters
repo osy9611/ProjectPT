@@ -867,6 +867,12 @@
     <Filter Include="Source\ProjectPT\UI\Event">
       <UniqueIdentifier>{B6315B22-7609-352B-BB65-D16304C44485}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventTicket.cpp">
+      <Filter>Source\ProjectPT\UI\Event</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Event\PTEventTicket.h">
+      <Filter>Source\ProjectPT\UI\Event</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Event\PTEventToggle.cpp">
       <Filter>Source\ProjectPT\UI\Event</Filter>
     </ClCompile>
