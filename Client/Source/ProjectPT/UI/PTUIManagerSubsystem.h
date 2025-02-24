@@ -22,6 +22,7 @@ public:
 	void ShowMouseCursor();
 	void HideMouseCursor();
 
+	void ShowDetailDescPopup(FString Title, FString Desc);
 	void ShowSystemPopup(FString Title, FString Desc, FString YesText, TFunction<void()>YesCallback, FString NoText, TFunction<void()>NoCallback);
 	void ShowSystemPopup(FString Title, FString Desc, FString YesText, TFunction<void()>YesCallback);
 
@@ -32,7 +33,8 @@ private:
 	T* GetWidget(FGameplayTag LayerTag, FString LayerName, FString WidgetPath);
 
 private:
-	FString DynamicPopupPath;
+	FString DetailDescPopupPath;
+	FString RewardPopupPath;
 	FString SystemPopupPath;
 
 	FGameplayTag DynamicLayerTag;

@@ -996,6 +996,15 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\System\PTSystemPopup.h">
       <Filter>Source\ProjectPT\UI\System</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\System\DetailDesc">
+      <UniqueIdentifier>{C2B214D5-5C58-3CCE-87EE-49991683579A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\System\DetailDesc\PTDetailDescPopup.cpp">
+      <Filter>Source\ProjectPT\UI\System\DetailDesc</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\System\DetailDesc\PTDetailDescPopup.h">
+      <Filter>Source\ProjectPT\UI\System\DetailDesc</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\UI\System\Reward">
       <UniqueIdentifier>{8A51029A-8A45-3680-AEBF-DB64BC5C7923}</UniqueIdentifier>
     </Filter>

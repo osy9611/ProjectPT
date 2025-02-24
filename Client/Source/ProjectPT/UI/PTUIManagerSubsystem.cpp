@@ -6,12 +6,14 @@
 #include "ProjectPT/System/PTAssetManager.h"
 #include "ProjectPT/UI//System/PTRewardPopup.h"
 #include "ProjectPT/UI/System/PTSystemPopup.h"
+#include "ProjectPT/UI/System/DetailDesc/PTDetailDescPopup.h"
 #include "ProjectPT/Data/ServerDatas/PTServerData.h"
 #include "GameplayTagContainer.h"
 
 UPTUIManagerSubsystem::UPTUIManagerSubsystem()
 {
-	DynamicPopupPath = "/Game/UI/HUD/System/Reward/WBP_RewardPopup.WBP_RewardPopup_C";
+	DetailDescPopupPath = "/Game/UI/HUD/System/DetailDesc/WBP_DetailDescPopup.WBP_DetailDescPopup_C";
+	RewardPopupPath = "/Game/UI/HUD/System/Reward/WBP_RewardPopup.WBP_RewardPopup_C";
 	SystemPopupPath = "/Game/UI/HUD/System/WBP_SystemPopup.WBP_SystemPopup_C";
 
 	FString TagString = TEXT("UI.Layer.System");
@@ -43,6 +45,15 @@ void UPTUIManagerSubsystem::HideMouseCursor()
 	}
 }
 
+void UPTUIManagerSubsystem::ShowDetailDescPopup(FString Title, FString Desc)
+{
+	UPTDetailDescPopup* DetailDescPopup = GetWidget<UPTDetailDescPopup>(SystemLayerTag, "WBP_SystemLayout", DetailDescPopupPath);
+	if (DetailDescPopup)
+	{
+		DetailDescPopup->ShowDetailDescPopup(Title, Desc);
+	}
+}
+
 void UPTUIManagerSubsystem::ShowSystemPopup(FString Title, FString Desc, FString YesText, TFunction<void()> YesCallback, FString NoText, TFunction<void()> NoCallback)
 {
 	UPTSystemPopup* SystemPopup = GetWidget<UPTSystemPopup>(SystemLayerTag, "WBP_SystemLayout", SystemPopupPath);
@@ -55,7 +66,7 @@ void UPTUIManagerSubsystem::ShowSystemPopup(FString Title, FString Desc, FString
 void UPTUIManagerSubsystem::ShowSystemPopup(FString Title, FString Desc, FString YesText, TFunction<void()> YesCallback)
 {
 
-	UPTSystemPopup* SystemPopup = GetWidget<UPTSystemPopup>(SystemLayerTag, "WBP_SystemLayout",SystemPopupPath);
+	UPTSystemPopup* SystemPopup = GetWidget<UPTSystemPopup>(SystemLayerTag, "WBP_SystemLayout", SystemPopupPath);
 	if (SystemPopup)
 	{
 		SystemPopup->ShowSystemPopup(Title, Desc, YesText, YesCallback);
@@ -64,7 +75,7 @@ void UPTUIManagerSubsystem::ShowSystemPopup(FString Title, FString Desc, FString
 
 void UPTUIManagerSubsystem::ShowItemRewardPopup(TArray<FItemReward> RewardDatas)
 {
-	UPTRewardPopup* RewardPopup = GetWidget<UPTRewardPopup>(DynamicLayerTag, "WBP_DynamicLayout", DynamicPopupPath);
+	UPTRewardPopup* RewardPopup = GetWidget<UPTRewardPopup>(DynamicLayerTag, "WBP_DynamicLayout", RewardPopupPath);
 	if (RewardPopup)
 	{
 		RewardPopup->ShowRewardPopup(RewardDatas);
