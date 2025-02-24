@@ -30,7 +30,7 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 
 ### Event
 - 붕괴 스타레일 이벤트 시스템을 모작해 이벤트 타이머, RedDot, 이벤트 배너 등의 기능을 구현했습니다.
-- **[자세히 보기]("https://github.com/osy9611/ProjectPT/wiki/Event)**
+- **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Event)**
 - **작업 결과**
 
   <a href="https://github.com/osy9611/ProjectPT/wiki/Event">
