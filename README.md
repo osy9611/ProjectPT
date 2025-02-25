@@ -58,7 +58,7 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 ### Camera System
 - 다양한 카메라 모드를 유연하게 관리
 - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Camera-System)**
-  
+- **작업 결과**
   <a href="https://github.com/osy9611/ProjectPT/wiki/Camera-System">
     <img src="https://github.com/user-attachments/assets/f4843152-0221-45cb-94e1-36505312e8be" width="50%" height="50%" alt="카메라 시스템 작업 결과 GIF">
   </a>
