@@ -61,6 +61,13 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FUIUpdateInventoryMessage
+{
+	GENERATED_BODY()
+public:
+};
+
+USTRUCT(BlueprintType)
 struct FDeleteMailMessage
 {
 	GENERATED_BODY()
@@ -91,3 +98,34 @@ public:
 	TArray<FString> EvnetRewardIDs;
 };
 
+USTRUCT(BlueprintType)
+struct FAddInventoryMesssage
+{
+	GENERATED_BODY()
+public:
+	int32 ItemID;
+};
+
+USTRUCT(BlueprintType)
+struct FRemoveInventoryMesssage
+{
+	GENERATED_BODY()
+public:
+	int32 ItemID;
+};
+
+USTRUCT(BlueprintType)
+struct FGetInventoryMesssage
+{
+	GENERATED_BODY()
+};
+
+
+USTRUCT(BlueprintType)
+struct FSetSlotInventoryMesssage
+{
+	GENERATED_BODY()
+public:
+	FString ItemID;
+	int32 SlotNum;
+};

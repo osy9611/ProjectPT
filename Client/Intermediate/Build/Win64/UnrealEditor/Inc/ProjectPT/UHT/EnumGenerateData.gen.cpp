@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeEnumGenerateData() {}
 
 // Begin Cross Module References
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMonsterType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EPTElementType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ERedDotType();
@@ -263,6 +264,60 @@ UEnum* Z_Construct_UEnum_ProjectPT_ERedDotType()
 }
 // End Enum ERedDotType
 
+// Begin Enum EItemType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EItemType;
+static UEnum* EItemType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EItemType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EItemType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_EItemType, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("EItemType"));
+	}
+	return Z_Registration_Info_UEnum_EItemType.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<EItemType>()
+{
+	return EItemType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_EItemType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+		{ "Potion.Name", "EItemType::Potion" },
+		{ "Scroll.Comment", "//\xed\x8f\xac\xec\x85\x98\n" },
+		{ "Scroll.Name", "EItemType::Scroll" },
+		{ "Scroll.ToolTip", "\xed\x8f\xac\xec\x85\x98" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EItemType::Potion", (int64)EItemType::Potion },
+		{ "EItemType::Scroll", (int64)EItemType::Scroll },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_EItemType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"EItemType",
+	"EItemType",
+	Z_Construct_UEnum_ProjectPT_EItemType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EItemType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EItemType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_EItemType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_EItemType()
+{
+	if (!Z_Registration_Info_UEnum_EItemType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EItemType.InnerSingleton, Z_Construct_UEnum_ProjectPT_EItemType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EItemType.InnerSingleton;
+}
+// End Enum EItemType
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics
 {
@@ -271,9 +326,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 		{ EMonsterType_StaticEnum, TEXT("EMonsterType"), &Z_Registration_Info_UEnum_EMonsterType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 815457047U) },
 		{ ECollisionType_StaticEnum, TEXT("ECollisionType"), &Z_Registration_Info_UEnum_ECollisionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4236091643U) },
 		{ ERedDotType_StaticEnum, TEXT("ERedDotType"), &Z_Registration_Info_UEnum_ERedDotType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3203063460U) },
+		{ EItemType_StaticEnum, TEXT("EItemType"), &Z_Registration_Info_UEnum_EItemType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2880388580U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_2966223711(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_2394247799(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));

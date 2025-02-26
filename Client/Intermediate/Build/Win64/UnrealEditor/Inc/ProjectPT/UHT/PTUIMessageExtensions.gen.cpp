@@ -11,15 +11,20 @@ void EmptyLinkFunctionForGeneratedCodePTUIMessageExtensions() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FAddInventoryMesssage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FDeleteMailMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetEventMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetEventRewardMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetInventoryMesssage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRecieveRewardMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRemoveInventoryMesssage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSetSlotInventoryMesssage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIHPMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUISkillCoolTimeMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateEventMessage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateInventoryMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateMailMessage();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
@@ -402,6 +407,57 @@ UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateEventMessage()
 }
 // End ScriptStruct FUIUpdateEventMessage
 
+// Begin ScriptStruct FUIUpdateInventoryMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage;
+class UScriptStruct* FUIUpdateInventoryMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FUIUpdateInventoryMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("UIUpdateInventoryMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FUIUpdateInventoryMessage>()
+{
+	return FUIUpdateInventoryMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FUIUpdateInventoryMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUIUpdateInventoryMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIUpdateInventoryMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"UIUpdateInventoryMessage",
+	nullptr,
+	0,
+	sizeof(FUIUpdateInventoryMessage),
+	alignof(FUIUpdateInventoryMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIUpdateInventoryMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FUIUpdateInventoryMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateInventoryMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage.InnerSingleton, Z_Construct_UScriptStruct_FUIUpdateInventoryMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage.InnerSingleton;
+}
+// End ScriptStruct FUIUpdateInventoryMessage
+
 // Begin ScriptStruct FDeleteMailMessage
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_DeleteMailMessage;
 class UScriptStruct* FDeleteMailMessage::StaticStruct()
@@ -606,6 +662,210 @@ UScriptStruct* Z_Construct_UScriptStruct_FGetEventRewardMessage()
 }
 // End ScriptStruct FGetEventRewardMessage
 
+// Begin ScriptStruct FAddInventoryMesssage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AddInventoryMesssage;
+class UScriptStruct* FAddInventoryMesssage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_AddInventoryMesssage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_AddInventoryMesssage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FAddInventoryMesssage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("AddInventoryMesssage"));
+	}
+	return Z_Registration_Info_UScriptStruct_AddInventoryMesssage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FAddInventoryMesssage>()
+{
+	return FAddInventoryMesssage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FAddInventoryMesssage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FAddInventoryMesssage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FAddInventoryMesssage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"AddInventoryMesssage",
+	nullptr,
+	0,
+	sizeof(FAddInventoryMesssage),
+	alignof(FAddInventoryMesssage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FAddInventoryMesssage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FAddInventoryMesssage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FAddInventoryMesssage()
+{
+	if (!Z_Registration_Info_UScriptStruct_AddInventoryMesssage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_AddInventoryMesssage.InnerSingleton, Z_Construct_UScriptStruct_FAddInventoryMesssage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_AddInventoryMesssage.InnerSingleton;
+}
+// End ScriptStruct FAddInventoryMesssage
+
+// Begin ScriptStruct FRemoveInventoryMesssage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage;
+class UScriptStruct* FRemoveInventoryMesssage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FRemoveInventoryMesssage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("RemoveInventoryMesssage"));
+	}
+	return Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FRemoveInventoryMesssage>()
+{
+	return FRemoveInventoryMesssage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FRemoveInventoryMesssage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"RemoveInventoryMesssage",
+	nullptr,
+	0,
+	sizeof(FRemoveInventoryMesssage),
+	alignof(FRemoveInventoryMesssage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FRemoveInventoryMesssage()
+{
+	if (!Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage.InnerSingleton, Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage.InnerSingleton;
+}
+// End ScriptStruct FRemoveInventoryMesssage
+
+// Begin ScriptStruct FGetInventoryMesssage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_GetInventoryMesssage;
+class UScriptStruct* FGetInventoryMesssage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_GetInventoryMesssage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_GetInventoryMesssage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FGetInventoryMesssage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("GetInventoryMesssage"));
+	}
+	return Z_Registration_Info_UScriptStruct_GetInventoryMesssage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FGetInventoryMesssage>()
+{
+	return FGetInventoryMesssage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FGetInventoryMesssage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"GetInventoryMesssage",
+	nullptr,
+	0,
+	sizeof(FGetInventoryMesssage),
+	alignof(FGetInventoryMesssage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FGetInventoryMesssage()
+{
+	if (!Z_Registration_Info_UScriptStruct_GetInventoryMesssage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_GetInventoryMesssage.InnerSingleton, Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_GetInventoryMesssage.InnerSingleton;
+}
+// End ScriptStruct FGetInventoryMesssage
+
+// Begin ScriptStruct FSetSlotInventoryMesssage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage;
+class UScriptStruct* FSetSlotInventoryMesssage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FSetSlotInventoryMesssage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("SetSlotInventoryMesssage"));
+	}
+	return Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FSetSlotInventoryMesssage>()
+{
+	return FSetSlotInventoryMesssage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FSetSlotInventoryMesssage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"SetSlotInventoryMesssage",
+	nullptr,
+	0,
+	sizeof(FSetSlotInventoryMesssage),
+	alignof(FSetSlotInventoryMesssage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FSetSlotInventoryMesssage()
+{
+	if (!Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage.InnerSingleton, Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage.InnerSingleton;
+}
+// End ScriptStruct FSetSlotInventoryMesssage
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics
 {
@@ -616,13 +876,18 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FUIHPMessage::StaticStruct, Z_Construct_UScriptStruct_FUIHPMessage_Statics::NewStructOps, TEXT("UIHPMessage"), &Z_Registration_Info_UScriptStruct_UIHPMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIHPMessage), 3844032259U) },
 		{ FUIUpdateMailMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::NewStructOps, TEXT("UIUpdateMailMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateMailMessage), 856343851U) },
 		{ FUIUpdateEventMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewStructOps, TEXT("UIUpdateEventMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateEventMessage), 752352978U) },
+		{ FUIUpdateInventoryMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateInventoryMessage_Statics::NewStructOps, TEXT("UIUpdateInventoryMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateInventoryMessage), 3520360832U) },
 		{ FDeleteMailMessage::StaticStruct, Z_Construct_UScriptStruct_FDeleteMailMessage_Statics::NewStructOps, TEXT("DeleteMailMessage"), &Z_Registration_Info_UScriptStruct_DeleteMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDeleteMailMessage), 4251612553U) },
 		{ FRecieveRewardMessage::StaticStruct, Z_Construct_UScriptStruct_FRecieveRewardMessage_Statics::NewStructOps, TEXT("RecieveRewardMessage"), &Z_Registration_Info_UScriptStruct_RecieveRewardMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRecieveRewardMessage), 2168281164U) },
 		{ FGetEventMessage::StaticStruct, Z_Construct_UScriptStruct_FGetEventMessage_Statics::NewStructOps, TEXT("GetEventMessage"), &Z_Registration_Info_UScriptStruct_GetEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetEventMessage), 1679700882U) },
 		{ FGetEventRewardMessage::StaticStruct, Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics::NewStructOps, TEXT("GetEventRewardMessage"), &Z_Registration_Info_UScriptStruct_GetEventRewardMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetEventRewardMessage), 1950954237U) },
+		{ FAddInventoryMesssage::StaticStruct, Z_Construct_UScriptStruct_FAddInventoryMesssage_Statics::NewStructOps, TEXT("AddInventoryMesssage"), &Z_Registration_Info_UScriptStruct_AddInventoryMesssage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAddInventoryMesssage), 4052093233U) },
+		{ FRemoveInventoryMesssage::StaticStruct, Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics::NewStructOps, TEXT("RemoveInventoryMesssage"), &Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRemoveInventoryMesssage), 3079054671U) },
+		{ FGetInventoryMesssage::StaticStruct, Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics::NewStructOps, TEXT("GetInventoryMesssage"), &Z_Registration_Info_UScriptStruct_GetInventoryMesssage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetInventoryMesssage), 3277580001U) },
+		{ FSetSlotInventoryMesssage::StaticStruct, Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics::NewStructOps, TEXT("SetSlotInventoryMesssage"), &Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSetSlotInventoryMesssage), 1794115990U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_112282105(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_2593226042(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);

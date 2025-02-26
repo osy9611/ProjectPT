@@ -606,6 +606,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Event.h">
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Inventory.cpp">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Inventory.h">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Mail.cpp">
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClCompile>
@@ -912,6 +918,15 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\Event\Banner\PTEventBanner_Ticket.h">
       <Filter>Source\ProjectPT\UI\Event\Banner</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\Inventory">
+      <UniqueIdentifier>{F5042EC0-4520-35CA-A276-D8D7823A8C39}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryWidget.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryWidget.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Item">
       <UniqueIdentifier>{BAC39D79-1EF9-3B0A-B275-F9F80A59A969}</UniqueIdentifier>
     </Filter>
@@ -925,6 +940,18 @@
       <Filter>Source\ProjectPT\UI\Item</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\Item\PTItemCellData.h">
+      <Filter>Source\ProjectPT\UI\Item</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Item\PTItemCell_Drag.cpp">
+      <Filter>Source\ProjectPT\UI\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Item\PTItemCell_Drag.h">
+      <Filter>Source\ProjectPT\UI\Item</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Item\PTItemDragOperation.cpp">
+      <Filter>Source\ProjectPT\UI\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Item\PTItemDragOperation.h">
       <Filter>Source\ProjectPT\UI\Item</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Lobby">

@@ -34,6 +34,7 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(UI_Event_Health, "UI.Event.Health", "");
 	AddTag(UI_Event_MailUpdate, "UI.Event.MailUpdate","");
 	AddTag(UI_Event_EventUpdate, "UI.Event.EventUpdate", "");
+	AddTag(UI_Event_InvenUpdate, "UI.Event.InvenUpdate", "");
 
 	//GE Event
 	AddTag(GE_Event_Damage, "GameplayEffect.Event.Damage", "");
@@ -52,4 +53,8 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(Request_ReceiveReward, "Request.ReceiveReward", "");
 	AddTag(Request_GetEventData, "Request.GetEvent", "");
 	AddTag(Request_GetEventReward, "Request.GetEventReward", "");
+	AddTag(Reqeust_AddItem, "Reqeust.AddItem", "");
+	AddTag(Request_RemoveItem, "Request.RemoveItem", "");
+	AddTag(Request_InvenSlotChange, "Request.InvenSlotChange", "");
+	AddTag(Request_GetInvenData, "Request.GetInvenData", "");
 }

@@ -59,4 +59,12 @@ enum class ERedDotType : uint8;
 template<> struct TIsUEnumClass<ERedDotType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<ERedDotType>();
 
+#define FOREACH_ENUM_EITEMTYPE(op) \
+	op(EItemType::Potion) \
+	op(EItemType::Scroll) 
+
+enum class EItemType : uint8;
+template<> struct TIsUEnumClass<EItemType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EItemType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

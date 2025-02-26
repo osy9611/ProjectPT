@@ -21,3 +21,7 @@
 ,!Enumerator,Mail,,메일
 ,!Enumerator,Inventory,,인벤토리
 ,!Enumerator,Event,!End,이벤트
+,,,,
+,!Enum,ItemType,,
+,!Enumerator,Potion,,포션
+,!Enumerator,Scroll,!End,스크롤
