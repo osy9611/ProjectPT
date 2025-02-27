@@ -58,7 +58,7 @@ inline T* UPTUIManagerSubsystem::GetWidget(FGameplayTag LayerTag, FString LayerN
 
 		if (WidgetClass)
 		{
-			PopupWidget = WidgetBase->CreateWidgetClass(WidgetClass, true);
+			PopupWidget = WidgetBase->CreateWidgetClass(WidgetClass, ESlateVisibility::Visible, ESlateVisibility::Hidden, true);
 		}
 	}
 

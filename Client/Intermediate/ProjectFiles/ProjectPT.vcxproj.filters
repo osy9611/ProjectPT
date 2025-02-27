@@ -846,6 +846,12 @@
     <Filter Include="Source\ProjectPT\UI\Common">
       <UniqueIdentifier>{14B20CF3-BB50-3D2D-A33E-2B3D34BBDA1E}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\CustomTileView.cpp">
+      <Filter>Source\ProjectPT\UI\Common</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\CustomTileView.h">
+      <Filter>Source\ProjectPT\UI\Common</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Common\ToggleGroup">
       <UniqueIdentifier>{8B618154-DBBF-3F09-AE78-442D11DC1D06}</UniqueIdentifier>
     </Filter>
@@ -921,6 +927,12 @@
     <Filter Include="Source\ProjectPT\UI\Inventory">
       <UniqueIdentifier>{F5042EC0-4520-35CA-A276-D8D7823A8C39}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryItemData.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryItemData.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryWidget.cpp">
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClCompile>
