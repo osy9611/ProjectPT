@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "ProjectPT/Data/EnumGenerateData.h"
 #include "PTUIMessageExtensions.generated.h"
 
 USTRUCT(BlueprintType)
@@ -135,5 +136,6 @@ struct FChangeCategoryMessage
 {
 	GENERATED_BODY()
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EItemType Type;
 };

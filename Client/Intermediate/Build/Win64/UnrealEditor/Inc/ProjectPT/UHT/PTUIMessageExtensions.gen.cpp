@@ -11,7 +11,9 @@ void EmptyLinkFunctionForGeneratedCodePTUIMessageExtensions() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FAddInventoryMesssage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FChangeCategoryMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FDeleteMailMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetEventMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetEventRewardMessage();
@@ -866,6 +868,71 @@ UScriptStruct* Z_Construct_UScriptStruct_FSetSlotInventoryMesssage()
 }
 // End ScriptStruct FSetSlotInventoryMesssage
 
+// Begin ScriptStruct FChangeCategoryMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ChangeCategoryMessage;
+class UScriptStruct* FChangeCategoryMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ChangeCategoryMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ChangeCategoryMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FChangeCategoryMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("ChangeCategoryMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_ChangeCategoryMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FChangeCategoryMessage>()
+{
+	return FChangeCategoryMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Type_MetaData[] = {
+		{ "Category", "ChangeCategoryMessage" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Type_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_Type;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FChangeCategoryMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::NewProp_Type_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::NewProp_Type = { "Type", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FChangeCategoryMessage, Type), Z_Construct_UEnum_ProjectPT_EItemType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Type_MetaData), NewProp_Type_MetaData) }; // 2774345383
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::NewProp_Type_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::NewProp_Type,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"ChangeCategoryMessage",
+	Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::PropPointers),
+	sizeof(FChangeCategoryMessage),
+	alignof(FChangeCategoryMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FChangeCategoryMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_ChangeCategoryMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ChangeCategoryMessage.InnerSingleton, Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_ChangeCategoryMessage.InnerSingleton;
+}
+// End ScriptStruct FChangeCategoryMessage
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics
 {
@@ -885,9 +952,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FRemoveInventoryMesssage::StaticStruct, Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics::NewStructOps, TEXT("RemoveInventoryMesssage"), &Z_Registration_Info_UScriptStruct_RemoveInventoryMesssage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRemoveInventoryMesssage), 3079054671U) },
 		{ FGetInventoryMesssage::StaticStruct, Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics::NewStructOps, TEXT("GetInventoryMesssage"), &Z_Registration_Info_UScriptStruct_GetInventoryMesssage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetInventoryMesssage), 3277580001U) },
 		{ FSetSlotInventoryMesssage::StaticStruct, Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics::NewStructOps, TEXT("SetSlotInventoryMesssage"), &Z_Registration_Info_UScriptStruct_SetSlotInventoryMesssage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSetSlotInventoryMesssage), 1794115990U) },
+		{ FChangeCategoryMessage::StaticStruct, Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::NewStructOps, TEXT("ChangeCategoryMessage"), &Z_Registration_Info_UScriptStruct_ChangeCategoryMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FChangeCategoryMessage), 533644021U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_2593226042(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_670345990(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);
