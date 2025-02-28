@@ -23,5 +23,6 @@
 ,!Enumerator,Event,!End,이벤트
 ,,,,
 ,!Enum,ItemType,,
+,!Enumerator,All,,전부
 ,!Enumerator,Potion,,포션
 ,!Enumerator,Scroll,!End,스크롤

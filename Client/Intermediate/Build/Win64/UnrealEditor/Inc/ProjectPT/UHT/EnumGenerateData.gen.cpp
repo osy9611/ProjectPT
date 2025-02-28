@@ -282,15 +282,19 @@ struct Z_Construct_UEnum_ProjectPT_EItemType_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "All.Name", "EItemType::All" },
 		{ "BlueprintType", "true" },
 		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+		{ "Potion.Comment", "//\xec\xa0\x84\xeb\xb6\x80\n" },
 		{ "Potion.Name", "EItemType::Potion" },
+		{ "Potion.ToolTip", "\xec\xa0\x84\xeb\xb6\x80" },
 		{ "Scroll.Comment", "//\xed\x8f\xac\xec\x85\x98\n" },
 		{ "Scroll.Name", "EItemType::Scroll" },
 		{ "Scroll.ToolTip", "\xed\x8f\xac\xec\x85\x98" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EItemType::All", (int64)EItemType::All },
 		{ "EItemType::Potion", (int64)EItemType::Potion },
 		{ "EItemType::Scroll", (int64)EItemType::Scroll },
 	};
@@ -326,10 +330,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 		{ EMonsterType_StaticEnum, TEXT("EMonsterType"), &Z_Registration_Info_UEnum_EMonsterType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 815457047U) },
 		{ ECollisionType_StaticEnum, TEXT("ECollisionType"), &Z_Registration_Info_UEnum_ECollisionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4236091643U) },
 		{ ERedDotType_StaticEnum, TEXT("ERedDotType"), &Z_Registration_Info_UEnum_ERedDotType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3203063460U) },
-		{ EItemType_StaticEnum, TEXT("EItemType"), &Z_Registration_Info_UEnum_EItemType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2880388580U) },
+		{ EItemType_StaticEnum, TEXT("EItemType"), &Z_Registration_Info_UEnum_EItemType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2774345383U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_2394247799(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_3756504946(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));

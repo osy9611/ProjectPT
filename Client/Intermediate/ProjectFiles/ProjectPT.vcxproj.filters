@@ -855,6 +855,12 @@
     <Filter Include="Source\ProjectPT\UI\Common\ToggleGroup">
       <UniqueIdentifier>{8B618154-DBBF-3F09-AE78-442D11DC1D06}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupDefaultWidget.cpp">
+      <Filter>Source\ProjectPT\UI\Common\ToggleGroup</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleGroupDefaultWidget.h">
+      <Filter>Source\ProjectPT\UI\Common\ToggleGroup</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Common\ToggleGroup\ToggleWidget.cpp">
       <Filter>Source\ProjectPT\UI\Common\ToggleGroup</Filter>
     </ClCompile>
@@ -927,6 +933,18 @@
     <Filter Include="Source\ProjectPT\UI\Inventory">
       <UniqueIdentifier>{F5042EC0-4520-35CA-A276-D8D7823A8C39}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryCategory.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryCategory.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryCellGroup.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryCellGroup.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryItemData.cpp">
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClCompile>
@@ -937,6 +955,18 @@
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryWidget.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTItemCategoryGroup.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTItemCategoryGroup.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTItemCell_Inventory.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTItemCell_Inventory.h">
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI\Item">

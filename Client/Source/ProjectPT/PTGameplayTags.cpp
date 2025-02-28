@@ -57,4 +57,5 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(Request_RemoveItem, "Request.RemoveItem", "");
 	AddTag(Request_InvenSlotChange, "Request.InvenSlotChange", "");
 	AddTag(Request_GetInvenData, "Request.GetInvenData", "");
+	AddTag(Request_ChangeCategory, "Request.ChangeCategory", "");
 }

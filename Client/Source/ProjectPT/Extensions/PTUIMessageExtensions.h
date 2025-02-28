@@ -129,3 +129,11 @@ public:
 	FString ItemID;
 	int32 SlotNum;
 };
+
+USTRUCT(BlueprintType)
+struct FChangeCategoryMessage
+{
+	GENERATED_BODY()
+public:
+	EItemType Type;
+};

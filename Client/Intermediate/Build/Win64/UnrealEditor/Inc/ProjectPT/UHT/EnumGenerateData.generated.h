@@ -60,6 +60,7 @@ template<> struct TIsUEnumClass<ERedDotType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<ERedDotType>();
 
 #define FOREACH_ENUM_EITEMTYPE(op) \
+	op(EItemType::All) \
 	op(EItemType::Potion) \
 	op(EItemType::Scroll) 
 
