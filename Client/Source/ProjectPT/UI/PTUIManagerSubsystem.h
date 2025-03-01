@@ -9,6 +9,7 @@
 
 class UPTActivatableWidget;
 class UPTSystemPopup;
+class UInputMappingContext;
 struct FItemReward;
 
 UCLASS()
@@ -18,6 +19,10 @@ class PROJECTPT_API UPTUIManagerSubsystem : public UUIManagerSubsystem
 
 public:
 	UPTUIManagerSubsystem();
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+
+	void RegisterMappingData(APlayerController* PlayerController, UInputMappingContext* MappingContext);
+	void RemoveMappingData(APlayerController* PlayerController, UInputMappingContext* MappingContext);
 
 	void ShowMouseCursor();
 	void HideMouseCursor();
@@ -33,6 +38,10 @@ private:
 	T* GetWidget(FGameplayTag LayerTag, FString LayerName, FString WidgetPath);
 
 private:
+	//MappingContext 중복 방지를 위함
+	UPROPERTY()
+	TArray<UInputMappingContext*>ActiveMappingContexts;
+
 	FString DetailDescPopupPath;
 	FString RewardPopupPath;
 	FString SystemPopupPath;

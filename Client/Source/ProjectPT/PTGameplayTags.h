@@ -58,7 +58,6 @@ struct FPTGameplayTags
 
 	FGameplayTag Reqeust_AddItem;
 	FGameplayTag Request_RemoveItem;
-	FGameplayTag Request_InvenSlotChange;
 	FGameplayTag Request_GetInvenData;
 	FGameplayTag Request_ChangeCategory;
 private:

@@ -34,3 +34,14 @@ const UInputAction* UPTInputConfig::FindAbilityInputActionForTag(const FGameplay
 		UE_LOG(PTLog, Error, TEXT("Can't find AbilityInputAction for InputTag [%s] on InputConfig [%s]."), *InputTag.ToString(), *GetNameSafe(this));
 	return nullptr;
 }
+
+const UInputAction* UPTInputConfig::FindNativeInputActionForTag(const FString& InputTag, bool bLogNotFound) const
+{
+	if (InputTag.IsEmpty())
+		return nullptr;
+
+	FName TagName = FName(InputTag);
+	FGameplayTag GameplayTag = FGameplayTag::RequestGameplayTag(TagName);
+
+	return FindNativeInputActionForTag(GameplayTag, bLogNotFound);
+}

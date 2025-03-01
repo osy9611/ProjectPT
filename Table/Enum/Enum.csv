@@ -26,3 +26,8 @@
 ,!Enumerator,All,,전부
 ,!Enumerator,Potion,,포션
 ,!Enumerator,Scroll,!End,스크롤
+,,,,
+,!Enum,Grade,,
+,!Enumerator,Normal,,노멀
+,!Enumerator,Rare,,레어
+,!Enumerator,Legend,!End,레전드

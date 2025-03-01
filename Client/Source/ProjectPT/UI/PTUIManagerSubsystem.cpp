@@ -9,6 +9,7 @@
 #include "ProjectPT/UI/System/DetailDesc/PTDetailDescPopup.h"
 #include "ProjectPT/Data/ServerDatas/PTServerData.h"
 #include "GameplayTagContainer.h"
+#include "EnhancedInputSubsystems.h"
 
 UPTUIManagerSubsystem::UPTUIManagerSubsystem()
 {
@@ -21,7 +22,55 @@ UPTUIManagerSubsystem::UPTUIManagerSubsystem()
 
 	TagString = TEXT("UI.Layer.Dynamic");
 	DynamicLayerTag = FGameplayTag::RequestGameplayTag(FName(*TagString));
+}
 
+void UPTUIManagerSubsystem::Initialize(FSubsystemCollectionBase& Collection)
+{
+	Super::Initialize(Collection);
+}
+
+void UPTUIManagerSubsystem::RegisterMappingData(APlayerController* PlayerController, UInputMappingContext* MappingContext)
+{
+	if (!PlayerController || !MappingContext)
+	{
+		UE_LOG(PTLog, Error, TEXT("[PTUIManageSubsystem] RegisterMappingData Fail PlayerController or MappinConext is nullptr"));
+		return;
+	}
+
+	UEnhancedInputLocalPlayerSubsystem* InputSubsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer());
+	if (!InputSubsystem)
+	{
+		UE_LOG(PTLog, Error, TEXT("[PTUIManageSubsystem] EnhancedInputLocalPlayerSubsystem is nullptr"));
+		return;
+	}
+
+	if (!ActiveMappingContexts.Contains(MappingContext))
+	{
+		InputSubsystem->AddMappingContext(MappingContext, 0);
+		ActiveMappingContexts.Add(MappingContext);
+	}
+}
+
+void UPTUIManagerSubsystem::RemoveMappingData(APlayerController* PlayerController, UInputMappingContext* MappingContext)
+{
+	if (!PlayerController || !MappingContext)
+	{
+		UE_LOG(PTLog, Error, TEXT("[PTUIManageSubsystem] RemoveMappingData Fail PlayerController or MappinConext is nullptr"));
+		return;
+	}
+
+	UEnhancedInputLocalPlayerSubsystem* InputSubsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer());
+	if (!InputSubsystem)
+	{
+		UE_LOG(PTLog, Error, TEXT("[PTUIManageSubsystem] EnhancedInputLocalPlayerSubsystem is nullptr"));
+		return;
+	}
+
+	if (!ActiveMappingContexts.Contains(MappingContext))
+	{
+		InputSubsystem->RemoveMappingContext(MappingContext);
+		ActiveMappingContexts.Remove(MappingContext);
+	}
 }
 
 void UPTUIManagerSubsystem::ShowMouseCursor()

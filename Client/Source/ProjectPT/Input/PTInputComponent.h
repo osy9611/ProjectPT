@@ -22,12 +22,25 @@ public:
 	template <class UserClass, typename FuncType>
 	void BindNativeAction(const UPTInputConfig* InputConfig, const FGameplayTag& InputTag, ETriggerEvent TriggerEvent, UserClass* Object, FuncType Func, bool bLogIfNotFound);
 
+	template <class UserClass, typename FuncType>
+	void BindNativeAction(const UPTInputConfig* InputConfig, const FString& InputTag, ETriggerEvent TriggerEvent, UserClass* Object, FuncType Func, bool bLogIfNotFound);
+
+
 	template <class UserClass, typename PressedFuncType, typename ReleasedFuncType>
 	void BindAbilityActions(const UPTInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, TArray<uint32>& BindHandles);
 };
 
 template <class UserClass, typename FuncType>
 void UPTInputComponent::BindNativeAction(const UPTInputConfig* InputConfig, const FGameplayTag& InputTag, ETriggerEvent TriggerEvent, UserClass* Object, FuncType Func, bool bLogIfNotFound)
+{
+	check(InputConfig);
+
+	if (const UInputAction* IA = InputConfig->FindNativeInputActionForTag(InputTag, bLogIfNotFound))
+		BindAction(IA, TriggerEvent, Object, Func);
+}
+
+template<class UserClass, typename FuncType>
+void UPTInputComponent::BindNativeAction(const UPTInputConfig* InputConfig, const FString& InputTag, ETriggerEvent TriggerEvent, UserClass* Object, FuncType Func, bool bLogIfNotFound)
 {
 	check(InputConfig);
 

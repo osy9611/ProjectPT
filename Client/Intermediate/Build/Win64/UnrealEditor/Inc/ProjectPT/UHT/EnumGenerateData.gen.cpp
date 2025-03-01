@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeEnumGenerateData() {}
 
 // Begin Cross Module References
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EGrade();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMonsterType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EPTElementType();
@@ -322,6 +323,64 @@ UEnum* Z_Construct_UEnum_ProjectPT_EItemType()
 }
 // End Enum EItemType
 
+// Begin Enum EGrade
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EGrade;
+static UEnum* EGrade_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EGrade.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EGrade.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_EGrade, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("EGrade"));
+	}
+	return Z_Registration_Info_UEnum_EGrade.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<EGrade>()
+{
+	return EGrade_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_EGrade_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Legend.Comment", "//\xeb\xa0\x88\xec\x96\xb4\n" },
+		{ "Legend.Name", "EGrade::Legend" },
+		{ "Legend.ToolTip", "\xeb\xa0\x88\xec\x96\xb4" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+		{ "Normal.Name", "EGrade::Normal" },
+		{ "Rare.Comment", "//\xeb\x85\xb8\xeb\xa9\x80\n" },
+		{ "Rare.Name", "EGrade::Rare" },
+		{ "Rare.ToolTip", "\xeb\x85\xb8\xeb\xa9\x80" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EGrade::Normal", (int64)EGrade::Normal },
+		{ "EGrade::Rare", (int64)EGrade::Rare },
+		{ "EGrade::Legend", (int64)EGrade::Legend },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_EGrade_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"EGrade",
+	"EGrade",
+	Z_Construct_UEnum_ProjectPT_EGrade_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EGrade_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EGrade_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_EGrade_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_EGrade()
+{
+	if (!Z_Registration_Info_UEnum_EGrade.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EGrade.InnerSingleton, Z_Construct_UEnum_ProjectPT_EGrade_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EGrade.InnerSingleton;
+}
+// End Enum EGrade
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics
 {
@@ -331,9 +390,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 		{ ECollisionType_StaticEnum, TEXT("ECollisionType"), &Z_Registration_Info_UEnum_ECollisionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4236091643U) },
 		{ ERedDotType_StaticEnum, TEXT("ERedDotType"), &Z_Registration_Info_UEnum_ERedDotType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3203063460U) },
 		{ EItemType_StaticEnum, TEXT("EItemType"), &Z_Registration_Info_UEnum_EItemType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2774345383U) },
+		{ EGrade_StaticEnum, TEXT("EGrade"), &Z_Registration_Info_UEnum_EGrade, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1290959772U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_3756504946(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_1502355951(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));

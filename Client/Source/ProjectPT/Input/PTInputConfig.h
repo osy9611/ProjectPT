@@ -35,6 +35,8 @@ public:
 	const UInputAction* FindNativeInputActionForTag(const FGameplayTag& InputTag, bool bLogNotFound = true) const;
 	const UInputAction* FindAbilityInputActionForTag(const FGameplayTag& InputTag, bool bLogNotFound = true) const;
 
+	const UInputAction* FindNativeInputActionForTag(const FString& InputTag, bool bLogNotFound = true) const;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Meta = (TitleProperty = "InputAction"))
 	TArray<FPTInputAction> NativeInputActions;
 

@@ -68,4 +68,13 @@ enum class EItemType : uint8;
 template<> struct TIsUEnumClass<EItemType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<EItemType>();
 
+#define FOREACH_ENUM_EGRADE(op) \
+	op(EGrade::Normal) \
+	op(EGrade::Rare) \
+	op(EGrade::Legend) 
+
+enum class EGrade : uint8;
+template<> struct TIsUEnumClass<EGrade> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EGrade>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

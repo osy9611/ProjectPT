@@ -705,6 +705,12 @@
     <Filter Include="Source\ProjectPT\Input">
       <UniqueIdentifier>{80210474-71C0-35E4-8D49-1D96D9B022A4}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Input\PTCustomInputTrigger.cpp">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Input\PTCustomInputTrigger.h">
+      <Filter>Source\ProjectPT\Input</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Input\PTInputComponent.cpp">
       <Filter>Source\ProjectPT\Input</Filter>
     </ClCompile>
@@ -943,6 +949,12 @@
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryCellGroup.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryDividePopup.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryDividePopup.h">
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryItemData.cpp">

@@ -972,6 +972,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\GameModes\PTSceneData.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Input\PTCustomInputTrigger.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Input\PTCustomInputTrigger.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Input\PTInputComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
@@ -1138,6 +1143,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryCellGroup.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryDividePopup.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryDividePopup.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryItemData.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
