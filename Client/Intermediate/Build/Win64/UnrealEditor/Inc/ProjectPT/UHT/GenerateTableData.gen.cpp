@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeGenerateTableData() {}
 
 // Begin Cross Module References
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EBindType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EGrade();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
@@ -152,6 +153,18 @@ struct Z_Construct_UScriptStruct_FItemData_Statics
 		{ "Category", "ItemData" },
 		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BindType_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanCell_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemDesc_MetaData[] = {
+		{ "Category", "ItemData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ResourcePath_MetaData[] = {
 		{ "Category", "ItemData" },
 		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
@@ -170,6 +183,11 @@ struct Z_Construct_UScriptStruct_FItemData_Statics
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_Grade;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ItemType_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_ItemType;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_BindType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_BindType;
+	static void NewProp_CanCell_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_CanCell;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_ItemDesc;
 	static const UECodeGen_Private::FStrPropertyParams NewProp_ResourcePath;
 	static void NewProp_CanStack_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_CanStack;
@@ -186,6 +204,14 @@ const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FItemData
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Grade = { "Grade", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, Grade), Z_Construct_UEnum_ProjectPT_EGrade, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Grade_MetaData), NewProp_Grade_MetaData) }; // 1290959772
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ItemType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ItemType = { "ItemType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, ItemType), Z_Construct_UEnum_ProjectPT_EItemType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemType_MetaData), NewProp_ItemType_MetaData) }; // 2774345383
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_BindType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_BindType = { "BindType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, BindType), Z_Construct_UEnum_ProjectPT_EBindType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BindType_MetaData), NewProp_BindType_MetaData) }; // 1504203016
+void Z_Construct_UScriptStruct_FItemData_Statics::NewProp_CanCell_SetBit(void* Obj)
+{
+	((FItemData*)Obj)->CanCell = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_CanCell = { "CanCell", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FItemData), &Z_Construct_UScriptStruct_FItemData_Statics::NewProp_CanCell_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CanCell_MetaData), NewProp_CanCell_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ItemDesc = { "ItemDesc", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, ItemDesc), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemDesc_MetaData), NewProp_ItemDesc_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ResourcePath = { "ResourcePath", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FItemData, ResourcePath), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResourcePath_MetaData), NewProp_ResourcePath_MetaData) };
 void Z_Construct_UScriptStruct_FItemData_Statics::NewProp_CanStack_SetBit(void* Obj)
 {
@@ -199,6 +225,10 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FI
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_Grade,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ItemType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ItemType,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_BindType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_BindType,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_CanCell,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ItemDesc,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_ResourcePath,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_CanStack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FItemData_Statics::NewProp_MaxStackCount,
@@ -655,7 +685,7 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
 		{ FEventData::StaticStruct, Z_Construct_UScriptStruct_FEventData_Statics::NewStructOps, TEXT("EventData"), &Z_Registration_Info_UScriptStruct_EventData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEventData), 1283806976U) },
-		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 73057429U) },
+		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 3450657270U) },
 		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 4054298180U) },
 		{ FPlayerData::StaticStruct, Z_Construct_UScriptStruct_FPlayerData_Statics::NewStructOps, TEXT("PlayerData"), &Z_Registration_Info_UScriptStruct_PlayerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerData), 3805507274U) },
 		{ FRewardData::StaticStruct, Z_Construct_UScriptStruct_FRewardData_Statics::NewStructOps, TEXT("RewardData"), &Z_Registration_Info_UScriptStruct_RewardData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRewardData), 1045036157U) },
@@ -663,7 +693,7 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_
 		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 146149087U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_2562747419(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_12167644(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);

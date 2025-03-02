@@ -77,4 +77,12 @@ enum class EGrade : uint8;
 template<> struct TIsUEnumClass<EGrade> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<EGrade>();
 
+#define FOREACH_ENUM_EBINDTYPE(op) \
+	op(EBindType::Character) \
+	op(EBindType::Account) 
+
+enum class EBindType : uint8;
+template<> struct TIsUEnumClass<EBindType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EBindType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

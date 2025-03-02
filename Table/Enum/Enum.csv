@@ -31,3 +31,7 @@
 ,!Enumerator,Normal,,노멀
 ,!Enumerator,Rare,,레어
 ,!Enumerator,Legend,!End,레전드
+,,,,
+,!Enum,BindType,,
+,!Enumerator,Character,,캐릭터
+,!Enumerator,Account,!End,귀속

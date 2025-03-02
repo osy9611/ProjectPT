@@ -1,5 +1,5 @@
-tableNo,ItemName,Grade,ItemType,ResourcePath,CanStack,MaxStackCount
-int,string,Grade,ItemType,string,bool,int
-1,포션,Normal,Potion,/Game/CraftResourcesIcons/Textures/Tex_reagent_12_b.Tex_reagent_12_b,True,100
-2,두루마리,Rare,Scroll,/Game/CraftResourcesIcons/Textures/Tex_recipes_01_b.Tex_recipes_01_b,False,1
-3,책,Legend,Potion,/Game/CraftResourcesIcons/Textures/Tex_recipes_09_b.Tex_recipes_09_b,True,10
+tableNo,ItemName,Grade,ItemType,BindType,CanCell,ItemDesc,ResourcePath,CanStack,MaxStackCount
+int,string,Grade,ItemType,BindType,bool,string,string,bool,int
+1,포션,Normal,Potion,Character,True,생명력 회복,/Game/CraftResourcesIcons/Textures/Tex_reagent_12_b.Tex_reagent_12_b,True,100
+2,두루마리,Rare,Scroll,Account,False,두루마리,/Game/CraftResourcesIcons/Textures/Tex_recipes_01_b.Tex_recipes_01_b,False,1
+3,책,Legend,Potion,Character,False,책이다,/Game/CraftResourcesIcons/Textures/Tex_recipes_09_b.Tex_recipes_09_b,True,10

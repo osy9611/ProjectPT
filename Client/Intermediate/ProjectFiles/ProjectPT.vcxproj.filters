@@ -963,6 +963,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryItemData.h">
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryToolTip.cpp">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryToolTip.h">
+      <Filter>Source\ProjectPT\UI\Inventory</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\Inventory\PTInventoryWidget.cpp">
       <Filter>Source\ProjectPT\UI\Inventory</Filter>
     </ClCompile>

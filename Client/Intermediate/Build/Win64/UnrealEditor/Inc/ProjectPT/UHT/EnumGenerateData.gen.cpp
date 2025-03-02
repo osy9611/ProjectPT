@@ -10,6 +10,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEnumGenerateData() {}
 
 // Begin Cross Module References
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EBindType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EGrade();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
@@ -381,6 +382,60 @@ UEnum* Z_Construct_UEnum_ProjectPT_EGrade()
 }
 // End Enum EGrade
 
+// Begin Enum EBindType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EBindType;
+static UEnum* EBindType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EBindType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EBindType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_EBindType, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("EBindType"));
+	}
+	return Z_Registration_Info_UEnum_EBindType.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<EBindType>()
+{
+	return EBindType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_EBindType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "Account.Comment", "//\xec\xba\x90\xeb\xa6\xad\xed\x84\xb0\n" },
+		{ "Account.Name", "EBindType::Account" },
+		{ "Account.ToolTip", "\xec\xba\x90\xeb\xa6\xad\xed\x84\xb0" },
+		{ "BlueprintType", "true" },
+		{ "Character.Name", "EBindType::Character" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EBindType::Character", (int64)EBindType::Character },
+		{ "EBindType::Account", (int64)EBindType::Account },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_EBindType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"EBindType",
+	"EBindType",
+	Z_Construct_UEnum_ProjectPT_EBindType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EBindType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EBindType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_EBindType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_EBindType()
+{
+	if (!Z_Registration_Info_UEnum_EBindType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EBindType.InnerSingleton, Z_Construct_UEnum_ProjectPT_EBindType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EBindType.InnerSingleton;
+}
+// End Enum EBindType
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics
 {
@@ -391,9 +446,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 		{ ERedDotType_StaticEnum, TEXT("ERedDotType"), &Z_Registration_Info_UEnum_ERedDotType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3203063460U) },
 		{ EItemType_StaticEnum, TEXT("EItemType"), &Z_Registration_Info_UEnum_EItemType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2774345383U) },
 		{ EGrade_StaticEnum, TEXT("EGrade"), &Z_Registration_Info_UEnum_EGrade, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1290959772U) },
+		{ EBindType_StaticEnum, TEXT("EBindType"), &Z_Registration_Info_UEnum_EBindType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1504203016U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_1502355951(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_871430126(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));
