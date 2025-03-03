@@ -38,7 +38,7 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
   </a>
 
 ### Inventory
-- 인벤토리 시스템을 구현해 아이템 이동, 정렬, 필터링, 툴팁 등의 기능을 구현했습니다
+- 인벤토리 시스템을 구현해 아이템 이동, 정렬, 필터링, 툴팁 등의 기능을 구현했습니다.
 - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Inventory)**
 - **작업 결과**
 
