@@ -37,7 +37,16 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
     <img src="https://github.com/user-attachments/assets/5df4f67d-9a0f-4b9f-8fdb-1de4435dd548" width="50%" height="50%" alt="우편 시스템 작업 결과 GIF">
   </a>
 
-## 주요 시스템
+### Inventory
+- 인벤토리 시스템을 구현해 아이템 이동, 정렬, 필터링, 툴팁 등의 기능을 구현했습니다
+- **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/Inventory)**
+- **작업 결과**
+
+  <a href="https://github.com/osy9611/ProjectPT/wiki/Inventory">
+    <img src="https://github.com/user-attachments/assets/dee01e23-6909-4b33-af9e-c8e9306784d3" width="50%" height="50%" alt="인벤토리 시스템 작업 결과 GIF">
+  </a>
+
+## 시스템
 
 ### UI 시스템
 - Unity의 UIManager를 Unreal의 UIManagerSubsystem 으로 변환
