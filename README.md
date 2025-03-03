@@ -44,11 +44,9 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 �
 - GameplayTag 기반 UI Layer 관리 (Static, Dynamic, System)
 - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/UISystem)**
 
-### DataTable & AssetManager
+### DataTable
 - CSV 기반 DataTable 자동 생성 및 직렬화 저장
   - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/DataTable)**
-- Unreal의 AssetManager를 Unity의 Addressable과 비교하여 리소스 로드 및 관리
-  - **[자세히 보기](https://github.com/osy9611/ProjectPT/wiki/AssetManager)**
 
 ### Subsystem (Unity의 Manager 시스템을 Unreal에 적용)
 - Unity에서 사용했던 Manager 패턴을 Unreal의 Subsystem 구조로 변환
