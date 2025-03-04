@@ -886,6 +886,16 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\Event\PTEventCondition_ConentsOpen.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\Event\PTEventCondition_ConentsOpen.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\Event\PTEventOpenCondition.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\Event\PTEventOpenCondition.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTServerData.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
@@ -896,6 +906,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Contents.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Contents.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Event.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
@@ -911,6 +926,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Mail.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Extensions\PTExtensionsFunc.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTExtensionsFunc.h"/>
     <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTUIMessageExtensions.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\GameFeature\GameFeatureAction_AddWidgets.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>

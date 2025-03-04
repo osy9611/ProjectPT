@@ -22,7 +22,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FEventData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_26_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_30_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FItemData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -30,7 +30,15 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FEventData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FItemData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_50_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_54_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FMailData_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
+	typedef FTableRowBase Super;
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMailData>();
+
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_66_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FMonsterData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -38,7 +46,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FItemData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMonsterData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_68_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_84_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPlayerData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -46,7 +54,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMonsterData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPlayerData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_80_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_96_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRewardData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -54,7 +62,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPlayerData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FRewardData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_90_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_106_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSceneData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -62,7 +70,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FRewardData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSceneData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_100_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_116_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSkillData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;

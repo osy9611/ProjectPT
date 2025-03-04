@@ -69,6 +69,13 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FGetMailsMessage
+{
+	GENERATED_BODY()
+public:
+};
+
+USTRUCT(BlueprintType)
 struct FDeleteMailMessage
 {
 	GENERATED_BODY()

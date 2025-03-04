@@ -13,10 +13,13 @@ void EmptyLinkFunctionForGeneratedCodeGenerateTableData() {}
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FTableRowBase();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EBindType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EEventOpenType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EGrade();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMailType();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FEventData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FMailData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FMonsterData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FPlayerData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRewardData();
@@ -55,6 +58,14 @@ struct Z_Construct_UScriptStruct_FEventData_Statics
 		{ "Category", "EventData" },
 		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_openType_MetaData[] = {
+		{ "Category", "EventData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_openValue_MetaData[] = {
+		{ "Category", "EventData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bannerPath_MetaData[] = {
 		{ "Category", "EventData" },
 		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
@@ -70,6 +81,9 @@ struct Z_Construct_UScriptStruct_FEventData_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_eventName;
 	static const UECodeGen_Private::FStrPropertyParams NewProp_eventDesc;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_openType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_openType;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_openValue;
 	static const UECodeGen_Private::FStrPropertyParams NewProp_bannerPath;
 	static const UECodeGen_Private::FStrPropertyParams NewProp_toggleImgPath;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_rewardItems_Inner;
@@ -83,6 +97,9 @@ struct Z_Construct_UScriptStruct_FEventData_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_eventName = { "eventName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, eventName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_eventName_MetaData), NewProp_eventName_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_eventDesc = { "eventDesc", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, eventDesc), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_eventDesc_MetaData), NewProp_eventDesc_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openType = { "openType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, openType), Z_Construct_UEnum_ProjectPT_EEventOpenType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_openType_MetaData), NewProp_openType_MetaData) }; // 1397047845
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openValue = { "openValue", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, openValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_openValue_MetaData), NewProp_openValue_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_bannerPath = { "bannerPath", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, bannerPath), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bannerPath_MetaData), NewProp_bannerPath_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_toggleImgPath = { "toggleImgPath", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, toggleImgPath), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_toggleImgPath_MetaData), NewProp_toggleImgPath_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_rewardItems_Inner = { "rewardItems", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
@@ -90,6 +107,9 @@ const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FEventDa
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FEventData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_eventName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_eventDesc,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openType,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openValue,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_bannerPath,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_toggleImgPath,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_rewardItems_Inner,
@@ -256,6 +276,86 @@ UScriptStruct* Z_Construct_UScriptStruct_FItemData()
 	return Z_Registration_Info_UScriptStruct_ItemData.InnerSingleton;
 }
 // End ScriptStruct FItemData
+
+// Begin ScriptStruct FMailData
+static_assert(std::is_polymorphic<FMailData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FMailData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_MailData;
+class UScriptStruct* FMailData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_MailData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_MailData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FMailData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("MailData"));
+	}
+	return Z_Registration_Info_UScriptStruct_MailData.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FMailData>()
+{
+	return FMailData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FMailData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MailType_MetaData[] = {
+		{ "Category", "MailData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MailName_MetaData[] = {
+		{ "Category", "MailData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MailDesc_MetaData[] = {
+		{ "Category", "MailData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_MailType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_MailType;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_MailName;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_MailDesc;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FMailData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailType = { "MailType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FMailData, MailType), Z_Construct_UEnum_ProjectPT_EMailType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MailType_MetaData), NewProp_MailType_MetaData) }; // 925762257
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailName = { "MailName", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FMailData, MailName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MailName_MetaData), NewProp_MailName_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailDesc = { "MailDesc", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FMailData, MailDesc), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MailDesc_MetaData), NewProp_MailDesc_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FMailData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailType,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FMailData_Statics::NewProp_MailDesc,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMailData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMailData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	Z_Construct_UScriptStruct_FTableRowBase,
+	&NewStructOps,
+	"MailData",
+	Z_Construct_UScriptStruct_FMailData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMailData_Statics::PropPointers),
+	sizeof(FMailData),
+	alignof(FMailData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FMailData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FMailData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FMailData()
+{
+	if (!Z_Registration_Info_UScriptStruct_MailData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_MailData.InnerSingleton, Z_Construct_UScriptStruct_FMailData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_MailData.InnerSingleton;
+}
+// End ScriptStruct FMailData
 
 // Begin ScriptStruct FMonsterData
 static_assert(std::is_polymorphic<FMonsterData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FMonsterData cannot be polymorphic unless super FTableRowBase is polymorphic");
@@ -684,8 +784,9 @@ UScriptStruct* Z_Construct_UScriptStruct_FSkillData()
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FEventData::StaticStruct, Z_Construct_UScriptStruct_FEventData_Statics::NewStructOps, TEXT("EventData"), &Z_Registration_Info_UScriptStruct_EventData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEventData), 1283806976U) },
+		{ FEventData::StaticStruct, Z_Construct_UScriptStruct_FEventData_Statics::NewStructOps, TEXT("EventData"), &Z_Registration_Info_UScriptStruct_EventData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEventData), 1618028685U) },
 		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 3450657270U) },
+		{ FMailData::StaticStruct, Z_Construct_UScriptStruct_FMailData_Statics::NewStructOps, TEXT("MailData"), &Z_Registration_Info_UScriptStruct_MailData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMailData), 3049839908U) },
 		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 4054298180U) },
 		{ FPlayerData::StaticStruct, Z_Construct_UScriptStruct_FPlayerData_Statics::NewStructOps, TEXT("PlayerData"), &Z_Registration_Info_UScriptStruct_PlayerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerData), 3805507274U) },
 		{ FRewardData::StaticStruct, Z_Construct_UScriptStruct_FRewardData_Statics::NewStructOps, TEXT("RewardData"), &Z_Registration_Info_UScriptStruct_RewardData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRewardData), 1045036157U) },
@@ -693,7 +794,7 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_
 		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 146149087U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_12167644(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_677813496(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);

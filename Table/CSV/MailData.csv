@@ -1,0 +1,4 @@
+tableNo,MailType,MailName,MailDesc
+int,MailType,string,string
+1,System,오픈 베타 기념 보상,오픈 베타 기념 보상
+2,System,친구 추가 보상,친구 추가 보상

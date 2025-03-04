@@ -585,6 +585,21 @@
     <ClInclude Include="..\..\Source\ProjectPT\Data\ClientLocalStorage\OptionStorage.h">
       <Filter>Source\ProjectPT\Data\ClientLocalStorage</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\Data\Event">
+      <UniqueIdentifier>{35ECEFEC-3C5E-3EE0-BE94-C2D0DF3CF60E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\Event\PTEventCondition_ConentsOpen.cpp">
+      <Filter>Source\ProjectPT\Data\Event</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\Event\PTEventCondition_ConentsOpen.h">
+      <Filter>Source\ProjectPT\Data\Event</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\Event\PTEventOpenCondition.cpp">
+      <Filter>Source\ProjectPT\Data\Event</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\Event\PTEventOpenCondition.h">
+      <Filter>Source\ProjectPT\Data\Event</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Data\ServerDatas">
       <UniqueIdentifier>{881B9BA3-DA1B-3864-AFDA-2D2C11C20372}</UniqueIdentifier>
     </Filter>
@@ -598,6 +613,12 @@
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData.h">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Contents.cpp">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Contents.h">
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Event.cpp">
@@ -621,6 +642,12 @@
     <Filter Include="Source\ProjectPT\Extensions">
       <UniqueIdentifier>{41503613-6DDD-3295-9A1F-4C5E9D6A7F42}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Extensions\PTExtensionsFunc.cpp">
+      <Filter>Source\ProjectPT\Extensions</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTExtensionsFunc.h">
+      <Filter>Source\ProjectPT\Extensions</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ProjectPT\Extensions\PTUIMessageExtensions.h">
       <Filter>Source\ProjectPT\Extensions</Filter>
     </ClInclude>

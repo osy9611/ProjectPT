@@ -35,3 +35,14 @@
 ,!Enum,BindType,,
 ,!Enumerator,Character,,캐릭터
 ,!Enumerator,Account,!End,귀속
+,,,,
+,!Enum,MailType,,
+,!Enumerator,ServerMail,,서버 메일
+,!Enumerator,System,!End,시스템
+,,,,
+,!Enum,EventOpenType,,
+,!Enumerator,NONE,,없음
+,!Enumerator,ConentsOpen,!End,콘텐츠 오픈
+,,,,
+,!Enum,ContentsType,,
+,!Enumerator,Battle,!End,전투

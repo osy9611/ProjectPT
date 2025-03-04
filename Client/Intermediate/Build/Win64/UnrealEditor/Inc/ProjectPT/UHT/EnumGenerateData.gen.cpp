@@ -12,8 +12,11 @@ void EmptyLinkFunctionForGeneratedCodeEnumGenerateData() {}
 // Begin Cross Module References
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EBindType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EContentsType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EEventOpenType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EGrade();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMailType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMonsterType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EPTElementType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ERedDotType();
@@ -436,6 +439,164 @@ UEnum* Z_Construct_UEnum_ProjectPT_EBindType()
 }
 // End Enum EBindType
 
+// Begin Enum EMailType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EMailType;
+static UEnum* EMailType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EMailType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EMailType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_EMailType, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("EMailType"));
+	}
+	return Z_Registration_Info_UEnum_EMailType.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<EMailType>()
+{
+	return EMailType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_EMailType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+		{ "ServerMail.Name", "EMailType::ServerMail" },
+		{ "System.Comment", "//\xec\x84\x9c\xeb\xb2\x84 \xeb\xa9\x94\xec\x9d\xbc\n" },
+		{ "System.Name", "EMailType::System" },
+		{ "System.ToolTip", "\xec\x84\x9c\xeb\xb2\x84 \xeb\xa9\x94\xec\x9d\xbc" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EMailType::ServerMail", (int64)EMailType::ServerMail },
+		{ "EMailType::System", (int64)EMailType::System },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_EMailType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"EMailType",
+	"EMailType",
+	Z_Construct_UEnum_ProjectPT_EMailType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EMailType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EMailType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_EMailType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_EMailType()
+{
+	if (!Z_Registration_Info_UEnum_EMailType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EMailType.InnerSingleton, Z_Construct_UEnum_ProjectPT_EMailType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EMailType.InnerSingleton;
+}
+// End Enum EMailType
+
+// Begin Enum EEventOpenType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EEventOpenType;
+static UEnum* EEventOpenType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EEventOpenType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EEventOpenType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_EEventOpenType, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("EEventOpenType"));
+	}
+	return Z_Registration_Info_UEnum_EEventOpenType.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<EEventOpenType>()
+{
+	return EEventOpenType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_EEventOpenType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ConentsOpen.Comment", "//\xec\x97\x86\xec\x9d\x8c\n" },
+		{ "ConentsOpen.Name", "EEventOpenType::ConentsOpen" },
+		{ "ConentsOpen.ToolTip", "\xec\x97\x86\xec\x9d\x8c" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+		{ "NONE.Name", "EEventOpenType::NONE" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EEventOpenType::NONE", (int64)EEventOpenType::NONE },
+		{ "EEventOpenType::ConentsOpen", (int64)EEventOpenType::ConentsOpen },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_EEventOpenType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"EEventOpenType",
+	"EEventOpenType",
+	Z_Construct_UEnum_ProjectPT_EEventOpenType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EEventOpenType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EEventOpenType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_EEventOpenType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_EEventOpenType()
+{
+	if (!Z_Registration_Info_UEnum_EEventOpenType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EEventOpenType.InnerSingleton, Z_Construct_UEnum_ProjectPT_EEventOpenType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EEventOpenType.InnerSingleton;
+}
+// End Enum EEventOpenType
+
+// Begin Enum EContentsType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EContentsType;
+static UEnum* EContentsType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EContentsType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EContentsType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_EContentsType, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("EContentsType"));
+	}
+	return Z_Registration_Info_UEnum_EContentsType.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<EContentsType>()
+{
+	return EContentsType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_EContentsType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "Battle.Name", "EContentsType::Battle" },
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EContentsType::Battle", (int64)EContentsType::Battle },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_EContentsType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"EContentsType",
+	"EContentsType",
+	Z_Construct_UEnum_ProjectPT_EContentsType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EContentsType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EContentsType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_EContentsType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_EContentsType()
+{
+	if (!Z_Registration_Info_UEnum_EContentsType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EContentsType.InnerSingleton, Z_Construct_UEnum_ProjectPT_EContentsType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EContentsType.InnerSingleton;
+}
+// End Enum EContentsType
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics
 {
@@ -447,9 +608,12 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 		{ EItemType_StaticEnum, TEXT("EItemType"), &Z_Registration_Info_UEnum_EItemType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2774345383U) },
 		{ EGrade_StaticEnum, TEXT("EGrade"), &Z_Registration_Info_UEnum_EGrade, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1290959772U) },
 		{ EBindType_StaticEnum, TEXT("EBindType"), &Z_Registration_Info_UEnum_EBindType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1504203016U) },
+		{ EMailType_StaticEnum, TEXT("EMailType"), &Z_Registration_Info_UEnum_EMailType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 925762257U) },
+		{ EEventOpenType_StaticEnum, TEXT("EEventOpenType"), &Z_Registration_Info_UEnum_EEventOpenType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1397047845U) },
+		{ EContentsType_StaticEnum, TEXT("EContentsType"), &Z_Registration_Info_UEnum_EContentsType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2230140088U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_871430126(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_3772964561(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));

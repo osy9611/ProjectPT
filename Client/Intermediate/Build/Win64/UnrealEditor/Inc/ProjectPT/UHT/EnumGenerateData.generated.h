@@ -85,4 +85,27 @@ enum class EBindType : uint8;
 template<> struct TIsUEnumClass<EBindType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<EBindType>();
 
+#define FOREACH_ENUM_EMAILTYPE(op) \
+	op(EMailType::ServerMail) \
+	op(EMailType::System) 
+
+enum class EMailType : uint8;
+template<> struct TIsUEnumClass<EMailType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EMailType>();
+
+#define FOREACH_ENUM_EEVENTOPENTYPE(op) \
+	op(EEventOpenType::NONE) \
+	op(EEventOpenType::ConentsOpen) 
+
+enum class EEventOpenType : uint8;
+template<> struct TIsUEnumClass<EEventOpenType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EEventOpenType>();
+
+#define FOREACH_ENUM_ECONTENTSTYPE(op) \
+	op(EContentsType::Battle) 
+
+enum class EContentsType : uint8;
+template<> struct TIsUEnumClass<EContentsType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EContentsType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
