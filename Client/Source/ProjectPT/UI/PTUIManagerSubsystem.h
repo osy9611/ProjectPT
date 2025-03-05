@@ -33,7 +33,6 @@ public:
 
 	void ShowItemRewardPopup(TArray<FItemReward> RewardDatas);
 
-private:
 	template<typename T = UUserWidget>
 	T* GetWidget(FGameplayTag LayerTag, FString LayerName, FString WidgetPath);
 
@@ -60,7 +59,7 @@ inline T* UPTUIManagerSubsystem::GetWidget(FGameplayTag LayerTag, FString LayerN
 		return nullptr;
 	}
 
-	UUserWidget* PopupWidget = WidgetBase->GetWidget("WBP_SystemLayout");
+	UUserWidget* PopupWidget = WidgetBase->GetWidget(LayerName);
 	if (!PopupWidget)
 	{
 		TSubclassOf<UUserWidget> WidgetClass = StaticLoadClass(UUserWidget::StaticClass(), nullptr, *WidgetPath);

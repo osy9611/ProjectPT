@@ -74,6 +74,10 @@ struct Z_Construct_UScriptStruct_FEventData_Statics
 		{ "Category", "EventData" },
 		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_openPageImgPath_MetaData[] = {
+		{ "Category", "EventData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_rewardItems_MetaData[] = {
 		{ "Category", "EventData" },
 		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
@@ -86,6 +90,7 @@ struct Z_Construct_UScriptStruct_FEventData_Statics
 	static const UECodeGen_Private::FStrPropertyParams NewProp_openValue;
 	static const UECodeGen_Private::FStrPropertyParams NewProp_bannerPath;
 	static const UECodeGen_Private::FStrPropertyParams NewProp_toggleImgPath;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_openPageImgPath;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_rewardItems_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_rewardItems;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -102,6 +107,7 @@ const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FEventDat
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openValue = { "openValue", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, openValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_openValue_MetaData), NewProp_openValue_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_bannerPath = { "bannerPath", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, bannerPath), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bannerPath_MetaData), NewProp_bannerPath_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_toggleImgPath = { "toggleImgPath", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, toggleImgPath), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_toggleImgPath_MetaData), NewProp_toggleImgPath_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openPageImgPath = { "openPageImgPath", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, openPageImgPath), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_openPageImgPath_MetaData), NewProp_openPageImgPath_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_rewardItems_Inner = { "rewardItems", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UScriptStruct_FEventData_Statics::NewProp_rewardItems = { "rewardItems", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FEventData, rewardItems), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_rewardItems_MetaData), NewProp_rewardItems_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FEventData_Statics::PropPointers[] = {
@@ -112,6 +118,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FE
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openValue,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_bannerPath,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_toggleImgPath,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_openPageImgPath,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_rewardItems_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FEventData_Statics::NewProp_rewardItems,
 };
@@ -784,7 +791,7 @@ UScriptStruct* Z_Construct_UScriptStruct_FSkillData()
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics
 {
 	static constexpr FStructRegisterCompiledInInfo ScriptStructInfo[] = {
-		{ FEventData::StaticStruct, Z_Construct_UScriptStruct_FEventData_Statics::NewStructOps, TEXT("EventData"), &Z_Registration_Info_UScriptStruct_EventData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEventData), 1618028685U) },
+		{ FEventData::StaticStruct, Z_Construct_UScriptStruct_FEventData_Statics::NewStructOps, TEXT("EventData"), &Z_Registration_Info_UScriptStruct_EventData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEventData), 1540007122U) },
 		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 3450657270U) },
 		{ FMailData::StaticStruct, Z_Construct_UScriptStruct_FMailData_Statics::NewStructOps, TEXT("MailData"), &Z_Registration_Info_UScriptStruct_MailData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMailData), 3049839908U) },
 		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 4054298180U) },
@@ -794,7 +801,7 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_
 		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 146149087U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_677813496(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_2678525048(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);
