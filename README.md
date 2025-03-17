@@ -1,18 +1,24 @@
 # ProjectPT - Unreal Engine Toy Project
 
-**ProjectPT**는 Unity에서 작업했던 경험을 바탕으로 Unreal Engine을 학습하며 제작한 토이 프로젝트입니다.  
-Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal의 시스템(GAS, Experience 등)을 비교 분석하며 적용한 과정과 결과를 정리했습니다.
+**ProjectPT**는 Unity에서 작업했던 경험을 바탕으로 Unreal Engine 환경으로 재구성하며, 게임 개발 과정에서의 문제 해결과 경험을 정리한 프로젝트입니다.
+Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal Engine5 환경에서 구현 및 개선하면서, 엔진 간의 차이점을 비교하고, 새로운 기술을 익히는 데 집중했습니다.
 
-**프로젝트 주요 내용**
+## 프로젝트 주요 내용 ##
 - Unity의 시스템을 Unreal Engine에 맞게 변경 및 적용
 - Unreal의 주요 시스템 (GAS, Experience, Subsystem 등) 학습 및 활용
 - AI, UI, DataTable 등 다양한 기능 개발
 
-🔗 **관련 문서**
+## 기술 스택 ##
+✔ **Engine:** Unreal Engine 5  
+✔ **Language:** C++, Blueprint  
+✔ **Game Systems:** GAS(Ability System), AI Behavior Tree  
+✔ **Optimization:** Object Pooling
+
+## 관련 문서 ##
 - [ GitHub 위키](https://github.com/osy9611/ProjectPT/wiki)
 - [ Unity 프로젝트 (ProjectT)](https://github.com/osy9611/ProjectT)
 
-**영상 링크**
+## 영상 링크 ##
 - [ 영상 링크 ](https://youtu.be/AaxhsxUV9HY)
 
 ---
