@@ -10,9 +10,7 @@ Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal Engi
 
 ## 기술 스택 ##
 ✔ **Engine:** Unreal Engine 5  
-✔ **Language:** C++, Blueprint  
-✔ **Game Systems:** GAS(Ability System), AI Behavior Tree  
-✔ **Optimization:** Object Pooling
+✔ **Language:** C++, Python ,Blueprint 
 
 ## 관련 문서 ##
 - [ GitHub 위키](https://github.com/osy9611/ProjectPT/wiki)
