@@ -1,4 +1,4 @@
-# ProjectPT - Unreal Engine Toy Project
+# ProjectPT - Unreal Engine Project
 
 **ProjectPT**는 Unity에서 작업했던 경험을 바탕으로 Unreal Engine 환경으로 재구성하며, 게임 개발 과정에서의 문제 해결과 경험을 정리한 프로젝트입니다.
 Unity에서 사용했던 기술(예: TableGenerator, Addressable)과 Unreal Engine5 환경에서 구현 및 개선하면서, 엔진 간의 차이점을 비교하고, 새로운 기술을 익히는 데 집중했습니다.
