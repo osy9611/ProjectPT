@@ -108,4 +108,11 @@ enum class EContentsType : uint8;
 template<> struct TIsUEnumClass<EContentsType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<EContentsType>();
 
+#define FOREACH_ENUM_EINTERACTIONTYPE(op) \
+	op(EInteractionType::Shop) 
+
+enum class EInteractionType : uint8;
+template<> struct TIsUEnumClass<EInteractionType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EInteractionType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

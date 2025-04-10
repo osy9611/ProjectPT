@@ -18,7 +18,6 @@
 			"OptionStorage.gen.cpp.obj",
 			"Poolable_Actor.gen.cpp.obj",
 			"Poolable_NiagaraSystem.gen.cpp.obj",
-			"ProjectPT.init.gen.cpp.obj",
 			"PTAbilitySet.gen.cpp.obj",
 			"PTAbilitySystemComponent.gen.cpp.obj",
 			"PTAbilityTask_Trace.gen.cpp.obj",
@@ -31,7 +30,8 @@
 			"PTAnimNotify_AttackHitCheck.gen.cpp.obj",
 			"PTAssetManager.gen.cpp.obj",
 			"PTAttributeSet.gen.cpp.obj",
-			"PTAudioSubsystem.gen.cpp.obj"
+			"PTAudioSubsystem.gen.cpp.obj",
+			"ProjectPT.init.gen.cpp.obj"
 		],
 		"Module.ProjectPT.2.cpp.obj": [
 			"PTCameraComponent.gen.cpp.obj",

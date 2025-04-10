@@ -522,6 +522,18 @@
     <ClInclude Include="..\..\Source\ProjectPT\Character\PTHeroComponent.h">
       <Filter>Source\ProjectPT\Character</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTNPCCharacter.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTNPCCharacter.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Character\PTNPCComponent.cpp">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Character\PTNPCComponent.h">
+      <Filter>Source\ProjectPT\Character</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Character\PTPawnData.cpp">
       <Filter>Source\ProjectPT\Character</Filter>
     </ClCompile>

@@ -142,6 +142,7 @@ void FTableGeneratorModule::FillMenu(FMenuBuilder& MenuBuilder)
 	MenuBuilder.EndSection();
 }
 
+//외부 Python 스크립트를 실행시키는 로직
 void FTableGeneratorModule::MakeDataTableStruct()
 {
 	UE_LOG(LogTemp, Log, TEXT(" "));

@@ -149,7 +149,7 @@ void UPTHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* Man
 
 		if (APTPlayerState* PlayerState = Pawn->GetPlayerState<APTPlayerState>())
 		{
-			UPTCharacter_AttributeSet* AttributeSet = PlayerState->CreateAttribute<UPTCharacter_AttributeSet>();
+			UPTCharacter_AttributeSet * AttributeSet = PlayerState->CreateAttribute<UPTCharacter_AttributeSet>();
 			AttributeSet->InitAttributeSet("1");
 		}
 
@@ -271,6 +271,11 @@ void UPTHeroComponent::InitializePlayerInput(UInputComponent* PlayerInputCompone
 				}
 
 				//Input Mapping Context를 순회하며, EnhanceInputLocalPlayerSubsystem에 추가한다
+				//Enhanced Input System에서 기본 입력 매핑 리스트 중
+				//자동 활성화 설정이 된 항목만 골라 플레이어 입력 서브시스템에 등록하는 구조
+				//각 Config는 UInputMappingContext로 되어 있고,
+				//AddPlayerMappableConfig 함수를 통해 유저가 키 리맵 가능한 매핑으로 적용된다.
+				//이를 통해 초기 설정과 향후 입력 설정 변경, 저장/불러오기 기능의 기반이 됨
 				for (const FPTMappableConfigPair& Pair : DefaultInputConfigs)
 				{
 					if (Pair.bShouldActivateAutomatically)

@@ -47,6 +47,14 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMailData>();
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMonsterData>();
 
 #define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_86_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FNPCData_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
+	typedef FTableRowBase Super;
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FNPCData>();
+
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_96_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FPlayerData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -54,7 +62,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FMonsterData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPlayerData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_98_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_108_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRewardData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -62,7 +70,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FPlayerData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FRewardData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_108_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_118_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSceneData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;
@@ -70,7 +78,7 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FRewardData>();
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSceneData>();
 
-#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_118_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Data_GenerateTableData_h_128_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSkillData_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct(); \
 	typedef FTableRowBase Super;

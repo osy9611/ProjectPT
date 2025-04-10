@@ -24,7 +24,6 @@ public:
 	void GenerateByte();
 	void SettingConfig();
 
-
 	void LoadConfigData();
 	void SaveConfigData();
 

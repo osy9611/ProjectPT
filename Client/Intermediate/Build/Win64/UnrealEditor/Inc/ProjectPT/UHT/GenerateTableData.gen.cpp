@@ -15,12 +15,14 @@ PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EBindType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EEventOpenType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EGrade();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EInteractionType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EItemType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMailType();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FEventData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FItemData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FMailData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FMonsterData();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FNPCData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FPlayerData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRewardData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSceneData();
@@ -462,6 +464,79 @@ UScriptStruct* Z_Construct_UScriptStruct_FMonsterData()
 }
 // End ScriptStruct FMonsterData
 
+// Begin ScriptStruct FNPCData
+static_assert(std::is_polymorphic<FNPCData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FNPCData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_NPCData;
+class UScriptStruct* FNPCData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_NPCData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_NPCData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FNPCData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("NPCData"));
+	}
+	return Z_Registration_Info_UScriptStruct_NPCData.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FNPCData>()
+{
+	return FNPCData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FNPCData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractionRadius_MetaData[] = {
+		{ "Category", "NPCData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractionType_MetaData[] = {
+		{ "Category", "NPCData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InteractionRadius;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_InteractionType_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_InteractionType;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FNPCData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionRadius = { "InteractionRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNPCData, InteractionRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionRadius_MetaData), NewProp_InteractionRadius_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType = { "InteractionType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNPCData, InteractionType), Z_Construct_UEnum_ProjectPT_EInteractionType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionType_MetaData), NewProp_InteractionType_MetaData) }; // 4099167668
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FNPCData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionRadius,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNPCData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNPCData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	Z_Construct_UScriptStruct_FTableRowBase,
+	&NewStructOps,
+	"NPCData",
+	Z_Construct_UScriptStruct_FNPCData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNPCData_Statics::PropPointers),
+	sizeof(FNPCData),
+	alignof(FNPCData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNPCData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FNPCData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FNPCData()
+{
+	if (!Z_Registration_Info_UScriptStruct_NPCData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_NPCData.InnerSingleton, Z_Construct_UScriptStruct_FNPCData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_NPCData.InnerSingleton;
+}
+// End ScriptStruct FNPCData
+
 // Begin ScriptStruct FPlayerData
 static_assert(std::is_polymorphic<FPlayerData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FPlayerData cannot be polymorphic unless super FTableRowBase is polymorphic");
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_PlayerData;
@@ -795,13 +870,14 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_
 		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 3450657270U) },
 		{ FMailData::StaticStruct, Z_Construct_UScriptStruct_FMailData_Statics::NewStructOps, TEXT("MailData"), &Z_Registration_Info_UScriptStruct_MailData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMailData), 3049839908U) },
 		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 4054298180U) },
+		{ FNPCData::StaticStruct, Z_Construct_UScriptStruct_FNPCData_Statics::NewStructOps, TEXT("NPCData"), &Z_Registration_Info_UScriptStruct_NPCData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FNPCData), 3174432090U) },
 		{ FPlayerData::StaticStruct, Z_Construct_UScriptStruct_FPlayerData_Statics::NewStructOps, TEXT("PlayerData"), &Z_Registration_Info_UScriptStruct_PlayerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerData), 3805507274U) },
 		{ FRewardData::StaticStruct, Z_Construct_UScriptStruct_FRewardData_Statics::NewStructOps, TEXT("RewardData"), &Z_Registration_Info_UScriptStruct_RewardData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRewardData), 1045036157U) },
 		{ FSceneData::StaticStruct, Z_Construct_UScriptStruct_FSceneData_Statics::NewStructOps, TEXT("SceneData"), &Z_Registration_Info_UScriptStruct_SceneData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSceneData), 2898749887U) },
 		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 146149087U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_2678525048(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_3613165745(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);

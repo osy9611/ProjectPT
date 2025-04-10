@@ -123,6 +123,9 @@ void UPTObjectSubsystem::ReturnActor(AActor* Actor)
 {
 }
 
+//GAS에서 여러 형태의 타겟 데이터를 처리하기 위한 로직으로,
+//FGameplayAbilityTargetDataHandle 내부의 다양한 타입을 분기 처리해
+//ActorArray나 SingleHit 타입에 따라 데미지를 적용한다.
 void UPTObjectSubsystem::ApplyActorsDamage(AActor* Owner, const FGameplayAbilityTargetDataHandle& InData, float Damage)
 {
 	check(Owner);
@@ -248,6 +251,9 @@ void UPTObjectSubsystem::ApplyDamage(UPTAbilitySystemComponent* OwnerASC, const 
 		{
 			const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
 
+			//GameplayEffectSpec에 런타임에서 유동적인 값을 주입하기 위한 함수
+			//GameplayEffect에서는 SetByCaller 타입의 Modifier를 정의해두고,
+			//실제 적용 시 Ability 측에서 FGameplayTag와 함께 값을 전달해주는 방식
 			SpecHandle.Data->SetSetByCallerMagnitude(
 				GameplayTags.GE_Event_Damage,
 				Damage

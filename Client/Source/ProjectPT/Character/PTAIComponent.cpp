@@ -132,15 +132,8 @@ void UPTAIComponent::HandleChangeInitState(UGameFrameworkComponentManager* Manag
 
 				UPTAI_AttributeSet* AttributeSet = PTPlayerState->CreateAttribute<UPTAI_AttributeSet>();
 				AttributeSet->InitAttributeSet(FString::FromInt(TableId));
-
-				/*if (const UPTPawnData* PawnData = PawnExtComp->GetPawnData<UPTPawnData>())
-				{
-					PTPlayerState->SetPawnData(PawnData);
-				}*/
 			}
-
 			Pawn->SpawnDefaultController();
-
 		}
 	}
 }
@@ -149,7 +142,6 @@ void UPTAIComponent::HandleChangeInitState(UGameFrameworkComponentManager* Manag
 void UPTAIComponent::CheckDefaultInitialization()
 {
 	//Pawn Extension Feature에 종속되어 있으므로, CheckDefaultInitializationForImplementers를 호출하지 않는다
-
 	const FPTGameplayTags& InitTags = FPTGameplayTags::Get();
 	static const TArray<FGameplayTag> StateChain = { InitTags.InitState_Spawned, InitTags.InitState_DataAvailable, InitTags.InitState_DataInitialized, InitTags.InitState_GameplayReady };
 	ContinueInitStateChain(StateChain);

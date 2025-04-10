@@ -46,3 +46,6 @@
 ,,,,
 ,!Enum,ContentsType,,
 ,!Enumerator,Battle,!End,전투
+,,,,
+,!Enum,InteractionType,,
+,!Enumerator,Shop,!End,상점
