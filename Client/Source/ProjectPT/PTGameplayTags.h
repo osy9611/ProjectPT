@@ -36,6 +36,7 @@ struct FPTGameplayTags
 	FGameplayTag UI_Event_MailUpdate;
 	FGameplayTag UI_Event_EventUpdate;
 	FGameplayTag UI_Event_InvenUpdate;
+	FGameplayTag UI_Event_ActiveInteraction;
 
 	//AI Event
 	FGameplayTag AI_Event_Attack;

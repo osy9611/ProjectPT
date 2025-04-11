@@ -35,6 +35,7 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(UI_Event_MailUpdate, "UI.Event.MailUpdate","");
 	AddTag(UI_Event_EventUpdate, "UI.Event.EventUpdate", "");
 	AddTag(UI_Event_InvenUpdate, "UI.Event.InvenUpdate", "");
+	AddTag(UI_Event_ActiveInteraction, "UI.Event.ActiveInteraction", "");
 
 	//GE Event
 	AddTag(GE_Event_Damage, "GameplayEffect.Event.Damage", "");

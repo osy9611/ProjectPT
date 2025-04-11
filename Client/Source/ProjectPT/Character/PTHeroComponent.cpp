@@ -3,6 +3,8 @@
 
 #include "PTHeroComponent.h"
 #include "PlayerMappableInputConfig.h"
+#include "GameplayEffectExtension.h"
+#include "GameFramework/GameplayMessageSubsystem.h"
 #include <EnhancedInputSubsystems.h>
 #include "PTPawnExtensionComponent.h"
 #include <ProjectPT/PTGameplayTags.h>
@@ -22,6 +24,7 @@
 #include "ProjectPT/AbilitySystem/AttributeSet/PTCharacter_AttributeSet.h"
 #include "ProjectPT/Object/PTObjectSubsystem.h"
 #include "ProjectPT/Animation/PTAnimInstance.h"
+#include "ProjectPT/Extensions/PTUIMessageExtensions.h"
 
 const FName UPTHeroComponent::NAME_ActorFeatureName("Hero");
 
@@ -149,7 +152,7 @@ void UPTHeroComponent::HandleChangeInitState(UGameFrameworkComponentManager* Man
 
 		if (APTPlayerState* PlayerState = Pawn->GetPlayerState<APTPlayerState>())
 		{
-			UPTCharacter_AttributeSet * AttributeSet = PlayerState->CreateAttribute<UPTCharacter_AttributeSet>();
+			UPTCharacter_AttributeSet* AttributeSet = PlayerState->CreateAttribute<UPTCharacter_AttributeSet>();
 			AttributeSet->InitAttributeSet("1");
 		}
 
@@ -389,4 +392,59 @@ void UPTHeroComponent::Input_AbilityInputTagReleased(FGameplayTag InputTag)
 				ASC->AbilityInputTagReleased(InputTag);
 		}
 	}
+}
+
+void UPTHeroComponent::InteractionTest(const AActor* OtherActor)
+{
+	if (!InteractionTarget.IsValid())
+	{
+		InteractionTarget = const_cast<AActor*>(OtherActor);
+		SendInteractionUIMessage(true);
+		return;
+	}
+
+	APawn* Pawn = GetPawn<APawn>();
+	FVector Pos = Pawn->GetActorForwardVector();
+	FVector TargetPos = OtherActor->GetActorLocation();
+
+	Pos.Normalize();
+	TargetPos.Normalize();
+
+	float resultDot = FVector::DotProduct(Pos, TargetPos);
+
+	if (resultDot < 0)
+	{
+		InteractionTarget = nullptr;
+		SendInteractionUIMessage(false);
+		return;
+	}
+
+	float Dist1 = FVector::Distance(InteractionTarget->GetActorLocation(), Pawn->GetActorLocation());
+	float Dist2 = FVector::Distance(OtherActor->GetActorLocation(), Pawn->GetActorLocation());
+
+	if (Dist1 > Dist2)
+	{
+		InteractionTarget = const_cast<AActor*>(OtherActor);
+		SendInteractionUIMessage(true);
+	}
+}
+
+void UPTHeroComponent::InteractionTest2(const AActor* OtherActor)
+{
+	if (!OtherActor || !InteractionTarget.IsValid())
+		return;
+
+	InteractionTarget = nullptr;
+	SendInteractionUIMessage(false);
+}
+
+void UPTHeroComponent::SendInteractionUIMessage(bool IsActive)
+{
+	const FPTGameplayTags& GameplayTags = FPTGameplayTags::Get();
+	UGameplayMessageSubsystem& MessageSubsystem = UGameplayMessageSubsystem::Get(this);
+
+	FUIActiveInteractionMessage UIActiveInteractionMessage;
+	UIActiveInteractionMessage.IsActive = IsActive;
+	MessageSubsystem.BroadcastMessage(GameplayTags.UI_Event_ActiveInteraction, UIActiveInteractionMessage);
+
 }

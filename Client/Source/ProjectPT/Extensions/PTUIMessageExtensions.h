@@ -69,6 +69,15 @@ public:
 };
 
 USTRUCT(BlueprintType)
+struct FUIActiveInteractionMessage
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsActive;
+};
+
+USTRUCT(BlueprintType)
 struct FGetMailsMessage
 {
 	GENERATED_BODY()

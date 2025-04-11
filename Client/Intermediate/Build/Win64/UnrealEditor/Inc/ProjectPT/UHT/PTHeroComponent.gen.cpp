@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodePTHeroComponent() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UGameFrameworkInitStateInterface_NoRegister();
 MODULARGAMEPLAY_API UClass* Z_Construct_UClass_UPawnComponent();
 PROJECTPT_API UClass* Z_Construct_UClass_UPTCameraMode_NoRegister();
@@ -21,9 +22,105 @@ PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FPTMappableConfigPair();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
+// Begin Class UPTHeroComponent Function InteractionTest
+struct Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics
+{
+	struct PTHeroComponent_eventInteractionTest_Parms
+	{
+		const AActor* OtherActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/PTHeroComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OtherActor_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTHeroComponent_eventInteractionTest_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherActor_MetaData), NewProp_OtherActor_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::NewProp_OtherActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTHeroComponent, nullptr, "InteractionTest", nullptr, nullptr, Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::PTHeroComponent_eventInteractionTest_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::PTHeroComponent_eventInteractionTest_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTHeroComponent_InteractionTest()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTHeroComponent_InteractionTest_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTHeroComponent::execInteractionTest)
+{
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InteractionTest(Z_Param_OtherActor);
+	P_NATIVE_END;
+}
+// End Class UPTHeroComponent Function InteractionTest
+
+// Begin Class UPTHeroComponent Function InteractionTest2
+struct Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics
+{
+	struct PTHeroComponent_eventInteractionTest2_Parms
+	{
+		const AActor* OtherActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Character/PTHeroComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OtherActor_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000082, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PTHeroComponent_eventInteractionTest2_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherActor_MetaData), NewProp_OtherActor_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::NewProp_OtherActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPTHeroComponent, nullptr, "InteractionTest2", nullptr, nullptr, Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::PTHeroComponent_eventInteractionTest2_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::PTHeroComponent_eventInteractionTest2_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPTHeroComponent_InteractionTest2()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPTHeroComponent_InteractionTest2_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPTHeroComponent::execInteractionTest2)
+{
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InteractionTest2(Z_Param_OtherActor);
+	P_NATIVE_END;
+}
+// End Class UPTHeroComponent Function InteractionTest2
+
 // Begin Class UPTHeroComponent
 void UPTHeroComponent::StaticRegisterNativesUPTHeroComponent()
 {
+	UClass* Class = UPTHeroComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "InteractionTest", &UPTHeroComponent::execInteractionTest },
+		{ "InteractionTest2", &UPTHeroComponent::execInteractionTest2 },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPTHeroComponent);
 UClass* Z_Construct_UClass_UPTHeroComponent_NoRegister()
@@ -67,6 +164,11 @@ struct Z_Construct_UClass_UPTHeroComponent_Statics
 	static const UECodeGen_Private::FClassPropertyParams NewProp_AbilityCameraMode;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPTHeroComponent_InteractionTest, "InteractionTest" }, // 3298922795
+		{ &Z_Construct_UFunction_UPTHeroComponent_InteractionTest2, "InteractionTest2" }, // 3708503189
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UPTHeroComponent>::IsAbstract,
@@ -101,11 +203,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UPTHeroComponent_Static
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UPTHeroComponent_Statics::PropPointers,
 	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UPTHeroComponent_Statics::PropPointers),
 	UE_ARRAY_COUNT(InterfaceParams),
 	0x00B000A4u,
@@ -131,10 +233,10 @@ UPTHeroComponent::~UPTHeroComponent() {}
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPTHeroComponent, UPTHeroComponent::StaticClass, TEXT("UPTHeroComponent"), &Z_Registration_Info_UClass_UPTHeroComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTHeroComponent), 3621697753U) },
+		{ Z_Construct_UClass_UPTHeroComponent, UPTHeroComponent::StaticClass, TEXT("UPTHeroComponent"), &Z_Registration_Info_UClass_UPTHeroComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPTHeroComponent), 2792318700U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_3239514013(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_1651209809(TEXT("/Script/ProjectPT"),
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

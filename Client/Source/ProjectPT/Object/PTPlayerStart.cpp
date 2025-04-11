@@ -22,7 +22,6 @@ void APTPlayerStart::PostEditChangeProperty(FPropertyChangedEvent& PropertyChang
 		FColor Color = FColor::Red;
 
 		DrawDebugCapsule(GetWorld(), Center, Radius,Radius, GetActorQuat(), FColor::Red, false, -1.0f);
-
 	}
 }
 #endif

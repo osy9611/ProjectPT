@@ -9,10 +9,16 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef PROJECTPT_PTHeroComponent_generated_h
 #error "PTHeroComponent.generated.h already included, missing '#pragma once' in PTHeroComponent.h"
 #endif
 #define PROJECTPT_PTHeroComponent_generated_h
+
+#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execInteractionTest2); \
+	DECLARE_FUNCTION(execInteractionTest);
+
 
 #define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_INCLASS_NO_PURE_DECLS \
 private: \
@@ -40,6 +46,7 @@ public: \
 #define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_INCLASS_NO_PURE_DECLS \
 	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_ENHANCED_CONSTRUCTORS \
 private: \

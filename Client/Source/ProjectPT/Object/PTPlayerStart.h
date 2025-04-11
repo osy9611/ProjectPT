@@ -19,8 +19,6 @@ public:
 #if WITH_EDITOR
 	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
 #endif
-
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|ShowRaidusInEditor")
 	bool ShowRadiusInEditor;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PT|ShowYAxis")

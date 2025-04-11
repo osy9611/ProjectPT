@@ -52,6 +52,14 @@ public:
 	void Input_AbilityInputTagPressed(FGameplayTag InputTag);
 	void Input_AbilityInputTagReleased(FGameplayTag InputTag);
 
+	UFUNCTION(BlueprintCallable)
+	void InteractionTest(const AActor* OtherActor);
+	UFUNCTION(BlueprintCallable)
+	void InteractionTest2(const AActor* OtherActor);
+	void SendInteractionUIMessage(bool IsActive);
+public:
+	TWeakObjectPtr<AActor> InteractionTarget;
+
 	UPROPERTY(EditAnywhere)
 	bool bIsMove = true;
 
@@ -62,4 +70,5 @@ public:
 	TSubclassOf<UPTCameraMode> AbilityCameraMode;
 
 	FGameplayAbilitySpecHandle AbilityCameraModeOwningSpecHandle;
+
 };

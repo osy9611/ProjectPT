@@ -22,6 +22,7 @@ PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FGetMailsMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRecieveRewardMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRemoveInventoryMesssage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSetSlotInventoryMesssage();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIActiveInteractionMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIDamageMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIFireZoomMessage();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FUIHPMessage();
@@ -460,6 +461,73 @@ UScriptStruct* Z_Construct_UScriptStruct_FUIUpdateInventoryMessage()
 	return Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage.InnerSingleton;
 }
 // End ScriptStruct FUIUpdateInventoryMessage
+
+// Begin ScriptStruct FUIActiveInteractionMessage
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage;
+class UScriptStruct* FUIActiveInteractionMessage::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FUIActiveInteractionMessage, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("UIActiveInteractionMessage"));
+	}
+	return Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FUIActiveInteractionMessage>()
+{
+	return FUIActiveInteractionMessage::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsActive_MetaData[] = {
+		{ "Category", "UIActiveInteractionMessage" },
+		{ "ModuleRelativePath", "Extensions/PTUIMessageExtensions.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_IsActive_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsActive;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FUIActiveInteractionMessage>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+void Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::NewProp_IsActive_SetBit(void* Obj)
+{
+	((FUIActiveInteractionMessage*)Obj)->IsActive = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::NewProp_IsActive = { "IsActive", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FUIActiveInteractionMessage), &Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::NewProp_IsActive_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsActive_MetaData), NewProp_IsActive_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::NewProp_IsActive,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	&NewStructOps,
+	"UIActiveInteractionMessage",
+	Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::PropPointers),
+	sizeof(FUIActiveInteractionMessage),
+	alignof(FUIActiveInteractionMessage),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FUIActiveInteractionMessage()
+{
+	if (!Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage.InnerSingleton, Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage.InnerSingleton;
+}
+// End ScriptStruct FUIActiveInteractionMessage
 
 // Begin ScriptStruct FGetMailsMessage
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_GetMailsMessage;
@@ -996,6 +1064,7 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FUIUpdateMailMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateMailMessage_Statics::NewStructOps, TEXT("UIUpdateMailMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateMailMessage), 856343851U) },
 		{ FUIUpdateEventMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateEventMessage_Statics::NewStructOps, TEXT("UIUpdateEventMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateEventMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateEventMessage), 752352978U) },
 		{ FUIUpdateInventoryMessage::StaticStruct, Z_Construct_UScriptStruct_FUIUpdateInventoryMessage_Statics::NewStructOps, TEXT("UIUpdateInventoryMessage"), &Z_Registration_Info_UScriptStruct_UIUpdateInventoryMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIUpdateInventoryMessage), 3520360832U) },
+		{ FUIActiveInteractionMessage::StaticStruct, Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics::NewStructOps, TEXT("UIActiveInteractionMessage"), &Z_Registration_Info_UScriptStruct_UIActiveInteractionMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FUIActiveInteractionMessage), 1068580147U) },
 		{ FGetMailsMessage::StaticStruct, Z_Construct_UScriptStruct_FGetMailsMessage_Statics::NewStructOps, TEXT("GetMailsMessage"), &Z_Registration_Info_UScriptStruct_GetMailsMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FGetMailsMessage), 3987930934U) },
 		{ FDeleteMailMessage::StaticStruct, Z_Construct_UScriptStruct_FDeleteMailMessage_Statics::NewStructOps, TEXT("DeleteMailMessage"), &Z_Registration_Info_UScriptStruct_DeleteMailMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDeleteMailMessage), 4251612553U) },
 		{ FRecieveRewardMessage::StaticStruct, Z_Construct_UScriptStruct_FRecieveRewardMessage_Statics::NewStructOps, TEXT("RecieveRewardMessage"), &Z_Registration_Info_UScriptStruct_RecieveRewardMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRecieveRewardMessage), 2168281164U) },
@@ -1008,7 +1077,7 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageE
 		{ FChangeCategoryMessage::StaticStruct, Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics::NewStructOps, TEXT("ChangeCategoryMessage"), &Z_Registration_Info_UScriptStruct_ChangeCategoryMessage, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FChangeCategoryMessage), 533644021U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_124483719(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_3008056924(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_Statics::ScriptStructInfo),
 	nullptr, 0);

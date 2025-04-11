@@ -64,69 +64,76 @@ template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIUpdateEventMessag
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIUpdateInventoryMessage>();
 
 #define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_74_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FUIActiveInteractionMessage_Statics; \
+	PROJECTPT_API static class UScriptStruct* StaticStruct();
+
+
+template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FUIActiveInteractionMessage>();
+
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_83_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGetMailsMessage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FGetMailsMessage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_81_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_90_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FDeleteMailMessage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FDeleteMailMessage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_89_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_98_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRecieveRewardMessage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FRecieveRewardMessage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_97_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_106_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGetEventMessage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FGetEventMessage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_103_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_112_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGetEventRewardMessage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FGetEventRewardMessage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_112_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_121_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FAddInventoryMesssage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FAddInventoryMesssage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_120_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_129_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FRemoveInventoryMesssage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FRemoveInventoryMesssage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_128_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_137_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FGetInventoryMesssage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FGetInventoryMesssage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_135_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_144_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FSetSlotInventoryMesssage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
 
 template<> PROJECTPT_API UScriptStruct* StaticStruct<struct FSetSlotInventoryMesssage>();
 
-#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_144_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Extensions_PTUIMessageExtensions_h_153_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FChangeCategoryMessage_Statics; \
 	PROJECTPT_API static class UScriptStruct* StaticStruct();
 
