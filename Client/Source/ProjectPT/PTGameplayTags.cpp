@@ -29,6 +29,7 @@ void FPTGameplayTags::AddAllTags(UGameplayTagsManager& Manager)
 	AddTag(InputTag_Move, "InputTag.Move", "");
 	AddTag(InputTag_Look_Mouse, "InputTag.Look.Mouse", "");
 	AddTag(InputTag_Zoom, "InputTag.Zoom", "");
+	AddTag(InputTag_Interaction, "InputTag.Interaction", "");
 
 	//UI Event
 	AddTag(UI_Event_Health, "UI.Event.Health", "");

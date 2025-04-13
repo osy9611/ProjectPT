@@ -301,6 +301,7 @@ void UPTHeroComponent::InitializePlayerInput(UInputComponent* PlayerInputCompone
 					PTIC->BindNativeAction(InputConfig, GameplayTags.InputTag_Move, ETriggerEvent::Triggered, this, &ThisClass::Input_Move, false);
 					PTIC->BindNativeAction(InputConfig, GameplayTags.InputTag_Look_Mouse, ETriggerEvent::Triggered, this, &ThisClass::Input_LookMouse, false);
 					PTIC->BindNativeAction(InputConfig, GameplayTags.InputTag_Zoom, ETriggerEvent::Triggered, this, &ThisClass::Input_Zoom, false);
+					PTIC->BindNativeAction(InputConfig, GameplayTags.InputTag_Interaction, ETriggerEvent::Started, this, &ThisClass::Input_Interaction, false);
 				}
 			}
 		}
@@ -353,6 +354,8 @@ void UPTHeroComponent::Input_LookMouse(const FInputActionValue& InputActionValue
 		double AimInversionValue = -Value.Y;
 		Pawn->AddControllerPitchInput(AimInversionValue);
 	}
+
+	CheckInteraction();
 }
 
 void UPTHeroComponent::Input_Zoom(const FInputActionValue& InputActionValue)
@@ -368,6 +371,12 @@ void UPTHeroComponent::Input_Zoom(const FInputActionValue& InputActionValue)
 	{
 		CameraPomponent->AddFieldOfViewOffset(Value, false);
 	}
+}
+
+void UPTHeroComponent::Input_Interaction(const FInputActionValue& InputActionValue)
+{
+	UE_LOG(PTLog, Log, TEXT("Input_Interaction"));
+
 }
 
 void UPTHeroComponent::Input_AbilityInputTagPressed(FGameplayTag InputTag)
@@ -394,48 +403,53 @@ void UPTHeroComponent::Input_AbilityInputTagReleased(FGameplayTag InputTag)
 	}
 }
 
-void UPTHeroComponent::InteractionTest(const AActor* OtherActor)
+void UPTHeroComponent::InteractionEnter(const AActor* OtherActor)
 {
 	if (!InteractionTarget.IsValid())
 	{
 		InteractionTarget = const_cast<AActor*>(OtherActor);
-		SendInteractionUIMessage(true);
 		return;
 	}
 
 	APawn* Pawn = GetPawn<APawn>();
-	FVector Pos = Pawn->GetActorForwardVector();
-	FVector TargetPos = OtherActor->GetActorLocation();
-
-	Pos.Normalize();
-	TargetPos.Normalize();
-
-	float resultDot = FVector::DotProduct(Pos, TargetPos);
-
-	if (resultDot < 0)
-	{
-		InteractionTarget = nullptr;
-		SendInteractionUIMessage(false);
-		return;
-	}
-
 	float Dist1 = FVector::Distance(InteractionTarget->GetActorLocation(), Pawn->GetActorLocation());
 	float Dist2 = FVector::Distance(OtherActor->GetActorLocation(), Pawn->GetActorLocation());
 
 	if (Dist1 > Dist2)
 	{
 		InteractionTarget = const_cast<AActor*>(OtherActor);
-		SendInteractionUIMessage(true);
 	}
 }
 
-void UPTHeroComponent::InteractionTest2(const AActor* OtherActor)
+void UPTHeroComponent::InteractionLeave(const AActor* OtherActor)
 {
 	if (!OtherActor || !InteractionTarget.IsValid())
 		return;
 
 	InteractionTarget = nullptr;
 	SendInteractionUIMessage(false);
+}
+
+bool UPTHeroComponent::CheckInteraction()
+{
+	if (InteractionTarget.IsValid())
+	{
+		APawn* Pawn = GetPawn<APawn>();
+		FVector Pos = Pawn->GetActorForwardVector();
+		FVector TargetPos = InteractionTarget->GetActorLocation();
+
+		Pos.Normalize();
+		TargetPos.Normalize();
+
+		float resultDot = FVector::DotProduct(Pos, TargetPos);
+		bool ActiveUI = resultDot > 0;
+
+		SendInteractionUIMessage(ActiveUI);
+
+		return resultDot > 0;
+	}
+
+	return false;
 }
 
 void UPTHeroComponent::SendInteractionUIMessage(bool IsActive)

@@ -48,14 +48,16 @@ public:
 	void SetMove(bool IsMove) { bIsMove = IsMove; }
 	void Input_LookMouse(const FInputActionValue& InputActionValue);
 	void Input_Zoom(const FInputActionValue& InputActionValue);
+	void Input_Interaction(const FInputActionValue& InputActionValue);
 
 	void Input_AbilityInputTagPressed(FGameplayTag InputTag);
 	void Input_AbilityInputTagReleased(FGameplayTag InputTag);
 
 	UFUNCTION(BlueprintCallable)
-	void InteractionTest(const AActor* OtherActor);
+	void InteractionEnter(const AActor* OtherActor);
 	UFUNCTION(BlueprintCallable)
-	void InteractionTest2(const AActor* OtherActor);
+	void InteractionLeave(const AActor* OtherActor);
+	bool CheckInteraction();
 	void SendInteractionUIMessage(bool IsActive);
 public:
 	TWeakObjectPtr<AActor> InteractionTarget;

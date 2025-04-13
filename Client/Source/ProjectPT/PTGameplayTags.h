@@ -30,6 +30,7 @@ struct FPTGameplayTags
 	FGameplayTag InputTag_Move;
 	FGameplayTag InputTag_Look_Mouse;
 	FGameplayTag InputTag_Zoom;
+	FGameplayTag InputTag_Interaction;
 
 	//UI Event
 	FGameplayTag UI_Event_Health;
