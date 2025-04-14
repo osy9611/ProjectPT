@@ -56,7 +56,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void RegisterInteractionComponent(UInteractionComponent* Component);
-
 	UFUNCTION()
 	void SendInteractionUIMessage(bool IsActive);
 public:
