@@ -13,6 +13,7 @@ struct FPTMappableConfigPair;
 struct FInputActionValue;
 class UPTCameraMode;
 class UNiagaraSystem;
+class UInteractionComponent;
 /**
  * 카메라, 입력 등 플레이어가 제어하는 시스템의 초기화를 처리하는 컴포넌트
  * Pawn에 종속성을 방지하기 위해서 독립적으로 만듬
@@ -54,13 +55,13 @@ public:
 	void Input_AbilityInputTagReleased(FGameplayTag InputTag);
 
 	UFUNCTION(BlueprintCallable)
-	void InteractionEnter(const AActor* OtherActor);
-	UFUNCTION(BlueprintCallable)
-	void InteractionLeave(const AActor* OtherActor);
-	bool CheckInteraction();
+	void RegisterInteractionComponent(UInteractionComponent* Component);
+
+	UFUNCTION()
 	void SendInteractionUIMessage(bool IsActive);
 public:
-	TWeakObjectPtr<AActor> InteractionTarget;
+	UPROPERTY()
+	UInteractionComponent* InteractionComponent;
 
 	UPROPERTY(EditAnywhere)
 	bool bIsMove = true;

@@ -1022,6 +1022,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\Input\PTMappableConfigPair.h"/>
+    <ClCompile Include="..\..\Source\ProjectPT\Interaction\InteractionComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Interaction\InteractionComponent.h"/>
     <ClCompile Include="..\..\Source\ProjectPT\Object\PTObjectSubsystem.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories_6)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles_6)</ForcedIncludeFiles>

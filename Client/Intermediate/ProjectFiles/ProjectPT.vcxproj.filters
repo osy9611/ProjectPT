@@ -768,6 +768,15 @@
     <ClInclude Include="..\..\Source\ProjectPT\Input\PTMappableConfigPair.h">
       <Filter>Source\ProjectPT\Input</Filter>
     </ClInclude>
+    <Filter Include="Source\ProjectPT\Interaction">
+      <UniqueIdentifier>{4C5EB995-5378-306D-86C2-28D69F7872F8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\Interaction\InteractionComponent.cpp">
+      <Filter>Source\ProjectPT\Interaction</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Interaction\InteractionComponent.h">
+      <Filter>Source\ProjectPT\Interaction</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Object">
       <UniqueIdentifier>{30BD0487-3A27-3130-9F9A-308BAD03637B}</UniqueIdentifier>
     </Filter>

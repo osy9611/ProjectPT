@@ -9,18 +9,18 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
+class UInteractionComponent;
 #ifdef PROJECTPT_PTHeroComponent_generated_h
 #error "PTHeroComponent.generated.h already included, missing '#pragma once' in PTHeroComponent.h"
 #endif
 #define PROJECTPT_PTHeroComponent_generated_h
 
-#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execInteractionLeave); \
-	DECLARE_FUNCTION(execInteractionEnter);
+#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSendInteractionUIMessage); \
+	DECLARE_FUNCTION(execRegisterInteractionComponent);
 
 
-#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_INCLASS_NO_PURE_DECLS \
+#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPTHeroComponent(); \
 	friend struct Z_Construct_UClass_UPTHeroComponent_Statics; \
@@ -30,7 +30,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<UPTHeroComponent*>(this); }
 
 
-#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_ENHANCED_CONSTRUCTORS \
+#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UPTHeroComponent(UPTHeroComponent&&); \
@@ -42,13 +42,13 @@ public: \
 	NO_API virtual ~UPTHeroComponent();
 
 
-#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_20_PROLOG
-#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_GENERATED_BODY \
+#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_21_PROLOG
+#define FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_INCLASS_NO_PURE_DECLS \
-	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_23_ENHANCED_CONSTRUCTORS \
+	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_INCLASS_NO_PURE_DECLS \
+	FID_Client_Source_ProjectPT_Character_PTHeroComponent_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

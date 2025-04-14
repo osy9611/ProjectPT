@@ -25,6 +25,7 @@
 #include "ProjectPT/Object/PTObjectSubsystem.h"
 #include "ProjectPT/Animation/PTAnimInstance.h"
 #include "ProjectPT/Extensions/PTUIMessageExtensions.h"
+#include "ProjectPT/Interaction/InteractionComponent.h"
 
 const FName UPTHeroComponent::NAME_ActorFeatureName("Hero");
 
@@ -354,8 +355,10 @@ void UPTHeroComponent::Input_LookMouse(const FInputActionValue& InputActionValue
 		double AimInversionValue = -Value.Y;
 		Pawn->AddControllerPitchInput(AimInversionValue);
 	}
-
-	CheckInteraction();
+	if (InteractionComponent)
+	{
+		InteractionComponent->CheckInteraction(true);
+	}
 }
 
 void UPTHeroComponent::Input_Zoom(const FInputActionValue& InputActionValue)
@@ -376,6 +379,11 @@ void UPTHeroComponent::Input_Zoom(const FInputActionValue& InputActionValue)
 void UPTHeroComponent::Input_Interaction(const FInputActionValue& InputActionValue)
 {
 	UE_LOG(PTLog, Log, TEXT("Input_Interaction"));
+
+	if (InteractionComponent)
+	{
+		InteractionComponent->ExcecuteInteractionTarget();
+	}
 
 }
 
@@ -403,53 +411,13 @@ void UPTHeroComponent::Input_AbilityInputTagReleased(FGameplayTag InputTag)
 	}
 }
 
-void UPTHeroComponent::InteractionEnter(const AActor* OtherActor)
+void UPTHeroComponent::RegisterInteractionComponent(UInteractionComponent* Component)
 {
-	if (!InteractionTarget.IsValid())
-	{
-		InteractionTarget = const_cast<AActor*>(OtherActor);
-		return;
-	}
-
-	APawn* Pawn = GetPawn<APawn>();
-	float Dist1 = FVector::Distance(InteractionTarget->GetActorLocation(), Pawn->GetActorLocation());
-	float Dist2 = FVector::Distance(OtherActor->GetActorLocation(), Pawn->GetActorLocation());
-
-	if (Dist1 > Dist2)
-	{
-		InteractionTarget = const_cast<AActor*>(OtherActor);
-	}
-}
-
-void UPTHeroComponent::InteractionLeave(const AActor* OtherActor)
-{
-	if (!OtherActor || !InteractionTarget.IsValid())
+	if (!Component)
 		return;
 
-	InteractionTarget = nullptr;
-	SendInteractionUIMessage(false);
-}
-
-bool UPTHeroComponent::CheckInteraction()
-{
-	if (InteractionTarget.IsValid())
-	{
-		APawn* Pawn = GetPawn<APawn>();
-		FVector Pos = Pawn->GetActorForwardVector();
-		FVector TargetPos = InteractionTarget->GetActorLocation();
-
-		Pos.Normalize();
-		TargetPos.Normalize();
-
-		float resultDot = FVector::DotProduct(Pos, TargetPos);
-		bool ActiveUI = resultDot > 0;
-
-		SendInteractionUIMessage(ActiveUI);
-
-		return resultDot > 0;
-	}
-
-	return false;
+	InteractionComponent = Component;
+	InteractionComponent->OnInteractionChangeCallback.AddDynamic(this, &ThisClass::SendInteractionUIMessage);
 }
 
 void UPTHeroComponent::SendInteractionUIMessage(bool IsActive)

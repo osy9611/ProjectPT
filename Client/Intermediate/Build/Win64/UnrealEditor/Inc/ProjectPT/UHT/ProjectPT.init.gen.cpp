@@ -9,6 +9,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeProjectPT_init() {}
 	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_OnChangeRedDot__DelegateSignature();
 	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_OnClickEvent__DelegateSignature();
+	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_OnExecuteInteraction__DelegateSignature();
+	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_OnInteractionChanged__DelegateSignature();
 	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_OnItemCellDropEvent__DelegateSignature();
 	PROJECTPT_API UFunction* Z_Construct_UDelegateFunction_ProjectPT_TraceResultDelegate__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_ProjectPT;
@@ -19,6 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeProjectPT_init() {}
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_OnChangeRedDot__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_OnClickEvent__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_OnExecuteInteraction__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_OnInteractionChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_OnItemCellDropEvent__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_ProjectPT_TraceResultDelegate__DelegateSignature,
 			};
@@ -27,13 +31,13 @@ void EmptyLinkFunctionForGeneratedCodeProjectPT_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x0F088F1F,
-				0x9E30CE2C,
+				0x58818083,
+				0x0552E9D4,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ProjectPT.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_ProjectPT.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProjectPT(Z_Construct_UPackage__Script_ProjectPT, TEXT("/Script/ProjectPT"), Z_Registration_Info_UPackage__Script_ProjectPT, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x0F088F1F, 0x9E30CE2C));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ProjectPT(Z_Construct_UPackage__Script_ProjectPT, TEXT("/Script/ProjectPT"), Z_Registration_Info_UPackage__Script_ProjectPT, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x58818083, 0x0552E9D4));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
