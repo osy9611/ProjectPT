@@ -378,13 +378,10 @@ void UPTHeroComponent::Input_Zoom(const FInputActionValue& InputActionValue)
 
 void UPTHeroComponent::Input_Interaction(const FInputActionValue& InputActionValue)
 {
-	UE_LOG(PTLog, Log, TEXT("Input_Interaction"));
-
 	if (InteractionComponent)
 	{
 		InteractionComponent->ExcecuteInteractionTarget();
 	}
-
 }
 
 void UPTHeroComponent::Input_AbilityInputTagPressed(FGameplayTag InputTag)

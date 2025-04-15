@@ -777,6 +777,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\Interaction\InteractionComponent.h">
       <Filter>Source\ProjectPT\Interaction</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Interaction\PTInteractionInterface.cpp">
+      <Filter>Source\ProjectPT\Interaction</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Interaction\PTInteractionInterface.h">
+      <Filter>Source\ProjectPT\Interaction</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\Object">
       <UniqueIdentifier>{30BD0487-3A27-3130-9F9A-308BAD03637B}</UniqueIdentifier>
     </Filter>
