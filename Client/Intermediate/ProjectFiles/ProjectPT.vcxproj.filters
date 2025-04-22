@@ -897,6 +897,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\PTActivatableWidget.h">
       <Filter>Source\ProjectPT\UI</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\PTUIContainer.cpp">
+      <Filter>Source\ProjectPT\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\PTUIContainer.h">
+      <Filter>Source\ProjectPT\UI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\UI\PTUIManagerSubsystem.cpp">
       <Filter>Source\ProjectPT\UI</Filter>
     </ClCompile>
@@ -1127,6 +1133,33 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\ProjectPT\UI\Mail\SPTMailCell_Slate.h">
       <Filter>Source\ProjectPT\UI\Mail</Filter>
+    </ClInclude>
+    <Filter Include="Source\ProjectPT\UI\Shop">
+      <UniqueIdentifier>{1F51D615-9A3D-32A3-87F6-1D4D2D8592B5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Shop\PTItemCell_Shop.cpp">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTItemCell_Shop.h">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Shop\PTShopCellGroup.cpp">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTShopCellGroup.h">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Shop\PTShopItemData.cpp">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTShopItemData.h">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget.cpp">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget.h">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
     </ClInclude>
     <Filter Include="Source\ProjectPT\UI\System">
       <UniqueIdentifier>{A197357C-A558-3CBB-BC54-CA42FBE122CB}</UniqueIdentifier>
