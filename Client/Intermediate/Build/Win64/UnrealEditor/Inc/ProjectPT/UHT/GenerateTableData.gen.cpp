@@ -26,6 +26,8 @@ PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FNPCData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FPlayerData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FRewardData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSceneData();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FShopData();
+PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FShopItemData();
 PROJECTPT_API UScriptStruct* Z_Construct_UScriptStruct_FSkillData();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
@@ -494,10 +496,15 @@ struct Z_Construct_UScriptStruct_FNPCData_Statics
 		{ "Category", "NPCData" },
 		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractionValue_MetaData[] = {
+		{ "Category", "NPCData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_InteractionRadius;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_InteractionType_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_InteractionType;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_InteractionValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static void* NewStructOps()
 	{
@@ -508,10 +515,12 @@ struct Z_Construct_UScriptStruct_FNPCData_Statics
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionRadius = { "InteractionRadius", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNPCData, InteractionRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionRadius_MetaData), NewProp_InteractionRadius_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType = { "InteractionType", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNPCData, InteractionType), Z_Construct_UEnum_ProjectPT_EInteractionType, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionType_MetaData), NewProp_InteractionType_MetaData) }; // 4099167668
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionValue = { "InteractionValue", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FNPCData, InteractionValue), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionValue_MetaData), NewProp_InteractionValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FNPCData_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionType,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FNPCData_Statics::NewProp_InteractionValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FNPCData_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FNPCData_Statics::StructParams = {
@@ -754,6 +763,146 @@ UScriptStruct* Z_Construct_UScriptStruct_FSceneData()
 }
 // End ScriptStruct FSceneData
 
+// Begin ScriptStruct FShopData
+static_assert(std::is_polymorphic<FShopData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FShopData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ShopData;
+class UScriptStruct* FShopData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ShopData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ShopData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FShopData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("ShopData"));
+	}
+	return Z_Registration_Info_UScriptStruct_ShopData.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FShopData>()
+{
+	return FShopData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FShopData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_shopItemGroupID_MetaData[] = {
+		{ "Category", "ShopData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_shopItemGroupID;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FShopData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FShopData_Statics::NewProp_shopItemGroupID = { "shopItemGroupID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FShopData, shopItemGroupID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_shopItemGroupID_MetaData), NewProp_shopItemGroupID_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FShopData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FShopData_Statics::NewProp_shopItemGroupID,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FShopData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FShopData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	Z_Construct_UScriptStruct_FTableRowBase,
+	&NewStructOps,
+	"ShopData",
+	Z_Construct_UScriptStruct_FShopData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FShopData_Statics::PropPointers),
+	sizeof(FShopData),
+	alignof(FShopData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FShopData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FShopData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FShopData()
+{
+	if (!Z_Registration_Info_UScriptStruct_ShopData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ShopData.InnerSingleton, Z_Construct_UScriptStruct_FShopData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_ShopData.InnerSingleton;
+}
+// End ScriptStruct FShopData
+
+// Begin ScriptStruct FShopItemData
+static_assert(std::is_polymorphic<FShopItemData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FShopItemData cannot be polymorphic unless super FTableRowBase is polymorphic");
+static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ShopItemData;
+class UScriptStruct* FShopItemData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ShopItemData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ShopItemData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FShopItemData, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("ShopItemData"));
+	}
+	return Z_Registration_Info_UScriptStruct_ShopItemData.OuterSingleton;
+}
+template<> PROJECTPT_API UScriptStruct* StaticStruct<FShopItemData>()
+{
+	return FShopItemData::StaticStruct();
+}
+struct Z_Construct_UScriptStruct_FShopItemData_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_shopItemGroupID_MetaData[] = {
+		{ "Category", "ShopItemData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ItemID_MetaData[] = {
+		{ "Category", "ShopItemData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Currency_MetaData[] = {
+		{ "Category", "ShopItemData" },
+		{ "ModuleRelativePath", "Data/GenerateTableData.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FIntPropertyParams NewProp_shopItemGroupID;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_ItemID;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_Currency;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static void* NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FShopItemData>();
+	}
+	static const UECodeGen_Private::FStructParams StructParams;
+};
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FShopItemData_Statics::NewProp_shopItemGroupID = { "shopItemGroupID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FShopItemData, shopItemGroupID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_shopItemGroupID_MetaData), NewProp_shopItemGroupID_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FShopItemData_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FShopItemData, ItemID), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ItemID_MetaData), NewProp_ItemID_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FShopItemData_Statics::NewProp_Currency = { "Currency", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FShopItemData, Currency), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Currency_MetaData), NewProp_Currency_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FShopItemData_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FShopItemData_Statics::NewProp_shopItemGroupID,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FShopItemData_Statics::NewProp_ItemID,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FShopItemData_Statics::NewProp_Currency,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FShopItemData_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FShopItemData_Statics::StructParams = {
+	(UObject* (*)())Z_Construct_UPackage__Script_ProjectPT,
+	Z_Construct_UScriptStruct_FTableRowBase,
+	&NewStructOps,
+	"ShopItemData",
+	Z_Construct_UScriptStruct_FShopItemData_Statics::PropPointers,
+	UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FShopItemData_Statics::PropPointers),
+	sizeof(FShopItemData),
+	alignof(FShopItemData),
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	EStructFlags(0x00000001),
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FShopItemData_Statics::Struct_MetaDataParams), Z_Construct_UScriptStruct_FShopItemData_Statics::Struct_MetaDataParams)
+};
+UScriptStruct* Z_Construct_UScriptStruct_FShopItemData()
+{
+	if (!Z_Registration_Info_UScriptStruct_ShopItemData.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ShopItemData.InnerSingleton, Z_Construct_UScriptStruct_FShopItemData_Statics::StructParams);
+	}
+	return Z_Registration_Info_UScriptStruct_ShopItemData.InnerSingleton;
+}
+// End ScriptStruct FShopItemData
+
 // Begin ScriptStruct FSkillData
 static_assert(std::is_polymorphic<FSkillData>() == std::is_polymorphic<FTableRowBase>(), "USTRUCT FSkillData cannot be polymorphic unless super FTableRowBase is polymorphic");
 static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_SkillData;
@@ -870,14 +1019,16 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_
 		{ FItemData::StaticStruct, Z_Construct_UScriptStruct_FItemData_Statics::NewStructOps, TEXT("ItemData"), &Z_Registration_Info_UScriptStruct_ItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FItemData), 3450657270U) },
 		{ FMailData::StaticStruct, Z_Construct_UScriptStruct_FMailData_Statics::NewStructOps, TEXT("MailData"), &Z_Registration_Info_UScriptStruct_MailData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMailData), 3049839908U) },
 		{ FMonsterData::StaticStruct, Z_Construct_UScriptStruct_FMonsterData_Statics::NewStructOps, TEXT("MonsterData"), &Z_Registration_Info_UScriptStruct_MonsterData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMonsterData), 4054298180U) },
-		{ FNPCData::StaticStruct, Z_Construct_UScriptStruct_FNPCData_Statics::NewStructOps, TEXT("NPCData"), &Z_Registration_Info_UScriptStruct_NPCData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FNPCData), 3174432090U) },
+		{ FNPCData::StaticStruct, Z_Construct_UScriptStruct_FNPCData_Statics::NewStructOps, TEXT("NPCData"), &Z_Registration_Info_UScriptStruct_NPCData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FNPCData), 3995810216U) },
 		{ FPlayerData::StaticStruct, Z_Construct_UScriptStruct_FPlayerData_Statics::NewStructOps, TEXT("PlayerData"), &Z_Registration_Info_UScriptStruct_PlayerData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FPlayerData), 3805507274U) },
 		{ FRewardData::StaticStruct, Z_Construct_UScriptStruct_FRewardData_Statics::NewStructOps, TEXT("RewardData"), &Z_Registration_Info_UScriptStruct_RewardData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FRewardData), 1045036157U) },
 		{ FSceneData::StaticStruct, Z_Construct_UScriptStruct_FSceneData_Statics::NewStructOps, TEXT("SceneData"), &Z_Registration_Info_UScriptStruct_SceneData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSceneData), 2898749887U) },
+		{ FShopData::StaticStruct, Z_Construct_UScriptStruct_FShopData_Statics::NewStructOps, TEXT("ShopData"), &Z_Registration_Info_UScriptStruct_ShopData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FShopData), 1628903493U) },
+		{ FShopItemData::StaticStruct, Z_Construct_UScriptStruct_FShopItemData_Statics::NewStructOps, TEXT("ShopItemData"), &Z_Registration_Info_UScriptStruct_ShopItemData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FShopItemData), 1471051617U) },
 		{ FSkillData::StaticStruct, Z_Construct_UScriptStruct_FSkillData_Statics::NewStructOps, TEXT("SkillData"), &Z_Registration_Info_UScriptStruct_SkillData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSkillData), 146149087U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_3613165745(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_204106806(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_GenerateTableData_h_Statics::ScriptStructInfo),
 	nullptr, 0);

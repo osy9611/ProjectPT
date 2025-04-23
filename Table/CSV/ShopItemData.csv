@@ -1,0 +1,5 @@
+tableNo,shopItemGroupID,ItemID,Currency
+int,int,int,int
+1001,1,1,100
+1002,1,2,200
+1003,1,3,300
