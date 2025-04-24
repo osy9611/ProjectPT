@@ -33,7 +33,7 @@ public:
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	virtual void Deinitialize() override;
 
-	void SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName);
+	void SpawnActor_GameplayTag(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName, TFunction<void(APawn*, APTPlayerStart*)> OnSpawnCallback);
 	APawn* SpawnActor(UClass* PawnClass, const FTransform& SpawnTransform, APawn* Instigator);
 	void RegisterActor(AActor* Actor);
 	void ReturnActor(AActor* Actor);

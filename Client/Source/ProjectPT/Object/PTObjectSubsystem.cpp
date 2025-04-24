@@ -22,6 +22,7 @@
 #include "ProjectPT/Character/PTAIComponent.h"
 #include "ProjectPT/PTGameplayTags.h"
 #include "ProjectPT/Extensions/PTUIMessageExtensions.h"
+#include "ProjectPT/Character/PTNPCComponent.h"
 
 UPTObjectSubsystem::UPTObjectSubsystem()
 {
@@ -44,7 +45,7 @@ void UPTObjectSubsystem::Deinitialize()
 	Super::Deinitialize();
 }
 
-void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName)
+void UPTObjectSubsystem::SpawnActor_GameplayTag(const UPTPawnData* PawnData, FGameplayTag GameplayTag, FString DataPawnName, TFunction<void(APawn*, APTPlayerStart*)> OnSpawnCallback)
 {
 	if (!PawnData)
 	{
@@ -60,8 +61,19 @@ void UPTObjectSubsystem::SpawnAIActor(const UPTPawnData* PawnData, FGameplayTag 
 		{
 			APawn* Pawn = SpawnActor(PawnData->PawnClass, PTPlayerStart->GetActorTransform(), nullptr);
 
+			if (Pawn && OnSpawnCallback)
+			{
+				OnSpawnCallback(Pawn, PTPlayerStart);
+			}
+
+
 			if (Pawn)
 			{
+				if (UPTNPCComponent* NPCComponent = UPTNPCComponent::FindNPCComponent(Pawn))
+				{
+					NPCComponent->SetNPCID(PTPlayerStart->TableId);
+				}
+
 				if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(Pawn))
 				{
 					AIComponent->RegisterPTPlayerStart(PTPlayerStart);
