@@ -49,3 +49,8 @@
 ,,,,
 ,!Enum,InteractionType,,
 ,!Enumerator,Shop,!End,상점
+,,,,
+,!Enum,ShopType,,
+,!Enumerator,Buy,,구매 샵
+,!Enumerator,Sell,,판매 샵
+,!Enumerator,Fix,!End,수리 샵

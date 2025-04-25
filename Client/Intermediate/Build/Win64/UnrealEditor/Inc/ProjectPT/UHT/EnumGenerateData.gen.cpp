@@ -21,6 +21,7 @@ PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMailType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EMonsterType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EPTElementType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ERedDotType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EShopType();
 UPackage* Z_Construct_UPackage__Script_ProjectPT();
 // End Cross Module References
 
@@ -648,6 +649,64 @@ UEnum* Z_Construct_UEnum_ProjectPT_EInteractionType()
 }
 // End Enum EInteractionType
 
+// Begin Enum EShopType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_EShopType;
+static UEnum* EShopType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_EShopType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_EShopType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_EShopType, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("EShopType"));
+	}
+	return Z_Registration_Info_UEnum_EShopType.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<EShopType>()
+{
+	return EShopType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_EShopType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Buy.Name", "EShopType::Buy" },
+		{ "Fix.Comment", "//\xed\x8c\x90\xeb\xa7\xa4 \xec\x83\xb5\n" },
+		{ "Fix.Name", "EShopType::Fix" },
+		{ "Fix.ToolTip", "\xed\x8c\x90\xeb\xa7\xa4 \xec\x83\xb5" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+		{ "Sell.Comment", "//\xea\xb5\xac\xeb\xa7\xa4 \xec\x83\xb5\n" },
+		{ "Sell.Name", "EShopType::Sell" },
+		{ "Sell.ToolTip", "\xea\xb5\xac\xeb\xa7\xa4 \xec\x83\xb5" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "EShopType::Buy", (int64)EShopType::Buy },
+		{ "EShopType::Sell", (int64)EShopType::Sell },
+		{ "EShopType::Fix", (int64)EShopType::Fix },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_EShopType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"EShopType",
+	"EShopType",
+	Z_Construct_UEnum_ProjectPT_EShopType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EShopType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_EShopType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_EShopType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_EShopType()
+{
+	if (!Z_Registration_Info_UEnum_EShopType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_EShopType.InnerSingleton, Z_Construct_UEnum_ProjectPT_EShopType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_EShopType.InnerSingleton;
+}
+// End Enum EShopType
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics
 {
@@ -663,9 +722,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 		{ EEventOpenType_StaticEnum, TEXT("EEventOpenType"), &Z_Registration_Info_UEnum_EEventOpenType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1397047845U) },
 		{ EContentsType_StaticEnum, TEXT("EContentsType"), &Z_Registration_Info_UEnum_EContentsType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2230140088U) },
 		{ EInteractionType_StaticEnum, TEXT("EInteractionType"), &Z_Registration_Info_UEnum_EInteractionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4099167668U) },
+		{ EShopType_StaticEnum, TEXT("EShopType"), &Z_Registration_Info_UEnum_EShopType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2903499760U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_2786890954(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_262297137(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));

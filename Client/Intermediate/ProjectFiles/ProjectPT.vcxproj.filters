@@ -1173,6 +1173,24 @@
     <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget.h">
       <Filter>Source\ProjectPT\UI\Shop</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget_Base.cpp">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget_Base.h">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget_Buy.cpp">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget_Buy.h">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget_Sell.cpp">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\UI\Shop\PTShopWidget_Sell.h">
+      <Filter>Source\ProjectPT\UI\Shop</Filter>
+    </ClInclude>
     <Filter Include="Source\ProjectPT\UI\System">
       <UniqueIdentifier>{A197357C-A558-3CBB-BC54-CA42FBE122CB}</UniqueIdentifier>
     </Filter>

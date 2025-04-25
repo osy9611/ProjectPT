@@ -115,4 +115,13 @@ enum class EInteractionType : uint8;
 template<> struct TIsUEnumClass<EInteractionType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<EInteractionType>();
 
+#define FOREACH_ENUM_ESHOPTYPE(op) \
+	op(EShopType::Buy) \
+	op(EShopType::Sell) \
+	op(EShopType::Fix) 
+
+enum class EShopType : uint8;
+template<> struct TIsUEnumClass<EShopType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<EShopType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
