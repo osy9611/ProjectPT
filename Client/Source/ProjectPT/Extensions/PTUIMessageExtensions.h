@@ -155,3 +155,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EItemType Type;
 };
+
+
+USTRUCT(BlueprintType)
+struct FUpdateCurrencyMessage
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ECurrencyType Type;
+	int32 Amount;
+};

@@ -633,6 +633,12 @@
     <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Contents.h">
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Currency.cpp">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Currency.h">
+      <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ProjectPT\Data\ServerDatas\PTUserData_Event.cpp">
       <Filter>Source\ProjectPT\Data\ServerDatas</Filter>
     </ClCompile>

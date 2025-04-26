@@ -63,6 +63,7 @@ struct FPTGameplayTags
 	FGameplayTag Request_RemoveItem;
 	FGameplayTag Request_GetInvenData;
 	FGameplayTag Request_ChangeCategory;
+	FGameplayTag Request_UpdateCurrency;
 private:
 	static FPTGameplayTags GameplayTags;
 };

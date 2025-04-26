@@ -124,4 +124,12 @@ enum class EShopType : uint8;
 template<> struct TIsUEnumClass<EShopType> { enum { Value = true }; };
 template<> PROJECTPT_API UEnum* StaticEnum<EShopType>();
 
+#define FOREACH_ENUM_ECURRENCYTYPE(op) \
+	op(ECurrencyType::Gold) \
+	op(ECurrencyType::Diamond) 
+
+enum class ECurrencyType : uint8;
+template<> struct TIsUEnumClass<ECurrencyType> { enum { Value = true }; };
+template<> PROJECTPT_API UEnum* StaticEnum<ECurrencyType>();
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

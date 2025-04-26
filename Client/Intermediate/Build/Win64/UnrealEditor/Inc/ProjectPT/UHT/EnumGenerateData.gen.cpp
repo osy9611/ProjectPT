@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeEnumGenerateData() {}
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EBindType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECollisionType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EContentsType();
+PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_ECurrencyType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EEventOpenType();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EGrade();
 PROJECTPT_API UEnum* Z_Construct_UEnum_ProjectPT_EInteractionType();
@@ -707,6 +708,60 @@ UEnum* Z_Construct_UEnum_ProjectPT_EShopType()
 }
 // End Enum EShopType
 
+// Begin Enum ECurrencyType
+static FEnumRegistrationInfo Z_Registration_Info_UEnum_ECurrencyType;
+static UEnum* ECurrencyType_StaticEnum()
+{
+	if (!Z_Registration_Info_UEnum_ECurrencyType.OuterSingleton)
+	{
+		Z_Registration_Info_UEnum_ECurrencyType.OuterSingleton = GetStaticEnum(Z_Construct_UEnum_ProjectPT_ECurrencyType, (UObject*)Z_Construct_UPackage__Script_ProjectPT(), TEXT("ECurrencyType"));
+	}
+	return Z_Registration_Info_UEnum_ECurrencyType.OuterSingleton;
+}
+template<> PROJECTPT_API UEnum* StaticEnum<ECurrencyType>()
+{
+	return ECurrencyType_StaticEnum();
+}
+struct Z_Construct_UEnum_ProjectPT_ECurrencyType_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "Diamond.Comment", "//\xea\xb3\xa8\xeb\x93\x9c\n" },
+		{ "Diamond.Name", "ECurrencyType::Diamond" },
+		{ "Diamond.ToolTip", "\xea\xb3\xa8\xeb\x93\x9c" },
+		{ "Gold.Name", "ECurrencyType::Gold" },
+		{ "ModuleRelativePath", "Data/EnumGenerateData.h" },
+	};
+#endif // WITH_METADATA
+	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
+		{ "ECurrencyType::Gold", (int64)ECurrencyType::Gold },
+		{ "ECurrencyType::Diamond", (int64)ECurrencyType::Diamond },
+	};
+	static const UECodeGen_Private::FEnumParams EnumParams;
+};
+const UECodeGen_Private::FEnumParams Z_Construct_UEnum_ProjectPT_ECurrencyType_Statics::EnumParams = {
+	(UObject*(*)())Z_Construct_UPackage__Script_ProjectPT,
+	nullptr,
+	"ECurrencyType",
+	"ECurrencyType",
+	Z_Construct_UEnum_ProjectPT_ECurrencyType_Statics::Enumerators,
+	RF_Public|RF_Transient|RF_MarkAsNative,
+	UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_ECurrencyType_Statics::Enumerators),
+	EEnumFlags::None,
+	(uint8)UEnum::ECppForm::EnumClass,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UEnum_ProjectPT_ECurrencyType_Statics::Enum_MetaDataParams), Z_Construct_UEnum_ProjectPT_ECurrencyType_Statics::Enum_MetaDataParams)
+};
+UEnum* Z_Construct_UEnum_ProjectPT_ECurrencyType()
+{
+	if (!Z_Registration_Info_UEnum_ECurrencyType.InnerSingleton)
+	{
+		UECodeGen_Private::ConstructUEnum(Z_Registration_Info_UEnum_ECurrencyType.InnerSingleton, Z_Construct_UEnum_ProjectPT_ECurrencyType_Statics::EnumParams);
+	}
+	return Z_Registration_Info_UEnum_ECurrencyType.InnerSingleton;
+}
+// End Enum ECurrencyType
+
 // Begin Registration
 struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics
 {
@@ -723,9 +778,10 @@ struct Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h
 		{ EContentsType_StaticEnum, TEXT("EContentsType"), &Z_Registration_Info_UEnum_EContentsType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2230140088U) },
 		{ EInteractionType_StaticEnum, TEXT("EInteractionType"), &Z_Registration_Info_UEnum_EInteractionType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4099167668U) },
 		{ EShopType_StaticEnum, TEXT("EShopType"), &Z_Registration_Info_UEnum_EShopType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2903499760U) },
+		{ ECurrencyType_StaticEnum, TEXT("ECurrencyType"), &Z_Registration_Info_UEnum_ECurrencyType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3924764404U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_262297137(TEXT("/Script/ProjectPT"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_3104640924(TEXT("/Script/ProjectPT"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Client_Source_ProjectPT_Data_EnumGenerateData_h_Statics::EnumInfo));
