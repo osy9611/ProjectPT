@@ -195,17 +195,6 @@ const UPTPawnData* APTGameModeBase::GetPawnDataForController(const AController* 
 					return Experience->DefaultPawnData;
 				}
 			}
-			else
-			{
-				if (UPTObjectSubsystem* ObjectSubsystem = GetWorld()->GetSubsystem<UPTObjectSubsystem>())
-				{
-					return ObjectSubsystem->GetPawnData();
-				}
-				/*if (Experience->AIPawnData)
-				{
-					return Experience->AIPawnData; 
-				}*/
-			}
 		}
 	}
 

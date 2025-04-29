@@ -38,13 +38,18 @@ void APTPlayerState::PostInitializeComponents()
 
 void APTPlayerState::OnExperienceLoaded(const UPTExperienceDefinition* CurrentExperience)
 {
+	//내 플레의 경우에는 해당 방식을 따라야하지만 AI나 NPC 같은 경우에는 직접 PawnData를 등록하는 방식으로 진행해야함
 	if (APTGameModeBase* GameModeBase = GetWorld()->GetAuthGameMode<APTGameModeBase>())
 	{
-		//GetPawnDataForController에서 아직 PawndData를 설정하지 않았으므로, ExperienceManagerComponent의 DefautlPawnData로 설정한다.
-		const UPTPawnData* NewPawnData = GameModeBase->GetPawnDataForController(GetOwningController());
-		check(NewPawnData);
+		AController* OwningController = GetOwningController();
+		if (OwningController && OwningController->IsPlayerController())
+		{
+			//GetPawnDataForController에서 아직 PawndData를 설정하지 않았으므로, ExperienceManagerComponent의 DefautlPawnData로 설정한다.
+			const UPTPawnData* NewPawnData = GameModeBase->GetPawnDataForController(GetOwningController());
+			check(NewPawnData);
 
-		SetPawnData(NewPawnData);
+			SetPawnData(NewPawnData);
+		}
 	}
 }
 

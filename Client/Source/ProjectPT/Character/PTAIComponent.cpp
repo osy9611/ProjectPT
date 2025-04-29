@@ -3,6 +3,7 @@
 
 #include "PTAIComponent.h"
 #include "PTAICharacter.h"
+#include "ProjectPT/Player/PTPlayerState.h"
 #include "ProjectPT/PTLogChannels.h"
 #include "ProjectPT/AbilitySystem/PTAbilitySystemComponent.h"
 #include "ProjectPT/AbilitySystem/AttributeSet/PTAI_AttributeSet.h"
@@ -132,6 +133,10 @@ void UPTAIComponent::HandleChangeInitState(UGameFrameworkComponentManager* Manag
 
 				UPTAI_AttributeSet* AttributeSet = PTPlayerState->CreateAttribute<UPTAI_AttributeSet>();
 				AttributeSet->InitAttributeSet(FString::FromInt(TableId));
+
+				const UPTPawnData* PawnData = PawnExtComp->GetPawnData<UPTPawnData>();
+				PTPlayerState->SetPawnData(PawnData);
+				
 			}
 			Pawn->SpawnDefaultController();
 		}

@@ -6,9 +6,9 @@
 #include "Components/PawnComponent.h"
 #include "Components/GameFrameworkInitStateInterface.h"
 #include "ProjectPT/Player/PTPlayerState.h"
+#include "ProjectPT/Character/PTPawnData.h"
 #include "PTPawnExtensionComponent.generated.h"
 
-class UPTPawnData;
 class UPTAbilitySystemComponent;
 class UPTAnimInstance;
 /**

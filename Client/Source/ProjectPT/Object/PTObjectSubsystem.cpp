@@ -55,7 +55,6 @@ void UPTObjectSubsystem::SpawnActor_GameplayTag(const UPTPawnData* PawnData, FGa
 
 	if (PawnData->PawnClass)
 	{
-		AIPawnData = const_cast<UPTPawnData*>(PawnData);
 		TArray<APTPlayerStart*> PlayerStartList = GetPlayerStartList(GameplayTag);
 		for (APTPlayerStart* PTPlayerStart : PlayerStartList)
 		{
@@ -64,27 +63,6 @@ void UPTObjectSubsystem::SpawnActor_GameplayTag(const UPTPawnData* PawnData, FGa
 			if (Pawn && OnSpawnCallback)
 			{
 				OnSpawnCallback(Pawn, PTPlayerStart);
-			}
-
-
-			if (Pawn)
-			{
-				if (UPTNPCComponent* NPCComponent = UPTNPCComponent::FindNPCComponent(Pawn))
-				{
-					NPCComponent->SetNPCID(PTPlayerStart->TableId);
-				}
-
-				if (UPTAIComponent* AIComponent = UPTAIComponent::FindAIComponent(Pawn))
-				{
-					AIComponent->RegisterPTPlayerStart(PTPlayerStart);
-					AIComponent->SetMonsterID(PTPlayerStart->TableId);
-				}
-
-				if (UPTPawnExtensionComponent* PawnExtComp = UPTPawnExtensionComponent::FindPawnExtensionComponent(Pawn))
-				{
-					PawnExtComp->SetPawnData(PawnData);
-					PawnExtComp->SetPlayerInputComponent();
-				}
 			}
 		}
 	}
@@ -328,13 +306,16 @@ void UPTObjectSubsystem::SetCachePlayerStart()
 	UE_LOG(PTLog, Log, TEXT("[ObjectSubSystem] Complete CachePlayerStart!"))
 }
 
-UPTPawnData* UPTObjectSubsystem::GetPawnData()
+const UPTPawnData* UPTObjectSubsystem::GetPawnData(AActor* Actor)
 {
-	if (AIPawnData.IsValid())
+	FString ActorName = Actor->GetName();
+	if (ObjectDatas.Contains(ActorName))
 	{
-		return AIPawnData.Get();
+		if (UPTPawnExtensionComponent* PawnExt = UPTPawnExtensionComponent::FindPawnExtensionComponent(Actor))
+		{
+			return PawnExt->GetPawnData<UPTPawnData>();
+		}
 	}
-
 	return nullptr;
 }
 

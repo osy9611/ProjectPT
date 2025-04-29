@@ -48,7 +48,7 @@ public:
 
 	void SetCachePlayerStart();
 
-	UPTPawnData* GetPawnData();
+	const UPTPawnData* GetPawnData(AActor* Actor);
 
 	TArray<APTPlayerStart*> GetPlayerStartList(FGameplayTag GameplayTag);
 
@@ -62,7 +62,4 @@ private:
 
 	UPROPERTY()
 	TMap<FString, AActor*> ObjectDatas;
-
-	UPROPERTY()
-	TWeakObjectPtr<UPTPawnData> AIPawnData;
 };
